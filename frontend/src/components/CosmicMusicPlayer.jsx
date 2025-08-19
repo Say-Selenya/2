@@ -21,10 +21,29 @@ const CosmicMusicPlayer = () => {
   ]);
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = isMuted ? 0 : volume;
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = isMuted ? 0 : volume;
+      
+      // Event listeners para manejar el estado
+      const handlePlay = () => setIsPlaying(true);
+      const handlePause = () => setIsPlaying(false);
+      const handleEnded = () => {
+        setIsPlaying(false);
+        nextTrack();
+      };
+      
+      audio.addEventListener('play', handlePlay);
+      audio.addEventListener('pause', handlePause);
+      audio.addEventListener('ended', handleEnded);
+      
+      return () => {
+        audio.removeEventListener('play', handlePlay);
+        audio.removeEventListener('pause', handlePause);
+        audio.removeEventListener('ended', handleEnded);
+      };
     }
-  }, [volume, isMuted]);
+  }, [volume, isMuted, currentTrack]);
 
   const togglePlay = () => {
     if (audioRef.current) {
