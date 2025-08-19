@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BrightYouTubeBanner from "./components/YouTubeBanner";
+import CosmicVideoIntro from "./components/CosmicVideoIntro";
 import AboutSection from "./components/AboutSection";
 import PortalSection from "./components/PortalSection";
 import StatsSection from "./components/StatsSection";
