@@ -1576,3 +1576,250 @@ html {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-2px); }
 }
+
+/* COSMIC VIDEO INTRODUCTION SECTION */
+.cosmic-video-intro {
+  background: #000000;
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 0;
+}
+
+.video-cosmic-bg {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(75, 0, 130, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 10%, rgba(25, 25, 112, 0.06) 0%, transparent 40%);
+  animation: video-cosmic-drift 30s ease-in-out infinite;
+}
+
+.video-stars-field {
+  background-image: 
+    radial-gradient(1px 1px at 50px 50px, #ffffff, transparent),
+    radial-gradient(1px 1px at 150px 100px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 250px 150px, #ffffff, transparent),
+    radial-gradient(1px 1px at 350px 80px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 450px 120px, #ffffff, transparent);
+  background-repeat: repeat;
+  background-size: 500px 200px;
+  animation: video-stars-twinkle 10s linear infinite;
+}
+
+.video-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  background: linear-gradient(45deg, #ffffff, #87ceeb, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+  margin-bottom: 1rem;
+}
+
+.cosmic-line-video {
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  border-radius: 2px;
+}
+
+.cosmic-video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.1);
+  position: relative;
+  background: #000000;
+}
+
+.cosmic-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Maximum quality settings */
+  object-fit: cover;
+  /* Ensure sharp rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  /* Remove any filters that could degrade quality */
+  filter: none;
+  /* Ensure maximum resolution */
+  max-width: 100%;
+  height: auto;
+}
+
+.video-cosmic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(138, 43, 226, 0.03) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(75, 0, 130, 0.03) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.video-controls.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.video-controls.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.controls-background {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.controls-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.video-control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.video-control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.video-control-btn.play-pause {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, rgba(138, 43, 226, 0.3), rgba(75, 0, 130, 0.3));
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.video-control-btn.play-pause:hover {
+  background: linear-gradient(45deg, rgba(138, 43, 226, 0.5), rgba(75, 0, 130, 0.5));
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.4);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.play-overlay:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cosmic-play-button {
+  background: linear-gradient(45deg, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.8));
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  animation: cosmic-play-pulse 2s ease-in-out infinite;
+}
+
+.cosmic-play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+}
+
+/* VIDEO ANIMATIONS */
+@keyframes video-cosmic-drift {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  33% { transform: translateX(-15px) translateY(-8px); }
+  66% { transform: translateX(15px) translateY(8px); }
+}
+
+@keyframes video-stars-twinkle {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+  75% { opacity: 0.2; }
+}
+
+@keyframes cosmic-play-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 50px rgba(138, 43, 226, 0.7);
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive Video */
+@media (max-width: 768px) {
+  .cosmic-video-container {
+    margin: 0 20px;
+    border-radius: 15px;
+  }
+  
+  .cosmic-play-button {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cosmic-play-button svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .video-control-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .video-control-btn.play-pause {
+    width: 50px;
+    height: 50px;
+  }
+}
