@@ -254,6 +254,409 @@ html {
   scroll-behavior: smooth;
 }
 
+/* YouTube Banner Styles */
+.youtube-banner {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(135, 206, 235, 0.15) 0%, transparent 25%),
+    radial-gradient(circle at 80% 30%, rgba(147, 112, 219, 0.12) 0%, transparent 30%),
+    radial-gradient(circle at 40% 70%, rgba(255, 192, 203, 0.10) 0%, transparent 25%),
+    radial-gradient(circle at 70% 80%, rgba(152, 251, 152, 0.08) 0%, transparent 20%),
+    linear-gradient(135deg, #000811 0%, #1a0033 25%, #330066 50%, #001a33 75%, #000811 100%);
+}
+
+@media (min-width: 768px) {
+  .youtube-banner {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .youtube-banner {
+    height: 600px;
+  }
+}
+
+/* Enhanced Cosmic Space Background */
+.cosmic-space-bg {
+  background: 
+    radial-gradient(2px 2px at 25px 35px, rgba(135, 206, 235, 0.9), transparent),
+    radial-gradient(1px 1px at 45px 75px, rgba(147, 112, 219, 0.7), transparent),
+    radial-gradient(1px 1px at 95px 45px, rgba(255, 192, 203, 0.8), transparent),
+    radial-gradient(2px 2px at 135px 85px, rgba(152, 251, 152, 0.6), transparent),
+    radial-gradient(1px 1px at 165px 35px, rgba(135, 206, 235, 0.7), transparent);
+  background-repeat: repeat;
+  background-size: 250px 180px;
+  animation: cosmic-space-drift 80s linear infinite;
+}
+
+.cosmic-stars-enhanced {
+  background-image: 
+    radial-gradient(1px 1px at 30px 30px, rgba(255, 255, 255, 0.9), transparent),
+    radial-gradient(1px 1px at 60px 60px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 90px 30px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 120px 90px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 150px 50px, rgba(255, 255, 255, 0.6), transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: cosmic-stars-twinkle 15s ease-in-out infinite;
+}
+
+.cosmic-nebula-deep {
+  background: 
+    radial-gradient(ellipse at 25% 25%, rgba(147, 112, 219, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 300% 150% at 75% 0%, rgba(135, 206, 235, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 200% 100% at 90% 70%, rgba(255, 192, 203, 0.06) 0%, transparent 60%);
+  animation: cosmic-nebula-deep-flow 60s ease-in-out infinite;
+}
+
+/* YouTube Banner Content */
+.youtube-banner-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  z-index: 10;
+}
+
+/* Shadow Banner Image */
+.shadow-banner-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0 0 0 50px;
+}
+
+.shadow-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, 
+    rgba(255, 215, 0, 0.1) 0%, 
+    transparent 30%, 
+    rgba(218, 165, 32, 0.15) 70%, 
+    transparent 100%);
+}
+
+.banner-glow-effect {
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00, #FFD700);
+  background-size: 400% 400%;
+  border-radius: 0 0 0 50px;
+  z-index: -1;
+  animation: golden-glow-pulse 3s ease-in-out infinite;
+  filter: blur(3px);
+  opacity: 0.6;
+}
+
+/* Golden Metallic Name */
+.artist-name-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 20;
+}
+
+.artist-name-golden {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.name-glow {
+  background: linear-gradient(45deg, 
+    #FFD700 0%, 
+    #FFA500 25%, 
+    #FFFF00 50%, 
+    #FF8C00 75%, 
+    #FFD700 100%);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: golden-metallic-shine 4s ease-in-out infinite;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.8),
+    0 0 20px rgba(255, 165, 0, 0.6),
+    0 0 30px rgba(255, 140, 0, 0.4);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.golden-underline {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+  border-radius: 2px;
+  animation: golden-underline-flow 3s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.cosmic-tagline {
+  color: #87CEEB;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  text-shadow: 0 0 8px rgba(135, 206, 235, 0.6);
+}
+
+/* UFO and Alien Stickers */
+.alien-ufo {
+  position: absolute;
+  z-index: 15;
+}
+
+.ufo-1 {
+  top: 15%;
+  left: 10%;
+  animation: ufo-float-1 8s ease-in-out infinite;
+}
+
+.ufo-2 {
+  top: 60%;
+  right: 15%;
+  animation: ufo-float-2 10s ease-in-out infinite;
+}
+
+.ufo-3 {
+  top: 30%;
+  left: 70%;
+  animation: ufo-float-3 12s ease-in-out infinite;
+}
+
+.ufo-body {
+  width: 50px;
+  height: 25px;
+  background: linear-gradient(45deg, #32CD32, #228B22, #32CD32);
+  border-radius: 50px 50px 20px 20px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.6);
+}
+
+.ufo-dome {
+  width: 30px;
+  height: 15px;
+  background: linear-gradient(45deg, rgba(50, 205, 50, 0.3), rgba(34, 139, 34, 0.5));
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(50, 205, 50, 0.8);
+}
+
+.ufo-lights {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+
+.light {
+  width: 4px;
+  height: 4px;
+  background: #FFFF00;
+  border-radius: 50%;
+  animation: ufo-lights-blink 2s ease-in-out infinite;
+  box-shadow: 0 0 8px #FFFF00;
+}
+
+.light:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.light:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.alien-pilot {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  animation: alien-bob 3s ease-in-out infinite;
+}
+
+/* Floating Alien Stickers */
+.alien-sticker {
+  position: absolute;
+  font-size: 2rem;
+  z-index: 12;
+  animation: alien-float 6s ease-in-out infinite;
+}
+
+.alien-1 {
+  top: 25%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.alien-2 {
+  bottom: 20%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.alien-3 {
+  top: 70%;
+  right: 5%;
+  animation-delay: 3s;
+}
+
+.alien-4 {
+  top: 5%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+/* Cosmic Particles */
+.cosmic-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, #FFD700, transparent);
+  border-radius: 50%;
+  animation: particle-drift 15s linear infinite;
+}
+
+.particle-1 { top: 20%; left: 30%; animation-delay: 0s; }
+.particle-2 { top: 50%; left: 80%; animation-delay: 3s; }
+.particle-3 { top: 80%; left: 20%; animation-delay: 6s; }
+.particle-4 { top: 30%; left: 60%; animation-delay: 9s; }
+.particle-5 { top: 70%; left: 40%; animation-delay: 12s; }
+
+/* Animations */
+@keyframes cosmic-space-drift {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(-30px) translateY(-20px) rotate(1deg); }
+  50% { transform: translateX(-60px) translateY(0) rotate(0deg); }
+  75% { transform: translateX(-30px) translateY(20px) rotate(-1deg); }
+  100% { transform: translateX(0) translateY(0) rotate(0deg); }
+}
+
+@keyframes cosmic-stars-twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.2); }
+}
+
+@keyframes cosmic-nebula-deep-flow {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  33% { transform: rotate(2deg) scale(1.1); }
+  66% { transform: rotate(-2deg) scale(0.9); }
+}
+
+@keyframes golden-metallic-shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes golden-glow-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+@keyframes golden-underline-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes ufo-float-1 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) translateX(10px) rotate(2deg); }
+  50% { transform: translateY(-5px) translateX(-5px) rotate(-1deg); }
+  75% { transform: translateY(-20px) translateX(15px) rotate(3deg); }
+}
+
+@keyframes ufo-float-2 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) translateX(-8px) rotate(-2deg); }
+  66% { transform: translateY(-25px) translateX(12px) rotate(1deg); }
+}
+
+@keyframes ufo-float-3 {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  40% { transform: translateY(-18px) translateX(-10px) rotate(2deg); }
+  80% { transform: translateY(-8px) translateX(8px) rotate(-1deg); }
+}
+
+@keyframes ufo-lights-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes alien-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+
+@keyframes alien-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes particle-drift {
+  0% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-50px) translateX(30px) rotate(360deg); opacity: 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .shadow-banner-container {
+    width: 70%;
+    border-radius: 0 0 0 30px;
+  }
+  
+  .artist-name-container {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  
+  .youtube-banner-content {
+    padding: 1rem;
+  }
+  
+  .alien-ufo {
+    transform: scale(0.8);
+  }
+  
+  .alien-sticker {
+    font-size: 1.5rem;
+  }
+}
+
 /* Enhanced Cosmic Background System */
 
 /* Enhanced cosmic background with space effects */
