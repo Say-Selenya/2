@@ -28,8 +28,53 @@ const AboutSection = () => {
 
   const toggleFullscreen = () => {
     if (videoRef.current) {
-      if (videoRef.current.requestFullscreen) {
-        videoRef.current.requestFullscreen();
+      try {
+        // Check if we're already in fullscreen
+        if (document.fullscreenElement) {
+          // Exit fullscreen
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        } else {
+          // Enter fullscreen
+          const video = videoRef.current;
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
+          } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+          } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+          } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+          }
+        }
+      } catch (error) {
+        console.log("Fullscreen not supported or blocked:", error);
+        // Fallback: try to make video larger
+        const video = videoRef.current;
+        if (video.style.width !== '100vw') {
+          video.style.width = '100vw';
+          video.style.height = '100vh';
+          video.style.position = 'fixed';
+          video.style.top = '0';
+          video.style.left = '0';
+          video.style.zIndex = '9999';
+          video.style.objectFit = 'contain';
+        } else {
+          video.style.width = '';
+          video.style.height = '';
+          video.style.position = '';
+          video.style.top = '';
+          video.style.left = '';
+          video.style.zIndex = '';
+          video.style.objectFit = '';
+        }
       }
     }
   };
