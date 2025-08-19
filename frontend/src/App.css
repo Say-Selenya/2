@@ -254,6 +254,41 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Profile photo magical effects */
+.profile-container {
+  position: relative;
+}
+
+.profile-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-purple), var(--cosmic-pink));
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: magical-pulse 3s ease-in-out infinite;
+}
+
+.profile-outer-glow {
+  position: absolute;
+  inset: -1rem;
+  background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-purple), var(--cosmic-pink));
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: magical-pulse 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes magical-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
