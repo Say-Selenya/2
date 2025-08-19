@@ -5,6 +5,7 @@ import BrightYouTubeBanner from "./components/YouTubeBanner";
 import AboutSection from "./components/AboutSection";
 import PortalSection from "./components/PortalSection";
 import StatsSection from "./components/StatsSection";
+import CosmicMusicPlayer from "./components/CosmicMusicPlayer";
 import { mockPortalSections } from "./mock";
 import { Toaster } from "./components/ui/toaster";
 
