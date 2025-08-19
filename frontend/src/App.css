@@ -1577,16 +1577,50 @@ html {
   50% { transform: translateY(-2px); }
 }
 
-/* PROFILE VIDEO INTEGRATION - SIDE BY SIDE WITH PROFILE */
+/* PROFILE VIDEO INTEGRATION - ELEGANT PRESENTATION */
 .profile-video-container {
   max-width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.6),
-    0 0 25px rgba(255, 255, 255, 0.1);
   position: relative;
-  background: #000000;
+  background: linear-gradient(145deg, #1a1a1a, #000000);
+  /* Elegant frame effect */
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  /* Multiple shadow layers for depth */
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.8),
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 30px rgba(255, 255, 255, 0.05);
+  /* Elegant border gradient */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    padding: 3px;
+    background: linear-gradient(145deg, 
+      rgba(255, 255, 255, 0.2), 
+      rgba(135, 206, 235, 0.1), 
+      rgba(255, 255, 255, 0.05),
+      rgba(147, 112, 219, 0.1));
+    border-radius: 20px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+  }
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 35px 80px rgba(0, 0, 0, 0.9),
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 8px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 40px rgba(255, 255, 255, 0.1);
 }
 
 .profile-video {
@@ -1603,20 +1637,31 @@ html {
   /* Ensure maximum resolution */
   max-width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.profile-video-container:hover .profile-video {
+  transform: scale(1.02);
 }
 
 .profile-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.02) 0%,
-    transparent 25%,
-    transparent 75%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(135, 206, 235, 0.02) 0%, transparent 50%),
+    linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.01) 0%,
+      transparent 25%,
+      transparent 75%,
+      rgba(147, 112, 219, 0.01) 100%);
   pointer-events: none;
   z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.profile-video-container:hover .profile-video-overlay {
+  opacity: 0.7;
 }
 
 .profile-video-controls {
@@ -1625,7 +1670,7 @@ html {
   left: 0;
   right: 0;
   z-index: 10;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0);
 }
 
@@ -1642,53 +1687,98 @@ html {
 .profile-controls-background {
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 40%,
+    rgba(0, 0, 0, 0.3) 70%,
     transparent 100%
   );
-  backdrop-filter: blur(8px);
-  padding: 15px;
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  position: relative;
+  /* Elegant top border */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent, 
+      rgba(255, 255, 255, 0.2), 
+      transparent);
+  }
 }
 
 .profile-controls-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .profile-control-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  /* Elegant inner glow */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
 }
 
 .profile-control-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.profile-control-btn:hover::before {
+  opacity: 1;
 }
 
 .profile-control-btn.play-pause {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.12), 
+    rgba(135, 206, 235, 0.08), 
+    rgba(255, 255, 255, 0.04));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  /* Special glow for play button */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .profile-control-btn.play-pause:hover {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.2), 
+    rgba(135, 206, 235, 0.15), 
+    rgba(255, 255, 255, 0.08));
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px) scale(1.08);
 }
 
 .profile-play-overlay {
@@ -1697,79 +1787,154 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
+  background: 
+    radial-gradient(circle, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 70%);
+  backdrop-filter: blur(3px);
   cursor: pointer;
   z-index: 5;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .profile-play-overlay:hover {
-  background: rgba(0, 0, 0, 0.5);
+  background: 
+    radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 70%);
 }
 
 .profile-play-button {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.15), 
+    rgba(135, 206, 235, 0.1), 
+    rgba(255, 255, 255, 0.05));
+  border: 3px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  transition: all 0.3s ease;
-  animation: profile-play-pulse 2s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: elegant-play-pulse 3s ease-in-out infinite;
+  position: relative;
+  /* Inner elegant glow */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    animation: inner-glow-pulse 3s ease-in-out infinite;
+  }
+  /* Outer ring effect */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: outer-ring-pulse 3s ease-in-out infinite;
+  }
 }
 
 .profile-play-button:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.25), 
+    rgba(135, 206, 235, 0.18), 
+    rgba(255, 255, 255, 0.1));
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.6),
+    0 0 35px rgba(255, 255, 255, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* PROFILE VIDEO ANIMATIONS */
-@keyframes profile-play-pulse {
+/* Video Description Elegant Styling */
+.profile-video-container + .text-center {
+  margin-top: 25px;
+  padding: 20px;
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.02), 
+    rgba(255, 255, 255, 0.005));
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.profile-video-container + .text-center:hover {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.04), 
+    rgba(255, 255, 255, 0.01));
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ELEGANT ANIMATIONS */
+@keyframes elegant-play-pulse {
   0%, 100% { 
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.4),
+      0 0 20px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
     transform: scale(1);
   }
   50% { 
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
-    transform: scale(1.03);
+    box-shadow: 
+      0 15px 40px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(255, 255, 255, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
   }
 }
 
-/* Responsive Profile Video */
+@keyframes inner-glow-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes outer-ring-pulse {
+  0%, 100% { 
+    opacity: 0.2; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.4; 
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Elegant Video */
 @media (max-width: 1024px) {
   .profile-video-container {
-    margin-top: 20px;
+    margin-top: 30px;
+    border-radius: 18px;
   }
 }
 
 @media (max-width: 768px) {
   .profile-video-container {
-    margin: 20px 0;
-    border-radius: 12px;
+    margin: 25px 0;
+    border-radius: 15px;
   }
   
   .profile-play-button {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
   
   .profile-play-button svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
   
   .profile-control-btn {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
   }
   
   .profile-control-btn.play-pause {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
   }
 }
 
