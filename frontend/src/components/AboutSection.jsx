@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Card } from './ui/card';
 import { Star, Palette, Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
 
@@ -7,6 +7,29 @@ const AboutSection = () => {
   const [isMuted, setIsMuted] = useState(false);
   const [showControls, setShowControls] = useState(true);
   const videoRef = useRef(null);
+
+  // Video-specific useEffect for better handling
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Handle fullscreen change events
+      const handleFullscreenChange = () => {
+        // Update any state if needed when fullscreen changes
+      };
+
+      document.addEventListener('fullscreenchange', handleFullscreenChange);
+      document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+
+      return () => {
+        document.removeEventListener('fullscreenchange', handleFullscreenChange);
+        document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+        document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+      };
+    }
+  }, []);
 
   const togglePlay = () => {
     if (videoRef.current) {
