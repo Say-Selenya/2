@@ -370,8 +370,8 @@ html {
 
 .custom-sticker-wrapper {
   position: relative;
-  transform: scale(1.2) scaleX(-1);
-  /* Flip horizontally so alien faces right (salutes to the right) */
+  transform: scale(1.2);
+  /* Keep original orientation - if alien is facing left, we'll flip it */
 }
 
 .custom-alien-image {
@@ -380,11 +380,18 @@ html {
   object-fit: contain;
   border-radius: 15px;
   transition: transform 0.3s ease;
-  /* Remove white background completely */
+  /* Make background completely transparent */
   background: transparent;
-  /* Clean image display without blurring filters */
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  /* Remove mix-blend-mode to prevent quality issues */
+  /* Remove white/light backgrounds using advanced CSS */
+  filter: 
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))
+    contrast(1.2)
+    saturate(1.1);
+  /* Use screen blend mode to eliminate white backgrounds */
+  mix-blend-mode: screen;
+  /* Ensure sharp rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .custom-alien-image:hover {
