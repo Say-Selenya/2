@@ -60,8 +60,8 @@ const BrightYouTubeBanner = () => {
       <div className="custom-alien-sticker">
         <div className="custom-sticker-wrapper">
           <img 
-            src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/hzcniihp_image.jpeg"
-            alt="Alien Cowboy Saludando"
+            src="/assets/alien_transparent.png"
+            alt="Alien Cowboy Saludando a la Derecha"
             className="custom-alien-image"
           />
           <div className="custom-sticker-border"></div>
