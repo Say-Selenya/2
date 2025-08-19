@@ -13,10 +13,10 @@ const CosmicMusicPlayer = () => {
   const [playlist, setPlaylist] = useState([
     {
       id: 1,
-      title: "Cosmic",
-      artist: "Portal",
-      src: "", // Se llenará cuando agregues las canciones reales
-      duration: "3:45"
+      title: "Alien fumeta",
+      artist: "Portal Cósmico",
+      src: "", // No hay archivo real por restricciones de YouTube
+      duration: "3:42"
     }
   ]);
 
