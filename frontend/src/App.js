@@ -1,16 +1,6 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import PortalSection from "./components/PortalSection";
-import StatsSection from "./components/StatsSection";
-import { mockPortalSections } from "./mock";
-import { Toaster } from "./components/ui/toaster";
-
-import React from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CosmicBanner from "./components/CosmicBanner";
 import AboutSection from "./components/AboutSection";
 import PortalSection from "./components/PortalSection";
