@@ -56,98 +56,16 @@ const BrightYouTubeBanner = () => {
       <div className="absolute inset-0 cosmic-lights"></div>
       <div className="absolute inset-0 space-nebula-bright"></div>
       
-      {/* Ultra-Realistic Alien Cowboy Sticker - Top Left Corner */}
-      <div className="ultra-realistic-alien-sticker">
-        <div className="realistic-sticker-wrapper">
-          {/* High-Detail UFO */}
-          <div className="ultra-realistic-ufo">
-            <div className="ufo-hull-ultra">
-              <div className="hull-main-surface"></div>
-              <div className="hull-secondary-surface"></div>
-              <div className="hull-edge-lighting"></div>
-              <div className="hull-panel-lines"></div>
-            </div>
-            <div className="ufo-dome-ultra">
-              <div className="dome-interior"></div>
-              <div className="dome-reflection"></div>
-            </div>
-            <div className="propulsion-system-ultra">
-              <div className="prop-light-ultra"></div>
-              <div className="prop-light-ultra"></div>
-              <div className="prop-light-ultra"></div>
-              <div className="prop-light-ultra"></div>
-              <div className="prop-light-ultra"></div>
-            </div>
-            <div className="energy-field"></div>
-          </div>
-          
-          {/* Ultra-Realistic Green Alien Cowboy */}
-          <div className="ultra-realistic-cowboy-alien">
-            {/* Detailed Alien Head */}
-            <div className="alien-head-ultra">
-              <div className="head-skin-texture"></div>
-              <div className="head-muscle-definition"></div>
-              <div className="facial-highlights"></div>
-              
-              {/* Realistic Eyes */}
-              <div className="alien-eyes-ultra">
-                <div className="realistic-eye-ultra left">
-                  <div className="eye-iris"></div>
-                  <div className="eye-pupil"></div>
-                  <div className="eye-reflection-1"></div>
-                  <div className="eye-reflection-2"></div>
-                </div>
-                <div className="realistic-eye-ultra right">
-                  <div className="eye-iris"></div>
-                  <div className="eye-pupil"></div>
-                  <div className="eye-reflection-1"></div>
-                  <div className="eye-reflection-2"></div>
-                </div>
-              </div>
-              
-              {/* Nose and Mouth */}
-              <div className="alien-nose"></div>
-              <div className="alien-mouth-ultra"></div>
-            </div>
-            
-            {/* Premium Cowboy Hat */}
-            <div className="premium-cowboy-hat">
-              <div className="hat-crown-ultra">
-                <div className="crown-texture"></div>
-                <div className="crown-wear-marks"></div>
-              </div>
-              <div className="hat-brim-ultra">
-                <div className="brim-curve-shadow"></div>
-              </div>
-              <div className="hat-band-ultra">
-                <div className="band-texture"></div>
-                <div className="band-buckle"></div>
-              </div>
-            </div>
-            
-            {/* Detailed Body */}
-            <div className="alien-body-ultra">
-              <div className="body-skin-texture"></div>
-              <div className="body-muscle-tone"></div>
-            </div>
-            
-            {/* Cowboy Hat Tip Gesture */}
-            <div className="cowboy-tip-gesture">
-              <div className="tipping-arm">
-                <div className="upper-arm"></div>
-                <div className="forearm"></div>
-              </div>
-              <div className="tipping-hand">
-                <div className="hand-base"></div>
-                <div className="fingers"></div>
-                <div className="thumb"></div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Premium Sticker Border */}
-          <div className="premium-sticker-border"></div>
-          <div className="sticker-shadow"></div>
+      {/* Custom Alien Cowboy Sticker - Top Left Corner */}
+      <div className="custom-alien-sticker">
+        <div className="custom-sticker-wrapper">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/hzcniihp_image.jpeg"
+            alt="Alien Cowboy Saludando"
+            className="custom-alien-image"
+          />
+          <div className="custom-sticker-border"></div>
+          <div className="custom-sticker-shadow"></div>
         </div>
       </div>
 
