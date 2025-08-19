@@ -19,6 +19,24 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="text-center z-10 px-6 max-w-4xl mx-auto">
         <div className="mb-8">
+          {/* Profile photo with magical frame */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-cosmic-blue via-cosmic-purple to-cosmic-pink p-1">
+                <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-cosmic-blue to-cosmic-purple">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/pmtl2agg_foto22.jpeg"
+                    alt="Zäe Selenya - Artista Cósmica"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+              </div>
+              {/* Magical glow effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-30 animate-pulse"></div>
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-10 animate-pulse" style={{animationDelay: '1s'}}></div>
+            </div>
+          </div>
+          
           <h1 className="brand-display text-white mb-4 drop-shadow-2xl">
             Zäe Selenya
           </h1>
