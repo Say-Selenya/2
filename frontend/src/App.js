@@ -19,6 +19,9 @@ const Home = () => {
       {/* Bright YouTube Banner */}
       <BrightYouTubeBanner />
       
+      {/* Cosmic Video Introduction */}
+      <CosmicVideoIntro />
+      
       {/* About Section */}
       <AboutSection />
       
