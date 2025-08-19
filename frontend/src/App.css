@@ -379,11 +379,18 @@ html {
   object-fit: contain;
   border-radius: 15px;
   transition: transform 0.3s ease;
-  /* Remove all blurry filters and keep image crisp */
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  /* Ensure crisp rendering */
+  /* Crisp image rendering */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  /* Remove white background to make it look like PNG */
+  background: transparent;
+  /* Advanced white background removal */
+  filter: 
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))
+    contrast(1.2)
+    brightness(1.1);
+  /* Blend mode to eliminate white background */
+  mix-blend-mode: multiply;
 }
 
 .custom-alien-image:hover {
