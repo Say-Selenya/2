@@ -174,9 +174,6 @@ const AboutSection = () => {
                 {/* Video Description */}
                 <div className="text-center mt-6 elegant-video-description">
                   <div className="elegant-description-content">
-                    <h3 className="elegant-video-title text-white mb-3">
-                      ✨ Presentación Personal ✨
-                    </h3>
                     <p className="body-medium text-white opacity-90 leading-relaxed mb-2">
                       Sumérgete en el universo creativo de Zäe Selenya
                     </p>
