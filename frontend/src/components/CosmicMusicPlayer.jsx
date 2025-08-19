@@ -119,7 +119,7 @@ const CosmicMusicPlayer = () => {
                 alt="Music Logo"
                 className="custom-music-icon"
               />
-              <span className="treble-clef">𝄞</span>
+              <span className="treble-clef">♪</span>
             </div>
             <button 
               className="minimize-btn"
