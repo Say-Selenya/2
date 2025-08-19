@@ -314,6 +314,51 @@ html {
   animation: nebula-bright-drift 60s ease-in-out infinite;
 }
 
+/* MAIN BANNER CONTAINER */
+.bright-banner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+/* BRIGHT SHADOW PHOTO BANNER - BACKGROUND IMAGE */
+.bright-shadow-banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bright-shadow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: contrast(1.15) brightness(1.2) saturate(1.1);
+  transition: transform 0.3s ease;
+}
+
+.bright-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.25) 0%, 
+      rgba(0, 0, 0, 0.1) 50%, 
+      rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(45deg, 
+      rgba(135, 206, 235, 0.08) 0%, 
+      transparent 30%, 
+      rgba(147, 112, 219, 0.06) 70%, 
+      transparent 100%);
+  z-index: 2;
+}
+
 /* ULTRA-REALISTIC ALIEN COWBOY STICKER - TOP LEFT CORNER */
 .ultra-realistic-alien-sticker {
   position: absolute;
