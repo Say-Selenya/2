@@ -1243,22 +1243,26 @@ html {
 .music-player-container.expanded .cosmic-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   filter: drop-shadow(0 0 8px rgba(135, 206, 235, 0.8));
 }
 
 .custom-music-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
-  filter: drop-shadow(0 0 6px rgba(135, 206, 235, 0.6));
+  filter: 
+    drop-shadow(0 0 6px rgba(135, 206, 235, 0.6))
+    brightness(1.2)
+    contrast(1.1);
 }
 
 .treble-clef {
-  font-size: 18px;
-  color: var(--cosmic-blue);
-  filter: drop-shadow(0 0 8px rgba(135, 206, 235, 0.8));
+  font-size: 20px;
+  color: var(--cosmic-mint);
+  filter: drop-shadow(0 0 10px rgba(152, 251, 152, 0.8));
   font-weight: bold;
+  text-shadow: 0 0 5px rgba(152, 251, 152, 0.5);
 }
 
 .music-player-container.expanded .minimize-btn {
