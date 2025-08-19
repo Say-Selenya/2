@@ -377,13 +377,13 @@ html {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  background: transparent;
   border-radius: 15px;
   transition: transform 0.3s ease;
+  /* Remove all blurry filters and keep image crisp */
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  /* Remove white background and make PNG transparent */
-  mix-blend-mode: multiply;
-  background-blend-mode: multiply;
+  /* Ensure crisp rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .custom-alien-image:hover {
