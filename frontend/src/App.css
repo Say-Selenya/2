@@ -401,18 +401,8 @@ html {
 }
 
 .custom-sticker-border {
-  position: absolute;
-  inset: -8px;
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  background: linear-gradient(45deg, 
-    rgba(255, 255, 255, 0.15) 0%, 
-    rgba(255, 255, 255, 0.08) 100%);
-  box-shadow: 
-    0 0 20px rgba(255, 255, 255, 0.6),
-    inset 0 0 15px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(3px);
-  pointer-events: none;
+  /* Removed - no border around alien */
+  display: none !important;
 }
 
 .custom-sticker-shadow {
