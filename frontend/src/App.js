@@ -61,6 +61,7 @@ function App() {
           <Route path="/" element={<Home />}>
             <Route index element={<Home />} />
           </Route>
+          <Route path="/zaestelar" element={<ZaestelarPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
