@@ -1438,191 +1438,143 @@ html {
   animation: triangle-pulse 1.5s ease-in-out infinite;
 }
 
-/* GALACTIC ABOUT SECTION - DEEP SPACE BLACK */
+/* GALACTIC ABOUT SECTION - PURE BLACK SPACE */
 .galactic-about-section {
-  background: linear-gradient(135deg, 
-    #000000 0%,
-    #0d0015 20%,
-    #1a0033 40%,
-    #0f001a 60%,
-    #000000 80%,
-    #000000 100%);
+  background: #000000;
   position: relative;
   min-height: 100vh;
 }
 
 .galactic-background {
-  background: 
-    radial-gradient(circle at 15% 25%, rgba(75, 0, 130, 0.4) 0%, transparent 40%),
-    radial-gradient(circle at 85% 75%, rgba(25, 25, 112, 0.3) 0%, transparent 45%),
-    radial-gradient(circle at 35% 85%, rgba(72, 61, 139, 0.25) 0%, transparent 40%),
-    radial-gradient(circle at 65% 15%, rgba(138, 43, 226, 0.2) 0%, transparent 35%),
-    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
-  animation: deep-space-drift 25s ease-in-out infinite;
+  background: #000000;
+  animation: none;
 }
 
 .stars-field {
   background-image: 
     radial-gradient(1px 1px at 20px 30px, #ffffff, transparent),
     radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.8), transparent),
-    radial-gradient(2px 2px at 90px 40px, #87ceeb, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, transparent),
     radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.6), transparent),
     radial-gradient(1px 1px at 160px 30px, #ffffff, transparent),
-    radial-gradient(2px 2px at 200px 60px, rgba(147, 112, 219, 0.9), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(255, 255, 255, 0.9), transparent),
     radial-gradient(1px 1px at 250px 90px, #ffffff, transparent),
-    radial-gradient(1px 1px at 300px 20px, rgba(255, 255, 255, 0.7), transparent);
+    radial-gradient(1px 1px at 300px 20px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 350px 110px, #ffffff, transparent),
+    radial-gradient(1px 1px at 380px 50px, rgba(255, 255, 255, 0.5), transparent);
   background-repeat: repeat;
-  background-size: 350px 150px;
-  animation: intense-stars-twinkle 6s linear infinite;
+  background-size: 400px 200px;
+  animation: subtle-stars-twinkle 8s linear infinite;
+  z-index: 1;
 }
 
 .nebula-glow {
-  background: 
-    radial-gradient(ellipse 1200px 600px at 30% 0%, rgba(75, 0, 130, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 800px 400px at 0% 100%, rgba(25, 25, 112, 0.12) 0%, transparent 55%),
-    radial-gradient(ellipse 600px 300px at 100% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse 400px 200px at 70% 80%, rgba(72, 61, 139, 0.08) 0%, transparent 45%);
-  animation: deep-nebula-pulse 20s ease-in-out infinite;
+  background: transparent;
+  animation: none;
 }
 
 .galactic-card {
-  background: rgba(0, 0, 0, 0.7) !important;
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(75, 0, 130, 0.6) !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
   box-shadow: 
-    0 15px 50px rgba(0, 0, 0, 0.8),
-    0 0 40px rgba(75, 0, 130, 0.3),
-    inset 0 0 30px rgba(25, 25, 112, 0.15);
+    0 15px 50px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
 .galactic-title {
-  background: linear-gradient(45deg, #ffffff, #87ceeb, #9370db, #ffffff);
+  background: linear-gradient(45deg, #ffffff, #ffffff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
-  text-shadow: 0 0 20px rgba(135, 206, 235, 0.6);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 15;
 }
 
 .galactic-text {
   color: #ffffff !important;
-  text-shadow: 
-    0 0 10px rgba(255, 255, 255, 0.3),
-    0 0 20px rgba(135, 206, 235, 0.2);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  position: relative;
+  z-index: 15;
 }
 
 .star-circle {
-  background: linear-gradient(135deg, rgba(75, 0, 130, 0.4), rgba(25, 25, 112, 0.3)) !important;
-  border: 2px solid rgba(255, 255, 255, 0.3) !important;
-  box-shadow: 
-    0 0 30px rgba(255, 255, 255, 0.4),
-    inset 0 0 20px rgba(75, 0, 130, 0.2);
-  animation: intense-star-glow 2.5s ease-in-out infinite;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: clean-star-glow 3s ease-in-out infinite;
+  position: relative;
+  z-index: 12;
 }
 
 .star-icon {
   color: #ffffff !important;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
-  animation: cosmic-star-rotate 8s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  animation: smooth-star-rotate 10s linear infinite;
 }
 
 .palette-circle {
-  background: linear-gradient(135deg, rgba(25, 25, 112, 0.4), rgba(72, 61, 139, 0.3)) !important;
-  border: 2px solid rgba(135, 206, 235, 0.4) !important;
-  box-shadow: 
-    0 0 30px rgba(135, 206, 235, 0.4),
-    inset 0 0 20px rgba(25, 25, 112, 0.2);
-  animation: intense-palette-glow 2.5s ease-in-out infinite;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: clean-palette-glow 3s ease-in-out infinite;
+  position: relative;
+  z-index: 12;
 }
 
 .palette-icon {
-  color: #87ceeb !important;
-  filter: drop-shadow(0 0 15px rgba(135, 206, 235, 0.8));
-  animation: cosmic-palette-bounce 5s ease-in-out infinite;
+  color: #ffffff !important;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  animation: smooth-palette-bounce 6s ease-in-out infinite;
 }
 
-/* DEEP SPACE ANIMATIONS */
-@keyframes deep-space-drift {
-  0%, 100% { transform: translateX(0px) translateY(0px) rotate(0deg); }
-  25% { transform: translateX(-20px) translateY(-10px) rotate(0.5deg); }
-  50% { transform: translateX(0px) translateY(-15px) rotate(0deg); }
-  75% { transform: translateX(20px) translateY(-5px) rotate(-0.5deg); }
+/* Container content with higher z-index to stay above stars */
+.galactic-about-section .container {
+  position: relative;
+  z-index: 10;
 }
 
-@keyframes intense-stars-twinkle {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  25% { opacity: 0.2; transform: scale(0.8); }
-  50% { opacity: 0.8; transform: scale(1.2); }
-  75% { opacity: 0.1; transform: scale(0.9); }
+/* PURE BLACK SPACE ANIMATIONS */
+@keyframes subtle-stars-twinkle {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  75% { opacity: 0.2; }
 }
 
-@keyframes deep-nebula-pulse {
+@keyframes clean-star-glow {
   0%, 100% { 
-    opacity: 1; 
-    transform: scale(1) rotate(0deg); 
-  }
-  33% { 
-    opacity: 0.4; 
-    transform: scale(1.1) rotate(1deg); 
-  }
-  66% { 
-    opacity: 0.7; 
-    transform: scale(0.9) rotate(-1deg); 
-  }
-}
-
-@keyframes intense-star-glow {
-  0%, 100% { 
-    box-shadow: 
-      0 0 30px rgba(255, 255, 255, 0.4),
-      inset 0 0 20px rgba(75, 0, 130, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     transform: scale(1);
   }
   50% { 
-    box-shadow: 
-      0 0 50px rgba(255, 255, 255, 0.7),
-      inset 0 0 30px rgba(75, 0, 130, 0.3);
-    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
   }
 }
 
-@keyframes cosmic-star-rotate {
-  0% { transform: rotate(0deg); filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); }
-  50% { transform: rotate(180deg); filter: drop-shadow(0 0 25px rgba(255, 255, 255, 1)); }
-  100% { transform: rotate(360deg); filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); }
+@keyframes smooth-star-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-@keyframes intense-palette-glow {
+@keyframes clean-palette-glow {
   0%, 100% { 
-    box-shadow: 
-      0 0 30px rgba(135, 206, 235, 0.4),
-      inset 0 0 20px rgba(25, 25, 112, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     transform: scale(1);
   }
   50% { 
-    box-shadow: 
-      0 0 50px rgba(135, 206, 235, 0.7),
-      inset 0 0 30px rgba(25, 25, 112, 0.3);
-    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
   }
 }
 
-@keyframes cosmic-palette-bounce {
-  0%, 100% { 
-    transform: translateY(0px); 
-    filter: drop-shadow(0 0 15px rgba(135, 206, 235, 0.8)); 
-  }
-  25% { 
-    transform: translateY(-4px); 
-    filter: drop-shadow(0 0 20px rgba(135, 206, 235, 1)); 
-  }
-  50% { 
-    transform: translateY(-2px); 
-    filter: drop-shadow(0 0 25px rgba(135, 206, 235, 0.9)); 
-  }
-  75% { 
-    transform: translateY(-6px); 
-    filter: drop-shadow(0 0 18px rgba(135, 206, 235, 0.8)); 
-  }
+@keyframes smooth-palette-bounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
 }
