@@ -27,54 +27,43 @@ const CosmicMusicPlayer = () => {
   }, [volume, isMuted]);
 
   const togglePlay = () => {
-    // Simulación de reproducción sin audio real
-    if (currentSong.src === "" || !currentSong.src) {
-      // No hay archivo real, solo simular
-      setIsPlaying(!isPlaying);
-      
-      // Mostrar mensaje informativo
-      const message = isPlaying ? "⏸️ Pausado (Demo)" : "▶️ Reproduciendo (Demo)";
-      
-      // Crear un toast/notification temporal
-      const notification = document.createElement('div');
-      notification.innerHTML = `
-        <div style="
-          position: fixed;
-          top: 100px;
-          right: 20px;
-          background: rgba(10, 10, 10, 0.9);
-          color: #87ceeb;
-          padding: 10px 15px;
-          border-radius: 10px;
-          border: 1px solid rgba(135, 206, 235, 0.3);
-          z-index: 1000;
-          font-size: 12px;
-          backdrop-filter: blur(10px);
-        ">
-          ${message}<br>
-          <span style="font-size: 10px; opacity: 0.7;">
-            🎵 Demo visual - Necesitas archivos MP3 para audio real
-          </span>
-        </div>
-      `;
-      document.body.appendChild(notification);
-      
-      // Remover después de 3 segundos
-      setTimeout(() => {
-        if (document.body.contains(notification)) {
-          document.body.removeChild(notification);
-        }
-      }, 3000);
-      
-      return;
-    }
-
-    // Código original para archivos reales
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        // Intentar reproducir el audio
+        audioRef.current.play().catch(error => {
+          console.log("Audio play failed:", error);
+          // Mostrar mensaje si falla
+          const notification = document.createElement('div');
+          notification.innerHTML = `
+            <div style="
+              position: fixed;
+              top: 100px;
+              right: 20px;
+              background: rgba(10, 10, 10, 0.9);
+              color: #87ceeb;
+              padding: 10px 15px;
+              border-radius: 10px;
+              border: 1px solid rgba(135, 206, 235, 0.3);
+              z-index: 1000;
+              font-size: 12px;
+              backdrop-filter: blur(10px);
+            ">
+              🎵 Click en el reproductor para iniciar<br>
+              <span style="font-size: 10px; opacity: 0.7;">
+                Los navegadores requieren interacción del usuario
+              </span>
+            </div>
+          `;
+          document.body.appendChild(notification);
+          
+          setTimeout(() => {
+            if (document.body.contains(notification)) {
+              document.body.removeChild(notification);
+            }
+          }, 3000);
+        });
       }
       setIsPlaying(!isPlaying);
     }
