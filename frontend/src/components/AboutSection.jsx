@@ -1,23 +1,20 @@
 import React from 'react';
 import { Card } from './ui/card';
-import { Sparkles, Heart, Palette } from 'lucide-react';
+import { Star, Palette } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section className="py-16 cosmic-section-about relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 animate-pulse">
-        <Sparkles className="w-6 h-6 text-cosmic-purple opacity-30" />
-      </div>
-      <div className="absolute bottom-20 right-20 animate-bounce slow">
-        <Heart className="w-8 h-8 text-cosmic-pink opacity-40" />
-      </div>
+    <section className="py-16 galactic-about-section relative overflow-hidden">
+      {/* Galactic Background Elements */}
+      <div className="absolute inset-0 galactic-background"></div>
+      <div className="absolute inset-0 stars-field"></div>
+      <div className="absolute inset-0 nebula-glow"></div>
       
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           
           {/* Main about card */}
-          <Card className="backdrop-blur-lg bg-black bg-opacity-30 border-2 border-cosmic-blue border-opacity-30 rounded-2xl p-8 mb-8">
+          <Card className="backdrop-blur-lg bg-black bg-opacity-40 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-8 mb-8 galactic-card">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
               
               {/* Profile photo - larger version */}
@@ -33,70 +30,44 @@ const AboutSection = () => {
                     </div>
                   </div>
                   {/* Enhanced magical effects */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-20 animate-pulse"></div>
-                  <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-10 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-30 animate-pulse"></div>
+                  <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-15 animate-pulse" style={{animationDelay: '1.5s'}}></div>
                 </div>
               </div>
               
               {/* About content */}
               <div className="lg:col-span-2 text-center lg:text-left">
-                <h2 className="section-heading text-white mb-6">
+                <h2 className="section-heading text-white mb-6 galactic-title">
                   La Artista Detrás del Portal
                 </h2>
                 
                 <div className="space-y-4 mb-6">
-                  <p className="body-large text-cosmic-mint leading-relaxed">
-                    Soy Zäe Selenya, una creadora multidimensional que navega entre diferentes mundos artísticos. 
-                    Mi trabajo explora la intersección entre la cultura pop, el arte oscuro y la ternura kawaii.
-                  </p>
-                  
-                  <p className="body-medium text-gray-300 leading-relaxed">
-                    Cada universo que creo representa una faceta de mi alma creativa: la pasión friki que me conecta 
-                    con fandoms y culturas pop, la profundidad melancólica que encuentra belleza en lo oscuro, 
-                    y la alegría pura que surge del arte colorido y tierno.
+                  <p className="body-large text-cosmic-mint leading-relaxed galactic-text">
+                    Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico. Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 🌌🖤💜
                   </p>
                 </div>
                 
-                {/* Creative aspects */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {/* Creative aspects with new symbols */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex flex-col items-center lg:items-start">
-                    <div className="w-12 h-12 rounded-full bg-cosmic-blue bg-opacity-20 border border-cosmic-blue flex items-center justify-center mb-3">
-                      <Sparkles className="w-6 h-6 text-cosmic-blue" />
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cosmic-blue to-cosmic-purple bg-opacity-30 border-2 border-cosmic-blue flex items-center justify-center mb-3 star-circle">
+                      <Star className="w-8 h-8 text-cosmic-blue star-icon" fill="currentColor" />
                     </div>
-                    <h4 className="body-medium font-semibold text-cosmic-blue mb-1">Imaginación</h4>
-                    <p className="body-small text-gray-400 text-center lg:text-left">Creando mundos únicos</p>
+                    <h4 className="body-medium font-semibold text-cosmic-blue mb-1">Mundos Únicos</h4>
+                    <p className="body-small text-gray-300 text-center lg:text-left">creando mundos únicos</p>
                   </div>
                   
                   <div className="flex flex-col items-center lg:items-start">
-                    <div className="w-12 h-12 rounded-full bg-cosmic-purple bg-opacity-20 border border-cosmic-purple flex items-center justify-center mb-3">
-                      <Heart className="w-6 h-6 text-cosmic-purple" />
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cosmic-mint to-cosmic-purple bg-opacity-30 border-2 border-cosmic-mint flex items-center justify-center mb-3 palette-circle">
+                      <Palette className="w-8 h-8 text-cosmic-mint palette-icon" />
                     </div>
-                    <h4 className="body-medium font-semibold text-cosmic-purple mb-1">Pasión</h4>
-                    <p className="body-small text-gray-400 text-center lg:text-left">Arte desde el corazón</p>
-                  </div>
-                  
-                  <div className="flex flex-col items-center lg:items-start">
-                    <div className="w-12 h-12 rounded-full bg-cosmic-mint bg-opacity-20 border border-cosmic-mint flex items-center justify-center mb-3">
-                      <Palette className="w-6 h-6 text-cosmic-mint" />
-                    </div>
-                    <h4 className="body-medium font-semibold text-cosmic-mint mb-1">Diversidad</h4>
-                    <p className="body-small text-gray-400 text-center lg:text-left">Múltiples estilos</p>
+                    <h4 className="body-medium font-semibold text-cosmic-mint mb-1">Arte Diverso</h4>
+                    <p className="body-small text-gray-300 text-center lg:text-left">arte desde el corazón y diversidad... múltiples estilos</p>
                   </div>
                 </div>
               </div>
             </div>
           </Card>
-          
-          {/* Quote section */}
-          <div className="text-center">
-            <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-cosmic-blue via-cosmic-purple to-cosmic-pink bg-opacity-10 border border-cosmic-blue border-opacity-20 backdrop-blur-sm">
-              <p className="body-large text-white font-medium italic mb-2">
-                "Creo que el arte verdadero nace cuando dejamos que nuestras múltiples personalidades 
-                creativas se expresen sin límites ni etiquetas."
-              </p>
-              <p className="body-small text-cosmic-mint">- Zäe Selenya</p>
-            </div>
-          </div>
           
         </div>
       </div>
