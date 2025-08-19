@@ -375,16 +375,17 @@ html {
 }
 
 .custom-alien-image {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
-  border-radius: 15px;
+  /* Remove border radius for sharper edges */
+  border-radius: 0px;
   transition: none;
-  /* Real PNG transparency - crystal clear */
+  /* Real PNG transparency - ultra clear */
   background: transparent !important;
-  /* Maximum sharpness - no blur whatsoever */
-  filter: none;
-  /* Ultra-sharp rendering */
+  /* No filters - pure image */
+  filter: none !important;
+  /* Ultra-sharp rendering - maximum clarity */
   image-rendering: -moz-crisp-edges !important;
   image-rendering: -webkit-optimize-contrast !important;
   image-rendering: crisp-edges !important;
@@ -392,8 +393,10 @@ html {
   /* Force sharp edges */
   -webkit-font-smoothing: none !important;
   -moz-osx-font-smoothing: unset !important;
-  /* Prevent any smoothing */
+  /* Prevent any smoothing or transforms */
   transform: none !important;
+  /* Maximum contrast and clarity */
+  opacity: 1 !important;
 }
 
 .custom-alien-image:hover {
