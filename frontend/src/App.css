@@ -254,587 +254,505 @@ html {
   scroll-behavior: smooth;
 }
 
-/* REALISTIC SPACE BANNER - PHOTOREALISTIC DESIGN */
+/* CLEAN YOUTUBE BANNER - PROFESSIONAL DESIGN */
 
-.realistic-space-banner {
+.clean-youtube-banner {
   height: 400px;
   width: 100%;
   position: relative;
   overflow: hidden;
-  background: 
-    radial-gradient(ellipse at 40% 40%, rgba(25, 25, 112, 0.8) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 10%, rgba(72, 61, 139, 0.6) 0%, transparent 50%),
-    radial-gradient(ellipse at 10% 80%, rgba(25, 25, 112, 0.7) 0%, transparent 50%),
-    linear-gradient(135deg, #000000 0%, #0f0f23 20%, #1a1a2e 40%, #16213e 60%, #0f0f23 80%, #000000 100%);
 }
 
 @media (min-width: 768px) {
-  .realistic-space-banner {
+  .clean-youtube-banner {
     height: 500px;
   }
 }
 
 @media (min-width: 1024px) {
-  .realistic-space-banner {
+  .clean-youtube-banner {
     height: 600px;
   }
 }
 
-/* PHOTOREALISTIC DEEP SPACE BACKGROUND */
-.deep-space-bg {
+/* CLEAN MYSTICAL GALACTIC BACKGROUND */
+.mystical-galaxy-bg {
   background: 
-    radial-gradient(circle at 15% 15%, rgba(65, 105, 225, 0.3) 0%, transparent 25%),
-    radial-gradient(circle at 85% 25%, rgba(138, 43, 226, 0.25) 0%, transparent 30%),
-    radial-gradient(circle at 30% 85%, rgba(72, 61, 139, 0.2) 0%, transparent 25%),
-    radial-gradient(circle at 70% 70%, rgba(25, 25, 112, 0.15) 0%, transparent 20%);
-  animation: deep-space-drift 120s linear infinite;
+    radial-gradient(ellipse at 20% 30%, rgba(72, 61, 139, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(25, 25, 112, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 20%, rgba(65, 105, 225, 0.08) 0%, transparent 40%),
+    linear-gradient(135deg, #000000 0%, #0a0a1a 30%, #1a1a2e 60%, #0a0a1a 100%);
+  animation: mystical-flow 60s ease-in-out infinite;
 }
 
-.starfield-realistic {
+.subtle-starfield {
   background-image: 
-    radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.95), transparent),
-    radial-gradient(1px 1px at 40px 70px, rgba(173, 216, 230, 0.8), transparent),
-    radial-gradient(2px 2px at 90px 40px, rgba(255, 255, 255, 0.6), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(240, 248, 255, 0.9), transparent),
-    radial-gradient(1px 1px at 160px 30px, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(2px 2px at 200px 60px, rgba(135, 206, 235, 0.5), transparent),
-    radial-gradient(1px 1px at 220px 90px, rgba(255, 255, 255, 0.85), transparent);
+    radial-gradient(1px 1px at 30px 50px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 80px 30px, rgba(173, 216, 230, 0.5), transparent),
+    radial-gradient(1px 1px at 150px 80px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 200px 40px, rgba(240, 248, 255, 0.4), transparent);
   background-repeat: repeat;
-  background-size: 250px 250px;
-  animation: starfield-twinkle 25s ease-in-out infinite;
+  background-size: 300px 300px;
+  animation: subtle-twinkle 30s ease-in-out infinite;
 }
 
-.nebula-photorealistic {
+.mystical-nebula {
   background: 
-    radial-gradient(ellipse 150% 100% at 20% 20%, rgba(138, 43, 226, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 200% 80% at 80% 10%, rgba(72, 61, 139, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 120% 150% at 60% 90%, rgba(65, 105, 225, 0.1) 0%, transparent 65%);
-  animation: nebula-realistic-flow 80s ease-in-out infinite;
+    radial-gradient(ellipse 200% 100% at 30% 50%, rgba(138, 43, 226, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 150% 80% at 70% 30%, rgba(72, 61, 139, 0.04) 0%, transparent 60%);
+  animation: nebula-drift 80s ease-in-out infinite;
 }
 
-.cosmic-dust {
-  background: 
-    radial-gradient(1px 1px at 30% 20%, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1px 1px at 70% 40%, rgba(173, 216, 230, 0.3), transparent),
-    radial-gradient(1px 1px at 50% 80%, rgba(255, 255, 255, 0.2), transparent),
-    radial-gradient(1px 1px at 90% 30%, rgba(240, 248, 255, 0.35), transparent);
-  background-size: 400px 400px;
-  animation: cosmic-dust-drift 200s linear infinite;
-}
-
-/* REALISTIC UFO FLEET */
-.ufo-realistic {
-  position: absolute;
-  z-index: 15;
-}
-
-.ufo-primary {
-  top: 20%;
-  left: 15%;
-  animation: ufo-patrol-primary 20s ease-in-out infinite;
-}
-
-.ufo-secondary {
-  top: 60%;
-  right: 20%;
-  animation: ufo-patrol-secondary 25s ease-in-out infinite;
-  transform: scale(0.8);
-}
-
-.ufo-distant {
-  top: 35%;
-  left: 75%;
-  animation: ufo-patrol-distant 30s ease-in-out infinite;
-  transform: scale(0.6);
-  opacity: 0.8;
-}
-
-.ufo-hull {
-  width: 80px;
-  height: 35px;
-  position: relative;
-}
-
-.hull-top {
-  width: 80px;
-  height: 20px;
-  background: linear-gradient(135deg, 
-    #2c3e50 0%, 
-    #34495e 25%, 
-    #5d6d7e 50%, 
-    #34495e 75%, 
-    #2c3e50 100%);
-  border-radius: 40px 40px 20px 20px;
-  position: relative;
-  box-shadow: 
-    inset 0 2px 4px rgba(255, 255, 255, 0.1),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(100, 149, 237, 0.4);
-}
-
-.hull-bottom {
-  width: 80px;
-  height: 15px;
-  background: linear-gradient(45deg, 
-    #1a252f 0%, 
-    #2c3e50 50%, 
-    #1a252f 100%);
-  border-radius: 0 0 40px 40px;
-  position: absolute;
-  bottom: 0;
-  box-shadow: 
-    inset 0 2px 3px rgba(0, 0, 0, 0.4),
-    0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.cockpit-dome {
-  width: 35px;
-  height: 18px;
-  background: linear-gradient(135deg, 
-    rgba(100, 149, 237, 0.3) 0%, 
-    rgba(135, 206, 235, 0.2) 50%, 
-    rgba(173, 216, 230, 0.4) 100%);
-  border-radius: 50px 50px 0 0;
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 1px solid rgba(100, 149, 237, 0.6);
-  box-shadow: 
-    inset 0 2px 4px rgba(255, 255, 255, 0.2),
-    0 0 15px rgba(100, 149, 237, 0.5);
-  animation: cockpit-glow 4s ease-in-out infinite;
-}
-
-.propulsion-ring {
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 8px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.propulsion-light {
-  width: 6px;
-  height: 6px;
-  background: radial-gradient(circle, #00ffff 0%, #0080ff 70%, transparent 100%);
-  border-radius: 50%;
-  animation: propulsion-pulse 1.5s ease-in-out infinite;
-  box-shadow: 
-    0 0 10px #00ffff,
-    0 0 20px rgba(0, 255, 255, 0.5),
-    0 0 30px rgba(0, 128, 255, 0.3);
-}
-
-.prop-1 { animation-delay: 0s; }
-.prop-2 { animation-delay: 0.2s; }
-.prop-3 { animation-delay: 0.4s; }
-.prop-4 { animation-delay: 0.6s; }
-.prop-5 { animation-delay: 0.8s; }
-.prop-6 { animation-delay: 1s; }
-
-.energy-beam {
-  position: absolute;
-  bottom: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 20px;
-  background: linear-gradient(to bottom, 
-    rgba(0, 255, 255, 0.8) 0%, 
-    rgba(0, 255, 255, 0.4) 50%, 
-    transparent 100%);
-  animation: energy-beam-pulse 3s ease-in-out infinite;
-  box-shadow: 
-    0 0 5px #00ffff,
-    0 0 10px rgba(0, 255, 255, 0.6);
-}
-
-/* CINEMATIC BANNER EFFECTS */
-.realistic-banner-content {
+/* BANNER CONTAINER */
+.banner-container {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
   z-index: 10;
 }
 
-.cinematic-banner-container {
+/* FULL SHADOW PHOTO BANNER */
+.shadow-photo-banner {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 60%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 0 0 0 50px;
 }
 
-.cinematic-banner-image {
+.shadow-banner-full {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: contrast(1.1) brightness(0.9) saturate(1.2);
   transition: transform 0.3s ease;
-  filter: contrast(1.15) brightness(1.05) saturate(1.1);
 }
 
-.cinematic-overlay {
+.shadow-overlay {
   position: absolute;
   inset: 0;
   background: 
+    linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.7) 0%, 
+      rgba(0, 0, 0, 0.3) 50%, 
+      rgba(0, 0, 0, 0.5) 100%),
     linear-gradient(45deg, 
-      rgba(212, 175, 55, 0.08) 0%, 
+      rgba(138, 43, 226, 0.1) 0%, 
       transparent 30%, 
-      rgba(255, 215, 0, 0.06) 70%, 
-      transparent 100%),
-    linear-gradient(135deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      transparent 50%,
-      rgba(0, 0, 0, 0.1) 100%);
+      rgba(72, 61, 139, 0.08) 70%, 
+      transparent 100%);
 }
 
-.film-grain {
+/* COWBOY ALIEN WITH UFO */
+.alien-cowboy-container {
   position: absolute;
-  inset: 0;
-  background-image: 
-    radial-gradient(1px 1px at 10px 10px, rgba(255, 255, 255, 0.1), transparent),
-    radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.08), transparent),
-    radial-gradient(1px 1px at 40px 20px, rgba(255, 255, 255, 0.06), transparent);
-  background-size: 50px 50px;
-  animation: film-grain-movement 0.5s infinite;
-  opacity: 0.3;
-  mix-blend-mode: overlay;
-}
-
-.lens-flare {
-  position: absolute;
-  top: 20%;
-  right: 30%;
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle,
-    rgba(255, 215, 0, 0.3) 0%,
-    rgba(255, 215, 0, 0.1) 40%,
-    transparent 70%);
-  border-radius: 50%;
-  animation: lens-flare-shimmer 8s ease-in-out infinite;
-  filter: blur(1px);
-}
-
-.edge-lighting {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg,
-    rgba(212, 175, 55, 0.15) 0%,
-    transparent 20%,
-    transparent 80%,
-    rgba(212, 175, 55, 0.1) 100%);
-  border-radius: 0 0 0 50px;
-}
-
-/* PHOTOREALISTIC GOLDEN TEXT */
-.artist-name-realistic {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  top: 15%;
+  right: 8%;
   z-index: 20;
 }
 
-.name-photorealistic {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: clamp(2rem, 6vw, 4rem);
-  line-height: 0.9;
-  margin-bottom: 0.5rem;
+.cowboy-ufo {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+  align-items: center;
 }
 
-.name-metallic {
+.ufo-clean {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  margin-bottom: -10px;
+}
+
+.ufo-hull-clean {
+  width: 60px;
+  height: 20px;
   background: linear-gradient(135deg, 
-    #ffd700 0%,    /* Gold */
-    #ffed4e 15%,   /* Light Gold */  
-    #ffa500 30%,   /* Orange Gold */
-    #ffd700 45%,   /* Gold */
-    #ffed4e 60%,   /* Light Gold */
-    #b8860b 75%,   /* Dark Golden Rod */
-    #ffd700 90%,   /* Gold */
-    #ffed4e 100%   /* Light Gold */
+    #708090 0%, 
+    #b0c4de 40%, 
+    #708090 100%);
+  border-radius: 30px 30px 15px 15px;
+  position: relative;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(135, 206, 235, 0.4);
+}
+
+.ufo-dome-clean {
+  width: 25px;
+  height: 12px;
+  background: linear-gradient(135deg, 
+    rgba(173, 216, 230, 0.4) 0%, 
+    rgba(135, 206, 235, 0.3) 100%);
+  border-radius: 25px 25px 0 0;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgba(173, 216, 230, 0.6);
+}
+
+.ufo-lights-clean {
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.clean-light {
+  width: 4px;
+  height: 4px;
+  background: #00ffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ffff;
+  animation: clean-light-pulse 2s ease-in-out infinite;
+}
+
+.clean-light:nth-child(2) { animation-delay: 0.5s; }
+.clean-light:nth-child(3) { animation-delay: 1s; }
+
+/* REALISTIC GREEN ALIEN COWBOY */
+.alien-cowboy {
+  position: relative;
+  z-index: 25;
+  animation: alien-wave 3s ease-in-out infinite;
+}
+
+.alien-head {
+  width: 35px;
+  height: 40px;
+  background: linear-gradient(135deg, 
+    #228b22 0%, 
+    #32cd32 40%, 
+    #228b22 100%);
+  border-radius: 50% 50% 45% 45%;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.alien-eyes {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.alien-eye {
+  width: 8px;
+  height: 12px;
+  background: linear-gradient(135deg, 
+    #000000 0%, 
+    #1a1a1a 100%);
+  border-radius: 50%;
+  position: relative;
+}
+
+.alien-eye::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 3px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.cowboy-hat {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 20px;
+  background: linear-gradient(135deg, 
+    #8b4513 0%, 
+    #a0522d 50%, 
+    #8b4513 100%);
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.cowboy-hat::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: -8px;
+  width: 61px;
+  height: 8px;
+  background: linear-gradient(135deg, 
+    #654321 0%, 
+    #8b4513 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.alien-body {
+  width: 25px;
+  height: 15px;
+  background: linear-gradient(135deg, 
+    #228b22 0%, 
+    #32cd32 100%);
+  border-radius: 50%;
+  margin: 2px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.waving-arm {
+  position: absolute;
+  top: 45px;
+  right: -8px;
+  width: 12px;
+  height: 4px;
+  background: #228b22;
+  border-radius: 2px;
+  transform-origin: left center;
+  animation: wave-hand 1.5s ease-in-out infinite;
+}
+
+.waving-arm::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  background: #228b22;
+  border-radius: 50%;
+}
+
+/* PROFILE SECTION - BOTTOM LEFT */
+.profile-section {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 30;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.profile-photo-container {
+  position: relative;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(173, 216, 230, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.profile-glow-ring {
+  position: absolute;
+  inset: -3px;
+  border: 2px solid rgba(173, 216, 230, 0.6);
+  border-radius: 50%;
+  animation: profile-glow 4s ease-in-out infinite;
+}
+
+/* SIGNATURE NAME */
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.signature-name {
+  font-family: 'Brush Script MT', cursive, 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1;
+  background: linear-gradient(135deg, 
+    #c0c0c0 0%,    /* Silver */
+    #e6e6fa 20%,   /* Light Silver */
+    #ffffff 40%,   /* White highlight */
+    #c0c0c0 60%,   /* Silver */
+    #a9a9a9 80%,   /* Dark Gray */
+    #c0c0c0 100%   /* Silver */
   );
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: metallic-realistic-shine 6s ease-in-out infinite;
+  animation: signature-shine 5s ease-in-out infinite;
   text-shadow: 
-    0 0 5px rgba(255, 215, 0, 0.5),
-    2px 2px 8px rgba(0, 0, 0, 0.8),
-    0 0 15px rgba(255, 215, 0, 0.3);
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    0 0 8px rgba(192, 192, 192, 0.4);
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.6));
+  transform: rotate(-2deg);
+  margin-bottom: 0.5rem;
 }
 
-.metallic-underline-realistic {
+.signature-underline {
   width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, 
-    #b8860b 0%, 
-    #ffd700 25%,
-    #ffed4e 50%,
-    #ffd700 75%,
-    #b8860b 100%);
-  border-radius: 2px;
-  animation: metallic-underline-realistic-flow 4s ease-in-out infinite;
-  margin-bottom: 1rem;
-  box-shadow: 
-    0 0 8px rgba(255, 215, 0, 0.4),
-    0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.space-explorer-tagline {
-  color: #e6f3ff;
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
-  font-weight: 500;
-  font-family: 'Inter', sans-serif;
-  display: flex;
-  align-items: center;
-  text-shadow: 
-    0 0 8px rgba(173, 216, 230, 0.6),
-    1px 1px 3px rgba(0, 0, 0, 0.8);
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
-}
-
-/* ATMOSPHERIC AND SPACE EFFECTS */
-.atmospheric-entry {
-  position: absolute;
-  width: 150px;
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255, 100, 0, 0.8) 20%, 
-    rgba(255, 200, 0, 0.6) 50%, 
-    rgba(255, 100, 0, 0.4) 80%, 
+    #c0c0c0 20%, 
+    #ffffff 50%, 
+    #c0c0c0 80%, 
     transparent 100%);
-  z-index: 12;
-  animation: atmospheric-streak 8s ease-in-out infinite;
+  margin-bottom: 0.5rem;
+  animation: underline-flow 3s ease-in-out infinite;
 }
 
-.entry-1 {
-  top: 25%;
-  right: 10%;
-  animation-delay: 2s;
+/* WEBSITE LINK */
+.website-link {
+  display: flex;
+  align-items: center;
+  color: #87ceeb;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(135, 206, 235, 0.6);
 }
 
-.entry-2 {
-  top: 70%;
-  left: 20%;
-  animation-delay: 5s;
-  transform: rotate(-30deg);
+.link-text {
+  color: #87ceeb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
 
-.space-debris {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: radial-gradient(circle, #8b7355 0%, #5d4e37 70%, transparent 100%);
-  border-radius: 50%;
-  z-index: 8;
-  animation: debris-drift 40s linear infinite;
+.link-text:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  border-bottom-color: #ffffff;
 }
 
-.debris-1 { top: 15%; left: 30%; animation-delay: 0s; }
-.debris-2 { top: 80%; right: 25%; animation-delay: 15s; }
-.debris-3 { top: 50%; left: 60%; animation-delay: 25s; }
-
-.distant-galaxy {
-  position: absolute;
-  width: 60px;
-  height: 20px;
-  background: radial-gradient(ellipse,
-    rgba(138, 43, 226, 0.3) 0%,
-    rgba(72, 61, 139, 0.2) 40%,
-    transparent 70%);
-  border-radius: 50%;
-  z-index: 5;
-  animation: galaxy-rotation 60s linear infinite;
-}
-
-.galaxy-1 {
-  top: 10%;
-  right: 15%;
-  transform: rotate(45deg);
-}
-
-.galaxy-2 {
-  bottom: 20%;
-  left: 10%;
-  transform: rotate(-30deg);
-  animation-delay: 30s;
-}
-
-.cosmic-matter {
+/* SUBTLE MYSTICAL PARTICLES */
+.mystical-particles {
   position: absolute;
   inset: 0;
-  z-index: 8;
+  z-index: 5;
 }
 
-.matter-particle {
+.particle {
   position: absolute;
   width: 2px;
   height: 2px;
   background: radial-gradient(circle, 
-    rgba(173, 216, 230, 0.8) 0%, 
-    rgba(135, 206, 235, 0.4) 50%, 
+    rgba(173, 216, 230, 0.6) 0%, 
     transparent 100%);
   border-radius: 50%;
-  animation: matter-drift 25s linear infinite;
+  animation: mystical-drift 20s linear infinite;
 }
 
-.particle-1 { top: 20%; left: 25%; animation-delay: 0s; }
-.particle-2 { top: 60%; left: 70%; animation-delay: 5s; }
-.particle-3 { top: 80%; left: 15%; animation-delay: 10s; }
-.particle-4 { top: 40%; left: 80%; animation-delay: 15s; }
-.particle-5 { top: 70%; left: 40%; animation-delay: 20s; }
-.particle-6 { top: 30%; left: 55%; animation-delay: 12s; }
+.mystical-1 { top: 20%; left: 15%; animation-delay: 0s; }
+.mystical-2 { top: 60%; left: 85%; animation-delay: 8s; }
+.mystical-3 { top: 80%; left: 40%; animation-delay: 15s; }
 
-/* REALISTIC ANIMATIONS */
-@keyframes deep-space-drift {
-  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
-  25% { transform: translateX(-20px) translateY(-15px) rotate(0.5deg); }
-  50% { transform: translateX(-40px) translateY(0) rotate(0deg); }
-  75% { transform: translateX(-20px) translateY(15px) rotate(-0.5deg); }
+/* ANIMATIONS */
+@keyframes mystical-flow {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(1deg) scale(1.02); opacity: 0.9; }
 }
 
-@keyframes starfield-twinkle {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  33% { opacity: 1; transform: scale(1.1); }
-  66% { opacity: 0.6; transform: scale(0.9); }
+@keyframes subtle-twinkle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
 }
 
-@keyframes nebula-realistic-flow {
-  0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.8; }
-  33% { transform: rotate(1deg) scale(1.05); opacity: 1; }
-  66% { transform: rotate(-1deg) scale(0.95); opacity: 0.9; }
+@keyframes nebula-drift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(-10px) translateY(5px); }
 }
 
-@keyframes cosmic-dust-drift {
-  0% { transform: translateX(0) translateY(0); }
-  100% { transform: translateX(-100px) translateY(-50px); }
+@keyframes clean-light-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px #00ffff; }
+  50% { opacity: 0.5; box-shadow: 0 0 4px #00ffff; }
 }
 
-@keyframes metallic-realistic-shine {
+@keyframes alien-wave {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+
+@keyframes wave-hand {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(25deg); }
+}
+
+@keyframes profile-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes signature-shine {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
-@keyframes metallic-underline-realistic-flow {
-  0%, 100% { background-position: 0% 50%; box-shadow: 0 0 8px rgba(255, 215, 0, 0.4); }
-  50% { background-position: 100% 50%; box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); }
+@keyframes underline-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-@keyframes ufo-patrol-primary {
-  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
-  25% { transform: translateY(-20px) translateX(30px) rotate(2deg); }
-  50% { transform: translateY(-10px) translateX(-15px) rotate(-1deg); }
-  75% { transform: translateY(-25px) translateX(20px) rotate(3deg); }
+@keyframes mystical-drift {
+  0% { transform: translateY(0px) translateX(0px); opacity: 0.6; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(-60px) translateX(40px); opacity: 0; }
 }
 
-@keyframes ufo-patrol-secondary {
-  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(0.8); }
-  33% { transform: translateY(-15px) translateX(-25px) rotate(-2deg) scale(0.8); }
-  66% { transform: translateY(-30px) translateX(35px) rotate(1deg) scale(0.8); }
-}
-
-@keyframes ufo-patrol-distant {
-  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg) scale(0.6); opacity: 0.8; }
-  40% { transform: translateY(-12px) translateX(-20px) rotate(2deg) scale(0.6); opacity: 0.6; }
-  80% { transform: translateY(-5px) translateX(15px) rotate(-1deg) scale(0.6); opacity: 0.9; }
-}
-
-@keyframes cockpit-glow {
-  0%, 100% { box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2), 0 0 15px rgba(100, 149, 237, 0.5); }
-  50% { box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), 0 0 25px rgba(100, 149, 237, 0.8); }
-}
-
-@keyframes propulsion-pulse {
-  0%, 100% { 
-    opacity: 1; 
-    transform: scale(1);
-    box-shadow: 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.5);
-  }
-  50% { 
-    opacity: 0.6; 
-    transform: scale(0.8);
-    box-shadow: 0 0 5px #00ffff, 0 0 10px rgba(0, 255, 255, 0.3);
-  }
-}
-
-@keyframes energy-beam-pulse {
-  0%, 100% { opacity: 0.8; height: 20px; }
-  50% { opacity: 1; height: 30px; }
-}
-
-@keyframes film-grain-movement {
-  0% { transform: translateX(0) translateY(0); }
-  100% { transform: translateX(1px) translateY(1px); }
-}
-
-@keyframes lens-flare-shimmer {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.2); }
-}
-
-@keyframes atmospheric-streak {
-  0% { transform: translateX(-200px); opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { transform: translateX(200px); opacity: 0; }
-}
-
-@keyframes debris-drift {
-  0% { transform: translateX(0) translateY(0) rotate(0deg); }
-  100% { transform: translateX(-100px) translateY(30px) rotate(360deg); }
-}
-
-@keyframes galaxy-rotation {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes matter-drift {
-  0% { transform: translateY(0px) translateX(0px); opacity: 0.8; }
-  50% { opacity: 0.4; }
-  100% { transform: translateY(-80px) translateX(50px); opacity: 0; }
-}
-
-/* Responsive adjustments for realism */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .cinematic-banner-container {
-    width: 65%;
-    border-radius: 0 0 0 30px;
+  .alien-cowboy-container {
+    top: 10%;
+    right: 5%;
+    transform: scale(0.8);
   }
   
-  .artist-name-realistic {
+  .profile-section {
     bottom: 1rem;
     left: 1rem;
+    gap: 1rem;
   }
   
-  .realistic-banner-content {
-    padding: 1rem;
+  .profile-photo {
+    width: 60px;
+    height: 60px;
   }
   
-  .ufo-hull {
-    transform: scale(0.8);
+  .signature-name {
+    font-size: clamp(1.4rem, 5vw, 2rem);
   }
   
-  .atmospheric-entry {
-    width: 100px;
+  .website-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .alien-cowboy-container {
+    display: none; /* Hide on very small screens */
   }
 }
 
