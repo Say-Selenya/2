@@ -441,6 +441,21 @@ html {
   text-shadow: 0 0 10px rgba(135, 206, 235, 0.8);
 }
 
+.zaestelar-link {
+  background: linear-gradient(45deg, #ffffff, #87ceeb, #9370db, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  transition: all 0.3s ease;
+}
+
+.zaestelar-link:hover {
+  filter: drop-shadow(0 0 15px rgba(135, 206, 235, 0.6));
+  transform: scale(1.05);
+  -webkit-text-fill-color: transparent;
+}
+
 .top-link-text:hover {
   color: #ffffff;
   text-shadow: 0 0 15px rgba(255, 255, 255, 1);
