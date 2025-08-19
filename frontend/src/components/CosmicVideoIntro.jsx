@@ -46,17 +46,6 @@ const CosmicVideoIntro = () => {
       <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="max-w-5xl mx-auto">
           
-          {/* Video Title */}
-          <div className="text-center mb-8">
-            <h2 className="video-title text-white mb-4">
-              Presentación del Portal Cósmico
-            </h2>
-            <div className="cosmic-line-video w-32 h-1 mx-auto mb-6"></div>
-            <p className="body-large text-white opacity-90">
-              Conoce a Zäe Selenya y su universo creativo 🌌
-            </p>
-          </div>
-
           {/* Video Container */}
           <div 
             className="cosmic-video-container relative"
