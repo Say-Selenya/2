@@ -406,15 +406,8 @@ html {
 }
 
 .custom-sticker-shadow {
-  position: absolute;
-  inset: -5px;
-  background: radial-gradient(ellipse at center, 
-    rgba(0, 0, 0, 0.4) 0%, 
-    rgba(0, 0, 0, 0.2) 70%, 
-    transparent 100%);
-  border-radius: 20px;
-  z-index: -1;
-  filter: blur(6px);
+  /* Removed - no shadow around alien */
+  display: none !important;
 }
 
 /* WEBSITE LINK - TOP CENTER */
