@@ -12,6 +12,9 @@ import { Toaster } from "./components/ui/toaster";
 const Home = () => {
   return (
     <div className="min-h-screen">
+      {/* Cosmic Music Player - Top Right */}
+      <CosmicMusicPlayer />
+      
       {/* Bright YouTube Banner */}
       <BrightYouTubeBanner />
       
