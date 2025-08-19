@@ -2184,3 +2184,87 @@ html {
     height: 50px;
   }
 }
+
+/* ELEGANT VIDEO DESCRIPTION */
+.elegant-video-description {
+  margin-top: 25px;
+  padding: 0;
+}
+
+.elegant-description-content {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.03), 
+    rgba(135, 206, 235, 0.02),
+    rgba(255, 255, 255, 0.01));
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  padding: 25px 20px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Elegant inner border */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 17px;
+    background: linear-gradient(145deg, 
+      rgba(255, 255, 255, 0.02) 0%, 
+      transparent 50%, 
+      rgba(135, 206, 235, 0.01) 100%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+.elegant-description-content:hover {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.05), 
+    rgba(135, 206, 235, 0.03),
+    rgba(255, 255, 255, 0.02));
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.elegant-video-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, 
+    #ffffff, 
+    #87ceeb, 
+    #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  letter-spacing: 0.5px;
+}
+
+.elegant-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    rgba(135, 206, 235, 0.4), 
+    rgba(255, 255, 255, 0.3), 
+    transparent);
+  margin: 0 auto;
+  border-radius: 1px;
+  animation: elegant-divider-glow 3s ease-in-out infinite;
+}
+
+@keyframes elegant-divider-glow {
+  0%, 100% { 
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scaleX(1.1);
+  }
+}
