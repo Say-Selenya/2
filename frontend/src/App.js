@@ -11,8 +11,8 @@ import { Toaster } from "./components/ui/toaster";
 const Home = () => {
   return (
     <div className="min-h-screen">
-      {/* Cosmic Banner - New hero with cosmic background */}
-      <CosmicBanner />
+      {/* YouTube Banner - New cosmic style */}
+      <YouTubeBanner />
       
       {/* About Section */}
       <AboutSection />
