@@ -1,34 +1,273 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Zäe Selenya Portal - Cosmic Theme */
+
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+/* Define cosmic color variables */
+:root {
+  --cosmic-blue: #87ceeb;
+  --cosmic-purple: #9370db;
+  --cosmic-pink: #ffc0cb;
+  --cosmic-mint: #98fb98;
+  --cosmic-dark: #0a0a0a;
+  --cosmic-dark-blue: #1f47e6;
+  --cosmic-mid-purple: #d987ff;
+  --cosmic-light-pink: #ffd1e7;
+  --cosmic-mid-green: #78d692;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--cosmic-dark);
+  color: white;
+  overflow-x: hidden;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Typography system following bigfish guidelines */
+.brand-display {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-.App-link {
-    color: #61dafb;
+.section-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.125;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.card-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  line-height: 1.375;
+}
+
+.body-large {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.45;
+}
+
+.body-medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.body-small {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+/* Hero section cosmic background */
+.hero-cosmic {
+  background: linear-gradient(135deg, 
+    var(--cosmic-dark) 0%,
+    rgba(135, 206, 235, 0.1) 25%,
+    rgba(147, 112, 219, 0.1) 50%,
+    rgba(255, 192, 203, 0.1) 75%,
+    var(--cosmic-dark) 100%);
+  position: relative;
+}
+
+.cosmic-bg {
+  background: radial-gradient(circle at 20% 50%, rgba(135, 206, 235, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(147, 112, 219, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(255, 192, 203, 0.15) 0%, transparent 50%);
+  animation: cosmic-float 20s ease-in-out infinite;
+}
+
+.cosmic-line {
+  background: linear-gradient(90deg, var(--cosmic-blue), var(--cosmic-purple), var(--cosmic-pink));
+  border-radius: 2px;
+}
+
+/* Portal sections */
+.cosmic-section-even {
+  background: linear-gradient(135deg, 
+    rgba(135, 206, 235, 0.05) 0%,
+    transparent 50%,
+    rgba(147, 112, 219, 0.05) 100%);
+}
+
+.cosmic-section-odd {
+  background: linear-gradient(135deg, 
+    rgba(255, 192, 203, 0.05) 0%,
+    transparent 50%,
+    rgba(152, 251, 152, 0.05) 100%);
+}
+
+.cosmic-section-stats {
+  background: linear-gradient(135deg,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(135, 206, 235, 0.1) 50%,
+    rgba(10, 10, 10, 0.9) 100%);
+}
+
+/* Portal cards */
+.portal-card {
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.portal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Portal visuals */
+.portal-visual {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(45deg, currentColor, rgba(255, 255, 255, 0.1));
+}
+
+.portal-visual:hover {
+  transform: scale(1.02) rotateY(5deg);
+}
+
+/* CTA Buttons following bigfish guidelines */
+.cta-button {
+  border-radius: 9999px;
+  padding: 0.625rem 1.375rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.0875em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+  transform: scale(0.98);
+}
+
+/* Custom animations */
+@keyframes cosmic-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-bounce.slow {
+  animation: bounce 3s ease-in-out infinite;
+}
+
+/* Container system following bigfish guidelines */
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .hero-cosmic {
+    min-height: 80vh;
+  }
+  
+  .portal-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  
+  .brand-display {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+}
+
+/* Focus states for accessibility */
+button:focus,
+input:focus,
+a:focus {
+  outline: 2px solid var(--cosmic-blue);
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cosmic-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cosmic-blue), var(--cosmic-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--cosmic-purple), var(--cosmic-pink));
 }
