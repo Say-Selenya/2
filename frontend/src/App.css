@@ -1625,26 +1625,39 @@ html {
   width: 100%;
   height: auto;
   display: block;
-  /* Maximum quality settings */
+  /* Maximum quality settings for video and poster */
   object-fit: cover;
-  /* Ensure sharp rendering */
+  /* Ultra-sharp rendering */
   image-rendering: -webkit-optimize-contrast;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+  image-rendering: pixelated;
   /* Remove any filters that could degrade quality */
   filter: none;
   /* Ensure maximum resolution */
   max-width: 100%;
   height: auto;
   transition: transform 0.3s ease;
-  /* Elegant poster styling */
+  /* Elegant poster styling with enhanced clarity */
   background-color: #000000;
+  /* Enhanced sharpness for poster images */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  /* Force GPU acceleration for better rendering */
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-/* Poster/thumbnail styling */
+/* Enhanced poster/thumbnail styling for maximum clarity */
 .profile-video[poster] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Enhanced clarity and sharpness */
+  filter: contrast(1.1) saturate(1.05) brightness(1.02);
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
 }
 
 .profile-video-container:hover .profile-video {
