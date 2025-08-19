@@ -370,7 +370,8 @@ html {
 
 .custom-sticker-wrapper {
   position: relative;
-  transform: scale(1.2) scaleX(-1); /* Flip horizontally to face right */
+  transform: scale(1.2);
+  /* NO flip - keep original orientation so alien faces right */
 }
 
 .custom-alien-image {
@@ -379,18 +380,18 @@ html {
   object-fit: contain;
   border-radius: 15px;
   transition: transform 0.3s ease;
-  /* Crisp image rendering */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  /* Remove white background to make it look like PNG */
+  /* Remove white background completely */
   background: transparent;
-  /* Advanced white background removal */
+  /* Advanced white background removal techniques */
   filter: 
     drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))
-    contrast(1.2)
-    brightness(1.1);
-  /* Blend mode to eliminate white background */
+    brightness(1.1)
+    contrast(1.15)
+    saturate(1.1);
+  /* Mix blend mode to remove white background */
   mix-blend-mode: multiply;
+  /* Alternative: use screen mode for white background removal */
+  /* mix-blend-mode: screen; */
 }
 
 .custom-alien-image:hover {
