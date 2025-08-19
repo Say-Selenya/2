@@ -1226,9 +1226,11 @@ html {
 .music-player-container.expanded {
   width: 200px;
   height: 120px;
-  clip-path: none;
   border-radius: 15px;
   padding: 10px;
+  /* Keep the background image but make it more subtle when expanded */
+  background-blend-mode: overlay;
+  background-color: rgba(10, 10, 10, 0.85);
 }
 
 .music-player-container.expanded .player-header {
