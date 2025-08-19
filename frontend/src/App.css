@@ -1084,7 +1084,7 @@ html {
   background: linear-gradient(var(--cosmic-purple), var(--cosmic-pink));
 }
 
-/* COSMIC MUSIC PLAYER - TOP RIGHT CORNER - TRIANGULAR & COMPACT */
+/* COSMIC MUSIC PLAYER - TOP RIGHT CORNER - CUSTOM IMAGE ICON */
 .cosmic-music-player {
   position: fixed;
   top: 15px;
@@ -1098,14 +1098,20 @@ html {
   background: rgba(10, 10, 10, 0.9);
   backdrop-filter: blur(8px);
   border: 2px solid rgba(135, 206, 235, 0.4);
-  /* Create triangle shape */
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-radius: 15px;
   transition: all 0.3s ease;
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.3),
     0 0 15px rgba(135, 206, 235, 0.3);
   position: relative;
   cursor: pointer;
+  /* Custom background image */
+  background-image: url('https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/mnftjz2y_image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Add overlay for better text visibility */
+  background-blend-mode: overlay;
 }
 
 .music-player-container.minimized {
