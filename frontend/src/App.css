@@ -1083,3 +1083,216 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(var(--cosmic-purple), var(--cosmic-pink));
 }
+
+/* COSMIC MUSIC PLAYER - TOP RIGHT CORNER */
+.cosmic-music-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.music-player-container {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(135, 206, 235, 0.3);
+  border-radius: 15px;
+  padding: 15px;
+  min-width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(135, 206, 235, 0.2);
+}
+
+.music-player-container.minimized {
+  min-width: 120px;
+  padding: 10px;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cosmic-logo {
+  font-size: 20px;
+  filter: drop-shadow(0 0 10px rgba(135, 206, 235, 0.8));
+}
+
+.minimize-btn {
+  background: none;
+  border: none;
+  color: var(--cosmic-blue);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.minimize-btn:hover {
+  background: rgba(135, 206, 235, 0.2);
+  transform: scale(1.1);
+}
+
+.track-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.track-title {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+  background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-mint));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.track-artist {
+  color: var(--cosmic-mint);
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.control-btn {
+  background: rgba(135, 206, 235, 0.1);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cosmic-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: rgba(135, 206, 235, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(135, 206, 235, 0.4);
+}
+
+.play-pause-btn {
+  background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-mint));
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+}
+
+.play-pause-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(135, 206, 235, 0.5);
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.volume-btn {
+  background: none;
+  border: none;
+  color: var(--cosmic-blue);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.volume-btn:hover {
+  background: rgba(135, 206, 235, 0.2);
+  transform: scale(1.1);
+}
+
+.volume-slider {
+  flex: 1;
+  height: 4px;
+  background: rgba(135, 206, 235, 0.2);
+  border-radius: 2px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-mint));
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-mint));
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
+}
+
+.playlist-info {
+  text-align: center;
+  color: var(--cosmic-mint);
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cosmic-music-player {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .music-player-container {
+    min-width: 240px;
+    padding: 12px;
+  }
+}
+
+/* ULTRA-REALISTIC ANIMATIONS FOR MUSIC PLAYER */
+@keyframes cosmic-pulse {
+  0%, 100% { 
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(135, 206, 235, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(135, 206, 235, 0.4);
+  }
+}
+
+.music-player-container:hover {
+  animation: cosmic-pulse 2s ease-in-out infinite;
+}
