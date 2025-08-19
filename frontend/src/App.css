@@ -1132,19 +1132,21 @@ html {
 
 .track-info {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
   pointer-events: none;
+  /* Better visibility over custom image */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .track-title {
   color: white;
-  font-weight: 600;
-  font-size: 10px;
-  margin-bottom: 2px;
+  font-weight: 700;
+  font-size: 9px;
+  margin-bottom: 1px;
   background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-mint));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1152,22 +1154,26 @@ html {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 50px;
+  max-width: 60px;
+  text-shadow: none;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
 }
 
 .track-artist {
-  color: var(--cosmic-mint);
-  font-size: 8px;
-  opacity: 0.8;
+  color: white;
+  font-size: 7px;
+  opacity: 0.9;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 50px;
+  max-width: 60px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .player-controls {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -1175,47 +1181,45 @@ html {
   align-items: center;
 }
 
-.control-btn {
-  display: none; /* Hide prev/next in compact mode */
-}
-
 .play-pause-btn {
   background: linear-gradient(45deg, var(--cosmic-blue), var(--cosmic-mint));
   border: none;
   border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(135, 206, 235, 0.4);
+  box-shadow: 
+    0 2px 8px rgba(135, 206, 235, 0.4),
+    0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .play-pause-btn:hover {
   transform: scale(1.2);
-  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.6);
+  box-shadow: 
+    0 4px 12px rgba(135, 206, 235, 0.6),
+    0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .play-pause-btn svg {
-  width: 12px;
-  height: 12px;
-}
-
-.volume-control {
-  display: none; /* Hide in compact mode */
+  width: 10px;
+  height: 10px;
 }
 
 .playlist-info {
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--cosmic-mint);
-  font-size: 8px;
-  opacity: 0.6;
+  color: white;
+  font-size: 7px;
+  opacity: 0.8;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Expanded mode on hover */
