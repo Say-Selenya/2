@@ -9,13 +9,13 @@ const CosmicMusicPlayer = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const audioRef = useRef(null);
 
-  // Playlist inicial (se irá expandiendo)
+  // Playlist con audio real
   const [playlist, setPlaylist] = useState([
     {
       id: 1,
       title: "Alien fumeta",
-      artist: "Portal Cósmico (Demo)",
-      src: "", // Demo visual - no hay archivo real
+      artist: "Portal Cósmico",
+      src: "https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/o664ku0u_ALIEN%20FUMETA.mp3",
       duration: "3:42"
     }
   ]);
