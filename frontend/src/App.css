@@ -537,6 +537,12 @@ html {
 }
 
 /* ULTRA-REALISTIC ANIMATIONS */
+/* CUSTOM ALIEN ANIMATIONS */
+@keyframes custom-sticker-float {
+  0%, 100% { transform: translateY(0px) scale(1.2) scaleX(-1); }
+  50% { transform: translateY(-10px) scale(1.2) scaleX(-1); }
+}
+
 @keyframes ultra-sticker-float {
   0%, 100% { transform: translateY(0px) scale(1.4); }
   50% { transform: translateY(-10px) scale(1.4); }
