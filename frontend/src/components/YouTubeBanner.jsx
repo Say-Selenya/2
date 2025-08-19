@@ -72,7 +72,7 @@ const BrightYouTubeBanner = () => {
       {/* Website Link - Top Center of Photo */}
       <div className="website-link-top">
         <ExternalLink className="w-5 h-5 inline mr-2" />
-        <a href="https://zäestelar.net" className="top-link-text">
+        <a href="/zaestelar" className="top-link-text zaestelar-link">
           Zäestelar.net
         </a>
       </div>
