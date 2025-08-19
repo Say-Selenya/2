@@ -14,8 +14,8 @@ const CosmicMusicPlayer = () => {
     {
       id: 1,
       title: "Alien fumeta",
-      artist: "Portal Cósmico",
-      src: "", // No hay archivo real por restricciones de YouTube
+      artist: "Portal Cósmico (Demo)",
+      src: "", // Demo visual - no hay archivo real
       duration: "3:42"
     }
   ]);
