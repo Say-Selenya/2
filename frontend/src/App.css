@@ -1636,6 +1636,15 @@ html {
   max-width: 100%;
   height: auto;
   transition: transform 0.3s ease;
+  /* Elegant poster styling */
+  background-color: #000000;
+}
+
+/* Poster/thumbnail styling */
+.profile-video[poster] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .profile-video-container:hover .profile-video {
