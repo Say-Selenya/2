@@ -1,115 +1,90 @@
 import React from 'react';
-import { Sparkles, Zap } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
-const RealisticSpaceBanner = () => {
+const CleanYouTubeBanner = () => {
   return (
-    <section className="realistic-space-banner relative overflow-hidden">
-      {/* Photorealistic Space Background */}
-      <div className="absolute inset-0 deep-space-bg"></div>
-      <div className="absolute inset-0 starfield-realistic"></div>
-      <div className="absolute inset-0 nebula-photorealistic"></div>
-      <div className="absolute inset-0 cosmic-dust"></div>
+    <section className="clean-youtube-banner relative overflow-hidden">
+      {/* Clean Galactic Mystical Background */}
+      <div className="absolute inset-0 mystical-galaxy-bg"></div>
+      <div className="absolute inset-0 subtle-starfield"></div>
+      <div className="absolute inset-0 mystical-nebula"></div>
       
-      {/* Realistic UFO Fleet */}
-      <div className="ufo-realistic ufo-primary">
-        <div className="ufo-hull">
-          <div className="hull-top"></div>
-          <div className="hull-bottom"></div>
-          <div className="cockpit-dome"></div>
-          <div className="propulsion-ring">
-            <div className="propulsion-light prop-1"></div>
-            <div className="propulsion-light prop-2"></div>
-            <div className="propulsion-light prop-3"></div>
-            <div className="propulsion-light prop-4"></div>
-            <div className="propulsion-light prop-5"></div>
-            <div className="propulsion-light prop-6"></div>
-          </div>
-          <div className="energy-beam"></div>
-        </div>
-      </div>
-      
-      <div className="ufo-realistic ufo-secondary">
-        <div className="ufo-hull">
-          <div className="hull-top"></div>
-          <div className="hull-bottom"></div>
-          <div className="cockpit-dome"></div>
-          <div className="propulsion-ring">
-            <div className="propulsion-light prop-1"></div>
-            <div className="propulsion-light prop-2"></div>
-            <div className="propulsion-light prop-3"></div>
-            <div className="propulsion-light prop-4"></div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="ufo-realistic ufo-distant">
-        <div className="ufo-hull">
-          <div className="hull-top"></div>
-          <div className="hull-bottom"></div>
-          <div className="cockpit-dome"></div>
-          <div className="propulsion-ring">
-            <div className="propulsion-light prop-1"></div>
-            <div className="propulsion-light prop-2"></div>
-            <div className="propulsion-light prop-3"></div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Atmospheric Entry Effects */}
-      <div className="atmospheric-entry entry-1"></div>
-      <div className="atmospheric-entry entry-2"></div>
-      
-      {/* Space Debris and Asteroids */}
-      <div className="space-debris debris-1"></div>
-      <div className="space-debris debris-2"></div>
-      <div className="space-debris debris-3"></div>
-      
-      {/* YouTube Banner Content Container */}
-      <div className="realistic-banner-content">
+      {/* Main YouTube Banner Container */}
+      <div className="banner-container">
         
-        {/* Shadow Banner Image with Cinematic Effects */}
-        <div className="cinematic-banner-container">
+        {/* Full Shadow Photo Banner */}
+        <div className="shadow-photo-banner">
           <img 
             src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/3cyghoul_image.jpeg"
-            alt="Zäe Selenya - Cinematic Space Banner"
-            className="cinematic-banner-image"
+            alt="Zäe Selenya - Shadow Banner"
+            className="shadow-banner-full"
           />
-          <div className="cinematic-overlay"></div>
-          <div className="film-grain"></div>
-          <div className="lens-flare"></div>
-          <div className="edge-lighting"></div>
+          <div className="shadow-overlay"></div>
         </div>
         
-        {/* Photorealistic Golden Name */}
-        <div className="artist-name-realistic">
-          <h1 className="name-photorealistic">
-            <span className="name-metallic">Zäe</span>
-            <span className="name-metallic">Selenya</span>
-          </h1>
-          <div className="metallic-underline-realistic"></div>
-          <p className="space-explorer-tagline">
-            <Sparkles className="w-4 h-4 inline mr-2 text-blue-300" />
-            Exploradora del Cosmos Infinito
-            <Zap className="w-4 h-4 inline ml-2 text-yellow-300" />
-          </p>
+        {/* Cowboy Alien with UFO */}
+        <div className="alien-cowboy-container">
+          <div className="cowboy-ufo">
+            <div className="ufo-clean">
+              <div className="ufo-hull-clean"></div>
+              <div className="ufo-dome-clean"></div>
+              <div className="ufo-lights-clean">
+                <div className="clean-light"></div>
+                <div className="clean-light"></div>
+                <div className="clean-light"></div>
+              </div>
+            </div>
+            
+            {/* Realistic Green Alien Cowboy */}
+            <div className="alien-cowboy">
+              <div className="alien-head">
+                <div className="alien-eyes">
+                  <div className="alien-eye left-eye"></div>
+                  <div className="alien-eye right-eye"></div>
+                </div>
+              </div>
+              <div className="cowboy-hat"></div>
+              <div className="alien-body"></div>
+              <div className="waving-arm"></div>
+            </div>
+          </div>
         </div>
         
-        {/* Realistic Cosmic Particles */}
-        <div className="cosmic-matter">
-          <div className="matter-particle particle-1"></div>
-          <div className="matter-particle particle-2"></div>
-          <div className="matter-particle particle-3"></div>
-          <div className="matter-particle particle-4"></div>
-          <div className="matter-particle particle-5"></div>
-          <div className="matter-particle particle-6"></div>
+        {/* Profile Photo Bottom Left */}
+        <div className="profile-section">
+          <div className="profile-photo-container">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/pmtl2agg_foto22.jpeg"
+              alt="Zäe Selenya Profile"
+              className="profile-photo"
+            />
+            <div className="profile-glow-ring"></div>
+          </div>
+          
+          {/* Signature Name */}
+          <div className="signature-container">
+            <h1 className="signature-name">Zäe Selenya</h1>
+            <div className="signature-underline"></div>
+          </div>
+          
+          {/* Website Link */}
+          <div className="website-link">
+            <ExternalLink className="w-4 h-4 inline mr-2" />
+            <a href="https://zäestelar.net" className="link-text">
+              Zäestelar.net
+            </a>
+          </div>
         </div>
         
-        {/* Distant Stars and Galaxies */}
-        <div className="distant-galaxy galaxy-1"></div>
-        <div className="distant-galaxy galaxy-2"></div>
+        {/* Subtle Mystical Particles */}
+        <div className="mystical-particles">
+          <div className="particle mystical-1"></div>
+          <div className="particle mystical-2"></div>
+          <div className="particle mystical-3"></div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default RealisticSpaceBanner;
+export default CleanYouTubeBanner;
