@@ -370,8 +370,8 @@ html {
 
 .custom-sticker-wrapper {
   position: relative;
+  /* IMPORTANT: Flip horizontally so alien faces RIGHT */
   transform: scale(1.2) scaleX(-1);
-  /* Flip horizontally so alien faces RIGHT and salutes to the right */
 }
 
 .custom-alien-image {
