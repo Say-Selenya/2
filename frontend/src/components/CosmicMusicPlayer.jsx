@@ -113,7 +113,14 @@ const CosmicMusicPlayer = () => {
         {/* Header - only visible when expanded */}
         {isExpanded && (
           <div className="player-header">
-            <div className="cosmic-logo">🎵</div>
+            <div className="cosmic-logo">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/cbh4awaa_image.png"
+                alt="Music Logo"
+                className="custom-music-icon"
+              />
+              <span className="treble-clef">𝄞</span>
+            </div>
             <button 
               className="minimize-btn"
               onClick={() => setIsExpanded(false)}
