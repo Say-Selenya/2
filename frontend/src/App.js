@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import YouTubeBanner from "./components/YouTubeBanner";
+import RealisticSpaceBanner from "./components/YouTubeBanner";
 import AboutSection from "./components/AboutSection";
 import PortalSection from "./components/PortalSection";
 import StatsSection from "./components/StatsSection";
