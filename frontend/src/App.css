@@ -370,23 +370,27 @@ html {
 
 .custom-sticker-wrapper {
   position: relative;
-  /* IMPORTANT: Flip horizontally so alien faces RIGHT */
-  transform: scale(1.2) scaleX(-1);
+  /* Direct scale and flip - alien faces RIGHT */
+  transform: scale(1.4) scaleX(-1) !important;
 }
 
 .custom-alien-image {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   border-radius: 15px;
-  transition: transform 0.3s ease;
-  /* Real PNG transparency - no additional processing needed */
-  background: transparent;
-  /* Only drop shadow for depth */
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  /* Sharp rendering */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  transition: none;
+  /* Real PNG transparency - crystal clear */
+  background: transparent !important;
+  /* No filters that cause blur */
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+  /* Force sharp rendering */
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: pixelated !important;
+  /* Prevent any blurring */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
 }
 
 .custom-alien-image:hover {
