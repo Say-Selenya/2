@@ -1241,8 +1241,24 @@ html {
 }
 
 .music-player-container.expanded .cosmic-logo {
-  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   filter: drop-shadow(0 0 8px rgba(135, 206, 235, 0.8));
+}
+
+.custom-music-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(135, 206, 235, 0.6));
+}
+
+.treble-clef {
+  font-size: 18px;
+  color: var(--cosmic-blue);
+  filter: drop-shadow(0 0 8px rgba(135, 206, 235, 0.8));
+  font-weight: bold;
 }
 
 .music-player-container.expanded .minimize-btn {
