@@ -171,11 +171,19 @@ const AboutSection = () => {
                 </div>
 
                 {/* Video Description */}
-                <div className="text-center mt-6">
-                  <p className="body-medium text-white opacity-80 leading-relaxed">
-                    Sumérgete en el universo creativo de Zäe Selenya. Una presentación íntima 
-                    de la artista detrás del portal y su visión galáctica. ✨
-                  </p>
+                <div className="text-center mt-6 elegant-video-description">
+                  <div className="elegant-description-content">
+                    <h3 className="elegant-video-title text-white mb-3">
+                      ✨ Presentación Personal ✨
+                    </h3>
+                    <p className="body-medium text-white opacity-90 leading-relaxed mb-2">
+                      Sumérgete en el universo creativo de Zäe Selenya
+                    </p>
+                    <p className="body-small text-gray-300 opacity-80 italic">
+                      Una presentación íntima de la artista detrás del portal y su visión galáctica
+                    </p>
+                    <div className="elegant-divider mt-4"></div>
+                  </div>
                 </div>
               </div>
             </div>
