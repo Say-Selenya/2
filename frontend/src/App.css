@@ -254,6 +254,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.cosmic-section-about {
+  background: linear-gradient(135deg, 
+    rgba(147, 112, 219, 0.08) 0%,
+    transparent 30%,
+    rgba(255, 192, 203, 0.08) 70%,
+    transparent 100%);
+}
+
 /* Profile photo magical effects */
 .profile-container {
   position: relative;
