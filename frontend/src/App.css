@@ -380,24 +380,17 @@ html {
   object-fit: contain;
   border-radius: 15px;
   transition: transform 0.3s ease;
-  /* Make background completely transparent - PNG effect */
+  /* Transparent background - PNG effect */
   background: transparent;
-  /* Ultra-advanced white background removal for PNG-like transparency */
+  /* Simple and clean - no blurriness */
   filter: 
     drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3))
-    contrast(1.4)
-    saturate(1.3)
-    brightness(1.2)
-    hue-rotate(0deg);
-  /* Multiple blend modes for maximum transparency */
-  mix-blend-mode: multiply;
-  /* Crystal clear sharpness - no blur */
+    brightness(1.15)
+    contrast(1.25);
+  /* No mix-blend-mode to avoid conflicts */
+  /* Crystal sharp rendering */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  /* Additional transparency techniques */
-  -webkit-backdrop-filter: contrast(1.2);
-  backdrop-filter: contrast(1.2);
 }
 
 .custom-alien-image:hover {
