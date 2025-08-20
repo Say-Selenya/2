@@ -216,8 +216,8 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              {/* Right Column - Video and Tips */}
-              <div className="flex flex-col justify-center relative">
+              {/* Right Column - Video */}
+              <div className="flex flex-col justify-center">
                 <div 
                   className="profile-video-container relative"
                   onMouseEnter={() => setShowControls(true)}
@@ -280,9 +280,6 @@ const AboutSection = () => {
                       </div>
                     </div>
                   )}
-
-                  {/* PokeBall Tips - Positioned to the right of video */}
-                  <PokeBallTips />
                 </div>
 
                 {/* Video Description */}
