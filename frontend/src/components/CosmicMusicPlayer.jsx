@@ -31,6 +31,13 @@ const CosmicMusicPlayer = () => {
       artist: "Delahoja",
       src: "https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/ij56ru9u_el-sueno-de-una-noche-de-verano-delahoja-letra-128-ytshorts.savetube.me.mp3",
       duration: "3:28"
+    },
+    {
+      id: 4,
+      title: "María Marihuana",
+      artist: "Green Valley",
+      src: "https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/v2f9duu3_maria-marihuana-la-voz-del-pueblo-green-valley-128-ytshorts.savetube.me.mp3",
+      duration: "3:45"
     }
   ]);
 
