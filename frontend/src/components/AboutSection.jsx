@@ -232,7 +232,7 @@ const AboutSection = () => {
                     onEnded={handleVideoEnd}
                     onPlay={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}
-                    poster="https://images.unsplash.com/photo-1640367169401-534dec442631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxyb2JvdCUyMG5hdHVyZXxlbnwwfHx8fDE3NTU2NDczNDf8MA&ixlib=rb-4.1.0&q=85"
+                    poster="https://images.unsplash.com/photo-1574282673493-46d5ff24e086?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxzaWxob3VldHRlJTIwbWljcm9waG9uZXxlbnwwfHx8fDE3MzQ2NzM5NDc8MA&ixlib=rb-4.1.0&q=85"
                     preload="metadata"
                   >
                     <source 
