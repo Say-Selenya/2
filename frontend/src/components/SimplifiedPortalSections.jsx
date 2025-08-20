@@ -14,7 +14,7 @@ const SimplifiedPortalSections = () => {
   return (
     <div className="simplified-portal-sections">
       <h3 className="section-heading text-white mb-6 text-center galactic-title">
-        Portales Mágicos ✨
+        Entradas Mágicas ✨
       </h3>
       
       <div className="portal-sections-row">
