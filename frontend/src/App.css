@@ -2616,13 +2616,13 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* SIMPLIFIED PORTAL SECTIONS - LEFT OF TIPS */
+/* SIMPLIFIED PORTAL SECTIONS - BETTER POSITIONED */
 .simplified-portal-sections {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 60px;
-  min-width: 400px;
+  margin-right: 0;
+  min-width: 380px;
 }
 
 .portal-sections-row {
