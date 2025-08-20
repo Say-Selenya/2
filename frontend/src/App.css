@@ -3026,9 +3026,10 @@ html {
 /* RESPONSIVE POKEBALL */
 @media (max-width: 768px) {
   .pokeball-tips-container {
-    bottom: 15px;
-    left: 15px;
-    max-width: 300px;
+    position: static;
+    margin: 20px auto 0 auto;
+    max-width: 280px;
+    transform: none;
   }
   
   .pokeball {
@@ -3050,6 +3051,24 @@ html {
   .cosmic-tip-btn {
     font-size: 11px;
     padding: 6px 10px;
+  }
+}
+
+/* Tablet positioning */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pokeball-tips-container {
+    bottom: -90px;
+    right: -10px;
+    max-width: 280px;
+  }
+}
+
+/* Large screens - better positioning */
+@media (min-width: 1025px) {
+  .pokeball-tips-container {
+    bottom: -120px;
+    right: -30px;
+    max-width: 320px;
   }
 }
 
