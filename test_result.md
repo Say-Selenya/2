@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "El usuario quiere que la pegatina del alien salude hacia la derecha, mantenga la misma posición (top-left corner) y el mismo tamaño. El alien actualmente está borroso y no está saludando hacia la derecha correctamente."
+user_problem_statement: "El usuario quiere implementar un sistema de pagos completo: eliminar todos los enlaces de gmail/correos, crear métodos de pago (Stripe + PayPal), agregar sistema de propinas con pokeball animada que se abre/cierra, mejorar sombra del video thumbnail, hacer todo responsive (móvil + escritorio), y crear sistema para videos bloqueados con precios personalizados."
 
 frontend:
   - task: "Fix Alien Image Orientation and Quality"
