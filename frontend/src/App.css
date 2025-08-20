@@ -2675,11 +2675,11 @@ html {
 }
 
 .portal-title {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.1;
   transition: all 0.3s ease;
 }
 
