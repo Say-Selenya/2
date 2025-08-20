@@ -1592,7 +1592,7 @@ html {
   50% { transform: translateY(-2px); }
 }
 
-/* PROFILE VIDEO INTEGRATION - ELEGANT PRESENTATION WITH ENHANCED SHADOW */
+/* PROFILE VIDEO INTEGRATION - ELEGANT PRESENTATION WITH ULTRA COSMIC SHADOW */
 .profile-video-container {
   max-width: 100%;
   border-radius: 20px;
@@ -1601,14 +1601,22 @@ html {
   background: linear-gradient(145deg, #1a1a1a, #000000);
   /* Elegant frame effect */
   border: 3px solid rgba(255, 255, 255, 0.1);
-  /* Enhanced shadow layers for elegant depth */
+  /* Ultra cosmic shadow layers - clearer and more defined */
   box-shadow: 
-    0 25px 60px rgba(0, 0, 0, 0.6),
-    0 15px 35px rgba(135, 206, 235, 0.15),
-    0 8px 20px rgba(255, 255, 255, 0.08),
-    0 4px 12px rgba(147, 112, 219, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 0 30px rgba(135, 206, 235, 0.12);
+    /* Deep base shadow for depth */
+    0 35px 80px rgba(0, 0, 0, 0.8),
+    /* Primary cosmic glow - brighter and clearer */
+    0 20px 50px rgba(135, 206, 235, 0.25),
+    /* Secondary cosmic glow */
+    0 15px 35px rgba(152, 251, 152, 0.12),
+    /* Tertiary cosmic accent */
+    0 10px 25px rgba(147, 112, 219, 0.15),
+    /* Inner highlight for elegance */
+    inset 0 2px 0 rgba(255, 255, 255, 0.15),
+    /* Outer cosmic aura - more prominent */
+    0 0 45px rgba(135, 206, 235, 0.2),
+    /* Ultra-wide cosmic field */
+    0 0 80px rgba(255, 255, 255, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
