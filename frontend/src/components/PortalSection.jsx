@@ -100,41 +100,79 @@ const PortalSection = ({ section, index }) => {
                 </div>
               </div>
 
-              {/* Subscription form */}
-              <form onSubmit={handleSubscribe} className="space-y-4">
-                <div className="flex items-center gap-2 mb-2">
+              {/* Subscription plans */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 mb-4">
                   <Users className="w-5 h-5" style={{ color: section.textColor }} />
                   <span className="body-small font-semibold">
                     {mockSubscriptionsData[section.id]?.count || 0} exploradores mágicos
                   </span>
                 </div>
                 
-                <div className="flex gap-3">
-                  <Input
-                    type="email"
-                    placeholder="tu-email@mágico.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 rounded-full border-2 focus:ring-2"
-                    style={{ 
-                      borderColor: section.bgColor,
-                      focusRingColor: section.textColor 
-                    }}
-                  />
-                  <Button
-                    type="submit"
-                    disabled={isLoading}
-                    className="cta-button px-6 rounded-full"
-                    style={{ 
-                      backgroundColor: section.textColor,
-                      color: section.bgColor 
-                    }}
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    {isLoading ? 'Enviando...' : 'Entrar'}
-                  </Button>
+                <div className="space-y-3">
+                  {subscriptionPlans.map((plan) => (
+                    <div key={plan.id} className="payment-plan-card">
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
+                          <h4 className="font-semibold text-white">{plan.name}</h4>
+                          <div className="flex items-center gap-1">
+                            <DollarSign className="w-4 h-4 text-green-400" />
+                            <span className="text-lg font-bold text-green-400">{plan.price}</span>
+                            <span className="text-sm text-gray-400">/mes</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {plan.features.map((feature, idx) => (
+                          <Badge 
+                            key={idx}
+                            variant="secondary"
+                            className="text-xs px-2 py-1"
+                            style={{ 
+                              backgroundColor: `${section.bgColor}20`,
+                              color: section.textColor 
+                            }}
+                          >
+                            {feature}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      <Button
+                        onClick={() => handlePaymentSubscribe(plan.name)}
+                        disabled={isProcessing}
+                        className="w-full payment-subscribe-btn"
+                        style={{ 
+                          backgroundColor: section.textColor,
+                          color: section.bgColor 
+                        }}
+                      >
+                        <CreditCard className="w-4 h-4 mr-2" />
+                        {isProcessing && selectedPlan === plan.name ? 
+                          'Procesando...' : 
+                          `Suscribirse a ${plan.name}`
+                        }
+                      </Button>
+                    </div>
+                  ))}
                 </div>
-              </form>
+                
+                {/* Payment methods */}
+                <div className="payment-methods-info">
+                  <p className="body-small text-gray-400 text-center mb-2">
+                    Métodos de pago seguros:
+                  </p>
+                  <div className="flex justify-center gap-4">
+                    <div className="payment-badge">
+                      <span className="text-blue-400 font-semibold">PayPal</span>
+                    </div>
+                    <div className="payment-badge">
+                      <span className="text-purple-400 font-semibold">Stripe</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Card>
           </div>
 
