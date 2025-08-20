@@ -3068,19 +3068,34 @@ html {
   }
 }
 
-@keyframes mystical-eye-glow {
+@keyframes ultra-mystical-eye-glow {
   0% {
     filter: 
-      drop-shadow(0 0 20px rgba(138, 43, 226, 0.8))
-      drop-shadow(0 0 40px rgba(75, 0, 130, 0.6))
-      drop-shadow(0 0 60px rgba(147, 112, 219, 0.4));
+      brightness(1.4)
+      contrast(1.6)
+      saturate(2.0)
+      drop-shadow(0 0 25px rgba(138, 43, 226, 1.2))
+      drop-shadow(0 0 50px rgba(75, 0, 130, 1.0))
+      drop-shadow(0 0 75px rgba(147, 112, 219, 0.8))
+      drop-shadow(0 0 100px rgba(255, 0, 255, 0.6));
+    box-shadow: 
+      inset 0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(138, 43, 226, 0.8);
   }
   100% {
     filter: 
-      drop-shadow(0 0 35px rgba(138, 43, 226, 1))
-      drop-shadow(0 0 70px rgba(75, 0, 130, 0.8))
-      drop-shadow(0 0 105px rgba(147, 112, 219, 0.6))
-      drop-shadow(0 0 140px rgba(135, 206, 235, 0.3));
+      brightness(1.8)
+      contrast(2.0)
+      saturate(2.5)
+      drop-shadow(0 0 35px rgba(138, 43, 226, 1.5))
+      drop-shadow(0 0 70px rgba(75, 0, 130, 1.2))
+      drop-shadow(0 0 105px rgba(147, 112, 219, 1.0))
+      drop-shadow(0 0 140px rgba(255, 0, 255, 0.8))
+      drop-shadow(0 0 175px rgba(0, 255, 255, 0.6));
+    box-shadow: 
+      inset 0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 60px rgba(138, 43, 226, 1.2),
+      0 0 120px rgba(255, 0, 255, 0.8);
   }
 }
 
