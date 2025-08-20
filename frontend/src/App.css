@@ -2619,7 +2619,7 @@ html {
 /* POKEBALL TIPS SYSTEM - MUCH MORE SEPARATED FROM VIDEO */
 .pokeball-tips-container {
   position: absolute;
-  bottom: -280px;
+  bottom: -380px;
   right: -20px;
   z-index: 1000;
   max-width: 300px;
