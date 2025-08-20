@@ -201,7 +201,11 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Fix Alien Image Orientation and Quality"
+    - "Enhance Video Thumbnail Shadow"
+    - "Remove Email Links and Forms"
+    - "Create Pokeball Animated Tips System"
+    - "Implement Responsive Design (Mobile + Desktop)"
+    - "Payment Integration Setup (Stripe + PayPal)"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
