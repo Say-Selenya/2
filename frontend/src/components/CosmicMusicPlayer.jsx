@@ -36,8 +36,17 @@ const CosmicMusicPlayer = () => {
       const handlePlay = () => setIsPlaying(true);
       const handlePause = () => setIsPlaying(false);
       const handleEnded = () => {
-        setIsPlaying(false);
-        nextTrack();
+        // Continuous playback: go to next track and keep playing
+        const nextIndex = (currentTrack + 1) % playlist.length;
+        setCurrentTrack(nextIndex);
+        // Keep playing state true for continuous playback
+        setIsPlaying(true);
+        // Auto-play next track after a short delay
+        setTimeout(() => {
+          if (audioRef.current) {
+            audioRef.current.play().catch(console.log);
+          }
+        }, 200);
       };
       
       audio.addEventListener('play', handlePlay);
