@@ -310,10 +310,6 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                {/* Magic Entries Below Profile */}
-                <div className="magic-entries-below-profile">
-                  <SimplifiedPortalSections />
-                </div>
               </div>
             </div>
           </Card>
