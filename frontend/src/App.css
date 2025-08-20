@@ -2625,6 +2625,128 @@ html {
   width: 100%;
 }
 
+/* POKEBALL GLOWING EFFECT */
+.pokeball.glowing {
+  animation: pokeball-glow-pulse 1.5s ease-in-out;
+}
+
+.pokeball.glowing .pokeball-top {
+  box-shadow: 
+    0 -10px 20px rgba(255, 215, 0, 0.4),
+    inset 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.pokeball.glowing .pokeball-bottom {
+  box-shadow: 
+    0 10px 20px rgba(255, 215, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.pokeball.glowing .pokeball-button {
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1),
+    0 0 30px rgba(255, 215, 0, 0.8),
+    0 0 50px rgba(255, 215, 0, 0.6);
+  background: radial-gradient(circle, #fff700 0%, #ffd700 70%, #ccc 100%);
+}
+
+/* FLYING COINS ANIMATION */
+.flying-coin {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #2c2c2c;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+  pointer-events: none;
+  
+  /* Calculate pokeball position - this will be dynamically adjusted */
+  left: var(--start-x, 50%);
+  top: var(--start-y, 50%);
+  
+  /* Flying animation towards pokeball */
+  animation: fly-to-pokeball 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.coin-amount {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* AUTO-OPEN ON HOVER */
+.pokeball-tips-container:hover .pokeball:not(.animating) {
+  /* Ensure auto-open behavior is handled by React state */
+}
+
+/* Enhanced sparkle effects for glow */
+.pokeball.glowing .sparkle {
+  color: #ffd700;
+  filter: drop-shadow(0 0 6px #ffd700);
+  animation-duration: 1s;
+}
+
+/* FLYING COIN KEYFRAMES */
+@keyframes fly-to-pokeball {
+  0% {
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-50px) translateY(-100px) scale(1.1) rotate(180deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-200px) translateY(-80px) scale(1) rotate(540deg);
+    opacity: 0.9;
+  }
+  90% {
+    transform: translateX(-280px) translateY(-20px) scale(0.8) rotate(720deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-320px) translateY(0px) scale(0.3) rotate(900deg);
+    opacity: 0;
+  }
+}
+
+/* POKEBALL GLOW PULSE */
+@keyframes pokeball-glow-pulse {
+  0% { 
+    filter: brightness(1) drop-shadow(0 0 0px rgba(255, 215, 0, 0));
+  }
+  25% { 
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+  }
+  50% { 
+    filter: brightness(1.6) drop-shadow(0 0 40px rgba(255, 215, 0, 0.8));
+  }
+  75% { 
+    filter: brightness(1.3) drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+  }
+  100% { 
+    filter: brightness(1) drop-shadow(0 0 0px rgba(255, 215, 0, 0));
+  }
+}
+
+/* Enhanced button hover for better coin launching effect */
+.cosmic-tip-btn:hover {
+  background: linear-gradient(45deg, 
+    rgba(135, 206, 235, 0.4) 0%, 
+    rgba(147, 112, 219, 0.3) 100%) !important;
+  border-color: rgba(135, 206, 235, 0.8) !important;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 10px 30px rgba(135, 206, 235, 0.4),
+    0 0 20px rgba(255, 215, 0, 0.3);
+}
+
 /* POKEBALL TIPS SYSTEM - POSITIONED IN SEPARATE SECTION */
 .pokeball-tips-container {
   position: static;
