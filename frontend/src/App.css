@@ -2728,9 +2728,9 @@ html {
   transform: translateY(0);
 }
 
-/* MAGIC ENTRIES BELOW "CREANDO MUNDOS ÚNICOS" TEXT */
+/* MAGIC ENTRIES BELOW "CREANDO MUNDOS ÚNICOS" TEXT - MORE SPACED */
 .magic-entries-below-text {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   justify-content: flex-start;
   width: 100%;
