@@ -2616,13 +2616,14 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* SIMPLIFIED PORTAL SECTIONS - BETTER POSITIONED */
+/* SIMPLIFIED PORTAL SECTIONS - POSITIONED TO NOT OVERLAP TEXT */
 .simplified-portal-sections {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-right: 0;
   min-width: 380px;
+  margin-left: 20px;
 }
 
 .portal-sections-row {
