@@ -3057,16 +3057,16 @@ html {
 /* Tablet positioning */
 @media (min-width: 769px) and (max-width: 1024px) {
   .pokeball-tips-container {
-    bottom: -160px;
+    bottom: -240px;
     right: -10px;
     max-width: 280px;
   }
 }
 
-/* Large screens - better positioning */
+/* Large screens - much more separated */
 @media (min-width: 1025px) {
   .pokeball-tips-container {
-    bottom: -200px;
+    bottom: -320px;
     right: -30px;
     max-width: 320px;
   }
