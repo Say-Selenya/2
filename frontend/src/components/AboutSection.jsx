@@ -297,9 +297,15 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                {/* Tips Section - Separate space below video */}
-                <div className="tips-section-container">
-                  <PokeBallTips />
+                {/* Tips and Portals Section - Side by side */}
+                <div className="tips-and-portals-container">
+                  {/* Portal Sections - Left */}
+                  <SimplifiedPortalSections />
+                  
+                  {/* Tips Section - Right */}
+                  <div className="tips-section-container">
+                    <PokeBallTips />
+                  </div>
                 </div>
               </div>
             </div>
