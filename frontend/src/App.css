@@ -2905,12 +2905,19 @@ html {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  background: transparent;
+  /* Remove white background and enhance mystical effects */
   filter: 
+    brightness(1.1)
+    contrast(1.2)
+    saturate(1.3)
     drop-shadow(0 0 20px rgba(138, 43, 226, 0.8))
     drop-shadow(0 0 40px rgba(75, 0, 130, 0.6))
     drop-shadow(0 0 60px rgba(147, 112, 219, 0.4));
   animation: mystical-eye-glow 4s ease-in-out infinite alternate;
   transition: all 0.3s ease;
+  /* Remove any white background */
+  mix-blend-mode: screen;
 }
 
 .artistic-eye:hover .mystical-eye-image {
