@@ -2765,7 +2765,7 @@ html {
   min-width: auto;
 }
 
-/* LAYOUT CONTAINER FOR TIPS - SYNCHRONIZED POSITIONING */
+/* LAYOUT CONTAINER FOR TIPS - CENTERED POSITIONING RESTORED */
 .tips-and-portals-container {
   display: flex;
   justify-content: center;
