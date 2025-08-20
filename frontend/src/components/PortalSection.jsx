@@ -7,40 +7,31 @@ import { mockSubscriptionsData } from '../mock';
 import { Users, CreditCard, Sparkles, Heart, Zap, DollarSign } from 'lucide-react';
 
 const PortalSection = ({ section, index }) => {
-  const [email, setEmail] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
   const { toast } = useToast();
   
-  const handleSubscribe = async (e) => {
-    e.preventDefault();
-    if (!email) {
+  const handlePaymentSubscribe = async (planType) => {
+    setSelectedPlan(planType);
+    setIsProcessing(true);
+    
+    // Simulate payment processing
+    setTimeout(() => {
       toast({
-        title: "Email requerido",
-        description: "Por favor ingresa tu email mágico",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsLoading(true);
-    try {
-      const result = await mockSubscribe(section.id, email);
-      toast({
-        title: "¡Éxito!",
-        description: result.message,
+        title: "¡Pago procesado! ✨",
+        description: `Suscripción ${planType} activada exitosamente`,
         duration: 3000,
       });
-      setEmail('');
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: error.message,
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
+      setIsProcessing(false);
+      setSelectedPlan(null);
+    }, 2000);
   };
+
+  const subscriptionPlans = [
+    { id: 'basic', name: 'Portal Básico', price: 9.99, features: ['Acceso completo', 'Sin anuncios'] },
+    { id: 'premium', name: 'Portal Premium', price: 19.99, features: ['Todo lo básico', 'Contenido exclusivo', 'Chat directo'] },
+    { id: 'cosmic', name: 'Portal Cósmico', price: 39.99, features: ['Todo lo premium', 'Videos en vivo', 'Contenido personalizado'] }
+  ];
 
   const getIcon = () => {
     switch(section.id) {
