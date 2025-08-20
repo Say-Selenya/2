@@ -2616,7 +2616,150 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* TIPS SECTION CONTAINER - SEPARATE SPACE BELOW VIDEO */
+/* SIMPLIFIED PORTAL SECTIONS - LEFT OF TIPS */
+.simplified-portal-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 60px;
+  min-width: 250px;
+}
+
+.portal-sections-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.simplified-portal-card {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 2px solid;
+  border-radius: 20px !important;
+  padding: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.simplified-portal-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.simplified-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.portal-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.simplified-portal-card:hover .portal-emoji {
+  transform: scale(1.2) rotate(15deg);
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+}
+
+.portal-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  line-height: 1.3;
+  transition: all 0.3s ease;
+}
+
+.simplified-portal-card:hover .portal-title {
+  transform: translateY(-2px);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.hover-indicator {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.simplified-portal-card:hover .hover-indicator {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LAYOUT CONTAINER FOR TIPS AND PORTALS */
+.tips-and-portals-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+/* RESPONSIVE SIMPLIFIED PORTALS */
+@media (max-width: 768px) {
+  .tips-and-portals-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .simplified-portal-sections {
+    margin-right: 0;
+    margin-bottom: 20px;
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .portal-sections-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .simplified-portal-card {
+    min-width: 140px;
+    padding: 15px;
+  }
+  
+  .portal-emoji {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .portal-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-sections-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .simplified-portal-card {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* TIPS SECTION CONTAINER - LEFT OF TIPS */
 .tips-section-container {
   display: flex;
   justify-content: flex-end;
