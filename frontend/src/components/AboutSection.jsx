@@ -49,55 +49,98 @@ const AboutSection = () => {
     }
   };
 
-  const toggleFullscreen = () => {
-    if (videoRef.current) {
-      try {
-        // Check if we're already in fullscreen
-        if (document.fullscreenElement) {
-          // Exit fullscreen
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-          } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-          } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-          }
-        } else {
-          // Enter fullscreen
-          const video = videoRef.current;
-          if (video.requestFullscreen) {
-            video.requestFullscreen();
-          } else if (video.webkitRequestFullscreen) {
-            video.webkitRequestFullscreen();
-          } else if (video.mozRequestFullScreen) {
-            video.mozRequestFullScreen();
-          } else if (video.msRequestFullscreen) {
-            video.msRequestFullscreen();
-          }
+  const toggleFullscreen = async () => {
+    if (!videoRef.current) return;
+    
+    try {
+      const video = videoRef.current;
+      
+      // Check if already in fullscreen
+      if (document.fullscreenElement || 
+          document.webkitFullscreenElement || 
+          document.mozFullScreenElement || 
+          document.msFullscreenElement) {
+        // Exit fullscreen
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
         }
-      } catch (error) {
-        console.log("Fullscreen not supported or blocked:", error);
-        // Fallback: try to make video larger
-        const video = videoRef.current;
-        if (video.style.width !== '100vw') {
-          video.style.width = '100vw';
-          video.style.height = '100vh';
+      } else {
+        // Request fullscreen on video element
+        if (video.requestFullscreen) {
+          await video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else if (video.mozRequestFullScreen) {
+          video.mozRequestFullScreen();
+        } else if (video.msRequestFullscreen) {
+          video.msRequestFullscreen();
+        } else {
+          // Fallback: manual fullscreen simulation
           video.style.position = 'fixed';
           video.style.top = '0';
           video.style.left = '0';
+          video.style.width = '100vw';
+          video.style.height = '100vh';
           video.style.zIndex = '9999';
+          video.style.backgroundColor = 'black';
           video.style.objectFit = 'contain';
-        } else {
-          video.style.width = '';
-          video.style.height = '';
-          video.style.position = '';
-          video.style.top = '';
-          video.style.left = '';
-          video.style.zIndex = '';
-          video.style.objectFit = '';
+          
+          // Add close button
+          const closeBtn = document.createElement('button');
+          closeBtn.innerHTML = '✕';
+          closeBtn.style.position = 'fixed';
+          closeBtn.style.top = '20px';
+          closeBtn.style.right = '20px';
+          closeBtn.style.zIndex = '10000';
+          closeBtn.style.background = 'rgba(0,0,0,0.7)';
+          closeBtn.style.color = 'white';
+          closeBtn.style.border = 'none';
+          closeBtn.style.borderRadius = '50%';
+          closeBtn.style.width = '40px';
+          closeBtn.style.height = '40px';
+          closeBtn.style.cursor = 'pointer';
+          closeBtn.style.fontSize = '20px';
+          
+          closeBtn.onclick = () => {
+            video.style.position = '';
+            video.style.top = '';
+            video.style.left = '';
+            video.style.width = '';
+            video.style.height = '';
+            video.style.zIndex = '';
+            video.style.backgroundColor = '';
+            video.style.objectFit = '';
+            document.body.removeChild(closeBtn);
+          };
+          
+          document.body.appendChild(closeBtn);
         }
+      }
+    } catch (error) {
+      console.error("Error with fullscreen:", error);
+      // Simple fallback
+      const video = videoRef.current;
+      if (video.style.position === 'fixed') {
+        video.style.position = '';
+        video.style.top = '';
+        video.style.left = '';
+        video.style.width = '';
+        video.style.height = '';
+        video.style.zIndex = '';
+      } else {
+        video.style.position = 'fixed';
+        video.style.top = '0';
+        video.style.left = '0';
+        video.style.width = '100vw';
+        video.style.height = '100vh';
+        video.style.zIndex = '9999';
+        video.style.backgroundColor = 'black';
       }
     }
   };
