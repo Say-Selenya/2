@@ -232,7 +232,7 @@ const AboutSection = () => {
                     onEnded={handleVideoEnd}
                     onPlay={() => setIsPlaying(true)}
                     onPause={() => setIsPlaying(false)}
-                    poster="https://images.unsplash.com/photo-1544502062-f82887f03d1c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxpbnRpbWF0ZSUyMHNpbGhvdWV0dGV8ZW58MHx8fHwxNzM0Njc0Mzg3fDA&ixlib=rb-4.1.0&q=85"
+                    poster="https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/68wtbozv_image.jpeg"
                     preload="metadata"
                   >
                     <source 
