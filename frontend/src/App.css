@@ -2982,19 +2982,19 @@ html {
 }
 
 .eye-corner-top-left {
-  top: 0;
-  left: 0;
-  animation-delay: 0s;
-  transform-origin: bottom right;
-  transform: rotate(40deg);
+  top: -10px;
+  left: -10px;
+  animation-delay: 0s; /* Immediate appearance */
+  transform-origin: center;
+  transform: rotate(40deg) scale(1.2); /* 120% size + rotation */
 }
 
 .eye-corner-top-right {
-  top: 0;
-  right: 0;
-  animation-delay: 1.5s;
-  transform-origin: bottom left;
-  transform: rotate(-40deg);
+  top: -10px;
+  right: -10px;
+  animation-delay: 0.2s; /* Quick appearance */
+  transform-origin: center;
+  transform: rotate(-40deg) scale(1.2); /* 120% size + rotation */
 }
 
 .eye-corner-bottom-left {
