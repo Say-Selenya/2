@@ -6,7 +6,6 @@ import AboutSection from "./components/AboutSection";
 import PortalSection from "./components/PortalSection";
 import StatsSection from "./components/StatsSection";
 import CosmicMusicPlayer from "./components/CosmicMusicPlayer";
-import PokeBallTips from "./components/PokeBallTips";
 import ZaestelarPage from "./components/ZaestelarPage";
 import { mockPortalSections } from "./mock";
 import { Toaster } from "./components/ui/toaster";
