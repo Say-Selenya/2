@@ -2,123 +2,168 @@ import React from 'react';
 import { ArrowLeft, ExternalLink, Star, Heart, Palette } from 'lucide-react';
 import { Card } from './ui/card';
 import CosmicMusicPlayer from './CosmicMusicPlayer';
+import BrightYouTubeBanner from './YouTubeBanner';
+import AboutSection from './AboutSection';
+import PortalSection from './PortalSection';
+import StatsSection from './StatsSection';
+import { mockPortalSections } from '../mock';
 
 const ZaestelarPage = () => {
   return (
-    <div className="min-h-screen zaestelar-page">
+    <div className="min-h-screen">
       {/* Cosmic Music Player - Top Right */}
       <CosmicMusicPlayer />
       
-      {/* Background Effects */}
-      <div className="absolute inset-0 zaestelar-cosmic-bg"></div>
-      <div className="absolute inset-0 zaestelar-stars-field"></div>
+      {/* Same YouTube Banner as main page */}
+      <BrightYouTubeBanner />
       
-      {/* Header */}
-      <header className="relative z-10 pt-8 pb-16">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between mb-8">
-            <button 
-              onClick={() => window.history.back()}
-              className="back-button flex items-center gap-2 text-white hover:text-cosmic-blue transition-colors"
-            >
-              <ArrowLeft size={20} />
-              <span>Volver al Portal</span>
-            </button>
+      {/* Zäestelar Specific Content - replaces about section */}
+      <section className="py-16 galactic-about-section relative overflow-hidden">
+        {/* Same background effects */}
+        <div className="absolute inset-0 galactic-background"></div>
+        <div className="absolute inset-0 stars-field"></div>
+        <div className="absolute inset-0 nebula-glow"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
             
-            <div className="zaestelar-logo">
-              <ExternalLink className="w-6 h-6 inline mr-2 text-cosmic-blue" />
-              <span className="zaestelar-title">Zäestelar.net</span>
+            {/* Back button */}
+            <div className="text-center mb-8">
+              <button 
+                onClick={() => window.history.back()}
+                className="back-button-inline text-cosmic-blue hover:text-white transition-colors mb-6"
+              >
+                <ArrowLeft className="w-5 h-5 inline mr-2" />
+                Volver al Portal Principal
+              </button>
             </div>
+            
+            {/* Main Zäestelar card */}
+            <Card className="backdrop-blur-lg bg-black bg-opacity-40 border-none rounded-2xl p-8 mb-8 galactic-card">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                
+                {/* Left Column - Profile and Zäestelar Info */}
+                <div className="flex flex-col items-center lg:items-start">
+                  {/* Profile photo - same as main page */}
+                  <div className="flex justify-center mb-8">
+                    <div className="relative">
+                      <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-cosmic-blue via-cosmic-purple to-cosmic-pink p-2">
+                        <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-cosmic-blue to-cosmic-purple">
+                          <img 
+                            src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/pmtl2agg_foto22.jpeg"
+                            alt="Zäe Selenya - Artista Cósmica"
+                            className="w-full h-full object-cover rounded-full hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                      {/* Enhanced magical effects */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-30 animate-pulse"></div>
+                      <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-15 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                    </div>
+                  </div>
+                  
+                  {/* Zäestelar content */}
+                  <div className="text-center lg:text-left">
+                    <h2 className="section-heading text-white mb-6 galactic-title">
+                      🌌 Bienvenido a Zäestelar.net 🌌
+                    </h2>
+                    
+                    <div className="space-y-4 mb-6">
+                      <p className="body-large text-cosmic-mint leading-relaxed galactic-text">
+                        Zäestelar.net es mi universo digital personal donde convergen todas mis creaciones artísticas. 
+                        Un espacio dedicado al contenido visual, sensual y mágico, donde la creatividad cósmica cobra vida. ✨
+                      </p>
+                      
+                      <p className="body-medium text-white opacity-90 leading-relaxed">
+                        Aquí encontrarás acceso exclusivo a mis creaciones más íntimas, experiencias interactivas 
+                        y contenido premium que no está disponible en ningún otro lugar del universo.
+                      </p>
+                    </div>
+                    
+                    {/* Features with same symbols as main page */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div className="flex flex-col items-center lg:items-start">
+                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cosmic-blue to-cosmic-purple bg-opacity-30 border-2 border-cosmic-blue flex items-center justify-center mb-3 star-circle">
+                          <Star className="w-8 h-8 text-cosmic-blue star-icon" fill="currentColor" />
+                        </div>
+                        <h4 className="body-medium font-semibold text-cosmic-blue mb-1">Contenido Exclusivo</h4>
+                        <p className="body-small text-gray-300 text-center lg:text-left">acceso premium a creaciones únicas</p>
+                      </div>
+                      
+                      <div className="flex flex-col items-center lg:items-start">
+                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cosmic-mint to-cosmic-purple bg-opacity-30 border-2 border-cosmic-mint flex items-center justify-center mb-3 palette-circle">
+                          <Heart className="w-8 h-8 text-cosmic-mint palette-icon" fill="currentColor" />
+                        </div>
+                        <h4 className="body-medium font-semibold text-cosmic-mint mb-1">Experiencias Íntimas</h4>
+                        <p className="body-small text-gray-300 text-center lg:text-left">contenido personal y auténtico</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Same video as main page */}
+                <div className="flex flex-col justify-center">
+                  <div className="profile-video-container relative">
+                    <video
+                      className="profile-video"
+                      poster="https://images.unsplash.com/photo-1640367169401-534dec442631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxyb2JvdCUyMG5hdHVyZXxlbnwwfHx8fDE3NTU2NDczNDf8MA&ixlib=rb-4.1.0&q=85"
+                      preload="metadata"
+                    >
+                      <source 
+                        src="https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/7siwsx5k_siriii.mp3" 
+                        type="video/mp4" 
+                      />
+                      Tu navegador no soporta el elemento video.
+                    </video>
+                  </div>
+
+                  {/* Coming soon info */}
+                  <div className="text-center mt-6 elegant-video-description">
+                    <div className="elegant-description-content">
+                      <p className="body-medium text-white opacity-90 leading-relaxed mb-2">
+                        🚀 Sitio web completo en construcción 🚀
+                      </p>
+                      <p className="body-small text-gray-300 opacity-80 italic">
+                        Mientras tanto, explora mi portal cósmico y suscríbete para actualizaciones
+                      </p>
+                      <div className="elegant-divider mt-4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+            
           </div>
-          
-          {/* Main Title */}
-          <div className="text-center">
-            <h1 className="zaestelar-main-title text-white mb-4">
-              Bienvenido a Zäestelar.net
-            </h1>
-            <div className="zaestelar-divider mx-auto mb-6"></div>
-            <p className="text-xl text-cosmic-mint opacity-90 max-w-2xl mx-auto">
-              El universo digital donde la creatividad cósmica cobra vida ✨
+        </div>
+      </section>
+      
+      {/* Same Portal Sections as main page */}
+      {mockPortalSections.map((section, index) => (
+        <PortalSection 
+          key={section.id} 
+          section={section} 
+          index={index}
+        />
+      ))}
+      
+      {/* Same Stats Section */}
+      <StatsSection />
+      
+      {/* Same Footer */}
+      <footer className="py-8 bg-black bg-opacity-80 border-t border-cosmic-blue border-opacity-30">
+        <div className="container mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="w-8 h-px bg-cosmic-blue"></div>
+            <p className="body-small text-cosmic-mint font-mono uppercase tracking-widest">
+              Zäestelar.net - Portal Estelar
             </p>
+            <div className="w-8 h-px bg-cosmic-blue"></div>
           </div>
+          <p className="body-small text-gray-400">
+            © 2025 - Universo digital de Zäe Selenya
+          </p>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="relative z-10 pb-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            
-            {/* Introduction Card */}
-            <Card className="zaestelar-card mb-8">
-              <div className="p-8 text-center">
-                <h2 className="text-2xl font-bold text-white mb-6">
-                  🌌 Portal Estelar de Creación 🌌
-                </h2>
-                <p className="text-lg text-white opacity-90 leading-relaxed mb-6">
-                  Zäestelar.net es mi espacio digital personal donde convergen todas mis 
-                  creaciones artísticas, desde contenido visual hasta experiencias interactivas. 
-                  Un templo galáctico dedicado a la expresión creativa en todas sus formas.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                  <div className="zaestelar-feature">
-                    <Star className="w-8 h-8 text-cosmic-blue mx-auto mb-3" fill="currentColor" />
-                    <h3 className="text-white font-semibold mb-2">Contenido Exclusivo</h3>
-                    <p className="text-gray-300 text-sm">
-                      Acceso a creaciones únicas y contenido premium
-                    </p>
-                  </div>
-                  
-                  <div className="zaestelar-feature">
-                    <Heart className="w-8 h-8 text-cosmic-purple mx-auto mb-3" fill="currentColor" />
-                    <h3 className="text-white font-semibold mb-2">Experiencias Visuales</h3>
-                    <p className="text-gray-300 text-sm">
-                      Contenido visual, sensual y mágico
-                    </p>
-                  </div>
-                  
-                  <div className="zaestelar-feature">
-                    <Palette className="w-8 h-8 text-cosmic-mint mx-auto mb-3" />
-                    <h3 className="text-white font-semibold mb-2">Arte Multidimensional</h3>
-                    <p className="text-gray-300 text-sm">
-                      Diversidad creativa en múltiples estilos
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            {/* Coming Soon Section */}
-            <Card className="zaestelar-card">
-              <div className="p-8 text-center">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  🚀 Próximamente 🚀
-                </h2>
-                <p className="text-lg text-cosmic-mint opacity-90 leading-relaxed mb-6">
-                  El sitio web completo está en construcción. Mientras tanto, 
-                  puedes explorar mi portal cósmico principal y suscribirte para 
-                  recibir actualizaciones cuando Zäestelar.net esté completamente listo.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <button 
-                    onClick={() => window.history.back()}
-                    className="zaestelar-cta-button"
-                  >
-                    ← Explorar Portal Cósmico
-                  </button>
-                  <a 
-                    href="mailto:contact@zaestelar.net" 
-                    className="zaestelar-contact-button"
-                  >
-                    📧 Contacto
-                  </a>
-                </div>
-              </div>
-            </Card>
-            
-          </div>
-        </div>
-      </main>
+      </footer>
     </div>
   );
 };
