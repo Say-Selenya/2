@@ -2728,6 +2728,30 @@ html {
   transform: translateY(0);
 }
 
+/* MAGIC ENTRIES BELOW "CREANDO MUNDOS ÚNICOS" TEXT */
+.magic-entries-below-text {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.magic-entries-below-text .simplified-portal-sections {
+  margin-left: 0;
+  min-width: auto;
+  align-items: flex-start;
+}
+
+.magic-entries-below-text .portal-sections-row {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.magic-entries-below-text .simplified-portal-card {
+  width: 110px;
+  padding: 12px;
+}
+
 /* MAGIC ENTRIES BELOW PROFILE */
 .magic-entries-below-profile {
   margin-top: 40px;
