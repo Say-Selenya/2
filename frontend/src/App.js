@@ -25,15 +25,6 @@ const Home = () => {
       {/* About Section */}
       <AboutSection />
       
-      {/* Portal Sections */}
-      {mockPortalSections.map((section, index) => (
-        <PortalSection 
-          key={section.id} 
-          section={section} 
-          index={index}
-        />
-      ))}
-      
       {/* Stats Section */}
       <StatsSection />
       
