@@ -3017,40 +3017,41 @@ html {
   object-fit: cover;
   border-radius: 50%;
   background: transparent;
-  /* ULTRA POTENT MYSTICAL EFFECTS */
+  /* DOMINANT GUARDIAN EFFECTS - More photo-like */
   filter: 
-    brightness(1.4)
-    contrast(1.6)
-    saturate(2.0)
-    drop-shadow(0 0 25px rgba(138, 43, 226, 1.2))
-    drop-shadow(0 0 50px rgba(75, 0, 130, 1.0))
-    drop-shadow(0 0 75px rgba(147, 112, 219, 0.8))
-    drop-shadow(0 0 100px rgba(255, 0, 255, 0.6));
-  animation: ultra-mystical-eye-glow 3s ease-in-out infinite alternate;
-  transition: all 0.3s ease;
-  /* Enhanced blend mode for maximum impact */
+    brightness(1.6)
+    contrast(1.8)
+    saturate(2.2)
+    drop-shadow(0 0 30px rgba(138, 43, 226, 1.4))
+    drop-shadow(0 0 60px rgba(75, 0, 130, 1.2))
+    drop-shadow(0 0 90px rgba(147, 112, 219, 1.0))
+    drop-shadow(0 0 120px rgba(255, 0, 255, 0.8));
+  animation: guardian-glow 2.5s ease-in-out infinite alternate;
+  transition: all 0.2s ease;
+  /* Enhanced for dominance */
   mix-blend-mode: screen;
-  border: 3px solid rgba(138, 43, 226, 0.6);
+  border: 4px solid rgba(138, 43, 226, 0.8);
   box-shadow: 
-    inset 0 0 20px rgba(255, 255, 255, 0.3),
-    0 0 40px rgba(138, 43, 226, 0.8);
+    inset 0 0 25px rgba(255, 255, 255, 0.4),
+    0 0 50px rgba(138, 43, 226, 1.0),
+    0 0 100px rgba(255, 0, 255, 0.6);
 }
 
 .artistic-eye:hover .mystical-eye-image {
-  transform: scale(1.3) rotate(15deg);
+  transform: scale(1.15);  /* Less dramatic but more guardian-like */
   filter: 
-    brightness(1.8)
-    contrast(2.0)
-    saturate(2.5)
-    drop-shadow(0 0 40px rgba(138, 43, 226, 1.5))
-    drop-shadow(0 0 80px rgba(75, 0, 130, 1.2))
-    drop-shadow(0 0 120px rgba(147, 112, 219, 1.0))
-    drop-shadow(0 0 160px rgba(255, 0, 255, 0.8))
-    drop-shadow(0 0 200px rgba(0, 255, 255, 0.6));
+    brightness(2.0)
+    contrast(2.2)
+    saturate(2.8)
+    drop-shadow(0 0 45px rgba(138, 43, 226, 1.8))
+    drop-shadow(0 0 90px rgba(75, 0, 130, 1.5))
+    drop-shadow(0 0 135px rgba(147, 112, 219, 1.2))
+    drop-shadow(0 0 180px rgba(255, 0, 255, 1.0))
+    drop-shadow(0 0 225px rgba(0, 255, 255, 0.8));
   box-shadow: 
-    inset 0 0 30px rgba(255, 255, 255, 0.5),
-    0 0 60px rgba(138, 43, 226, 1.2),
-    0 0 120px rgba(255, 0, 255, 0.8);
+    inset 0 0 35px rgba(255, 255, 255, 0.6),
+    0 0 70px rgba(138, 43, 226, 1.4),
+    0 0 140px rgba(255, 0, 255, 1.0);
 }
 
 /* MYSTICAL ARTISTIC EYES ANIMATIONS */
