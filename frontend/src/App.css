@@ -2702,14 +2702,18 @@ html {
   transform: translateY(0);
 }
 
-/* LAYOUT CONTAINER FOR TIPS AND PORTALS */
+/* LAYOUT CONTAINER FOR TIPS AND PORTALS - BETTER CENTERED */
 .tips-and-portals-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 80px;
   margin-top: 60px;
   width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
 }
 
 /* RESPONSIVE SIMPLIFIED PORTALS */
