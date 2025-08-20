@@ -65,6 +65,9 @@ function App() {
             <Route index element={<Home />} />
           </Route>
           <Route path="/zaestelar" element={<ZaestelarPage />} />
+          <Route path="/frikilandia" element={<FrikilandiaPage />} />
+          <Route path="/tragedias" element={<TragediesPage />} />
+          <Route path="/humor_kawaii" element={<KawaiiPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
