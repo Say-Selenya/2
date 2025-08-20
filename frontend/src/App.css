@@ -2616,13 +2616,13 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* POKEBALL TIPS SYSTEM - ANIMATED COMPONENT */
+/* POKEBALL TIPS SYSTEM - POSITIONED NEAR VIDEO */
 .pokeball-tips-container {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
   z-index: 1000;
-  max-width: 350px;
+  max-width: 320px;
   transform: translateY(0);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
