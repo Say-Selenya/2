@@ -2616,6 +2616,30 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+.clickable-payment {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable-payment:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* MAGIC ENTRIES LEFT POSITIONING */
+.magic-entries-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.magic-entries-left .simplified-portal-sections {
+  margin-left: 0;
+  min-width: auto;
+}
+
 /* SIMPLIFIED PORTAL SECTIONS - CLEAN LEFT ALIGNMENT BELOW STAR */
 .simplified-portal-sections {
   display: flex;
