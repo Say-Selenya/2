@@ -2616,14 +2616,14 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* SIMPLIFIED PORTAL SECTIONS - POSITIONED TO NOT OVERLAP TEXT */
+/* SIMPLIFIED PORTAL SECTIONS - CLEAN LEFT ALIGNMENT BELOW STAR */
 .simplified-portal-sections {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin-right: 0;
   min-width: 380px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .portal-sections-row {
