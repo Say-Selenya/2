@@ -3054,50 +3054,46 @@ html {
     0 0 140px rgba(255, 0, 255, 1.0);
 }
 
-/* MYSTICAL ARTISTIC EYES ANIMATIONS */
-@keyframes mystical-eye-float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg) scale(1);
+/* MYSTICAL GUARDIAN ANIMATIONS - More photo-like and dominant */
+@keyframes mystical-guardian-presence {
+  0% {
+    transform: scale(1) translateY(0px);
+    opacity: 0.95;
   }
-  25% {
-    transform: translateY(-8px) rotate(2deg) scale(1.05);
-  }
-  50% {
-    transform: translateY(-4px) rotate(-1deg) scale(1.02);
-  }
-  75% {
-    transform: translateY(-12px) rotate(3deg) scale(1.08);
+  100% {
+    transform: scale(1.02) translateY(-2px);
+    opacity: 1;
   }
 }
 
-@keyframes ultra-mystical-eye-glow {
+@keyframes guardian-glow {
   0% {
     filter: 
-      brightness(1.4)
-      contrast(1.6)
-      saturate(2.0)
-      drop-shadow(0 0 25px rgba(138, 43, 226, 1.2))
-      drop-shadow(0 0 50px rgba(75, 0, 130, 1.0))
-      drop-shadow(0 0 75px rgba(147, 112, 219, 0.8))
-      drop-shadow(0 0 100px rgba(255, 0, 255, 0.6));
+      brightness(1.6)
+      contrast(1.8)
+      saturate(2.2)
+      drop-shadow(0 0 30px rgba(138, 43, 226, 1.4))
+      drop-shadow(0 0 60px rgba(75, 0, 130, 1.2))
+      drop-shadow(0 0 90px rgba(147, 112, 219, 1.0))
+      drop-shadow(0 0 120px rgba(255, 0, 255, 0.8));
     box-shadow: 
-      inset 0 0 20px rgba(255, 255, 255, 0.3),
-      0 0 40px rgba(138, 43, 226, 0.8);
+      inset 0 0 25px rgba(255, 255, 255, 0.4),
+      0 0 50px rgba(138, 43, 226, 1.0),
+      0 0 100px rgba(255, 0, 255, 0.6);
   }
   100% {
     filter: 
-      brightness(1.8)
-      contrast(2.0)
+      brightness(1.9)
+      contrast(2.1)
       saturate(2.5)
-      drop-shadow(0 0 35px rgba(138, 43, 226, 1.5))
-      drop-shadow(0 0 70px rgba(75, 0, 130, 1.2))
-      drop-shadow(0 0 105px rgba(147, 112, 219, 1.0))
-      drop-shadow(0 0 140px rgba(255, 0, 255, 0.8))
-      drop-shadow(0 0 175px rgba(0, 255, 255, 0.6));
+      drop-shadow(0 0 40px rgba(138, 43, 226, 1.6))
+      drop-shadow(0 0 80px rgba(75, 0, 130, 1.4))
+      drop-shadow(0 0 120px rgba(147, 112, 219, 1.2))
+      drop-shadow(0 0 160px rgba(255, 0, 255, 1.0));
     box-shadow: 
-      inset 0 0 30px rgba(255, 255, 255, 0.5),
-      0 0 60px rgba(138, 43, 226, 1.2),
-      0 0 120px rgba(255, 0, 255, 0.8);
+      inset 0 0 35px rgba(255, 255, 255, 0.6),
+      0 0 70px rgba(138, 43, 226, 1.2),
+      0 0 140px rgba(255, 0, 255, 0.8);
   }
 }
 
