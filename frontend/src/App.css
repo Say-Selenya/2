@@ -2851,124 +2851,117 @@ html {
   flex-shrink: 0;
 }
 
-/* MYSTICAL EYES IN CORNERS OF OFRENDAS CARD */
-.mystical-eyes {
+/* MYSTICAL ARTISTIC EYES OUTSIDE OFRENDAS CARD */
+.mystical-artistic-eyes {
   position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.artistic-eye {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  animation: mystical-eye-float 6s ease-in-out infinite;
+}
+
+.eye-corner-top-left {
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.eye {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, 
-    rgba(255, 255, 255, 0.9) 0%, 
-    rgba(135, 206, 235, 0.8) 30%, 
-    rgba(147, 112, 219, 0.6) 70%, 
-    rgba(0, 0, 0, 0.8) 100%);
-  border: 2px solid rgba(135, 206, 235, 0.3);
-  box-shadow: 
-    0 0 15px rgba(135, 206, 235, 0.4),
-    inset 0 0 10px rgba(255, 255, 255, 0.2);
-  animation: mystical-blink 4s ease-in-out infinite;
-}
-
-.eye-top-left {
-  top: 15px;
-  left: 15px;
   animation-delay: 0s;
+  transform-origin: bottom right;
 }
 
-.eye-top-right {
-  top: 15px;
-  right: 15px;
-  animation-delay: 2s;
+.eye-corner-top-right {
+  top: 0;
+  right: 0;
+  animation-delay: 1.5s;
+  transform-origin: bottom left;
 }
 
-.eyeball {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  background: radial-gradient(circle at 40% 30%, 
-    rgba(255, 255, 255, 1) 0%, 
-    rgba(135, 206, 235, 0.9) 40%, 
-    rgba(147, 112, 219, 0.7) 100%);
+.eye-corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  animation-delay: 3s;
+  transform-origin: top right;
+}
+
+.eye-corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  animation-delay: 4.5s;
+  transform-origin: top left;
+}
+
+.mystical-eye-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: mystical-eye-follow 6s ease-in-out infinite;
+  filter: 
+    drop-shadow(0 0 20px rgba(138, 43, 226, 0.8))
+    drop-shadow(0 0 40px rgba(75, 0, 130, 0.6))
+    drop-shadow(0 0 60px rgba(147, 112, 219, 0.4));
+  animation: mystical-eye-glow 4s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
 }
 
-.pupil {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  background: radial-gradient(circle, 
-    rgba(0, 0, 0, 1) 0%, 
-    rgba(75, 0, 130, 0.8) 70%, 
-    rgba(138, 43, 226, 0.6) 100%);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 
-    0 0 8px rgba(138, 43, 226, 0.6),
-    inset 0 0 4px rgba(0, 0, 0, 0.8);
-  animation: mystical-pupil-glow 3s ease-in-out infinite alternate;
+.artistic-eye:hover .mystical-eye-image {
+  transform: scale(1.2);
+  filter: 
+    drop-shadow(0 0 30px rgba(138, 43, 226, 1))
+    drop-shadow(0 0 60px rgba(75, 0, 130, 0.8))
+    drop-shadow(0 0 90px rgba(147, 112, 219, 0.6))
+    drop-shadow(0 0 120px rgba(135, 206, 235, 0.4));
 }
 
-/* MYSTICAL EYES ANIMATIONS */
-@keyframes mystical-blink {
-  0%, 90%, 100% { 
-    transform: scaleY(1);
-    opacity: 0.8;
+/* MYSTICAL ARTISTIC EYES ANIMATIONS */
+@keyframes mystical-eye-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
   }
-  95% { 
-    transform: scaleY(0.1);
-    opacity: 0.9;
+  25% {
+    transform: translateY(-8px) rotate(2deg) scale(1.05);
   }
-}
-
-@keyframes mystical-eye-follow {
-  0%, 100% { 
-    transform: translate(-50%, -50%);
+  50% {
+    transform: translateY(-4px) rotate(-1deg) scale(1.02);
   }
-  25% { 
-    transform: translate(-45%, -45%);
-  }
-  50% { 
-    transform: translate(-55%, -50%);
-  }
-  75% { 
-    transform: translate(-50%, -55%);
+  75% {
+    transform: translateY(-12px) rotate(3deg) scale(1.08);
   }
 }
 
-@keyframes mystical-pupil-glow {
-  0% { 
-    box-shadow: 
-      0 0 8px rgba(138, 43, 226, 0.6),
-      inset 0 0 4px rgba(0, 0, 0, 0.8);
+@keyframes mystical-eye-glow {
+  0% {
+    filter: 
+      drop-shadow(0 0 20px rgba(138, 43, 226, 0.8))
+      drop-shadow(0 0 40px rgba(75, 0, 130, 0.6))
+      drop-shadow(0 0 60px rgba(147, 112, 219, 0.4));
   }
-  100% { 
-    box-shadow: 
-      0 0 15px rgba(138, 43, 226, 0.9),
-      0 0 25px rgba(135, 206, 235, 0.4),
-      inset 0 0 6px rgba(75, 0, 130, 0.6);
+  100% {
+    filter: 
+      drop-shadow(0 0 35px rgba(138, 43, 226, 1))
+      drop-shadow(0 0 70px rgba(75, 0, 130, 0.8))
+      drop-shadow(0 0 105px rgba(147, 112, 219, 0.6))
+      drop-shadow(0 0 140px rgba(135, 206, 235, 0.3));
   }
 }
 
-/* Enhanced pokeball card positioning for eyes */
-.pokeball-card {
+/* Enhanced pokeball container for eyes positioning */
+.pokeball-tips-container {
+  position: static;
+  z-index: 1000;
+  max-width: 320px;
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  overflow: visible;
 }
 
 /* POKEBALL GLOWING EFFECT */
