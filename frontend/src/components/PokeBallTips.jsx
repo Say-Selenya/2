@@ -138,7 +138,7 @@ const PokeBallTips = () => {
         </div>
       </div>
 
-      <Card className="pokeball-card backdrop-blur-lg bg-black bg-opacity-60 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-6">
+      <Card className="pokeball-card backdrop-blur-lg bg-black bg-opacity-20 border-2 border-cosmic-blue border-opacity-30 rounded-2xl p-6">
         
         
         {/* Header */}
