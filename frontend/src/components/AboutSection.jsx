@@ -297,12 +297,9 @@ const AboutSection = () => {
                   </div>
                 </div>
 
-                {/* Tips and Portals Section - Side by side */}
+                {/* Tips Section - Moved to where portals were */}
                 <div className="tips-and-portals-container">
-                  {/* Portal Sections - Left */}
-                  <SimplifiedPortalSections />
-                  
-                  {/* Tips Section - Right */}
+                  {/* Tips Section - Centered */}
                   <div className="tips-section-container">
                     <PokeBallTips />
                   </div>
