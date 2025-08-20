@@ -2616,10 +2616,10 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* POKEBALL TIPS SYSTEM - POSITIONED WELL BELOW VIDEO */
+/* POKEBALL TIPS SYSTEM - MUCH MORE SEPARATED FROM VIDEO */
 .pokeball-tips-container {
   position: absolute;
-  bottom: -180px;
+  bottom: -280px;
   right: -20px;
   z-index: 1000;
   max-width: 300px;
