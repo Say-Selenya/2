@@ -2972,12 +2972,13 @@ html {
 
 .artistic-eye {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 96px; /* 120% larger than 80px */
+  height: 96px;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.4s ease;
-  animation: mystical-eye-float 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+  /* Immediate appearance - no complex floating */
+  animation: mystical-guardian-presence 2s ease-in-out infinite alternate;
 }
 
 .eye-corner-top-left {
