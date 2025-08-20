@@ -2627,9 +2627,10 @@ html {
 
 .portal-sections-row {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  gap: 15px;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .simplified-portal-card {
