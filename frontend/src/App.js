@@ -17,6 +17,9 @@ const Home = () => {
       {/* Cosmic Music Player - Top Right */}
       <CosmicMusicPlayer />
       
+      {/* PokeBall Tips - Bottom Left */}
+      <PokeBallTips />
+      
       {/* Bright YouTube Banner */}
       <BrightYouTubeBanner />
       
