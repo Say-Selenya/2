@@ -2765,13 +2765,13 @@ html {
   min-width: auto;
 }
 
-/* LAYOUT CONTAINER FOR TIPS - CENTERED POSITIONING */
+/* LAYOUT CONTAINER FOR TIPS - SYNCHRONIZED POSITIONING */
 .tips-and-portals-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
-  margin-top: 80px;
+  margin-top: 40px;
   width: 100%;
   max-width: 800px;
   margin-left: auto;
