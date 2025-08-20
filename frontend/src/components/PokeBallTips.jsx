@@ -78,12 +78,24 @@ const PokeBallTips = () => {
     }, 1500); // Timing to match coin flight
   };
 
-  const handleCustomTip = () => {
-    toast({
-      title: "Próximamente",
-      description: "Cantidad personalizada estará disponible pronto",
-      duration: 2000,
-    });
+  const handlePaymentMethod = (method) => {
+    if (method === 'paypal') {
+      toast({
+        title: "PayPal activado 💰",
+        description: "Redirigiendo a PayPal para procesar tu propina...",
+        duration: 3000,
+      });
+      // Aquí se integraría la redirección real a PayPal
+      window.open('https://paypal.me', '_blank');
+    } else if (method === 'stripe') {
+      toast({
+        title: "Stripe activado 💳",
+        description: "Abriendo procesador de tarjetas seguro...",
+        duration: 3000,
+      });
+      // Aquí se integraría Stripe Checkout
+      console.log('Stripe payment initiated');
+    }
   };
 
   const handleMouseEnter = () => {
