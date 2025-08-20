@@ -2851,6 +2851,114 @@ html {
   flex-shrink: 0;
 }
 
+/* VERTICAL NEON LIGHTS - LEFT AND RIGHT SIDES */
+.vertical-neon-lights {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.neon-light {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+}
+
+.neon-left {
+  left: 20px;
+}
+
+.neon-right {
+  right: 20px;
+}
+
+.neon-strip {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 255, 255, 0.8) 10%,
+    rgba(138, 43, 226, 0.9) 30%,
+    rgba(255, 0, 255, 0.8) 50%,
+    rgba(0, 255, 255, 0.9) 70%,
+    rgba(138, 43, 226, 0.8) 90%,
+    transparent 100%
+  );
+  border-radius: 4px;
+  box-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(138, 43, 226, 0.4),
+    0 0 30px rgba(255, 0, 255, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  animation: neon-pulse 3s ease-in-out infinite alternate;
+}
+
+.neon-left .neon-strip {
+  animation-delay: 0s;
+}
+
+.neon-right .neon-strip {
+  animation-delay: 1.5s;
+}
+
+/* NEON LIGHTS ANIMATIONS */
+@keyframes neon-pulse {
+  0% {
+    opacity: 0.6;
+    box-shadow: 
+      0 0 10px rgba(0, 255, 255, 0.5),
+      0 0 20px rgba(138, 43, 226, 0.4),
+      0 0 30px rgba(255, 0, 255, 0.3),
+      inset 0 0 10px rgba(255, 255, 255, 0.1);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 
+      0 0 15px rgba(0, 255, 255, 0.8),
+      0 0 30px rgba(138, 43, 226, 0.6),
+      0 0 45px rgba(255, 0, 255, 0.5),
+      0 0 60px rgba(135, 206, 235, 0.3),
+      inset 0 0 15px rgba(255, 255, 255, 0.2);
+    filter: blur(0px);
+  }
+}
+
+/* Responsive neon lights */
+@media (max-width: 768px) {
+  .neon-left {
+    left: 10px;
+  }
+  
+  .neon-right {
+    right: 10px;
+  }
+  
+  .neon-light {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .neon-left {
+    left: 5px;
+  }
+  
+  .neon-right {
+    right: 5px;
+  }
+  
+  .neon-light {
+    width: 4px;
+  }
+}
+
 /* MYSTICAL ARTISTIC EYES OUTSIDE OFRENDAS CARD */
 .mystical-artistic-eyes {
   position: absolute;
