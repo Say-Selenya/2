@@ -210,6 +210,248 @@ body {
   }
 }
 
+/* RESPONSIVE DESIGN - MOBILE FIRST APPROACH */
+
+/* Mobile specific improvements */
+@media (max-width: 768px) {
+  /* Banner improvements for mobile */
+  .bright-youtube-banner {
+    height: 350px;
+  }
+  
+  .custom-alien-sticker {
+    top: 2%;
+    left: 1%;
+    transform: scale(0.8);
+  }
+  
+  .website-link-top {
+    top: 5%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .subscription-section-bottom {
+    bottom: 1rem;
+    right: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .bright-profile-section {
+    bottom: 1rem;
+    left: 1rem;
+    gap: 1rem;
+  }
+  
+  .bright-profile-photo {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .bright-signature-name {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+  }
+  
+  /* Portal sections mobile */
+  .portal-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  
+  .portal-card {
+    padding: 1.5rem;
+  }
+  
+  .payment-plan-card {
+    padding: 12px;
+  }
+  
+  .payment-subscribe-btn {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+  }
+  
+  /* About section mobile */
+  .galactic-about-section {
+    padding: 2rem 0;
+  }
+  
+  .galactic-card {
+    padding: 1.5rem !important;
+  }
+  
+  /* Video player mobile improvements */
+  .profile-video-container {
+    margin: 1rem 0;
+    border-radius: 12px;
+  }
+  
+  .profile-control-btn {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .profile-control-btn.play-pause {
+    width: 42px;
+    height: 42px;
+  }
+  
+  /* Music player mobile */
+  .cosmic-music-player {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .music-player-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .music-player-container.expanded {
+    width: 160px;
+    height: 100px;
+  }
+  
+  /* Typography mobile */
+  .brand-display {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+  
+  .section-heading {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+  }
+  
+  .body-large {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+}
+
+/* Tablet specific */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bright-youtube-banner {
+    height: 450px;
+  }
+  
+  .portal-section {
+    padding: 4rem 0;
+  }
+  
+  .music-player-container.expanded {
+    width: 180px;
+    height: 110px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .bright-youtube-banner {
+    height: 600px;
+  }
+  
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  /* Better touch targets */
+  .cta-button,
+  .payment-subscribe-btn,
+  .cosmic-tip-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .profile-control-btn {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .profile-control-btn.play-pause {
+    width: 56px;
+    height: 56px;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .portal-card:hover,
+  .payment-plan-card:hover,
+  .profile-video-container:hover {
+    transform: none;
+  }
+  
+  /* Better tap highlighting */
+  * {
+    -webkit-tap-highlight-color: rgba(135, 206, 235, 0.2);
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .custom-alien-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .bright-shadow-image,
+  .profile-video {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .bright-youtube-banner {
+    height: 280px;
+  }
+  
+  .galactic-about-section {
+    padding: 1.5rem 0;
+  }
+  
+  .portal-section {
+    padding: 2rem 0;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .portal-card {
+    padding: 1rem;
+  }
+  
+  .galactic-card {
+    padding: 1rem !important;
+  }
+  
+  .bright-signature-name {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+  
+  .subscription-section-bottom {
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .bright-profile-section {
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+  
+  .payment-plan-card {
+    padding: 8px;
+  }
+  
+  .cosmic-tip-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
 /* Responsive design */
 @media (max-width: 767px) {
   .hero-cosmic {
