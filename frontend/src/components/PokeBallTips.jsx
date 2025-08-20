@@ -122,19 +122,6 @@ const PokeBallTips = () => {
     >
       <Card className="pokeball-card backdrop-blur-lg bg-black bg-opacity-60 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-6">
         
-        {/* Mystical Eyes in Corners */}
-        <div className="mystical-eyes">
-          <div className="eye eye-top-left">
-            <div className="eyeball">
-              <div className="pupil"></div>
-            </div>
-          </div>
-          <div className="eye eye-top-right">
-            <div className="eyeball">
-              <div className="pupil"></div>
-            </div>
-          </div>
-        </div>
         
         {/* Header */}
         <div className="text-center mb-6">
