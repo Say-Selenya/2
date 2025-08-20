@@ -3072,12 +3072,7 @@ html {
   }
 }
 
-/* Hide pokeball on very small screens */
-@media (max-width: 480px) {
-  .pokeball-tips-container {
-    display: none;
-  }
-}
+
 .zaestelar-page {
   background: #000000;
   position: relative;
