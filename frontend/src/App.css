@@ -2690,11 +2690,11 @@ html {
 
 .hover-indicator {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(8px);
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .simplified-portal-card:hover .hover-indicator {
