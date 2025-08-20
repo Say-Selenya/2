@@ -3057,7 +3057,7 @@ html {
 /* Tablet positioning */
 @media (min-width: 769px) and (max-width: 1024px) {
   .pokeball-tips-container {
-    bottom: -240px;
+    bottom: -320px;
     right: -10px;
     max-width: 280px;
   }
@@ -3066,7 +3066,7 @@ html {
 /* Large screens - much more separated */
 @media (min-width: 1025px) {
   .pokeball-tips-container {
-    bottom: -320px;
+    bottom: -420px;
     right: -30px;
     max-width: 320px;
   }
