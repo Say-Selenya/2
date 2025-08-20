@@ -2616,13 +2616,20 @@ html {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* POKEBALL TIPS SYSTEM - MUCH MORE SEPARATED FROM VIDEO */
+/* TIPS SECTION CONTAINER - SEPARATE SPACE BELOW VIDEO */
+.tips-section-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 60px;
+  padding-right: 0;
+  width: 100%;
+}
+
+/* POKEBALL TIPS SYSTEM - POSITIONED IN SEPARATE SECTION */
 .pokeball-tips-container {
-  position: absolute;
-  bottom: -380px;
-  right: -20px;
+  position: static;
   z-index: 1000;
-  max-width: 300px;
+  max-width: 320px;
   transform: translateY(0);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
