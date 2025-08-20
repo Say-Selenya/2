@@ -205,6 +205,11 @@ const AboutSection = () => {
                       </div>
                       <h4 className="body-medium font-semibold text-cosmic-blue mb-1">Mundos Únicos</h4>
                       <p className="body-small text-gray-300 text-center lg:text-left">creando mundos únicos</p>
+                      
+                      {/* Magic Entries Below "creando mundos únicos" */}
+                      <div className="magic-entries-below-text">
+                        <SimplifiedPortalSections />
+                      </div>
                     </div>
                     
                     <div className="flex flex-col items-center lg:items-start">
