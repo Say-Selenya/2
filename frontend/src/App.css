@@ -2664,55 +2664,50 @@ html {
   border-radius: 20px;
   font-weight: bold;
   font-size: 12px;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+  box-shadow: 
+    0 4px 15px rgba(255, 215, 0, 0.6),
+    0 0 20px rgba(255, 215, 0, 0.4);
   pointer-events: none;
   
-  /* Calculate pokeball position - this will be dynamically adjusted */
+  /* Start from button position */
   left: var(--start-x, 50%);
   top: var(--start-y, 50%);
   
-  /* Flying animation towards pokeball */
-  animation: fly-to-pokeball 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  /* Flying animation towards pokeball center */
+  animation: fly-to-pokeball-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.coin-amount {
-  font-size: 10px;
-  font-weight: 700;
-}
-
-/* AUTO-OPEN ON HOVER */
-.pokeball-tips-container:hover .pokeball:not(.animating) {
-  /* Ensure auto-open behavior is handled by React state */
-}
-
-/* Enhanced sparkle effects for glow */
-.pokeball.glowing .sparkle {
-  color: #ffd700;
-  filter: drop-shadow(0 0 6px #ffd700);
-  animation-duration: 1s;
-}
-
-/* FLYING COIN KEYFRAMES */
-@keyframes fly-to-pokeball {
+/* FLYING COIN KEYFRAMES - IMPROVED TRAJECTORY */
+@keyframes fly-to-pokeball-center {
   0% {
     transform: translateX(0) translateY(0) scale(1) rotate(0deg);
     opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
   }
-  20% {
-    transform: translateX(-50px) translateY(-100px) scale(1.1) rotate(180deg);
+  15% {
+    transform: translateX(-40px) translateY(-80px) scale(1.2) rotate(90deg);
     opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+  }
+  35% {
+    transform: translateX(-120px) translateY(-60px) scale(1.1) rotate(270deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1));
   }
   60% {
-    transform: translateX(-200px) translateY(-80px) scale(1) rotate(540deg);
-    opacity: 0.9;
+    transform: translateX(-200px) translateY(-20px) scale(0.9) rotate(450deg);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.8));
   }
-  90% {
-    transform: translateX(-280px) translateY(-20px) scale(0.8) rotate(720deg);
-    opacity: 0.6;
+  85% {
+    transform: translateX(-260px) translateY(10px) scale(0.6) rotate(630deg);
+    opacity: 0.5;
+    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.6));
   }
   100% {
-    transform: translateX(-320px) translateY(0px) scale(0.3) rotate(900deg);
+    transform: translateX(-290px) translateY(20px) scale(0.2) rotate(720deg);
     opacity: 0;
+    filter: drop-shadow(0 0 35px rgba(255, 215, 0, 0.4));
   }
 }
 
