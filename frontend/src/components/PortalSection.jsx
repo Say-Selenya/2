@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { useToast } from '../hooks/use-toast';
-import { mockSubscribe, mockSubscriptionsData } from '../mock';
-import { Users, Mail, Sparkles, Heart, Zap } from 'lucide-react';
+import { mockSubscriptionsData } from '../mock';
+import { Users, CreditCard, Sparkles, Heart, Zap, DollarSign } from 'lucide-react';
 
 const PortalSection = ({ section, index }) => {
   const [email, setEmail] = useState('');
