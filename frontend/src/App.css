@@ -3032,11 +3032,14 @@ html {
 
 /* RESPONSIVE POKEBALL */
 @media (max-width: 768px) {
+  .tips-section-container {
+    justify-content: center;
+    margin-top: 40px;
+    padding-right: 0;
+  }
+  
   .pokeball-tips-container {
-    position: static;
-    margin: 20px auto 0 auto;
     max-width: 280px;
-    transform: none;
   }
   
   .pokeball {
@@ -3063,18 +3066,22 @@ html {
 
 /* Tablet positioning */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .tips-section-container {
+    margin-top: 50px;
+  }
+  
   .pokeball-tips-container {
-    bottom: -320px;
-    right: -10px;
-    max-width: 280px;
+    max-width: 300px;
   }
 }
 
-/* Large screens - much more separated */
+/* Large screens */
 @media (min-width: 1025px) {
+  .tips-section-container {
+    margin-top: 80px;
+  }
+  
   .pokeball-tips-container {
-    bottom: -420px;
-    right: -30px;
     max-width: 320px;
   }
 }
