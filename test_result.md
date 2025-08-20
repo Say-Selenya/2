@@ -119,6 +119,54 @@ frontend:
         - working: true
           agent: "main"
           comment: "FIXED: Applied scaleX(-1) to flip alien horizontally so it faces right. Removed mix-blend-mode and excessive filters to improve image sharpness. Alien now salutes to the right, maintains same position (top-left) and size (120px)."
+  
+  - task: "Enhance Video Thumbnail Shadow"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/App.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Need to add clearer, more elegant shadow to video thumbnail that matches cosmic theme. Current shadow needs enhancement for better visual integration."
+  
+  - task: "Remove Email Links and Forms"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/PortalSection.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Need to remove all email functionality from subscription forms and replace with payment system. Found email inputs in PortalSection.jsx and mock data with emails."
+  
+  - task: "Create Pokeball Animated Tips System"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/PokeBallTips.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Create pokeball component that opens/closes with animation when users give tips. Should integrate with payment system."
+  
+  - task: "Implement Responsive Design (Mobile + Desktop)"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/App.css"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Ensure all components work perfectly on mobile and desktop. Current design needs responsive improvements for touch interfaces and different screen sizes."
 
 metadata:
   created_by: "main_agent"
