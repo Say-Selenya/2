@@ -16,6 +16,16 @@ import { Toaster } from "./components/ui/toaster";
 const Home = () => {
   return (
     <div className="min-h-screen">
+      {/* Vertical Neon Lights */}
+      <div className="vertical-neon-lights">
+        <div className="neon-light neon-left">
+          <div className="neon-strip"></div>
+        </div>
+        <div className="neon-light neon-right">
+          <div className="neon-strip"></div>
+        </div>
+      </div>
+      
       {/* Cosmic Music Player - Top Right */}
       <CosmicMusicPlayer />
       
