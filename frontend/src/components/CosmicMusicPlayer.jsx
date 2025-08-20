@@ -17,6 +17,13 @@ const CosmicMusicPlayer = () => {
       artist: "Portal Cósmico",
       src: "https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/o664ku0u_ALIEN%20FUMETA.mp3",
       duration: "3:42"
+    },
+    {
+      id: 2,
+      title: "Saca, Prende y Sorprende",
+      artist: "Cultura Profética",
+      src: "https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/oxc4teuc_Cultura%20Prof%C3%A9tica%20-%20Saca%2C%20Prende%20y%20Sorprende%20%28Video%20Oficial%29.mp3",
+      duration: "4:15"
     }
   ]);
 
