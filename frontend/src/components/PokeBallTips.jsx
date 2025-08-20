@@ -2,45 +2,83 @@ import React, { useState, useEffect } from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { useToast } from '../hooks/use-toast';
-import { Heart, Sparkles, Star, DollarSign } from 'lucide-react';
+import { Heart, Sparkles, Star, DollarSign, Coins } from 'lucide-react';
 
 const PokeBallTips = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
   const [totalTips, setTotalTips] = useState(0);
   const [selectedAmount, setSelectedAmount] = useState(null);
+  const [coinAnimations, setCoinAnimations] = useState([]);
+  const [isGlowing, setIsGlowing] = useState(false);
   const { toast } = useToast();
 
   // Predefined tip amounts
   const tipAmounts = [5, 10, 25, 50, 100];
 
-  const handleTipClick = async (amount) => {
+  // Auto-open pokeball on hover
+  useEffect(() => {
+    if (isHovering && !isAnimating) {
+      setIsOpen(true);
+    } else if (!isHovering && !isAnimating) {
+      setIsOpen(false);
+    }
+  }, [isHovering, isAnimating]);
+
+  const createCoinAnimation = (amount, buttonRect) => {
+    const coinId = Date.now() + Math.random();
+    const coin = {
+      id: coinId,
+      amount: amount,
+      startX: buttonRect.left + buttonRect.width / 2,
+      startY: buttonRect.top + buttonRect.height / 2,
+    };
+    
+    setCoinAnimations(prev => [...prev, coin]);
+    
+    // Remove coin after animation completes
+    setTimeout(() => {
+      setCoinAnimations(prev => prev.filter(c => c.id !== coinId));
+    }, 2000);
+  };
+
+  const handleTipClick = async (amount, event) => {
     setSelectedAmount(amount);
     setIsAnimating(true);
     
-    // Open pokeball animation
+    // Get button position for coin animation
+    const buttonRect = event.target.getBoundingClientRect();
+    
+    // Create flying coin animation
+    createCoinAnimation(amount, buttonRect);
+    
+    // Keep pokeball open during animation
     setIsOpen(true);
     
     // Simulate payment process
     setTimeout(() => {
       setTotalTips(prev => prev + amount);
+      
+      // Trigger pokeball glow when coin "arrives"
+      setIsGlowing(true);
+      setTimeout(() => setIsGlowing(false), 1500);
+      
       toast({
-        title: "¡Propina enviada! ✨",
-        description: `Gracias por tu generosidad de $${amount}`,
+        title: "¡Propina recibida! ✨",
+        description: `¡La moneda de $${amount} llegó al portal mágico!`,
         duration: 3000,
       });
       
-      // Close pokeball after a moment
+      // Reset states
       setTimeout(() => {
-        setIsOpen(false);
         setIsAnimating(false);
         setSelectedAmount(null);
-      }, 2000);
-    }, 1500);
+      }, 1000);
+    }, 1500); // Timing to match coin flight
   };
 
   const handleCustomTip = () => {
-    // This will be implemented with payment integration
     toast({
       title: "Próximamente",
       description: "Cantidad personalizada estará disponible pronto",
@@ -48,8 +86,20 @@ const PokeBallTips = () => {
     });
   };
 
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
-    <div className="pokeball-tips-container">
+    <div 
+      className="pokeball-tips-container"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Card className="pokeball-card backdrop-blur-lg bg-black bg-opacity-60 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-6">
         
         {/* Header */}
@@ -73,7 +123,7 @@ const PokeBallTips = () => {
 
         {/* Pokeball Container */}
         <div className="pokeball-container">
-          <div className={`pokeball ${isOpen ? 'open' : 'closed'} ${isAnimating ? 'animating' : ''}`}>
+          <div className={`pokeball ${isOpen ? 'open' : 'closed'} ${isAnimating ? 'animating' : ''} ${isGlowing ? 'glowing' : ''}`}>
             
             {/* Top Half */}
             <div className="pokeball-top">
@@ -123,6 +173,21 @@ const PokeBallTips = () => {
           </div>
         </div>
 
+        {/* Flying Coins Animation */}
+        {coinAnimations.map(coin => (
+          <div
+            key={coin.id}
+            className="flying-coin"
+            style={{
+              '--start-x': `${coin.startX}px`,
+              '--start-y': `${coin.startY}px`,
+            }}
+          >
+            <Coins className="w-6 h-6 text-yellow-400" />
+            <span className="coin-amount">${coin.amount}</span>
+          </div>
+        ))}
+
         {/* Tip Buttons */}
         <div className="tip-buttons-grid">
           <h4 className="body-medium font-semibold text-white mb-4 text-center">
@@ -133,7 +198,7 @@ const PokeBallTips = () => {
             {tipAmounts.map((amount) => (
               <Button
                 key={amount}
-                onClick={() => handleTipClick(amount)}
+                onClick={(e) => handleTipClick(amount, e)}
                 disabled={isAnimating}
                 className="tip-button cosmic-tip-btn"
               >
