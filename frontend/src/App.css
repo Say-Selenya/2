@@ -2637,11 +2637,13 @@ html {
   background: rgba(0, 0, 0, 0.3) !important;
   border: 2px solid;
   border-radius: 20px !important;
-  padding: 20px;
+  padding: 15px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+  min-width: 140px;
+  flex: 1;
 }
 
 .simplified-portal-card:hover {
