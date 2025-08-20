@@ -96,11 +96,29 @@ const CosmicMusicPlayer = () => {
   };
 
   const nextTrack = () => {
-    setCurrentTrack((prev) => (prev + 1) % playlist.length);
+    const nextIndex = (currentTrack + 1) % playlist.length;
+    setCurrentTrack(nextIndex);
+    // Maintain playing state for continuous playback
+    if (isPlaying) {
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+        }
+      }, 100);
+    }
   };
 
   const prevTrack = () => {
-    setCurrentTrack((prev) => (prev - 1 + playlist.length) % playlist.length);
+    const prevIndex = (currentTrack - 1 + playlist.length) % playlist.length;
+    setCurrentTrack(prevIndex);
+    // Maintain playing state for continuous playback
+    if (isPlaying) {
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+        }
+      }, 100);
+    }
   };
 
   const toggleMute = () => {
