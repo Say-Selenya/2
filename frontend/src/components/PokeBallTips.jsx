@@ -120,7 +120,7 @@ const PokeBallTips = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Mystical Artistic Eyes OUTSIDE the card */}
+      {/* Mystical Artistic Eyes OUTSIDE the card - Only Top Corners */}
       <div className="mystical-artistic-eyes">
         <div className="artistic-eye eye-corner-top-left">
           <img 
@@ -130,20 +130,6 @@ const PokeBallTips = () => {
           />
         </div>
         <div className="artistic-eye eye-corner-top-right">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/ocplx6tx_image.jpeg"
-            alt="Mystical Eye"
-            className="mystical-eye-image"
-          />
-        </div>
-        <div className="artistic-eye eye-corner-bottom-left">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/ocplx6tx_image.jpeg"
-            alt="Mystical Eye"
-            className="mystical-eye-image"
-          />
-        </div>
-        <div className="artistic-eye eye-corner-bottom-right">
           <img 
             src="https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/ocplx6tx_image.jpeg"
             alt="Mystical Eye"
