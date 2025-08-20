@@ -245,20 +245,70 @@ const ZaestelarPage = () => {
                   </div>
                 </div>
 
-                {/* Right Column - Same video as main page */}
+                {/* Right Column - Same video as main page with full functionality */}
                 <div className="flex flex-col justify-center">
-                  <div className="profile-video-container relative">
+                  <div 
+                    className="profile-video-container relative"
+                    onMouseEnter={() => setShowControls(true)}
+                    onMouseLeave={() => setShowControls(false)}
+                  >
+                    
+                    {/* Video Element */}
                     <video
+                      ref={videoRef}
                       className="profile-video"
+                      onEnded={handleVideoEnd}
+                      onPlay={() => setIsPlaying(true)}
+                      onPause={() => setIsPlaying(false)}
                       poster="https://images.unsplash.com/photo-1640367169401-534dec442631?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxyb2JvdCUyMG5hdHVyZXxlbnwwfHx8fDE3NTU2NDczNDf8MA&ixlib=rb-4.1.0&q=85"
                       preload="metadata"
                     >
                       <source 
-                        src="https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/7siwsx5k_siriii.mp3" 
+                        src="https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/7siwsx5k_siriii.mp4" 
                         type="video/mp4" 
                       />
                       Tu navegador no soporta el elemento video.
                     </video>
+
+                    {/* Video Overlay Effects */}
+                    <div className="profile-video-overlay"></div>
+                    
+                    {/* Custom Video Controls */}
+                    <div className={`profile-video-controls ${showControls ? 'visible' : 'hidden'}`}>
+                      <div className="profile-controls-background"></div>
+                      
+                      <div className="profile-controls-buttons">
+                        <button 
+                          className="profile-control-btn play-pause"
+                          onClick={togglePlay}
+                        >
+                          {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+                        </button>
+                        
+                        <button 
+                          className="profile-control-btn volume"
+                          onClick={toggleMute}
+                        >
+                          {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+                        </button>
+                        
+                        <button 
+                          className="profile-control-btn fullscreen"
+                          onClick={toggleFullscreen}
+                        >
+                          <Maximize size={16} />
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Play Button Overlay (when paused) */}
+                    {!isPlaying && (
+                      <div className="profile-play-overlay" onClick={togglePlay}>
+                        <div className="profile-play-button">
+                          <Play size={40} />
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Coming soon info */}
