@@ -2702,18 +2702,18 @@ html {
   transform: translateY(0);
 }
 
-/* LAYOUT CONTAINER FOR TIPS AND PORTALS - BETTER CENTERED */
+/* LAYOUT CONTAINER FOR TIPS AND PORTALS - AVOID TEXT OVERLAP */
 .tips-and-portals-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 80px;
-  margin-top: 60px;
+  margin-top: 100px;
   width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 /* RESPONSIVE SIMPLIFIED PORTALS - IMPROVED CENTERING */
