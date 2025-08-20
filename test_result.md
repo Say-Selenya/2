@@ -168,6 +168,31 @@ frontend:
           agent: "main"
           comment: "Ensure all components work perfectly on mobile and desktop. Current design needs responsive improvements for touch interfaces and different screen sizes."
 
+backend:
+  - task: "Payment Integration Setup (Stripe + PayPal)"
+    implemented: false
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Need to integrate Stripe and PayPal payment systems for tips and blocked videos. Requires API keys from user and proper backend endpoints."
+  
+  - task: "Video Payment System for Blocked Content"
+    implemented: false
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Create system to handle payments for accessing blocked videos with custom pricing as user indicates."
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
