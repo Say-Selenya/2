@@ -2315,6 +2315,65 @@ html {
   }
 }
 
+/* PAYMENT PLAN CARDS */
+.payment-plan-card {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(0, 0, 0, 0.3) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.payment-plan-card:hover {
+  background: linear-gradient(145deg, 
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(0, 0, 0, 0.2) 100%);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.payment-subscribe-btn {
+  border-radius: 20px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 10px 16px;
+}
+
+.payment-subscribe-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.payment-subscribe-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.payment-methods-info {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.payment-badge {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.payment-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 /* POKEBALL TIPS SYSTEM - ANIMATED COMPONENT */
 .pokeball-tips-container {
   position: fixed;
