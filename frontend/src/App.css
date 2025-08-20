@@ -2635,16 +2635,17 @@ html {
 }
 
 .simplified-portal-card {
-  background: rgba(0, 0, 0, 0.3) !important;
+  background: rgba(0, 0, 0, 0.4) !important;
   border: 2px solid;
-  border-radius: 20px !important;
-  padding: 12px;
+  border-radius: 25px !important;
+  padding: 18px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   position: relative;
   overflow: hidden;
-  width: 120px;
+  width: 130px;
   height: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .simplified-portal-card:hover {
