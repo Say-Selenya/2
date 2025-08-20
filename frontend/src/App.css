@@ -2766,13 +2766,12 @@ html {
   }
 }
 
-/* TIPS SECTION CONTAINER - LEFT OF TIPS */
+/* TIPS SECTION CONTAINER - CENTERED LAYOUT */
 .tips-section-container {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 60px;
-  padding-right: 0;
-  width: 100%;
+  justify-content: center;
+  width: auto;
+  flex-shrink: 0;
 }
 
 /* POKEBALL GLOWING EFFECT */
