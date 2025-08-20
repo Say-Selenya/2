@@ -24,6 +24,13 @@ const CosmicMusicPlayer = () => {
       artist: "Cultura Profética",
       src: "https://customer-assets.emergentagent.com/job_zae-selenya/artifacts/oxc4teuc_Cultura%20Prof%C3%A9tica%20-%20Saca%2C%20Prende%20y%20Sorprende%20%28Video%20Oficial%29.mp3",
       duration: "4:15"
+    },
+    {
+      id: 3,
+      title: "El Sueño de una Noche de Verano",
+      artist: "Delahoja",
+      src: "https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/ij56ru9u_el-sueno-de-una-noche-de-verano-delahoja-letra-128-ytshorts.savetube.me.mp3",
+      duration: "3:28"
     }
   ]);
 
