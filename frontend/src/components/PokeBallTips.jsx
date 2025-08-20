@@ -98,6 +98,14 @@ const PokeBallTips = () => {
     }
   };
 
+  const handleCustomTip = () => {
+    toast({
+      title: "Próximamente",
+      description: "Cantidad personalizada estará disponible pronto",
+      duration: 2000,
+    });
+  };
+
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
