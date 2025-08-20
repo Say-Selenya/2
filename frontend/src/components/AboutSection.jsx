@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Card } from './ui/card';
 import { Star, Palette, Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
 import PokeBallTips from './PokeBallTips';
+import SimplifiedPortalSections from './SimplifiedPortalSections';
 
 const AboutSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
