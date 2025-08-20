@@ -136,16 +136,19 @@ frontend:
           comment: "COMPLETED: Enhanced video thumbnail shadow with ultra cosmic layers. Added multiple shadow layers with cosmic blue glow, deeper base shadows, and elegant cosmic aura effects. Shadow is now clearer, more defined, and perfectly matches the cosmic theme."
   
   - task: "Remove Email Links and Forms"
-    implemented: false
-    working: "NA"
+    implemented: true
+    working: true
     file: "/app/frontend/src/components/PortalSection.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Need to remove all email functionality from subscription forms and replace with payment system. Found email inputs in PortalSection.jsx and mock data with emails."
+        - working: true
+          agent: "main"
+          comment: "COMPLETED: Successfully removed all email forms and inputs. Replaced with payment subscription system featuring three tiers: Portal Básico ($9.99), Portal Premium ($19.99), and Portal Cósmico ($39.99) with different feature sets and payment buttons."
   
   - task: "Create Pokeball Animated Tips System"
     implemented: false
