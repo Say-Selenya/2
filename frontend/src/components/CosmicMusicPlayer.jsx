@@ -61,6 +61,21 @@ const CosmicMusicPlayer = () => {
     }
   }, [volume, isMuted, currentTrack]);
 
+  // Handle automatic playback when track changes during playing
+  useEffect(() => {
+    if (isPlaying && audioRef.current) {
+      const audio = audioRef.current;
+      // Small delay to ensure audio source has loaded
+      const timer = setTimeout(() => {
+        audio.play().catch(error => {
+          console.log("Auto-play prevented:", error);
+        });
+      }, 300);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [currentTrack, isPlaying]);
+
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
