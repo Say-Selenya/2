@@ -125,7 +125,7 @@ const PokeBallTips = () => {
         {/* Header */}
         <div className="text-center mb-6">
           <h3 className="section-heading text-white mb-2 galactic-title">
-            Portal de Propinas ✨
+            🔮Ofrendas🔮
           </h3>
           <p className="body-medium text-cosmic-mint opacity-90">
             Apoya el universo creativo de Zäe Selenya
