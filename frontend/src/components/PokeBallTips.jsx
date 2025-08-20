@@ -244,12 +244,18 @@ const PokeBallTips = () => {
             Métodos de pago disponibles:
           </p>
           <div className="flex justify-center gap-4">
-            <div className="payment-method">
+            <button 
+              className="payment-method clickable-payment"
+              onClick={() => handlePaymentMethod('paypal')}
+            >
               <span className="text-blue-400 font-semibold">PayPal</span>
-            </div>
-            <div className="payment-method">
+            </button>
+            <button 
+              className="payment-method clickable-payment"
+              onClick={() => handlePaymentMethod('stripe')}
+            >
               <span className="text-purple-400 font-semibold">Stripe</span>
-            </div>
+            </button>
           </div>
         </div>
 
