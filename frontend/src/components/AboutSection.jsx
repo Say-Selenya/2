@@ -295,6 +295,11 @@ const AboutSection = () => {
                     <div className="elegant-divider mt-4"></div>
                   </div>
                 </div>
+
+                {/* Tips Section - Separate space below video */}
+                <div className="tips-section-container">
+                  <PokeBallTips />
+                </div>
               </div>
             </div>
           </Card>
