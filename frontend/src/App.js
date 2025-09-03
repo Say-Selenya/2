@@ -7,7 +7,7 @@ import PortalSection from "./components/PortalSection";
 import StatsSection from "./components/StatsSection";
 import CosmicMusicPlayer from "./components/CosmicMusicPlayer";
 import VisitorCounter from "./components/VisitorCounter";
-import ZaestelarPage from "./components/ZaestelarPage";
+
 import FrikilandiaPage from "./components/FrikilandiaPage";
 import TragediesPage from "./components/TragediesPage";
 import KawaiiPage from "./components/KawaiiPage";
