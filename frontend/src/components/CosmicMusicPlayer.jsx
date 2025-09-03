@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX } from 'lucide-react';
+import { useAudio } from '../contexts/AudioContext';
 
 const CosmicMusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
