@@ -3,12 +3,21 @@ import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX } from 'lucide-rea
 import { useAudio } from '../contexts/AudioContext';
 
 const CosmicMusicPlayer = () => {
+  const { setMusicPlayerRef, updateMusicState } = useAudio();
+  
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(0);
   const [volume, setVolume] = useState(0.7);
   const [isMuted, setIsMuted] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const audioRef = useRef(null);
+
+  // Set up the audio ref for global control
+  useEffect(() => {
+    if (audioRef.current) {
+      setMusicPlayerRef(audioRef.current);
+    }
+  }, [setMusicPlayerRef]);
 
   // Playlist con audio real
   const [playlist, setPlaylist] = useState([
