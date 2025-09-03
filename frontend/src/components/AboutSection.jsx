@@ -156,6 +156,8 @@ const AboutSection = () => {
 
   const handleVideoEnd = () => {
     setIsPlaying(false);
+    // Resume music when video ends
+    resumeMusicAfterVideo();
   };
 
   return (
