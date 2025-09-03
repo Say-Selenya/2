@@ -3232,6 +3232,35 @@ html {
     box-shadow: 
       inset 0 0 25px rgba(255, 255, 255, 0.4),
       0 0 50px rgba(138, 43, 226, 1.0),
+
+/* ENHANCED PROFILE PHOTO HOVER EFFECT */
+.profile-photo-hover-container {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-photo-hover-container:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 15px 35px rgba(135, 206, 235, 0.3));
+}
+
+/* Enhanced hover effects for the profile photo itself */
+.profile-photo-hover-container img {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-photo-hover-container:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.1) contrast(1.05) saturate(1.1);
+}
+
+/* Make the border glow more on hover */
+.profile-photo-hover-container:hover > div {
+  box-shadow: 
+    0 0 40px rgba(135, 206, 235, 0.6),
+    0 0 80px rgba(147, 112, 219, 0.4),
+    0 0 120px rgba(255, 192, 203, 0.3);
+  border-color: rgba(135, 206, 235, 0.8);
+}
       0 0 100px rgba(255, 0, 255, 0.6);
   }
   100% {
