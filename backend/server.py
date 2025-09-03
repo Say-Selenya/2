@@ -36,6 +36,19 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class VisitorCount(BaseModel):
+    total_visitors: int
+    unique_visitors: int
+    last_updated: datetime
+
+class Visitor(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    ip_hash: str
+    user_agent_hash: str
+    first_visit: datetime = Field(default_factory=datetime.utcnow)
+    last_visit: datetime = Field(default_factory=datetime.utcnow)
+    visit_count: int = 1
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
