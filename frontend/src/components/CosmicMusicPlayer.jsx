@@ -48,6 +48,13 @@ const CosmicMusicPlayer = () => {
       artist: "Green Valley",
       src: "https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/v2f9duu3_maria-marihuana-la-voz-del-pueblo-green-valley-128-ytshorts.savetube.me.mp3",
       duration: "3:45"
+    },
+    {
+      id: 5,
+      title: "Say Hey (I Love You)",
+      artist: "Michael Franti",
+      src: "https://customer-assets.emergentagent.com/job_zae-selenya-1/artifacts/ysapo3j6_Say%20Hey%20%28%20I%20Love%20You%29%20-%20Micheal%20Franti%20%2B%20Lyrics.mp3",
+      duration: "4:20"
     }
   ]);
 
