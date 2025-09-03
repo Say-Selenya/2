@@ -11,6 +11,7 @@ import ZaestelarPage from "./components/ZaestelarPage";
 import FrikilandiaPage from "./components/FrikilandiaPage";
 import TragediesPage from "./components/TragediesPage";
 import KawaiiPage from "./components/KawaiiPage";
+import { AudioProvider } from "./contexts/AudioContext";
 import { mockPortalSections } from "./mock";
 import { Toaster } from "./components/ui/toaster";
 
