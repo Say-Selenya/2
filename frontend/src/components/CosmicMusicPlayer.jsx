@@ -57,14 +57,21 @@ const CosmicMusicPlayer = () => {
       audio.volume = isMuted ? 0 : volume;
       
       // Event listeners para manejar el estado
-      const handlePlay = () => setIsPlaying(true);
-      const handlePause = () => setIsPlaying(false);
+      const handlePlay = () => {
+        setIsPlaying(true);
+        updateMusicState(true, playlist[currentTrack]);
+      };
+      const handlePause = () => {
+        setIsPlaying(false);
+        updateMusicState(false, playlist[currentTrack]);
+      };
       const handleEnded = () => {
         // Continuous playback: go to next track and keep playing
         const nextIndex = (currentTrack + 1) % playlist.length;
         setCurrentTrack(nextIndex);
         // Keep playing state true for continuous playback
         setIsPlaying(true);
+        updateMusicState(true, playlist[nextIndex]);
         // Auto-play next track after a short delay
         setTimeout(() => {
           if (audioRef.current) {
