@@ -61,7 +61,7 @@
     "message": "CORS headers are properly configured",
     "timestamp": "2025-09-03T15:11:51.189502",
     "response_data": {
-      "Access-Control-Allow-Origin": "https://cosmic-portal-2.preview.emergentagent.com",
+      "Access-Control-Allow-Origin": "https://zae-selenya-1.preview.emergentagent.com",
       "Access-Control-Allow-Methods": "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT",
       "Access-Control-Allow-Headers": "Content-Type"
     }

@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv('/app/frontend/.env')
 
-BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://cosmic-portal-2.preview.emergentagent.com')
+BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://zae-selenya-1.preview.emergentagent.com')
 API_BASE = f"{BACKEND_URL}/api"
 
 def create_visitor_hash(ip: str, user_agent: str) -> str:

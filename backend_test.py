@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 load_dotenv('/app/frontend/.env')
 
 # Get backend URL from environment
-BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://cosmic-portal-2.preview.emergentagent.com')
+BACKEND_URL = os.getenv('REACT_APP_BACKEND_URL', 'https://zae-selenya-1.preview.emergentagent.com')
 API_BASE = f"{BACKEND_URL}/api"
 
 class VisitorTrackingTester:
@@ -336,7 +336,7 @@ class VisitorTrackingTester:
         try:
             # Test preflight request
             headers = {
-                'Origin': 'https://cosmic-portal-2.preview.emergentagent.com',
+                'Origin': 'https://zae-selenya-1.preview.emergentagent.com',
                 'Access-Control-Request-Method': 'POST',
                 'Access-Control-Request-Headers': 'Content-Type'
             }
