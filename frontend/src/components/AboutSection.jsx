@@ -160,6 +160,18 @@ const AboutSection = () => {
     resumeMusicAfterVideo();
   };
 
+  const handleVideoPlay = () => {
+    setIsPlaying(true);
+    // Pause music when video plays
+    pauseMusicForVideo();
+  };
+
+  const handleVideoPause = () => {
+    setIsPlaying(false);
+    // Resume music when video is paused
+    resumeMusicAfterVideo();
+  };
+
   return (
     <section className="py-16 galactic-about-section relative overflow-hidden">
       {/* Galactic Background Elements */}
