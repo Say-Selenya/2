@@ -6,6 +6,7 @@ import BrightYouTubeBanner from './YouTubeBanner';
 import PortalSection from './PortalSection';
 import StatsSection from './StatsSection';
 import { mockPortalSections } from '../mock';
+import { AudioProvider } from '../contexts/AudioContext';
 
 const ZaestelarPage = () => {
   const [isPlaying, setIsPlaying] = useState(false);
