@@ -11,9 +11,27 @@ const FrikilandiaPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Header with back button */}
-      <div className="container mx-auto px-6 py-8">
+    <AudioProvider>
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        
+        {/* Vertical Neon Lights */}
+        <div className="vertical-neon-lights">
+          <div className="neon-light neon-left">
+            <div className="neon-strip"></div>
+          </div>
+          <div className="neon-light neon-right">
+            <div className="neon-strip"></div>
+          </div>
+        </div>
+
+        {/* Cosmic Music Player - Top Right */}
+        <CosmicMusicPlayer />
+        
+        {/* Real Visitor Counter - Bottom Right */}
+        <VisitorCounter />
+
+        {/* Header with back button */}
+        <div className="container mx-auto px-6 py-8">
         <Button
           onClick={() => navigate('/')}
           className="mb-6 bg-blue-600 hover:bg-blue-700 text-white"
