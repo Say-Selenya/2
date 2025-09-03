@@ -2851,6 +2851,159 @@ html {
   flex-shrink: 0;
 }
 
+/* VISITOR COUNTER - REAL STATISTICS */
+.visitor-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: linear-gradient(145deg, 
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(135, 206, 235, 0.1) 50%,
+    rgba(0, 0, 0, 0.8) 100%);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+  border-radius: 15px;
+  padding: 12px 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(135, 206, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.visitor-counter:hover {
+  border-color: rgba(135, 206, 235, 0.5);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(135, 206, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.visitor-counter.loading {
+  padding: 16px;
+}
+
+.cosmic-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visitor-stats-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.visitor-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(135, 206, 235, 0.1);
+  border: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-number {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(135, 206, 235, 0.2);
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: #00ff00;
+  border-radius: 50%;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+.live-text {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* LIVE PULSE ANIMATION */
+@keyframes live-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive visitor counter */
+@media (max-width: 768px) {
+  .visitor-counter {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 12px;
+  }
+  
+  .visitor-stats-container {
+    gap: 12px;
+  }
+  
+  .stat-number {
+    font-size: 0.85rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visitor-counter {
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 10px;
+  }
+  
+  .visitor-stats-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
 /* VERTICAL NEON LIGHTS - LEFT AND RIGHT SIDES */
 .vertical-neon-lights {
   position: fixed;
