@@ -61,20 +61,22 @@ const Home = () => {
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-          <Route path="/zaestelar" element={<ZaestelarPage />} />
-          <Route path="/frikilandia" element={<FrikilandiaPage />} />
-          <Route path="/tragedias" element={<TragediesPage />} />
-          <Route path="/humor_kawaii" element={<KawaiiPage />} />
-        </Routes>
-      </BrowserRouter>
-      <Toaster />
-    </div>
+    <AudioProvider>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}>
+              <Route index element={<Home />} />
+            </Route>
+            <Route path="/zaestelar" element={<ZaestelarPage />} />
+            <Route path="/frikilandia" element={<FrikilandiaPage />} />
+            <Route path="/tragedias" element={<TragediesPage />} />
+            <Route path="/humor_kawaii" element={<KawaiiPage />} />
+          </Routes>
+        </BrowserRouter>
+        <Toaster />
+      </div>
+    </AudioProvider>
   );
 }
 
