@@ -190,19 +190,19 @@ const AboutSection = () => {
               <div className="flex flex-col items-center lg:items-start">
                 {/* Profile photo */}
                 <div className="flex justify-center mb-8">
-                  <div className="relative">
-                    <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-cosmic-blue via-cosmic-purple to-cosmic-pink p-2">
+                  <div className="relative profile-photo-hover-container">
+                    <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-cosmic-blue via-cosmic-purple to-cosmic-pink p-2 hover:scale-110 transition-transform duration-700 ease-in-out">
                       <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-cosmic-blue to-cosmic-purple">
                         <img 
                           src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/pmtl2agg_foto22.jpeg"
                           alt="Zäe Selenya - Artista Cósmica"
-                          className="w-full h-full object-cover rounded-full hover:scale-125 transition-transform duration-500 ease-in-out cursor-pointer"
+                          className="w-full h-full object-cover rounded-full hover:scale-125 transition-transform duration-700 ease-in-out cursor-pointer"
                         />
                       </div>
                     </div>
                     {/* Enhanced magical effects */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-30 animate-pulse"></div>
-                    <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-15 animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-30 animate-pulse hover:opacity-50 transition-opacity duration-700"></div>
+                    <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-cosmic-blue via-cosmic-purple to-cosmic-pink opacity-15 animate-pulse hover:opacity-30 transition-opacity duration-700" style={{animationDelay: '1.5s'}}></div>
                   </div>
                 </div>
                 
