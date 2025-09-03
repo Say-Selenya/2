@@ -116,6 +116,7 @@ const FrikilandiaPage = () => {
           </Card>
         </div>
 
+        </div>
       </div>
     </AudioProvider>
   );
