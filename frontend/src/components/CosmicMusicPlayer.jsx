@@ -90,7 +90,7 @@ const CosmicMusicPlayer = () => {
         audio.removeEventListener('ended', handleEnded);
       };
     }
-  }, [volume, isMuted, currentTrack]);
+  }, [volume, isMuted, currentTrack, updateMusicState, playlist]);
 
   // Handle automatic playback when track changes during playing
   useEffect(() => {
