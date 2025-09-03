@@ -6,6 +6,8 @@ import SimplifiedPortalSections from './SimplifiedPortalSections';
 import { useAudio } from '../contexts/AudioContext';
 
 const AboutSection = () => {
+  const { pauseMusicForVideo, resumeMusicAfterVideo } = useAudio();
+  
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [showControls, setShowControls] = useState(true);
