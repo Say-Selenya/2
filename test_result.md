@@ -278,7 +278,9 @@ test_plan:
     - "Create Pokeball Animated Tips System"
     - "Implement Responsive Design (Mobile + Desktop)"
     - "Payment Integration Setup (Stripe + PayPal)"
-  stuck_tasks: []
+    - "Visitor Tracking System - Unique Visitor Identification"
+  stuck_tasks:
+    - "Visitor Tracking System - Unique Visitor Identification"
   test_all: false
   test_priority: "high_first"
 
