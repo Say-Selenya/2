@@ -30,6 +30,9 @@ const Home = () => {
       {/* Cosmic Music Player - Top Right */}
       <CosmicMusicPlayer />
       
+      {/* Real Visitor Counter - Bottom Right */}
+      <VisitorCounter />
+      
       {/* Bright YouTube Banner */}
       <BrightYouTubeBanner />
       
