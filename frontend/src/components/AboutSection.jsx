@@ -257,8 +257,8 @@ const AboutSection = () => {
                     ref={videoRef}
                     className="profile-video"
                     onEnded={handleVideoEnd}
-                    onPlay={() => setIsPlaying(true)}
-                    onPause={() => setIsPlaying(false)}
+                    onPlay={handleVideoPlay}
+                    onPause={handleVideoPause}
                     poster="https://customer-assets.emergentagent.com/job_cosmic-portal-2/artifacts/68wtbozv_image.jpeg"
                     preload="metadata"
                   >
