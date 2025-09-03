@@ -66,6 +66,82 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+# Visitor tracking endpoints
+def create_visitor_hash(ip: str, user_agent: str) -> str:
+    """Create a hash from IP and user agent for unique visitor identification"""
+    combined = f"{ip}:{user_agent}"
+    return hashlib.sha256(combined.encode()).hexdigest()
+
+@api_router.post("/track-visit")
+async def track_visit(request: Request):
+    """Track a visitor and return updated count excluding admin"""
+    try:
+        # Get client info
+        client_ip = request.client.host if request.client else "unknown"
+        user_agent = request.headers.get("user-agent", "unknown")
+        
+        # Create unique identifier
+        visitor_hash = create_visitor_hash(client_ip, user_agent)
+        
+        # Check if visitor already exists
+        existing_visitor = await db.visitors.find_one({"ip_hash": visitor_hash})
+        
+        if existing_visitor:
+            # Update existing visitor
+            await db.visitors.update_one(
+                {"ip_hash": visitor_hash},
+                {
+                    "$set": {"last_visit": datetime.utcnow()},
+                    "$inc": {"visit_count": 1}
+                }
+            )
+        else:
+            # Create new visitor
+            new_visitor = Visitor(
+                ip_hash=visitor_hash,
+                user_agent_hash=hashlib.sha256(user_agent.encode()).hexdigest()
+            )
+            await db.visitors.insert_one(new_visitor.dict())
+        
+        # Get total counts (excluding admin/owner)
+        total_visitors = await db.visitors.count_documents({})
+        total_visits = await db.visitors.aggregate([
+            {"$group": {"_id": None, "total_visits": {"$sum": "$visit_count"}}}
+        ]).to_list(1)
+        
+        visit_count = total_visits[0]["total_visits"] if total_visits else 0
+        
+        return {
+            "unique_visitors": total_visitors,
+            "total_visits": visit_count,
+            "message": "Visit tracked successfully"
+        }
+        
+    except Exception as e:
+        logger.error(f"Error tracking visit: {e}")
+        return {"error": "Could not track visit"}
+
+@api_router.get("/visitor-count")
+async def get_visitor_count():
+    """Get current visitor statistics"""
+    try:
+        total_visitors = await db.visitors.count_documents({})
+        total_visits = await db.visitors.aggregate([
+            {"$group": {"_id": None, "total_visits": {"$sum": "$visit_count"}}}
+        ]).to_list(1)
+        
+        visit_count = total_visits[0]["total_visits"] if total_visits else 0
+        
+        return {
+            "unique_visitors": total_visitors,
+            "total_visits": visit_count,
+            "last_updated": datetime.utcnow()
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting visitor count: {e}")
+        return {"unique_visitors": 0, "total_visits": 0, "last_updated": datetime.utcnow()}
+
 # Include the router in the main app
 app.include_router(api_router)
 
