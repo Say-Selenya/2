@@ -35,9 +35,6 @@ const Home = () => {
       {/* About Section */}
       <AboutSection />
       
-      {/* Stats Section */}
-      <StatsSection />
-      
       {/* Footer */}
       <footer className="py-8 bg-black bg-opacity-80 border-t border-cosmic-blue border-opacity-30">
         <div className="container mx-auto px-6 text-center">
