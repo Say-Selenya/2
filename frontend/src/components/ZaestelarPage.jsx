@@ -1,11 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ArrowLeft, ExternalLink, Star, Heart, Palette, Play, Pause, Volume2, VolumeX, Maximize } from 'lucide-react';
-import { Card } from './ui/card';
-import CosmicMusicPlayer from './CosmicMusicPlayer';
+import React from 'react';
+import { ArrowLeft } from 'lucide-react';
 import BrightYouTubeBanner from './YouTubeBanner';
-import PortalSection from './PortalSection';
-import StatsSection from './StatsSection';
-import { mockPortalSections } from '../mock';
+import AboutSection from './AboutSection';
+import CosmicMusicPlayer from './CosmicMusicPlayer';
+import VisitorCounter from './VisitorCounter';
 import { AudioProvider } from '../contexts/AudioContext';
 
 const ZaestelarPage = () => {
