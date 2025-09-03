@@ -40,7 +40,11 @@ const AboutSection = () => {
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
+        // Resume music when video is paused
+        resumeMusicAfterVideo();
       } else {
+        // Pause music when video starts playing
+        pauseMusicForVideo();
         videoRef.current.play();
       }
       setIsPlaying(!isPlaying);
