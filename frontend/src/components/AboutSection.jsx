@@ -196,7 +196,7 @@ const AboutSection = () => {
                         <img 
                           src="https://customer-assets.emergentagent.com/job_mystic-selenya/artifacts/pmtl2agg_foto22.jpeg"
                           alt="Zäe Selenya - Artista Cósmica"
-                          className="w-full h-full object-cover rounded-full hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover rounded-full hover:scale-125 transition-transform duration-500 ease-in-out cursor-pointer"
                         />
                       </div>
                     </div>
