@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowLeft, Heart, Star, Gamepad2 } from 'lucide-react';
+import CosmicMusicPlayer from './CosmicMusicPlayer';
+import VisitorCounter from './VisitorCounter';
+import { AudioProvider } from '../contexts/AudioContext';
 
 const FrikilandiaPage = () => {
   const navigate = useNavigate();
