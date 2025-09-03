@@ -205,6 +205,66 @@ backend:
           agent: "main"
           comment: "Create system to handle payments for accessing blocked videos with custom pricing as user indicates."
 
+  - task: "Visitor Tracking System - Track Visit Endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "POST /api/track-visit endpoint is working correctly. Returns proper JSON response with unique_visitors, total_visits, and message fields. API connectivity confirmed."
+
+  - task: "Visitor Tracking System - Visitor Count Endpoint"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "GET /api/visitor-count endpoint is working correctly. Returns proper JSON response with unique_visitors, total_visits, and last_updated fields."
+
+  - task: "Visitor Tracking System - MongoDB Integration"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "MongoDB integration is working. Visitors collection is being used correctly for storing and retrieving visitor data."
+
+  - task: "Visitor Tracking System - CORS Configuration"
+    implemented: true
+    working: true
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "CORS headers are properly configured. Access-Control-Allow-Origin, Access-Control-Allow-Methods, and Access-Control-Allow-Headers are set correctly for frontend access."
+
+  - task: "Visitor Tracking System - Unique Visitor Identification"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: false
+          agent: "testing"
+          comment: "CRITICAL ISSUE: Unique visitor identification using IP and user agent hashing is not working correctly. Each request is being treated as a new unique visitor even when using the same user agent. The visitor identification logic needs to be debugged - either the IP addresses are changing between requests in the cloud environment, or there's an issue with the database query logic for finding existing visitors."
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
