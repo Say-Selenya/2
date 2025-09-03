@@ -117,7 +117,7 @@ const FrikilandiaPage = () => {
         </div>
 
       </div>
-    </div>
+    </AudioProvider>
   );
 };
 
