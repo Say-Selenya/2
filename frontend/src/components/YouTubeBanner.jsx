@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Bell } from 'lucide-react';
+import { Bell } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '../hooks/use-toast';
 import { mockSubscribe, mockSubscriptionsData } from '../mock';
