@@ -5,16 +5,9 @@ import { useToast } from '../hooks/use-toast';
 import { mockSubscribe, mockSubscriptionsData } from '../mock';
 
 const BrightYouTubeBanner = () => {
-  const [totalSubscribers, setTotalSubscribers] = useState(0);
   const [isSubscribing, setIsSubscribing] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const { toast } = useToast();
-
-  useEffect(() => {
-    // Calculate total subscribers from all sections
-    const total = Object.values(mockSubscriptionsData).reduce((sum, section) => sum + section.count, 0);
-    setTotalSubscribers(total);
-  }, []);
 
   const handleSubscribe = async () => {
     if (isSubscribed) {
