@@ -104,12 +104,6 @@ const BrightYouTubeBanner = () => {
         
         {/* Subscription Section - Bottom Right Corner */}
         <div className="subscription-section-bottom">
-          <div className="subscriber-count-bottom">
-            <Users className="w-5 h-5 mr-2" />
-            <span className="count-number-bottom">{totalSubscribers.toLocaleString()}</span>
-            <span className="count-label-bottom">Exploradores</span>
-          </div>
-          
           <Button
             onClick={handleSubscribe}
             disabled={isSubscribing}
