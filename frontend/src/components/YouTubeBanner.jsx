@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Bell } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '../hooks/use-toast';
-import { mockSubscribe, mockSubscriptionsData } from '../mock';
+import { mockSubscribe } from '../mock';
 
 const BrightYouTubeBanner = () => {
   const [isSubscribing, setIsSubscribing] = useState(false);
