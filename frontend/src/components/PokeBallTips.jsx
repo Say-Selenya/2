@@ -271,16 +271,16 @@ const PokeBallTips = () => {
             Elige tu propina mágica:
           </h4>
           
-          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-4">
             {tipAmounts.map((amount) => (
               <Button
                 key={amount}
                 onClick={(e) => handleTipClick(amount, e)}
                 disabled={isAnimating}
-                className="tip-button cosmic-tip-btn"
+                className="tip-button cosmic-tip-btn flex items-center justify-center"
               >
-                <DollarSign className="w-3 h-3 mr-1" />
-                {amount}
+                <DollarSign className="w-3 h-3 mr-1 flex-shrink-0" />
+                <span className="font-semibold">{amount}</span>
               </Button>
             ))}
           </div>
@@ -288,10 +288,10 @@ const PokeBallTips = () => {
           <Button
             onClick={handleCustomTip}
             disabled={isAnimating}
-            className="custom-tip-button w-full"
+            className="custom-tip-button w-full flex items-center justify-center"
           >
-            <Sparkles className="w-4 h-4 mr-2" />
-            Cantidad Personalizada
+            <Sparkles className="w-4 h-4 mr-2 flex-shrink-0" />
+            <span>Cantidad Personalizada</span>
           </Button>
         </div>
 
