@@ -177,6 +177,137 @@ async def get_visitor_count():
         logger.error(f"Error getting visitor count: {e}")
         return {"unique_visitors": 0, "total_visits": 0, "last_updated": datetime.utcnow()}
 
+# Payment/Tips endpoints
+@api_router.post("/payments/checkout/session")
+async def create_checkout_session(tip_request: TipRequest, request: Request):
+    try:
+        # Validate package exists
+        if tip_request.package_id not in TIP_PACKAGES:
+            raise HTTPException(status_code=400, detail="Invalid tip package")
+        
+        # Get amount from server-side definition only (security)
+        amount = TIP_PACKAGES[tip_request.package_id]
+        
+        # Initialize Stripe checkout
+        host_url = tip_request.origin_url
+        webhook_url = f"{host_url}/api/webhook/stripe"
+        stripe_checkout = StripeCheckout(api_key=stripe_api_key, webhook_url=webhook_url)
+        
+        # Build URLs from provided origin
+        success_url = f"{tip_request.origin_url}/tip-success?session_id={{CHECKOUT_SESSION_ID}}"
+        cancel_url = f"{tip_request.origin_url}/tip-cancelled"
+        
+        # Create checkout session request
+        checkout_request = CheckoutSessionRequest(
+            amount=amount,
+            currency="usd",
+            success_url=success_url,
+            cancel_url=cancel_url,
+            metadata={
+                "package_id": tip_request.package_id,
+                "source": "zaestelar_tips",
+                "tip_type": "cosmic_offering"
+            }
+        )
+        
+        # Create checkout session
+        session: CheckoutSessionResponse = await stripe_checkout.create_checkout_session(checkout_request)
+        
+        # Store transaction in database BEFORE redirecting
+        payment_transaction = PaymentTransaction(
+            session_id=session.session_id,
+            amount=amount,
+            currency="usd",
+            package_id=tip_request.package_id,
+            payment_status="pending",
+            status="initiated",
+            metadata={
+                "package_id": tip_request.package_id,
+                "source": "zaestelar_tips",
+                "tip_type": "cosmic_offering"
+            }
+        )
+        
+        # Insert into payment_transactions collection
+        await db.payment_transactions.insert_one(prepare_for_mongo(payment_transaction.dict()))
+        
+        logger.info(f"Created checkout session {session.session_id} for tip package {tip_request.package_id}")
+        
+        return {
+            "url": session.url,
+            "session_id": session.session_id
+        }
+        
+    except Exception as e:
+        logger.error(f"Error creating checkout session: {e}")
+        raise HTTPException(status_code=500, detail="Failed to create payment session")
+
+@api_router.get("/payments/checkout/status/{session_id}")
+async def get_checkout_status(session_id: str):
+    try:
+        # Initialize Stripe checkout  
+        stripe_checkout = StripeCheckout(api_key=stripe_api_key, webhook_url="")
+        
+        # Get checkout status from Stripe
+        checkout_status: CheckoutStatusResponse = await stripe_checkout.get_checkout_status(session_id)
+        
+        # Update transaction in database
+        update_data = {
+            "payment_status": checkout_status.payment_status,
+            "status": checkout_status.status,
+        }
+        
+        # Only update if not already processed (prevent double processing)
+        existing_transaction = await db.payment_transactions.find_one({"session_id": session_id})
+        if existing_transaction and existing_transaction.get("payment_status") != "paid":
+            await db.payment_transactions.update_one(
+                {"session_id": session_id},
+                {"$set": update_data}
+            )
+            logger.info(f"Updated transaction status for session {session_id}: {checkout_status.payment_status}")
+        
+        return {
+            "status": checkout_status.status,
+            "payment_status": checkout_status.payment_status,
+            "amount_total": checkout_status.amount_total,
+            "currency": checkout_status.currency,
+            "metadata": checkout_status.metadata
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting checkout status: {e}")
+        raise HTTPException(status_code=500, detail="Failed to get payment status")
+
+@api_router.post("/webhook/stripe")
+async def stripe_webhook(request: Request):
+    try:
+        # Get raw body and stripe signature
+        webhook_request_body = await request.body()
+        stripe_signature = request.headers.get("Stripe-Signature")
+        
+        # Initialize Stripe checkout
+        stripe_checkout = StripeCheckout(api_key=stripe_api_key, webhook_url="")
+        
+        # Handle webhook
+        webhook_response = await stripe_checkout.handle_webhook(webhook_request_body, stripe_signature)
+        
+        # Update transaction based on webhook event
+        if webhook_response.event_type == "checkout.session.completed":
+            await db.payment_transactions.update_one(
+                {"session_id": webhook_response.session_id},
+                {"$set": {
+                    "payment_status": webhook_response.payment_status,
+                    "status": "completed"
+                }}
+            )
+            logger.info(f"Webhook processed: {webhook_response.event_type} for session {webhook_response.session_id}")
+        
+        return {"status": "processed"}
+        
+    except Exception as e:
+        logger.error(f"Error processing webhook: {e}")
+        return {"status": "error", "message": str(e)}
+
 # Include the router in the main app
 app.include_router(api_router)
 
