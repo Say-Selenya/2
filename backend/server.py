@@ -56,6 +56,22 @@ class Visitor(BaseModel):
     last_visit: datetime = Field(default_factory=datetime.utcnow)
     visit_count: int = 1
 
+# Tip/Payment Models
+class TipRequest(BaseModel):
+    package_id: str
+    origin_url: str
+
+class PaymentTransaction(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    session_id: str
+    amount: float
+    currency: str = "usd"
+    package_id: str
+    payment_status: str = "pending"
+    status: str = "initiated"
+    metadata: Optional[Dict[str, str]] = None
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
