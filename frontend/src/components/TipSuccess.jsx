@@ -163,14 +163,14 @@ const TipSuccess = () => {
         </div>
       </div>
 
-      <Card className="backdrop-blur-lg bg-black bg-opacity-40 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-8 max-w-md w-full">
+      <Card className="backdrop-blur-lg bg-black bg-opacity-40 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-6 sm:p-8 max-w-md w-full mx-4">
         
         {renderStatus()}
         
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 sm:mt-8 flex justify-center">
           <Button
             onClick={() => navigate('/')}
-            className="bg-cosmic-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            className="bg-cosmic-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-full sm:w-auto"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al Portal Cósmico
