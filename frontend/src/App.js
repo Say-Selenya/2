@@ -74,6 +74,8 @@ function App() {
             <Route path="/frikilandia" element={<FrikilandiaPage />} />
             <Route path="/tragedias" element={<TragediesPage />} />
             <Route path="/humor_kawaii" element={<KawaiiPage />} />
+            <Route path="/tip-success" element={<TipSuccess />} />
+            <Route path="/tip-cancelled" element={<TipCancelled />} />
           </Routes>
         </BrowserRouter>
         <Toaster />
