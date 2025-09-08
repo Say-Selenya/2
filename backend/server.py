@@ -39,6 +39,19 @@ TIP_PACKAGES = {
     "cosmic": 100.00
 }
 
+# Helper function for MongoDB serialization
+def prepare_for_mongo(data):
+    """Prepare data for MongoDB storage by converting datetime objects to ISO strings"""
+    if isinstance(data, dict):
+        for key, value in data.items():
+            if isinstance(value, datetime):
+                data[key] = value.isoformat()
+            elif isinstance(value, dict):
+                data[key] = prepare_for_mongo(value)
+            elif isinstance(value, list):
+                data[key] = [prepare_for_mongo(item) if isinstance(item, dict) else item for item in value]
+    return data
+
 # Create the main app without a prefix
 app = FastAPI()
 
