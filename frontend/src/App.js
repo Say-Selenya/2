@@ -11,6 +11,8 @@ import VisitorCounter from "./components/VisitorCounter";
 import FrikilandiaPage from "./components/FrikilandiaPage";
 import TragediesPage from "./components/TragediesPage";
 import KawaiiPage from "./components/KawaiiPage";
+import TipSuccess from "./components/TipSuccess";
+import TipCancelled from "./components/TipCancelled";
 import { AudioProvider } from "./contexts/AudioContext";
 import { mockPortalSections } from "./mock";
 import { Toaster } from "./components/ui/toaster";
