@@ -20,22 +20,22 @@ const TipCancelled = () => {
         </div>
       </div>
 
-      <Card className="backdrop-blur-lg bg-black bg-opacity-40 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-8 max-w-md w-full text-center">
+      <Card className="backdrop-blur-lg bg-black bg-opacity-40 border-2 border-cosmic-blue border-opacity-50 rounded-2xl p-6 sm:p-8 max-w-md w-full mx-4 text-center">
         
-        <XCircle className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
+        <XCircle className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-4" />
         
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">
           Pago Cancelado
         </h2>
         
-        <p className="text-cosmic-mint mb-6">
+        <p className="text-cosmic-mint mb-6 text-sm sm:text-base">
           Has cancelado la propina. No se ha realizado ningún cargo. El portal cósmico te espera cuando estés listo para hacer una ofrenda. ✨
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col gap-3 sm:gap-4 justify-center">
           <Button
             onClick={() => navigate('/')}
-            className="bg-cosmic-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            className="bg-cosmic-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-full"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al Portal
@@ -44,7 +44,7 @@ const TipCancelled = () => {
           <Button
             onClick={() => navigate('/')}
             variant="outline"
-            className="border-cosmic-mint text-cosmic-mint hover:bg-cosmic-mint hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            className="border-cosmic-mint text-cosmic-mint hover:bg-cosmic-mint hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-full"
           >
             <RefreshCw className="w-4 h-4 mr-2" />
             Intentar de Nuevo
