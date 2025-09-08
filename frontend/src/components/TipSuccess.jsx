@@ -68,11 +68,11 @@ const TipSuccess = () => {
       case 'checking':
         return (
           <div className="text-center">
-            <div className="animate-spin w-12 h-12 border-4 border-cosmic-blue border-t-transparent rounded-full mx-auto mb-4"></div>
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="animate-spin w-10 h-10 sm:w-12 sm:h-12 border-4 border-cosmic-blue border-t-transparent rounded-full mx-auto mb-4"></div>
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">
               Verificando tu ofrenda cósmica...
             </h2>
-            <p className="text-cosmic-mint">
+            <p className="text-cosmic-mint text-sm sm:text-base">
               Estamos confirmando que tu propina llegó al portal mágico ✨
             </p>
           </div>
