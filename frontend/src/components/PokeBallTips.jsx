@@ -56,26 +56,64 @@ const PokeBallTips = () => {
     // Keep pokeball open during animation
     setIsOpen(true);
     
-    // Simulate payment process
-    setTimeout(() => {
-      setTotalTips(prev => prev + amount);
+    try {
+      // Determine package ID based on amount
+      let packageId;
+      switch(amount) {
+        case 5: packageId = 'small'; break;
+        case 10: packageId = 'medium'; break;
+        case 25: packageId = 'large'; break;
+        case 50: packageId = 'xl'; break;
+        case 100: packageId = 'cosmic'; break;
+        default: packageId = 'medium'; break;
+      }
       
-      // Trigger pokeball glow when coin "arrives"
-      setIsGlowing(true);
-      setTimeout(() => setIsGlowing(false), 1500);
+      // Get current origin for success/cancel URLs
+      const originUrl = window.location.origin;
       
-      toast({
-        title: "¡Propina recibida! ✨",
-        description: `¡La moneda de $${amount} llegó al portal mágico!`,
-        duration: 3000,
+      // Call backend to create checkout session
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || ''}/api/payments/checkout/session`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          package_id: packageId,
+          origin_url: originUrl
+        })
       });
       
-      // Reset states
+      if (!response.ok) {
+        throw new Error('Failed to create payment session');
+      }
+      
+      const data = await response.json();
+      
+      // Show success toast and redirect to Stripe
+      toast({
+        title: "🚀 Redirigiendo a pago seguro",
+        description: `Procesando propina de $${amount} - Stripe Checkout`,
+        duration: 2000,
+      });
+      
+      // Small delay for user to see the animation, then redirect
       setTimeout(() => {
-        setIsAnimating(false);
-        setSelectedAmount(null);
-      }, 1000);
-    }, 1500); // Timing to match coin flight
+        window.location.href = data.url;
+      }, 2000);
+      
+    } catch (error) {
+      console.error('Payment error:', error);
+      
+      toast({
+        title: "❌ Error al procesar pago",
+        description: "Hubo un problema. Por favor intenta nuevamente.",
+        duration: 4000,
+      });
+      
+      // Reset states on error
+      setIsAnimating(false);
+      setSelectedAmount(null);
+    }
   };
 
   const handlePaymentMethod = (method) => {
