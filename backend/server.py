@@ -27,6 +27,18 @@ mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
+# Stripe configuration
+stripe_api_key = os.environ.get('STRIPE_API_KEY')
+
+# Predefined tip packages (security: amounts defined on server only)
+TIP_PACKAGES = {
+    "small": 5.00,
+    "medium": 10.00,
+    "large": 25.00,
+    "xl": 50.00,
+    "cosmic": 100.00
+}
+
 # Create the main app without a prefix
 app = FastAPI()
 
