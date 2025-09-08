@@ -81,24 +81,24 @@ const TipSuccess = () => {
       case 'success':
         return (
           <div className="text-center">
-            <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-green-400 mx-auto mb-4" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               ¡Ofrenda Recibida! 🎉
             </h2>
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Star className="w-6 h-6 text-yellow-400" fill="currentColor" />
-              <span className="text-2xl font-bold text-yellow-400">
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" />
+              <span className="text-xl sm:text-2xl font-bold text-yellow-400">
                 ${paymentData ? (paymentData.amount_total / 100).toFixed(2) : '0.00'}
               </span>
-              <Star className="w-6 h-6 text-yellow-400" fill="currentColor" />
+              <Star className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" />
             </div>
-            <p className="text-cosmic-mint mb-6">
+            <p className="text-cosmic-mint mb-6 text-sm sm:text-base px-2">
               Tu propina ha sido recibida con gratitud infinita. El universo cósmico de Zäe Selenya se expande gracias a tu apoyo. ¡Que la magia te acompañe! 🌌✨
             </p>
-            <div className="flex items-center justify-center gap-2 text-cosmic-blue">
-              <Sparkles className="w-5 h-5" />
-              <span>Transacción completada exitosamente</span>
-              <Sparkles className="w-5 h-5" />
+            <div className="flex items-center justify-center gap-2 text-cosmic-blue text-sm sm:text-base">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-center">Transacción completada exitosamente</span>
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
           </div>
         );
