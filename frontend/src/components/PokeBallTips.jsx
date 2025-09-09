@@ -202,7 +202,7 @@ const PokeBallTips = () => {
         
         
         {/* Header */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-6" style={{padding: '10px 0', overflow: 'visible'}}>
           <h3 className="section-heading text-white mb-2 ofrendas-straight-line">
             🔮&nbsp;&nbsp;Ofrendas&nbsp;&nbsp;🔮
           </h3>
