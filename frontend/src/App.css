@@ -4448,6 +4448,33 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
+/* OFRENDAS TITLE - LINEAR ALIGNMENT */
+.galactic-title.flex {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.crystal-icon {
+  font-size: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+  animation: crystal-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes crystal-glow {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(138, 43, 226, 0.6));
+    transform: scale(1);
+  }
+  100% {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(138, 43, 226, 0.8));
+    transform: scale(1.05);
+  }
+}
     transition: transform 0.1s ease !important;
   }
 }
