@@ -4451,46 +4451,39 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS WITH FIXED EMOJI BOXES */
-.ofrendas-container-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 10px 0;
-  overflow: visible;
-}
-
-.emoji-box {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  line-height: 1;
-  overflow: visible;
+/* OFRENDAS LINEAR WITH COMPLETE EMOJIS IN SQUARE */
+.ofrendas-linear-complete {
+  font-size: 2.5rem !important;
+  line-height: 4rem !important;
+  height: 4.5rem !important;
+  min-height: 4.5rem !important;
   
-  /* Force emoji font and rendering */
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", sans-serif;
+  /* Essential positioning */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   
-  /* Ensure full emoji display */
-  box-sizing: content-box;
-  padding: 5px;
+  /* Space management */
+  padding: 25px 20px !important;
+  margin: 10px 0 !important;
+  overflow: visible !important;
+  
+  /* Font and rendering */
+  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
+  font-weight: 600 !important;
+  color: white !important;
+  
+  /* Prevent text wrapping */
+  white-space: nowrap !important;
+  
+  /* Ensure emoji rendering */
+  -webkit-font-feature-settings: "liga", "calt" !important;
+  font-feature-settings: "liga", "calt" !important;
+  text-rendering: optimizeLegibility !important;
   
   /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
-}
-
-.ofrendas-text-box {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  color: white;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  padding: 0 8px;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
