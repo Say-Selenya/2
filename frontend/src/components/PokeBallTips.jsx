@@ -207,20 +207,53 @@ const PokeBallTips = () => {
           marginBottom: '24px', 
           padding: '40px 20px', 
           overflow: 'visible',
-          minHeight: '100px'
+          minHeight: '120px'
         }}>
           <div style={{
-            fontSize: '3rem',
-            lineHeight: '4rem',
-            color: 'white',
-            fontFamily: 'Inter, Apple Color Emoji, Segoe UI Emoji, sans-serif',
-            fontWeight: '600',
-            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '20px',
             padding: '20px 0',
-            overflow: 'visible',
-            whiteSpace: 'nowrap'
+            overflow: 'visible'
           }}>
-            🔮 Ofrendas 🔮
+            <div style={{
+              width: '80px',
+              height: '80px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '4rem',
+              overflow: 'visible',
+              border: '2px solid rgba(135, 206, 235, 0.3)',
+              borderRadius: '10px',
+              fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif'
+            }}>
+              🔮
+            </div>
+            <div style={{
+              fontSize: '2.5rem',
+              color: 'white',
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: '600',
+              padding: '0 20px'
+            }}>
+              Ofrendas
+            </div>
+            <div style={{
+              width: '80px',
+              height: '80px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '4rem',
+              overflow: 'visible',
+              border: '2px solid rgba(135, 206, 235, 0.3)',
+              borderRadius: '10px',
+              fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif'
+            }}>
+              🔮
+            </div>
           </div>
           <p className="body-medium text-cosmic-mint opacity-90">
             Apoya el universo creativo de Zäe Selenya
