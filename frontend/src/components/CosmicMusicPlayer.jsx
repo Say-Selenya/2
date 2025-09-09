@@ -55,6 +55,13 @@ const CosmicMusicPlayer = () => {
       artist: "Michael Franti",
       src: "https://customer-assets.emergentagent.com/job_zae-selenya-1/artifacts/ysapo3j6_Say%20Hey%20%28%20I%20Love%20You%29%20-%20Micheal%20Franti%20%2B%20Lyrics.mp3",
       duration: "4:20"
+    },
+    {
+      id: 6,
+      title: "Quiero Fumar María",
+      artist: "Portal Cósmico",
+      src: "https://customer-assets.emergentagent.com/job_zae-selenya-1/artifacts/ap3zks6e_Quiero_fumar_Maria_mp3_KLICKAUD.mp3",
+      duration: "3:45"
     }
   ]);
 
