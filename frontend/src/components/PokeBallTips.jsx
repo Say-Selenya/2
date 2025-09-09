@@ -203,10 +203,8 @@ const PokeBallTips = () => {
         
         {/* Header */}
         <div className="text-center mb-6">
-          <h3 className="section-heading text-white mb-2 ofrendas-title-inline">
-            <span className="crystal-emoji">🔮</span>
-            <span className="ofrendas-word">Ofrendas</span>
-            <span className="crystal-emoji">🔮</span>
+          <h3 className="section-heading text-white mb-2 ofrendas-straight-line">
+            🔮&nbsp;&nbsp;Ofrendas&nbsp;&nbsp;🔮
           </h3>
           <p className="body-medium text-cosmic-mint opacity-90">
             Apoya el universo creativo de Zäe Selenya
