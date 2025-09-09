@@ -3394,13 +3394,13 @@ html {
   transform: scale(1.02);
 }
 
-/* LIGHT AND FLUID POKEBALL HOVER EFFECTS */
+/* RHYTHMIC AND SMOOTH POKEBALL HOVER EFFECTS */
 .pokeball:hover {
-  transform: scale(1.02) translateY(-1px);
+  transform: scale(1.04) translateY(-2px);
 }
 
 .pokeball.open {
-  transform: scale(1.03) translateY(-2px);
+  transform: scale(1.06) translateY(-3px);
 }
 
 .pokeball.closed {
