@@ -225,8 +225,6 @@ const PokeBallTips = () => {
               justifyContent: 'center',
               fontSize: '4rem',
               overflow: 'visible',
-              border: '2px solid rgba(135, 206, 235, 0.3)',
-              borderRadius: '10px',
               fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif'
             }}>
               🔮
@@ -248,8 +246,6 @@ const PokeBallTips = () => {
               justifyContent: 'center',
               fontSize: '4rem',
               overflow: 'visible',
-              border: '2px solid rgba(135, 206, 235, 0.3)',
-              borderRadius: '10px',
               fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif'
             }}>
               🔮
