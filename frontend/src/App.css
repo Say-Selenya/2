@@ -3393,6 +3393,47 @@ html {
   transform: scale(1.02);
 }
 
+/* SUPER SENSITIVE POKEBALL HOVER EFFECTS */
+.pokeball:hover {
+  transform: scale(1.05) translateY(-2px);
+  filter: brightness(1.1) drop-shadow(0 4px 15px rgba(135, 206, 235, 0.4));
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pokeball.open {
+  transform: scale(1.08) translateY(-3px);
+  filter: brightness(1.15) drop-shadow(0 6px 20px rgba(135, 206, 235, 0.6));
+}
+
+.pokeball.closed {
+  transform: scale(1);
+  filter: brightness(1);
+}
+
+/* Faster open/close transitions */
+.pokeball-top {
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pokeball-bottom {
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pokeball-band {
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pokeball-button {
+  transition: all 0.1s ease-out;
+}
+
+.pokeball-button:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(135, 206, 235, 0.8);
+}
+
 /* POKEBALL GLOWING EFFECT */
 .pokeball.glowing {
   animation: pokeball-glow-pulse 1.5s ease-in-out;
