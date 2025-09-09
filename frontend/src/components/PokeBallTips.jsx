@@ -198,12 +198,10 @@ const PokeBallTips = () => {
         
         
         {/* Header */}
-        <div className="ofrendas-header-container">
-          <div className="ofrendas-title-wrapper">
-            <span className="crystal-left">🔮</span>
-            <span className="ofrendas-text">Ofrendas</span>
-            <span className="crystal-right">🔮</span>
-          </div>
+        <div className="text-center mb-6">
+          <h3 className="section-heading text-white mb-2 ofrendas-title-fixed">
+            🔮Ofrendas🔮
+          </h3>
           <p className="body-medium text-cosmic-mint opacity-90">
             Apoya el universo creativo de Zäe Selenya
           </p>
