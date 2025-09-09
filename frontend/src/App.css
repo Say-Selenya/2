@@ -3410,21 +3410,21 @@ html {
   filter: brightness(1);
 }
 
-/* Faster open/close transitions */
+/* ULTRA-FAST open/close transitions */
 .pokeball-top {
-  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .pokeball-bottom {
-  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .pokeball-band {
-  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.08s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .pokeball-button {
-  transition: all 0.1s ease-out;
+  transition: all 0.05s ease-out;
 }
 
 .pokeball-button:hover {
