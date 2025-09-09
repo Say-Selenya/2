@@ -4451,20 +4451,44 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS TITLE - PERFECT DISPLAY WITHOUT CLIPPING */
-.ofrendas-title-fixed {
+/* OFRENDAS TITLE - PERFECT INLINE DISPLAY */
+.ofrendas-title-inline {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
   font-size: 2rem !important;
-  line-height: 1.8 !important;
+  line-height: 1 !important;
   padding: 20px 0 !important;
   height: auto !important;
   overflow: visible !important;
   white-space: nowrap;
+}
+
+.crystal-emoji {
+  font-size: 2rem !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  padding: 0 !important;
+  margin: 0 !important;
   
-  /* Ensure emojis display perfectly */
-  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
+  /* Ensure perfect emoji rendering */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
   
-  /* Animation for the crystals */
+  /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
+}
+
+.ofrendas-word {
+  font-size: 2rem !important;
+  line-height: 1 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  color: white !important;
+  vertical-align: middle !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
