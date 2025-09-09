@@ -4450,42 +4450,20 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* SIMPLE SOLUTION FOR OFRENDAS TITLE - NO CLIPPING */
-.ofrendas-header-container {
-  text-align: center;
-  margin-bottom: 24px;
-  padding: 20px 0;
-  overflow: visible;
-}
-
-.ofrendas-title-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 16px 0;
-  overflow: visible;
-}
-
-.crystal-left,
-.crystal-right {
-  font-size: 36px;
-  line-height: 1;
-  display: block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  overflow: visible;
+/* OFRENDAS TITLE - PERFECT DISPLAY WITHOUT CLIPPING */
+.ofrendas-title-fixed {
+  font-size: 2rem !important;
+  line-height: 1.8 !important;
+  padding: 20px 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+  white-space: nowrap;
+  
+  /* Ensure emojis display perfectly */
+  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
+  
+  /* Animation for the crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
-}
-
-.ofrendas-text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  color: white;
-  line-height: 1;
-  padding: 0 8px;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
