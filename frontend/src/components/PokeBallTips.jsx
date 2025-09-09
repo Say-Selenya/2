@@ -152,12 +152,21 @@ const PokeBallTips = () => {
     setIsHovering(false);
   };
 
-  // More sensitive hover detection
+  // Instant hover detection - no delays
   const handleContainerMouseEnter = () => {
     setIsHovering(true);
   };
 
   const handleContainerMouseLeave = () => {
+    setIsHovering(false);
+  };
+
+  // Optimized hover handlers with immediate response
+  const handleQuickMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleQuickMouseLeave = () => {
     setIsHovering(false);
   };
 
