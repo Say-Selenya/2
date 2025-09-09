@@ -3584,7 +3584,7 @@ html {
   width: 120px;
   height: 120px;
   position: relative;
-  transition: transform 0.05s ease-out;
+  transition: transform 0.15s ease-in-out;
   transform-style: preserve-3d;
   cursor: pointer;
   will-change: transform;
