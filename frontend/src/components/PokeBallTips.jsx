@@ -17,13 +17,17 @@ const PokeBallTips = () => {
   // Predefined tip amounts
   const tipAmounts = [5, 10, 25, 50, 100];
 
-  // Auto-open pokeball on hover
+  // Super sensitive auto-open pokeball on hover
   useEffect(() => {
-    if (isHovering && !isAnimating) {
-      setIsOpen(true);
-    } else if (!isHovering && !isAnimating) {
-      setIsOpen(false);
-    }
+    const timer = setTimeout(() => {
+      if (isHovering && !isAnimating) {
+        setIsOpen(true);
+      } else if (!isHovering && !isAnimating) {
+        setIsOpen(false);
+      }
+    }, 50); // Reduced delay for faster response
+
+    return () => clearTimeout(timer);
   }, [isHovering, isAnimating]);
 
   const createCoinAnimation = (amount, buttonRect) => {
