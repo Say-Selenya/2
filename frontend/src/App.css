@@ -3384,10 +3384,11 @@ html {
 }
 
 .sensitive-pokeball-area {
-  padding: 40px;
-  margin: -40px;
+  padding: 35px;
+  margin: -35px;
   cursor: pointer;
-  /* LARGE hover detection area - optimized for performance */
+  /* NATURAL hover detection area - smooth and responsive */
+  transition: all 0.15s ease-in-out;
 }
 
 .sensitive-pokeball-area:hover {
