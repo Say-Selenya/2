@@ -189,8 +189,8 @@ const PokeBallTips = () => {
         
         
         {/* Header */}
-        <div className="text-center mb-6">
-          <h3 className="section-heading text-white mb-2 galactic-title flex items-center justify-center gap-2">
+        <div className="text-center mb-6 overflow-visible">
+          <h3 className="section-heading text-white mb-2 galactic-title flex items-center justify-center gap-2 overflow-visible">
             <span className="crystal-icon">🔮</span>
             <span>Ofrendas</span>
             <span className="crystal-icon">🔮</span>
