@@ -4451,32 +4451,46 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS TITLE - FULL EMOJI DISPLAY IN SQUARE */
-.ofrendas-straight-line {
-  font-size: 2.5rem !important;
-  line-height: 3.5rem !important;
-  height: 4rem !important;
-  min-height: 4rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 20px 0 !important;
-  overflow: visible !important;
-  white-space: nowrap !important;
+/* OFRENDAS WITH FIXED EMOJI BOXES */
+.ofrendas-container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 0;
+  overflow: visible;
+}
+
+.emoji-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  line-height: 1;
+  overflow: visible;
   
-  /* Force emojis to display in full square */
-  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
-  font-weight: 600 !important;
+  /* Force emoji font and rendering */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", sans-serif;
   
-  /* Ensure emoji space */
-  letter-spacing: 2px !important;
-  word-spacing: 4px !important;
-  
-  /* Extra space for emoji rendering */
-  box-sizing: content-box !important;
+  /* Ensure full emoji display */
+  box-sizing: content-box;
+  padding: 5px;
   
   /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
+}
+
+.ofrendas-text-box {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
