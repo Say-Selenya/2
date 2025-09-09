@@ -4450,38 +4450,42 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS TITLE - ENSURE FULL EMOJI VISIBILITY */
-.galactic-title {
-  overflow: visible !important;
-  height: auto !important;
-  min-height: 60px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+/* SIMPLE SOLUTION FOR OFRENDAS TITLE - NO CLIPPING */
+.ofrendas-header-container {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 20px 0;
+  overflow: visible;
 }
 
-/* Force full emoji display - NO CLIPPING */
-.galactic-title span:first-child,
-.galactic-title span:last-child {
-  font-size: 2rem !important;
-  line-height: 1 !important;
-  display: inline-block !important;
-  padding: 8px 4px !important;
-  height: auto !important;
-  overflow: visible !important;
-  vertical-align: middle !important;
-  
-  /* Force emoji font */
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", 
-               "Segoe UI Symbol", "Android Emoji", "EmojiSymbols" !important;
-  
-  /* Prevent any clipping */
-  box-shadow: none !important;
-  text-shadow: none !important;
-  transform: none !important;
-  
-  /* Animation for crystals */
+.ofrendas-title-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 0;
+  overflow: visible;
+}
+
+.crystal-left,
+.crystal-right {
+  font-size: 36px;
+  line-height: 1;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  overflow: visible;
   animation: crystal-glow 2s ease-in-out infinite alternate;
+}
+
+.ofrendas-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  line-height: 1;
+  padding: 0 8px;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
