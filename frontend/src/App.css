@@ -4500,6 +4500,37 @@ html {
   0% {
 /* ENSURE CRYSTAL EMOJI DISPLAYS COMPLETELY */
 .crystal-icon {
+/* FORCE EMOJI TO DISPLAY IN FULL SQUARE */
+.ofrendas-straight-line::before,
+.ofrendas-straight-line::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 3rem;
+  vertical-align: middle;
+}
+
+/* Ensure container has enough space for emojis */
+.pokeball-card .text-center {
+  min-height: 5rem !important;
+  padding: 10px 0 !important;
+  overflow: visible !important;
+}
+
+/* Fix emoji clipping on different browsers */
+@supports (-webkit-appearance: none) {
+  .ofrendas-straight-line {
+    -webkit-font-feature-settings: "liga" on, "calt" on !important;
+    font-feature-settings: "liga" on, "calt" on !important;
+  }
+}
+
+@-moz-document url-prefix() {
+  .ofrendas-straight-line {
+    line-height: 4rem !important;
+    padding: 25px 0 !important;
+  }
+}
   /* Prevent emoji clipping in all browsers */
   -webkit-font-feature-settings: "liga" on, "calt" on;
   -moz-font-feature-settings: "liga" on, "calt" on;
