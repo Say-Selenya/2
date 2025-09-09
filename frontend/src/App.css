@@ -4483,6 +4483,23 @@ html {
   /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
 }
+/* FORCE CONTAINER TO NOT CLIP EMOJIS */
+.pokeball-card {
+  overflow: visible !important;
+}
+
+.pokeball-card .text-center {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+/* Remove any height restrictions that might clip emojis */
+.section-heading {
+  height: auto !important;
+  min-height: 60px !important;
+  overflow: visible !important;
+  padding: 12px 0 !important;
+}
 
 @keyframes crystal-glow {
   0% {
