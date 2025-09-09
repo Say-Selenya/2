@@ -4455,13 +4455,22 @@ html {
   justify-content: center !important;
   gap: 8px !important;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1.4 !important;
+  padding: 8px 0 !important;
+  overflow: visible !important;
 }
 
 .crystal-icon {
-  font-size: 1.2em;
-  display: inline-block;
+  font-size: 1.3em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   vertical-align: middle;
+  line-height: 1;
+  padding: 2px;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  overflow: visible !important;
   animation: crystal-glow 2s ease-in-out infinite alternate;
 }
 
