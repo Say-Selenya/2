@@ -203,10 +203,8 @@ const PokeBallTips = () => {
         
         {/* Header */}
         <div className="text-center mb-6" style={{padding: '30px 0', overflow: 'visible'}}>
-          <h3 className="ofrendas-centered-layout">
-            <span className="crystal-left">🔮</span>
-            <span className="word-center">Ofrendas</span>
-            <span className="crystal-right">🔮</span>
+          <h3 className="ofrendas-simple-center">
+            🔮&nbsp;&nbsp;&nbsp;&nbsp;Ofrendas&nbsp;&nbsp;&nbsp;&nbsp;🔮
           </h3>
           <p className="body-medium text-cosmic-mint opacity-90">
             Apoya el universo creativo de Zäe Selenya
