@@ -202,10 +202,26 @@ const PokeBallTips = () => {
         
         
         {/* Header */}
-        <div className="text-center mb-6" style={{padding: '30px 0', overflow: 'visible'}}>
-          <h3 className="ofrendas-simple-center">
-            🔮&nbsp;&nbsp;&nbsp;&nbsp;Ofrendas&nbsp;&nbsp;&nbsp;&nbsp;🔮
-          </h3>
+        <div style={{
+          textAlign: 'center', 
+          marginBottom: '24px', 
+          padding: '40px 20px', 
+          overflow: 'visible',
+          minHeight: '100px'
+        }}>
+          <div style={{
+            fontSize: '3rem',
+            lineHeight: '4rem',
+            color: 'white',
+            fontFamily: 'Inter, Apple Color Emoji, Segoe UI Emoji, sans-serif',
+            fontWeight: '600',
+            textAlign: 'center',
+            padding: '20px 0',
+            overflow: 'visible',
+            whiteSpace: 'nowrap'
+          }}>
+            🔮 Ofrendas 🔮
+          </div>
           <p className="body-medium text-cosmic-mint opacity-90">
             Apoya el universo creativo de Zäe Selenya
           </p>
