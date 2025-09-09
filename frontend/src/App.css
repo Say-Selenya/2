@@ -4451,39 +4451,62 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS LINEAR WITH COMPLETE EMOJIS IN SQUARE */
-.ofrendas-linear-complete {
-  font-size: 2.5rem !important;
-  line-height: 4rem !important;
-  height: 4.5rem !important;
-  min-height: 4.5rem !important;
-  
-  /* Essential positioning */
+/* OFRENDAS WITH CENTERED WORD BETWEEN EMOJIS */
+.ofrendas-centered-layout {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  text-align: center !important;
+  gap: 20px !important;
   
-  /* Space management */
+  /* Container sizing */
+  height: 4.5rem !important;
+  min-height: 4.5rem !important;
   padding: 25px 20px !important;
   margin: 10px 0 !important;
   overflow: visible !important;
   
-  /* Font and rendering */
-  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
-  font-weight: 600 !important;
-  color: white !important;
-  
-  /* Prevent text wrapping */
+  /* Prevent wrapping */
   white-space: nowrap !important;
+}
+
+.crystal-left,
+.crystal-right {
+  font-size: 2.5rem !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px !important;
   
-  /* Ensure emoji rendering */
-  -webkit-font-feature-settings: "liga", "calt" !important;
-  font-feature-settings: "liga", "calt" !important;
-  text-rendering: optimizeLegibility !important;
+  /* Emoji font */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+  
+  /* Full emoji display */
+  overflow: visible !important;
+  padding: 5px !important;
+  box-sizing: content-box !important;
   
   /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
+}
+
+.word-center {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 2.5rem !important;
+  color: white !important;
+  line-height: 1 !important;
+  
+  /* Center perfectly */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 1 !important;
+  text-align: center !important;
+  
+  /* Spacing */
+  padding: 0 10px !important;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
