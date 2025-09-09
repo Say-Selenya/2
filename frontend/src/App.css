@@ -4451,44 +4451,28 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS TITLE - PERFECT INLINE DISPLAY */
-.ofrendas-title-inline {
+/* OFRENDAS TITLE - SUPER SIMPLE STRAIGHT LINE */
+.ofrendas-straight-line {
+  font-size: 2rem !important;
+  line-height: 2.5rem !important;
+  height: 3rem !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
-  font-size: 2rem !important;
-  line-height: 1 !important;
-  padding: 20px 0 !important;
-  height: auto !important;
+  padding: 15px 0 !important;
   overflow: visible !important;
-  white-space: nowrap;
-}
-
-.crystal-emoji {
-  font-size: 2rem !important;
-  line-height: 1 !important;
-  display: inline-block !important;
-  vertical-align: middle !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  white-space: nowrap !important;
   
-  /* Ensure perfect emoji rendering */
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+  /* Force all characters to same baseline */
+  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif !important;
+  font-weight: 600 !important;
+  
+  /* Prevent any weird spacing */
+  letter-spacing: 0 !important;
+  word-spacing: 0 !important;
   
   /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
-}
-
-.ofrendas-word {
-  font-size: 2rem !important;
-  line-height: 1 !important;
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 600 !important;
-  color: white !important;
-  vertical-align: middle !important;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
