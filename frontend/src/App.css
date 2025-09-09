@@ -3370,8 +3370,27 @@ html {
   z-index: 1000;
   max-width: 320px;
   transform: translateY(0);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+}
+
+/* SENSITIVE HOVER AREAS */
+.sensitive-hover-area {
+  padding: 20px;
+  margin: -20px;
+  /* Invisible expanded area for more sensitive detection */
+}
+
+.sensitive-pokeball-area {
+  padding: 30px;
+  margin: -30px;
+  cursor: pointer;
+  /* Extra large hover detection area around pokeball */
+  transition: all 0.15s ease-out;
+}
+
+.sensitive-pokeball-area:hover {
+  transform: scale(1.02);
 }
 
 /* POKEBALL GLOWING EFFECT */
