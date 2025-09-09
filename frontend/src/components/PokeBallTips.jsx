@@ -163,9 +163,9 @@ const PokeBallTips = () => {
 
   return (
     <div 
-      className="pokeball-tips-container"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="pokeball-tips-container sensitive-hover-area"
+      onMouseEnter={handleContainerMouseEnter}
+      onMouseLeave={handleContainerMouseLeave}
     >
       {/* Mystical Artistic Eyes OUTSIDE the card - Only Top Corners */}
       <div className="mystical-artistic-eyes">
