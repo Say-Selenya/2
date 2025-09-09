@@ -152,6 +152,15 @@ const PokeBallTips = () => {
     setIsHovering(false);
   };
 
+  // More sensitive hover detection
+  const handleContainerMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleContainerMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div 
       className="pokeball-tips-container"
