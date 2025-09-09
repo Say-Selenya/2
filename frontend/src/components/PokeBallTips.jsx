@@ -221,8 +221,8 @@ const PokeBallTips = () => {
         {/* Pokeball Container */}
         <div 
           className="pokeball-container sensitive-pokeball-area"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={handleQuickMouseEnter}
+          onMouseLeave={handleQuickMouseLeave}
         >
           <div className={`pokeball ${isOpen ? 'open' : 'closed'} ${isAnimating ? 'animating' : ''} ${isGlowing ? 'glowing' : ''}`}>
             
