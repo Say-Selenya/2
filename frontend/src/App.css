@@ -4451,62 +4451,31 @@ html {
 
   .payment-method:active {
     transform: scale(0.98) !important;
-/* OFRENDAS WITH CENTERED WORD BETWEEN EMOJIS */
-.ofrendas-centered-layout {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 20px !important;
-  
-  /* Container sizing */
-  height: 4.5rem !important;
-  min-height: 4.5rem !important;
-  padding: 25px 20px !important;
-  margin: 10px 0 !important;
-  overflow: visible !important;
-  
-  /* Prevent wrapping */
-  white-space: nowrap !important;
-}
-
-.crystal-left,
-.crystal-right {
+/* SUPER SIMPLE CENTERED OFRENDAS */
+.ofrendas-simple-center {
   font-size: 2.5rem !important;
-  line-height: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 50px !important;
-  height: 50px !important;
+  line-height: 4rem !important;
+  height: 5rem !important;
   
-  /* Emoji font */
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif !important;
+  /* Center everything */
+  text-align: center !important;
+  display: block !important;
   
-  /* Full emoji display */
+  /* Space for emojis */
+  padding: 30px 20px !important;
+  margin: 15px 0 !important;
   overflow: visible !important;
-  padding: 5px !important;
-  box-sizing: content-box !important;
+  
+  /* Font settings */
+  font-family: 'Inter', 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif !important;
+  font-weight: 600 !important;
+  color: white !important;
+  
+  /* No wrapping */
+  white-space: nowrap !important;
   
   /* Animation for crystals */
   animation: crystal-glow 2s ease-in-out infinite alternate;
-}
-
-.word-center {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 2.5rem !important;
-  color: white !important;
-  line-height: 1 !important;
-  
-  /* Center perfectly */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex: 1 !important;
-  text-align: center !important;
-  
-  /* Spacing */
-  padding: 0 10px !important;
 }
 /* FORCE CONTAINER TO NOT CLIP EMOJIS */
 .pokeball-card {
