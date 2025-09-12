@@ -4728,13 +4728,10 @@ html {
 
 @keyframes rings-rotate {
   0% {
-    transform: translateX(-50%) rotate(0deg) scaleX(1);
-  }
-  50% {
-    transform: translateX(-50%) rotate(180deg) scaleX(0.8);
+    transform: translate(-50%, -50%) rotateX(75deg) rotateZ(0deg);
   }
   100% {
-    transform: translateX(-50%) rotate(360deg) scaleX(1);
+    transform: translate(-50%, -50%) rotateX(75deg) rotateZ(360deg);
   }
 }
 
