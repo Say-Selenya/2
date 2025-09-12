@@ -232,6 +232,11 @@ const AboutSection = () => {
                       <div className="magic-entries-below-text">
                         <SimplifiedPortalSections />
                       </div>
+
+                      {/* Cosmic Comments Below Magic Entries */}
+                      <div className="cosmic-comments-section">
+                        <CosmicComments />
+                      </div>
                     </div>
                     
                     <div className="flex flex-col items-center lg:items-start">
