@@ -97,6 +97,14 @@ class PaymentTransaction(BaseModel):
     metadata: Optional[Dict[str, str]] = None
     timestamp: datetime = Field(default_factory=datetime.utcnow)
 
+# Cosmic Comments Model
+class CosmicComment(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    message: str
+    email: str = "anonymous@cosmos.space"
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    ip_address: Optional[str] = None
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
