@@ -4561,56 +4561,56 @@ html {
   height: 450px;
   max-width: 450px;
   
-  /* REALISTIC PLANET SURFACE */
+  /* PLANET WITH REAL EARTH-LIKE APPEARANCE */
   background: 
-    /* Surface texture with craters */
-    radial-gradient(circle at 20% 25%, rgba(100, 149, 237, 0.4) 3px, transparent 3px),
-    radial-gradient(circle at 75% 15%, rgba(72, 61, 139, 0.5) 5px, transparent 5px),
-    radial-gradient(circle at 60% 70%, rgba(30, 144, 255, 0.3) 4px, transparent 4px),
-    radial-gradient(circle at 15% 80%, rgba(123, 104, 238, 0.4) 6px, transparent 6px),
-    radial-gradient(circle at 85% 60%, rgba(65, 105, 225, 0.3) 3px, transparent 3px),
+    /* Cloud layers */
+    radial-gradient(ellipse at 20% 30%, rgba(255, 255, 255, 0.3) 8%, transparent 15%),
+    radial-gradient(ellipse at 70% 20%, rgba(255, 255, 255, 0.2) 12%, transparent 20%),
+    radial-gradient(ellipse at 40% 80%, rgba(255, 255, 255, 0.25) 10%, transparent 18%),
     
-    /* Main planet surface with realistic lighting */
-    radial-gradient(ellipse at 35% 25%, 
-      rgba(135, 206, 235, 0.9) 0%,     /* Illuminated side - light blue */
-      rgba(70, 130, 180, 0.8) 25%,     /* Steel blue */
-      rgba(25, 25, 112, 0.85) 50%,     /* Midnight blue */
-      rgba(72, 61, 139, 0.9) 75%,      /* Dark slate blue */
-      rgba(25, 25, 112, 0.95) 100%     /* Dark side */
-    ),
+    /* Continents (land masses) */
+    radial-gradient(ellipse at 30% 40%, rgba(34, 139, 34, 0.8) 15%, transparent 25%),
+    radial-gradient(ellipse at 70% 60%, rgba(46, 125, 50, 0.7) 12%, transparent 22%),
+    radial-gradient(ellipse at 15% 70%, rgba(27, 94, 32, 0.6) 18%, transparent 28%),
     
-    /* Deep space background */
-    linear-gradient(45deg, 
-      rgba(25, 25, 112, 0.95) 0%, 
-      rgba(72, 61, 139, 0.9) 100%
+    /* Oceans (water) */
+    radial-gradient(circle at 50% 50%, 
+      rgba(13, 71, 161, 1) 0%,        /* Deep ocean blue center */
+      rgba(21, 101, 192, 0.9) 30%,    /* Ocean blue */
+      rgba(25, 118, 210, 0.8) 60%,    /* Lighter blue */
+      rgba(30, 136, 229, 0.7) 80%,    /* Surface blue */
+      rgba(33, 150, 243, 0.6) 100%    /* Atmosphere edge */
     );
   
   border-radius: 50%;
   padding: 50px 40px;
   margin: 30px auto;
   
-  /* Realistic planet shadow and glow */
+  /* Earth-like lighting and shadow */
   box-shadow: 
-    /* Planet's own shadow (dark side) */
-    inset 15px 15px 40px rgba(0, 0, 0, 0.4),
+    /* Terminator line (day/night boundary) */
+    inset -20px -20px 50px rgba(0, 0, 0, 0.6),
     /* Atmospheric glow */
-    0 0 40px rgba(135, 206, 235, 0.3),
-    0 0 80px rgba(100, 149, 237, 0.2),
-    /* Space depth */
-    0 15px 50px rgba(0, 0, 0, 0.3);
+    0 0 50px rgba(33, 150, 243, 0.4),
+    0 0 100px rgba(21, 101, 192, 0.2),
+    /* Space shadow */
+    10px 20px 60px rgba(0, 0, 0, 0.4);
   
-  /* Thin atmosphere border */
-  border: 2px solid rgba(135, 206, 235, 0.2);
+  /* Atmosphere border */
+  border: 3px solid rgba(135, 206, 235, 0.3);
   
-  /* Gentle planetary rotation */
-  animation: planet-rotate 20s linear infinite, planet-float 8s ease-in-out infinite;
+  /* Gentle rotation */
+  animation: planet-spin 30s linear infinite, planet-float 6s ease-in-out infinite;
   
-  /* Ensure perfect circle */
+  /* Perfect circle */
   aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  /* Make it look 3D */
+  transform-style: preserve-3d;
 }
 
 @keyframes planet-rotate {
