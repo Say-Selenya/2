@@ -329,6 +329,66 @@ async def stripe_webhook(request: Request):
         logger.error(f"Error processing webhook: {e}")
         return {"status": "error", "message": str(e)}
 
+# Cosmic Comments endpoint
+@api_router.post("/cosmic-comments")
+async def create_cosmic_comment(comment_data: dict, request: Request):
+    try:
+        # Create comment object
+        cosmic_comment = CosmicComment(
+            message=comment_data.get("message", "").strip(),
+            email=comment_data.get("email", "anonymous@cosmos.space").strip(),
+            ip_address=request.client.host if request.client else "unknown"
+        )
+        
+        # Validate message
+        if not cosmic_comment.message or len(cosmic_comment.message) < 3:
+            raise HTTPException(status_code=400, detail="Message too short")
+        
+        if len(cosmic_comment.message) > 500:
+            raise HTTPException(status_code=400, detail="Message too long")
+        
+        # Store in database
+        await db.cosmic_comments.insert_one(prepare_for_mongo(cosmic_comment.dict()))
+        
+        logger.info(f"New cosmic comment received from {cosmic_comment.email}")
+        
+        return {
+            "status": "success",
+            "message": "Comment sent to the cosmos!",
+            "comment_id": cosmic_comment.id
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error saving cosmic comment: {e}")
+        raise HTTPException(status_code=500, detail="Failed to send comment to cosmos")
+
+@api_router.get("/cosmic-comments")
+async def get_cosmic_comments(limit: int = 50):
+    try:
+        # Get recent comments (for potential admin view)
+        comments = await db.cosmic_comments.find().sort("timestamp", -1).limit(limit).to_list(length=None)
+        
+        # Remove sensitive data for public view
+        public_comments = []
+        for comment in comments:
+            public_comments.append({
+                "id": comment.get("id"),
+                "message": comment.get("message"),
+                "timestamp": comment.get("timestamp"),
+                "email": comment.get("email", "anonymous@cosmos.space")[:3] + "***" if comment.get("email") != "anonymous@cosmos.space" else "anonymous@cosmos.space"
+            })
+        
+        return {
+            "comments": public_comments,
+            "total": len(public_comments)
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting cosmic comments: {e}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve cosmic comments")
+
 # Include the router in the main app
 app.include_router(api_router)
 
