@@ -4975,27 +4975,33 @@ html {
 .planet-comment-box::before {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 50%;
   
-  /* Surface features - continents and oceans */
-  background: 
-    /* Large surface features */
-    radial-gradient(ellipse at 40% 30%, rgba(25, 25, 112, 0.3) 20%, transparent 40%),
-    radial-gradient(ellipse at 70% 60%, rgba(72, 61, 139, 0.4) 15%, transparent 35%),
-    radial-gradient(ellipse at 20% 70%, rgba(30, 144, 255, 0.2) 25%, transparent 45%),
-    
-    /* Small details */
-    radial-gradient(circle at 55% 20%, rgba(100, 149, 237, 0.3) 2px, transparent 3px),
-    radial-gradient(circle at 30% 50%, rgba(65, 105, 225, 0.4) 3px, transparent 4px),
-    radial-gradient(circle at 80% 40%, rgba(123, 104, 238, 0.3) 2px, transparent 3px);
+  /* PLANET EARTH-LIKE IMAGE PATTERN */
+  background-image: 
+    /* Use a data URL for a simple planet pattern */
+    url("data:image/svg+xml,%3Csvg width='450' height='450' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='planet' cx='50%25' cy='50%25'%3E%3Cstop offset='0%25' stop-color='%2340A0FF'/%3E%3Cstop offset='70%25' stop-color='%23105080'/%3E%3Cstop offset='100%25' stop-color='%23001122'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='225' cy='225' r='225' fill='url(%23planet)'/%3E%3Cellipse cx='180' cy='150' rx='40' ry='25' fill='%23228B22' opacity='0.8'/%3E%3Cellipse cx='320' cy='200' rx='35' ry='20' fill='%23228B22' opacity='0.7'/%3E%3Cellipse cx='150' cy='300' rx='50' ry='30' fill='%23228B22' opacity='0.6'/%3E%3Cellipse cx='80' cy='180' rx='20' ry='35' fill='%23228B22' opacity='0.5'/%3E%3Cellipse cx='370' cy='320' rx='25' ry='15' fill='%23228B22' opacity='0.7'/%3E%3Cellipse cx='100' cy='350' rx='30' ry='18' fill='%23228B22' opacity='0.6'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
   
+  /* Add lighting effect */
+  background-blend-mode: multiply;
+  opacity: 0.9;
   pointer-events: none;
-  opacity: 0.7;
-  animation: surface-shift 15s ease-in-out infinite;
+  animation: planet-surface-rotate 40s linear infinite;
+}
+
+@keyframes planet-surface-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes surface-shift {
