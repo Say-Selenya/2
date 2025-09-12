@@ -65,6 +65,8 @@ const CosmicComments = () => {
   return (
     <div className="cosmic-comments-container">
       <div className="planet-comment-box">
+        {/* Planet emoji as background */}
+        <div className="planet-emoji-bg">🌍</div>
         
         {/* Planet Header */}
         <div className="planet-header">
