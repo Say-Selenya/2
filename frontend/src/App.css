@@ -4922,18 +4922,67 @@ html {
 
 .planet-atmosphere {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
   border-radius: 50%;
-  background: radial-gradient(circle, 
-    transparent 80%, 
-    rgba(135, 206, 235, 0.1) 90%, 
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  
+  /* Realistic atmospheric layers */
+  background: 
+    /* Outer atmosphere */
+    radial-gradient(circle, 
+      transparent 75%, 
+      rgba(135, 206, 235, 0.1) 85%, 
+      rgba(100, 149, 237, 0.15) 92%, 
+      rgba(70, 130, 180, 0.08) 100%
+    );
+  
+  /* Atmospheric glow */
+  box-shadow: 
+    0 0 25px rgba(135, 206, 235, 0.2),
+    inset 0 0 25px rgba(135, 206, 235, 0.1);
+  
   pointer-events: none;
-  animation: atmosphere-pulse 4s ease-in-out infinite;
+  animation: atmosphere-pulse 6s ease-in-out infinite;
+}
+
+/* Add surface details overlay */
+.planet-comment-box::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  
+  /* Surface features - continents and oceans */
+  background: 
+    /* Large surface features */
+    radial-gradient(ellipse at 40% 30%, rgba(25, 25, 112, 0.3) 20%, transparent 40%),
+    radial-gradient(ellipse at 70% 60%, rgba(72, 61, 139, 0.4) 15%, transparent 35%),
+    radial-gradient(ellipse at 20% 70%, rgba(30, 144, 255, 0.2) 25%, transparent 45%),
+    
+    /* Small details */
+    radial-gradient(circle at 55% 20%, rgba(100, 149, 237, 0.3) 2px, transparent 3px),
+    radial-gradient(circle at 30% 50%, rgba(65, 105, 225, 0.4) 3px, transparent 4px),
+    radial-gradient(circle at 80% 40%, rgba(123, 104, 238, 0.3) 2px, transparent 3px);
+  
+  pointer-events: none;
+  opacity: 0.7;
+  animation: surface-shift 15s ease-in-out infinite;
+}
+
+@keyframes surface-shift {
+  0%, 100% {
+    opacity: 0.7;
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: rotate(2deg);
+  }
 }
 
 @keyframes atmosphere-pulse {
