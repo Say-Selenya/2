@@ -4585,33 +4585,35 @@ html {
 
 .planet-sphere {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
   
-  /* REALISTIC PLANET EARTH COLORS */
+  /* BRIGHT TURQUOISE/BLUE PLANET like the image */
   background: 
-    /* Oceans - dominant blue */
-    radial-gradient(circle at 40% 30%, 
-      #4FC3F7 0%,    /* Light blue (shallow water) */
-      #29B6F6 30%,   /* Medium blue */
-      #0288D1 60%,   /* Deep blue */
-      #01579B 100%   /* Deep ocean */
+    radial-gradient(ellipse at 30% 25%, 
+      rgba(64, 224, 208, 1) 0%,      /* Bright turquoise center */
+      rgba(32, 178, 170, 0.95) 25%,  /* Medium turquoise */
+      rgba(70, 130, 180, 0.9) 50%,   /* Steel blue */
+      rgba(25, 118, 210, 0.85) 75%,  /* Deep blue */
+      rgba(13, 71, 161, 0.8) 100%    /* Dark blue edge */
     );
   
-  /* Planet lighting and shadow */
+  /* Bright atmospheric glow like the image */
   box-shadow: 
-    /* Day/night terminator */
-    inset -30px -30px 80px rgba(0, 0, 0, 0.8),
-    /* Atmospheric glow */
-    0 0 50px rgba(135, 206, 235, 0.6),
-    /* Space shadow */
-    15px 25px 80px rgba(0, 0, 0, 0.4);
+    /* Inner glow */
+    inset 0 0 60px rgba(64, 224, 208, 0.3),
+    /* Outer atmospheric glow */
+    0 0 80px rgba(64, 224, 208, 0.6),
+    0 0 150px rgba(32, 178, 170, 0.4),
+    /* Subtle shadow */
+    0 20px 60px rgba(0, 0, 0, 0.2);
   
-  animation: planet-rotation 15s linear infinite;
+  animation: planet-rotation 20s linear infinite;
   overflow: hidden;
 }
 
