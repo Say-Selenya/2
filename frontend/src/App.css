@@ -4800,41 +4800,43 @@ html {
   position: relative;
 }
 
-.cosmic-input,
-.cosmic-textarea {
+/* Elegant white input fields like in the image */
+.cosmic-input-elegant,
+.cosmic-textarea-elegant {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 12px 16px;
-  color: white;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  padding: 15px 20px;
+  color: #2c3e50;
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-weight: 400;
   
-  /* Glass effect */
-  backdrop-filter: blur(10px);
+  /* Subtle shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   
   transition: all 0.3s ease;
 }
 
-.cosmic-input::placeholder,
-.cosmic-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  font-style: italic;
+.cosmic-input-elegant::placeholder,
+.cosmic-textarea-elegant::placeholder {
+  color: rgba(44, 62, 80, 0.6);
+  font-weight: 300;
 }
 
-.cosmic-input:focus,
-.cosmic-textarea:focus {
+.cosmic-input-elegant:focus,
+.cosmic-textarea-elegant:focus {
   outline: none;
-  border-color: rgba(135, 206, 235, 0.8);
-  box-shadow: 0 0 15px rgba(135, 206, 235, 0.3);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(64, 224, 208, 0.8);
+  box-shadow: 0 0 20px rgba(64, 224, 208, 0.3);
+  background: rgba(255, 255, 255, 1);
 }
 
-.cosmic-textarea {
+.cosmic-textarea-elegant {
   resize: vertical;
-  min-height: 100px;
-  line-height: 1.5;
+  min-height: 80px;
+  line-height: 1.6;
 }
 
 .character-count {
