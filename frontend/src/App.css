@@ -4676,15 +4676,6 @@ html {
 
 @keyframes cloud-movement {
   0% {
-/* Content overlay on top of planet */
-.planet-content-overlay {
-  position: relative;
-  z-index: 20;
-  padding: 40px 30px;
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-}
     transform: rotateZ(0deg);
     opacity: 0.6;
   }
@@ -4695,6 +4686,16 @@ html {
     transform: rotateZ(360deg);
     opacity: 0.6;
   }
+}
+
+/* Content overlay on top of planet */
+.planet-content-overlay {
+  position: relative;
+  z-index: 20;
+  padding: 60px 40px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
 }
 
 @keyframes planet-spin {
