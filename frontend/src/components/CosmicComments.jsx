@@ -76,8 +76,8 @@ const CosmicComments = () => {
         <div className="planet-content-overlay">
           
           {/* Planet Header */}
-          <div className="planet-header">
-            <h4 className="cosmic-title">¡Escríbeme!</h4>
+          <div className="planet-header-elegant">
+            <h3 className="cosmic-title-elegant">Escríbeme</h3>
           </div>
 
           {/* Comment Form */}
