@@ -63,86 +63,121 @@ const CosmicComments = () => {
   };
 
   return (
-    <div className="cosmic-comments-container">
-      <div className="planet-visual-container">
+    <div style={{
+      margin: '40px 0',
+      padding: '40px 20px',
+      background: 'linear-gradient(135deg, rgba(13, 27, 42, 1) 0%, rgba(27, 38, 59, 1) 50%, rgba(20, 30, 48, 1) 100%)',
+      borderRadius: '20px',
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '500px'
+    }}>
+      
+      {/* Simple Planet Sphere */}
+      <div style={{
+        position: 'absolute',
+        width: '300px',
+        height: '300px',
+        borderRadius: '50%',
+        background: 'radial-gradient(circle at 30% 30%, #40E0D0 0%, #20B2AA 50%, #1976D2 100%)',
+        boxShadow: '0 0 60px rgba(64, 224, 208, 0.5), inset -20px -20px 40px rgba(0,0,0,0.3)',
+        zIndex: '1'
+      }}></div>
+      
+      {/* Form Content */}
+      <div style={{
+        position: 'relative',
+        zIndex: '10',
+        maxWidth: '350px',
+        width: '100%',
+        textAlign: 'center',
+        padding: '40px 20px'
+      }}>
         
-        {/* Visible Planet */}
-        <div className="planet-sphere">
-          <div className="planet-surface"></div>
-          <div className="planet-clouds"></div>
-        </div>
+        <h3 style={{
+          color: 'white',
+          fontSize: '2rem',
+          marginBottom: '30px',
+          textShadow: '0 0 20px rgba(64, 224, 208, 0.6)'
+        }}>
+          Escríbeme
+        </h3>
         
-        {/* Content Over Planet */}
-        <div className="planet-content-overlay">
+        <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column', gap: '15px'}}>
           
-          {/* Planet Header */}
-          <div className="planet-header-elegant">
-            <h3 className="cosmic-title-elegant">Escríbeme</h3>
-          </div>
-
-          {/* Comment Form */}
-          <form onSubmit={handleSubmit} className="cosmic-form">
+          <input
+            type="text"
+            placeholder="Tu nombre"
+            style={{
+              padding: '15px 20px',
+              borderRadius: '25px',
+              border: 'none',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              fontSize: '1rem',
+              color: '#2c3e50'
+            }}
+          />
           
-          {/* Name Input */}
-          <div className="cosmic-input-group">
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Tu estrella (nombre)"
-              className="cosmic-input-elegant name-input"
-            />
-          </div>
-
-          {/* Email Input */}
-          <div className="cosmic-input-group">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Tu órbita (correo)"
-              className="cosmic-input-elegant email-input"
-            />
-          </div>
-
-          {/* Message Textarea */}
-          <div className="cosmic-input-group">
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Tu mensaje desde el universo..."
-              rows="3"
-              className="cosmic-textarea-elegant"
-              maxLength={500}
-            />
-          </div>
-
-          {/* Launch Button */}
-          <div className="launch-button-container">
-            <button
-              type="submit"
-              disabled={isLaunching}
-              className={`cosmic-launch-button ${isLaunching ? 'launching' : ''}`}
-            >
-              <span className="rocket-emoji">🚀</span>
-              <span className="button-text">
-                {isLaunching ? 'Enviando al cosmos...' : 'Enviar al cosmos'}
-              </span>
-              {isLaunching && (
-                <div className="rocket-trail">
-                  <span>✨</span>
-                  <span>⭐</span>
-                  <span>🌟</span>
-                </div>
-              )}
-            </button>
-          </div>
-
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Tu correo"
+            style={{
+              padding: '15px 20px',
+              borderRadius: '25px',
+              border: 'none',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              fontSize: '1rem',
+              color: '#2c3e50'
+            }}
+          />
+          
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Tu mensaje..."
+            rows="3"
+            style={{
+              padding: '15px 20px',
+              borderRadius: '25px',
+              border: 'none',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              fontSize: '1rem',
+              color: '#2c3e50',
+              resize: 'vertical',
+              minHeight: '80px'
+            }}
+          />
+          
+          <button
+            type="submit"
+            disabled={isLaunching}
+            style={{
+              padding: '15px 30px',
+              borderRadius: '25px',
+              border: 'none',
+              background: 'linear-gradient(135deg, #40E0D0 0%, #20B2AA 50%, #1976D2 100%)',
+              color: 'white',
+              fontSize: '1rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+              marginTop: '10px'
+            }}
+          >
+            <span>🚀</span>
+            <span>{isLaunching ? 'Enviando...' : 'Enviar al cosmos'}</span>
+          </button>
+          
         </form>
-
-        </div> {/* Close planet-content-overlay */}
         
       </div>
+      
     </div>
   );
 };
