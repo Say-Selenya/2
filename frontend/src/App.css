@@ -5074,14 +5074,18 @@ html {
   }
 }
 
-/* Mobile responsiveness for realistic planet */
+/* Mobile responsiveness for visual planet */
 @media (max-width: 768px) {
-  .planet-comment-box {
-    width: 350px;
-    height: 350px;
-    max-width: 350px;
-    padding: 35px 30px;
+  .planet-visual-container {
+    width: 400px;
+    height: 400px;
+    max-width: 400px;
     margin: 20px auto;
+  }
+  
+  .planet-sphere {
+    width: 250px;
+    height: 250px;
   }
   
   .cosmic-title {
@@ -5093,20 +5097,19 @@ html {
     font-size: 1rem;
     min-width: 180px;
   }
-  
-  .planet-rings {
-    width: 220px;
-    height: 220px;
-  }
 }
 
 @media (max-width: 480px) {
-  .planet-comment-box {
-    width: 300px;
-    height: 300px;
-    max-width: 300px;
-    padding: 30px 25px;
+  .planet-visual-container {
+    width: 350px;
+    height: 350px;
+    max-width: 350px;
     margin: 15px auto;
+  }
+  
+  .planet-sphere {
+    width: 200px;
+    height: 200px;
   }
   
   .cosmic-title {
@@ -5120,18 +5123,14 @@ html {
   }
   
   .cosmic-textarea {
-    min-height: 80px;
+    min-height: 60px;
+    max-height: 80px;
   }
   
   .cosmic-launch-button {
     padding: 10px 20px;
     font-size: 0.9rem;
     min-width: 160px;
-  }
-  
-  .planet-rings {
-    width: 180px;
-    height: 180px;
   }
 }
   min-height: 5rem !important;
