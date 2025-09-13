@@ -132,8 +132,7 @@ const CosmicComments = () => {
 
         </form>
 
-        {/* Planet Atmosphere Effect */}
-        <div className="planet-atmosphere"></div>
+        </div> {/* Close planet-content-overlay */}
         
       </div>
     </div>
