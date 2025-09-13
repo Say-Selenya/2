@@ -4561,23 +4561,13 @@ html {
   height: 450px;
   max-width: 450px;
   
-  /* PLANET WITH REAL EARTH-LIKE APPEARANCE */
+  /* Simple space background to let planet emoji show */
   background: 
-    /* Cloud layers */
-    radial-gradient(ellipse at 20% 30%, rgba(255, 255, 255, 0.3) 8%, transparent 15%),
-    radial-gradient(ellipse at 70% 20%, rgba(255, 255, 255, 0.2) 12%, transparent 20%),
-    radial-gradient(ellipse at 40% 80%, rgba(255, 255, 255, 0.25) 10%, transparent 18%),
-    
-    /* Continents (land masses) */
-    radial-gradient(ellipse at 30% 40%, rgba(34, 139, 34, 0.8) 15%, transparent 25%),
-    radial-gradient(ellipse at 70% 60%, rgba(46, 125, 50, 0.7) 12%, transparent 22%),
-    radial-gradient(ellipse at 15% 70%, rgba(27, 94, 32, 0.6) 18%, transparent 28%),
-    
-    /* Oceans (water) */
     radial-gradient(circle at 50% 50%, 
-      rgba(13, 71, 161, 1) 0%,        /* Deep ocean blue center */
-      rgba(21, 101, 192, 0.9) 30%,    /* Ocean blue */
-      rgba(25, 118, 210, 0.8) 60%,    /* Lighter blue */
+      rgba(13, 71, 161, 0.2) 0%,      /* Center */
+      rgba(25, 25, 112, 0.4) 50%,     /* Mid */
+      rgba(0, 0, 0, 0.8) 100%         /* Space black */
+    );
 /* PLANET EMOJI BACKGROUND */
 .planet-emoji-bg {
   position: absolute;
