@@ -72,14 +72,16 @@ const CosmicComments = () => {
           <div className="planet-clouds"></div>
         </div>
         
-        {/* Planet Header */}
-        <div className="planet-header">
-          <h4 className="cosmic-title">¡Escríbeme!</h4>
-          <div className="planet-rings"></div>
-        </div>
+        {/* Content Over Planet */}
+        <div className="planet-content-overlay">
+          
+          {/* Planet Header */}
+          <div className="planet-header">
+            <h4 className="cosmic-title">¡Escríbeme!</h4>
+          </div>
 
-        {/* Comment Form */}
-        <form onSubmit={handleSubmit} className="cosmic-form">
+          {/* Comment Form */}
+          <form onSubmit={handleSubmit} className="cosmic-form">
           
           {/* Email Input (Optional) */}
           <div className="cosmic-input-group">
