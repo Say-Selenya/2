@@ -83,14 +83,25 @@ const CosmicComments = () => {
           {/* Comment Form */}
           <form onSubmit={handleSubmit} className="cosmic-form">
           
-          {/* Email Input (Optional) */}
+          {/* Name Input */}
+          <div className="cosmic-input-group">
+            <input
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Tu estrella (nombre)"
+              className="cosmic-input-elegant name-input"
+            />
+          </div>
+
+          {/* Email Input */}
           <div className="cosmic-input-group">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Tu email (opcional) 📧"
-              className="cosmic-input email-input"
+              placeholder="Tu órbita (correo)"
+              className="cosmic-input-elegant email-input"
             />
           </div>
 
@@ -99,14 +110,11 @@ const CosmicComments = () => {
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Comparte tus pensamientos cósmicos... ✨"
-              rows="4"
-              className="cosmic-textarea"
+              placeholder="Tu mensaje desde el universo..."
+              rows="3"
+              className="cosmic-textarea-elegant"
               maxLength={500}
             />
-            <div className="character-count">
-              {message.length}/500 caracteres
-            </div>
           </div>
 
           {/* Launch Button */}
