@@ -108,10 +108,10 @@
   50% { height: 20px; opacity: 1; }
 }
 
-/* Banner del Canal */
+/* Banner del Canal - Tamaño YouTube */
 .channel-banner {
   width: 100%;
-  height: 200px;
+  height: 250px;
   position: relative;
   overflow: hidden;
   margin-top: 0;
