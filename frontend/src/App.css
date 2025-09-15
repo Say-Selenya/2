@@ -1,4 +1,6 @@
-/* Canal YouTuber Profesional - ZaestelaR */
+/* Portal Cósmico de Zäe Selenya - Diseño Místico Original */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -6,401 +8,28 @@
   box-sizing: border-box;
 }
 
-.youtube-container {
+/* Variables Cósmicas */
+:root {
+  --cosmic-orange: #ff6a00;
+  --cosmic-yellow: #ffd53d;
+  --cosmic-blue: #00d4ff;
+  --cosmic-purple: #7a5cff;
+  --cosmic-dark: #0d0d0d;
+  --cosmic-glow: rgba(255, 255, 255, 0.35);
+}
+
+.cosmic-portal {
   min-height: 100vh;
-  background: #0f0f0f;
-  color: #ffffff;
-  font-family: 'Roboto', 'Arial', sans-serif;
-  position: relative;
-}
-
-/* Alien Vaquero - Esquina Superior Izquierda */
-.alien-cowboy {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1000;
-}
-
-.alien-waving {
-  width: 80px;
-  height: 80px;
-  animation: alienWave 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 12px rgba(0, 255, 127, 0.6));
-  transition: all 0.3s ease;
-}
-
-.alien-waving:hover {
-  transform: scale(1.3);
-  filter: drop-shadow(0 0 20px rgba(0, 255, 127, 1));
-}
-
-@keyframes alienWave {
-  0%, 100% { transform: rotate(0deg) translateY(0px); }
-  25% { transform: rotate(-12deg) translateY(-3px); }
-  50% { transform: rotate(0deg) translateY(-6px); }
-  75% { transform: rotate(12deg) translateY(-3px); }
-}
-
-/* Control de Música */
-.music-control {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.play-btn {
-  background: linear-gradient(135deg, #ff0000, #cc0000);
-  border: none;
-  border-radius: 20px;
-  padding: 8px 16px;
+  background: radial-gradient(ellipse at top, var(--cosmic-orange) 0%, var(--cosmic-yellow) 25%, var(--cosmic-dark) 70%);
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
   color: white;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
-}
-
-.play-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
-}
-
-.play-btn.playing {
-  background: linear-gradient(135deg, #00aa00, #008800);
-  animation: playingPulse 2s ease-in-out infinite;
-}
-
-@keyframes playingPulse {
-  0%, 100% { box-shadow: 0 2px 8px rgba(0, 170, 0, 0.3); }
-  50% { box-shadow: 0 4px 16px rgba(0, 170, 0, 0.6); }
-}
-
-/* Ondas de Sonido */
-.sound-waves {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.wave {
-  width: 3px;
-  height: 12px;
-  background: linear-gradient(to top, #ff0000, #ff6666);
-  border-radius: 1px;
-  animation: soundWave 0.6s ease-in-out infinite;
-}
-
-.wave:nth-child(1) { animation-delay: 0s; }
-.wave:nth-child(2) { animation-delay: 0.1s; }
-.wave:nth-child(3) { animation-delay: 0.2s; }
-
-@keyframes soundWave {
-  0%, 100% { height: 12px; opacity: 0.5; }
-  50% { height: 20px; opacity: 1; }
-}
-
-/* Banner del Canal - Tamaño YouTube */
-.channel-banner {
-  width: 100%;
-  height: 250px;
   position: relative;
-  overflow: hidden;
-  margin-top: 0;
+  overflow-x: hidden;
 }
 
-.banner-bg {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  filter: brightness(0.8) contrast(1.2) saturate(1.1);
-}
-
-.banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-}
-
-/* Texto sobre el banner */
-.banner-text {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
-  text-align: right;
-}
-
-.banner-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 5px;
-}
-
-.banner-subtitle {
-  font-size: 14px;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  opacity: 0.9;
-}
-
-/* Información del Canal */
-.channel-info {
-  background: #0f0f0f;
-  padding: 24px;
-  border-bottom: 1px solid #333;
-}
-
-.channel-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-/* Foto de Perfil */
-.profile-section {
-  flex-shrink: 0;
-}
-
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid #ff0000;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Detalles del Canal */
-.channel-details {
-  flex: 1;
-}
-
-.channel-name {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 4px;
-  font-family: 'Roboto', sans-serif;
-}
-
-.channel-stats {
-  margin-bottom: 12px;
-}
-
-.subscriber-count {
-  color: #aaaaaa;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.channel-description {
-  color: #cccccc;
-  font-size: 14px;
-  line-height: 1.4;
-  margin-bottom: 16px;
-  max-width: 600px;
-}
-
-/* Botones de Acción */
-.action-buttons {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.subscribe-btn {
-  background: #ff0000;
-  color: white;
-  border: none;
-  border-radius: 24px;
-  padding: 10px 24px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.subscribe-btn:hover {
-  background: #cc0000;
-  transform: translateY(-1px);
-}
-
-.join-btn {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #333;
-  border-radius: 24px;
-  padding: 10px 24px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.join-btn:hover {
-  background: #333;
-}
-
-.notification-btn {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid #333;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.notification-btn:hover {
-  background: #333;
-}
-
-/* Sección de Contenido */
-.content-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-/* Tabs */
-.content-tabs {
-  display: flex;
-  gap: 32px;
-  border-bottom: 1px solid #333;
-  margin-bottom: 24px;
-}
-
-.tab {
-  color: #aaaaaa;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 0 0 12px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
-}
-
-.tab.active {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
-
-.tab:hover {
-  color: #ffffff;
-}
-
-/* Contenido Destacado */
-.featured-content h2 {
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-/* Grid de Videos */
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-}
-
-.video-card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.video-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.video-thumbnail {
-  position: relative;
-  width: 100%;
-  height: 157px;
-  background: linear-gradient(135deg, #333, #555);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
-}
-
-.thumbnail-bg {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-}
-
-.duration {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.video-info {
-  padding: 12px;
-}
-
-.video-info h3 {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  line-height: 1.3;
-}
-
-.video-info p {
-  color: #aaaaaa;
-  font-size: 12px;
-}
-
-/* Partículas */
-.particles {
+/* Partículas Cósmicas de Fondo */
+.cosmic-particles {
   position: fixed;
   top: 0;
   left: 0;
@@ -414,83 +43,664 @@
   position: absolute;
   width: 3px;
   height: 3px;
-  background: radial-gradient(circle, #ff0000, #ff6666);
+  background: radial-gradient(circle, var(--cosmic-blue), var(--cosmic-purple));
   border-radius: 50%;
-  animation: floatParticle 10s linear infinite;
-  opacity: 0.4;
+  animation: floatCosmic 12s linear infinite;
+  opacity: 0.7;
+  box-shadow: 0 0 6px var(--cosmic-blue);
 }
 
-.particle:nth-child(1) { left: 15%; animation-delay: 0s; }
-.particle:nth-child(2) { left: 35%; animation-delay: 2s; }
-.particle:nth-child(3) { left: 55%; animation-delay: 4s; }
-.particle:nth-child(4) { left: 75%; animation-delay: 6s; }
-.particle:nth-child(5) { left: 85%; animation-delay: 8s; }
+.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 8s; }
+.particle:nth-child(2) { left: 25%; animation-delay: 2s; animation-duration: 12s; }
+.particle:nth-child(3) { left: 40%; animation-delay: 4s; animation-duration: 10s; }
+.particle:nth-child(4) { left: 60%; animation-delay: 1s; animation-duration: 14s; }
+.particle:nth-child(5) { left: 75%; animation-delay: 3s; animation-duration: 9s; }
+.particle:nth-child(6) { left: 85%; animation-delay: 5s; animation-duration: 11s; }
+.particle:nth-child(7) { left: 15%; animation-delay: 6s; animation-duration: 13s; }
+.particle:nth-child(8) { left: 90%; animation-delay: 7s; animation-duration: 15s; }
 
-@keyframes floatParticle {
+@keyframes floatCosmic {
   0% {
-    transform: translateY(100vh) rotate(0deg);
+    transform: translateY(100vh) rotate(0deg) scale(0);
     opacity: 0;
   }
   10% {
-    opacity: 0.4;
+    opacity: 0.7;
+    transform: scale(1);
   }
   90% {
-    opacity: 0.4;
+    opacity: 0.7;
   }
   100% {
-    transform: translateY(-50px) rotate(360deg);
+    transform: translateY(-100px) rotate(360deg) scale(0);
     opacity: 0;
+  }
+}
+
+/* Alien Kawaii - Sello Personal */
+.alien-signature {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.alien-kawaii {
+  width: 90px;
+  height: 90px;
+  animation: kawaiiBounce 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px var(--cosmic-blue)) contrast(1.2) saturate(1.3);
+  transition: all 0.3s ease;
+}
+
+.alien-kawaii:hover {
+  transform: scale(1.3) rotate(15deg);
+  filter: drop-shadow(0 0 25px var(--cosmic-purple)) contrast(1.4) saturate(1.5);
+}
+
+@keyframes kawaiiBounce {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(-5deg); }
+  50% { transform: translateY(-12px) rotate(0deg); }
+  75% { transform: translateY(-8px) rotate(5deg); }
+}
+
+/* Control de Música Cósmico */
+.music-portal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cosmic-btn {
+  background: linear-gradient(135deg, var(--cosmic-blue), var(--cosmic-purple));
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmic-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.cosmic-btn:hover::before {
+  left: 100%;
+}
+
+.cosmic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122, 92, 255, 0.6);
+}
+
+.cosmic-btn.playing {
+  background: linear-gradient(135deg, var(--cosmic-orange), var(--cosmic-yellow));
+  animation: cosmicPulse 2s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
+}
+
+@keyframes cosmicPulse {
+  0%, 100% { 
+    box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 6px 25px rgba(255, 106, 0, 0.8);
+    transform: scale(1.05);
+  }
+}
+
+/* Ondas Cósmicas */
+.cosmic-waves {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.wave {
+  width: 4px;
+  height: 16px;
+  background: linear-gradient(to top, var(--cosmic-blue), var(--cosmic-purple));
+  border-radius: 2px;
+  animation: cosmicWave 0.8s ease-in-out infinite;
+  box-shadow: 0 0 4px var(--cosmic-blue);
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.15s; }
+.wave:nth-child(3) { animation-delay: 0.3s; }
+.wave:nth-child(4) { animation-delay: 0.45s; }
+
+@keyframes cosmicWave {
+  0%, 100% { 
+    height: 16px; 
+    opacity: 0.6; 
+  }
+  50% { 
+    height: 28px; 
+    opacity: 1; 
+    box-shadow: 0 0 8px var(--cosmic-blue);
+  }
+}
+
+/* Banner Cósmico Principal */
+.cosmic-banner {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mystical-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portal-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.6) contrast(1.3) saturate(1.2);
+}
+
+.cosmic-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 106, 0, 0.3) 0%,
+    rgba(255, 213, 61, 0.2) 30%,
+    rgba(122, 92, 255, 0.4) 70%,
+    rgba(13, 13, 13, 0.6) 100%
+  );
+}
+
+/* Contenido del Portal */
+.portal-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.cosmic-name {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    45deg,
+    white,
+    var(--cosmic-blue),
+    var(--cosmic-purple),
+    white
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cosmicGradient 4s ease-in-out infinite;
+  text-shadow: 0 0 30px var(--cosmic-glow);
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+@keyframes cosmicGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.cosmic-tagline {
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--cosmic-yellow);
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px rgba(255, 213, 61, 0.8);
+  font-style: italic;
+  animation: gentleGlow 3s ease-in-out infinite;
+}
+
+.mystical-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--cosmic-blue);
+  opacity: 0.9;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+  font-weight: 300;
+}
+
+@keyframes gentleGlow {
+  0%, 100% { 
+    opacity: 0.8; 
+    text-shadow: 0 0 20px rgba(255, 213, 61, 0.6); 
+  }
+  50% { 
+    opacity: 1; 
+    text-shadow: 0 0 30px rgba(255, 213, 61, 1); 
+  }
+}
+
+/* Perfil Cósmico */
+.cosmic-profile {
+  background: rgba(13, 13, 13, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  border-top: 1px solid rgba(122, 92, 255, 0.3);
+  position: relative;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Avatar Místico */
+.mystical-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cosmic-purple);
+  box-shadow: 0 0 20px rgba(122, 92, 255, 0.5);
+}
+
+.avatar-glow {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--cosmic-blue), var(--cosmic-purple));
+  opacity: 0.3;
+  animation: avatarGlow 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes avatarGlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+/* Info del Perfil */
+.profile-info {
+  flex: 1;
+}
+
+.artist-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cosmic-stats {
+  margin-bottom: 15px;
+}
+
+.stat {
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.cosmic-bio {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* Botones Cósmicos */
+.cosmic-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.subscribe-portal {
+  background: linear-gradient(135deg, var(--cosmic-orange), var(--cosmic-yellow));
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
+}
+
+.subscribe-portal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.6);
+}
+
+.join-dimension {
+  background: transparent;
+  color: var(--cosmic-blue);
+  border: 2px solid var(--cosmic-blue);
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-dimension:hover {
+  background: var(--cosmic-blue);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.notification-crystal {
+  background: transparent;
+  color: var(--cosmic-purple);
+  border: 2px solid var(--cosmic-purple);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.notification-crystal:hover {
+  background: var(--cosmic-purple);
+  color: white;
+  box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
+}
+
+/* Portal de Contenido */
+.content-portal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Tabs Místicos */
+.portal-tabs {
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid rgba(122, 92, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+.tab {
+  color: #aaaaaa;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 0 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  color: var(--cosmic-blue);
+  border-bottom-color: var(--cosmic-blue);
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.tab:hover {
+  color: var(--cosmic-purple);
+}
+
+/* Contenido Místico */
+.section-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px var(--cosmic-glow);
+}
+
+/* Grid Cósmico */
+.cosmic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.mystical-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(122, 92, 255, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.mystical-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(122, 92, 255, 0.1), transparent);
+  transition: all 0.8s ease;
+}
+
+.mystical-card:hover::before {
+  left: 100%;
+}
+
+.mystical-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(122, 92, 255, 0.6);
+  box-shadow: 0 15px 30px rgba(122, 92, 255, 0.2);
+}
+
+.card-portal {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, var(--cosmic-dark), #2a2a2a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-thumbnail {
+  font-size: 50px;
+  filter: drop-shadow(0 0 10px var(--cosmic-blue));
+  animation: portalSpin 8s linear infinite;
+}
+
+@keyframes portalSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.duration-crystal {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(122, 92, 255, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-essence {
+  padding: 15px;
+}
+
+.card-essence h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.card-essence p {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+
+/* Orbes Flotantes */
+.floating-orbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: floatOrb 15s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, var(--cosmic-blue), transparent);
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, var(--cosmic-purple), transparent);
+  top: 60%;
+  left: 85%;
+  animation-delay: 3s;
+}
+
+.orb-3 {
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, var(--cosmic-yellow), transparent);
+  top: 80%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+.orb-4 {
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, var(--cosmic-orange), transparent);
+  top: 30%;
+  left: 70%;
+  animation-delay: 9s;
+}
+
+@keyframes floatOrb {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.3;
+  }
+  25% { 
+    transform: translateY(-30px) translateX(20px) scale(1.2);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-15px) translateX(-10px) scale(0.8);
+    opacity: 0.4;
+  }
+  75% { 
+    transform: translateY(-40px) translateX(15px) scale(1.1);
+    opacity: 0.7;
   }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .channel-banner {
-    height: 180px;
+  .cosmic-banner {
+    height: 60vh;
   }
   
-  .banner-title {
-    font-size: 20px;
-  }
-  
-  .banner-subtitle {
-    font-size: 12px;
-  }
-  
-  .banner-text {
-    bottom: 15px;
-    right: 15px;
-  }
-  
-  .channel-content {
+  .profile-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    gap: 16px;
+    gap: 20px;
   }
   
-  .profile-pic {
-    width: 64px;
-    height: 64px;
-  }
-  
-  .video-grid {
+  .cosmic-grid {
     grid-template-columns: 1fr;
   }
   
-  .content-tabs {
-    gap: 16px;
+  .portal-tabs {
+    gap: 15px;
     overflow-x: auto;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
   }
   
-  .alien-waving {
-    width: 60px;
-    height: 60px;
+  .alien-kawaii {
+    width: 70px;
+    height: 70px;
   }
   
-  .play-btn {
-    padding: 6px 12px;
-    font-size: 11px;
+  .cosmic-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+  
+  .cosmic-actions {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
