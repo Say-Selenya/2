@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [audio, setAudio] = useState(null);
+  const [selectedAmount, setSelectedAmount] = useState(null);
+  const [customAmount, setCustomAmount] = useState('');
 
   useEffect(() => {
     // Crear el objeto de audio con música fumeta
@@ -33,152 +35,164 @@ const Home = () => {
     }
   };
 
-  return (
-    <div className="cosmic-portal">
-      {/* Partículas Cósmicas de Fondo */}
-      <div className="cosmic-particles">
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-      </div>
+  const handleAmountSelect = (amount) => {
+    setSelectedAmount(amount);
+    setCustomAmount('');
+  };
 
-      {/* Alien Vaquero - Sello Personal */}
-      <div className="alien-signature">
+  return (
+    <div className="galactic-sanctuary">
+      {/* Alien Kawaii - Esquina Superior Izquierda */}
+      <div className="alien-corner">
         <img 
           src="https://cdn.pixabay.com/photo/2024/03/09/17/17/alien-8623001_1280.png" 
           alt="Alien Kawaii" 
-          className="alien-kawaii"
+          className="alien-mascot"
         />
       </div>
 
-      {/* Control de Música Fumeta */}
-      <div className="music-portal">
+      {/* Control de Música */}
+      <div className="music-corner">
         <button 
           onClick={toggleMusic} 
-          className={`cosmic-btn ${isPlaying ? 'playing' : ''}`}
+          className={`music-btn ${isPlaying ? 'playing' : ''}`}
         >
-          <span className="btn-icon">{isPlaying ? '⏸️' : '▶️'}</span>
-          <span className="btn-text">{isPlaying ? 'Pausar' : 'Fumeta'}</span>
+          {isPlaying ? '⏸️' : '▶️'} Fumeta
         </button>
-        {isPlaying && (
-          <div className="cosmic-waves">
-            <div className="wave"></div>
-            <div className="wave"></div>
-            <div className="wave"></div>
-            <div className="wave"></div>
-          </div>
-        )}
       </div>
 
-      {/* Banner Cósmico Principal */}
-      <div className="cosmic-banner">
-        <div className="mystical-overlay">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
-            alt="Portal Místico" 
-            className="portal-bg"
-          />
-          <div className="cosmic-gradient-overlay"></div>
-        </div>
-        
-        {/* Contenido del Portal */}
-        <div className="portal-content">
-          <h1 className="cosmic-name">Zäe Selenya</h1>
-          <p className="cosmic-tagline">~ Portal de Vibes Cósmicas ~</p>
-          <div className="mystical-subtitle">Donde el misticismo se encuentra con beats alienígenas</div>
-        </div>
-      </div>
-
-      {/* Perfil Cósmico */}
-      <div className="cosmic-profile">
-        <div className="profile-container">
-          <div className="mystical-avatar">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/v3v2qa9l_foto22.jpeg" 
-              alt="Zäe Selenya" 
-              className="avatar-image"
-            />
-            <div className="avatar-glow"></div>
-          </div>
-          
-          <div className="profile-info">
-            <h2 className="artist-name">Zäe Selenya</h2>
-            <div className="cosmic-stats">
-              <span className="stat">@zaeselenyea • 1.5K exploradores cósmicos</span>
+      {/* Sección Principal - Portal Artist */}
+      <div className="portal-main">
+        <div className="artist-presentation">
+          <div className="artist-profile">
+            <div className="profile-circle">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/v3v2qa9l_foto22.jpeg" 
+                alt="Zäe Selenya Profile" 
+                className="profile-img"
+              />
             </div>
-            <p className="cosmic-bio">
-              🌌 Creadora de portales sonoros | 👽 Comunicadora intergaláctica | ✨ Guía de viajes astrales
+            <h1 className="portal-title">La Artista Detrás del Portal</h1>
+            <p className="sanctuary-description">
+              Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico. 
+              Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜💜
             </p>
             
-            <div className="cosmic-actions">
-              <button className="subscribe-portal">SUSCRIBIRSE</button>
-              <button className="join-dimension">UNIRSE</button>
-              <button className="notification-crystal">🔔</button>
+            <div className="artist-features">
+              <div className="feature-item">
+                <div className="feature-icon">✨</div>
+                <span>creando mundos únicos</span>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">🎮</div>
+                <span>arte desde el corazón y diversidad... múltiples estilos</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="vision-video">
+            <div className="video-container">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
+                alt="Visión Galáctica" 
+                className="vision-bg"
+              />
+              <div className="video-overlay">
+                <p className="vision-text">
+                  Sumérgete en el universo creativo de Zäe Selenya<br/>
+                  <span className="vision-subtitle">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Portal de Contenido */}
-      <div className="content-portal">
-        <div className="portal-tabs">
-          <div className="tab active">PORTAL</div>
-          <div className="tab">DIMENSIONES</div>
-          <div className="tab">CRISTALES</div>
-          <div className="tab">MISTICISMO</div>
-        </div>
-
-        <div className="mystical-content">
-          <h2 className="section-title">🌟 Últimas Transmisiones Cósmicas</h2>
+      {/* Entradas Mágicas */}
+      <div className="magical-entries">
+        <h2 className="section-title">
+          Entradas Mágicas
+          <span className="magic-sparkle">✨</span>
+        </h2>
+        
+        <div className="entries-grid">
+          <div className="entry-card frikilandia">
+            <div className="card-icon">💙</div>
+            <h3>Frikilandia</h3>
+          </div>
           
-          <div className="cosmic-grid">
-            <div className="mystical-card">
-              <div className="card-portal">
-                <div className="portal-thumbnail">🛸</div>
-                <div className="duration-crystal">15:33</div>
-              </div>
-              <div className="card-essence">
-                <h3>Portal Alienígena #1</h3>
-                <p>42K vibraciones • hace 3 lunas</p>
-              </div>
-            </div>
-
-            <div className="mystical-card">
-              <div className="card-portal">
-                <div className="portal-thumbnail">🌌</div>
-                <div className="duration-crystal">22:11</div>
-              </div>
-              <div className="card-essence">
-                <h3>Meditación Galáctica</h3>
-                <p>28K vibraciones • hace 1 semana</p>
-              </div>
-            </div>
-
-            <div className="mystical-card">
-              <div className="card-portal">
-                <div className="portal-thumbnail">✨</div>
-                <div className="duration-crystal">11:11</div>
-              </div>
-              <div className="card-essence">
-                <h3>Código Estelar</h3>
-                <p>69K vibraciones • hace 2 semanas</p>
-              </div>
-            </div>
+          <div className="entry-card tragedias">
+            <div className="card-icon">🖤</div>
+            <h3>Tragedias de<br/>Pesadillas</h3>
+          </div>
+          
+          <div className="entry-card kawaii">
+            <div className="card-icon">💚</div>
+            <h3>Humor +<br/>Arte +<br/>Kawaii</h3>
           </div>
         </div>
       </div>
 
-      {/* Orbes Flotantes */}
-      <div className="floating-orbs">
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-        <div className="orb orb-4"></div>
+      {/* Formulario Escríbeme */}
+      <div className="contact-section">
+        <div className="contact-form">
+          <h3 className="form-title">Escríbeme</h3>
+          <div className="form-fields">
+            <input type="text" placeholder="Tu nombre" className="form-input" />
+            <input type="email" placeholder="Tu correo" className="form-input" />
+            <textarea placeholder="Tu mensaje" className="form-textarea"></textarea>
+            <button className="send-btn">Enviar</button>
+          </div>
+        </div>
+
+        {/* Ofrendas */}
+        <div className="offerings-section">
+          <div className="crystal-orbs">
+            <div className="orb orb-purple"></div>
+            <div className="orb orb-blue"></div>
+          </div>
+          
+          <h3 className="offerings-title">Ofrendas</h3>
+          
+          <div className="pokeball-container">
+            <div className="pokeball">
+              <div className="pokeball-top"></div>
+              <div className="pokeball-middle"></div>
+              <div className="pokeball-bottom"></div>
+              <div className="pokeball-center"></div>
+            </div>
+          </div>
+          
+          <p className="offerings-subtitle">Elige tu propina mágica:</p>
+          
+          <div className="amount-options">
+            {[5, 15, 25, 50, 100].map(amount => (
+              <button 
+                key={amount}
+                className={`amount-btn ${selectedAmount === amount ? 'selected' : ''}`}
+                onClick={() => handleAmountSelect(amount)}
+              >
+                {amount}€
+              </button>
+            ))}
+          </div>
+          
+          <div className="custom-amount">
+            <input 
+              type="number" 
+              placeholder="Cantidad Personalizada"
+              value={customAmount}
+              onChange={(e) => {
+                setCustomAmount(e.target.value);
+                setSelectedAmount(null);
+              }}
+              className="custom-input"
+            />
+          </div>
+          
+          <p className="payment-methods">Métodos de pago disponibles</p>
+          <button className="donate-btn">Realizar Ofrenda</button>
+        </div>
       </div>
     </div>
   );

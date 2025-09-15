@@ -1,4 +1,4 @@
-/* Portal Cósmico de Zäe Selenya - Diseño Místico Original */
+/* Santuario Galáctico de Zäe Selenya - Plataforma de Contenido Místico */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -8,699 +8,622 @@
   box-sizing: border-box;
 }
 
-/* Variables Cósmicas */
-:root {
-  --cosmic-orange: #ff6a00;
-  --cosmic-yellow: #ffd53d;
-  --cosmic-blue: #00d4ff;
-  --cosmic-purple: #7a5cff;
-  --cosmic-dark: #0d0d0d;
-  --cosmic-glow: rgba(255, 255, 255, 0.35);
-}
-
-.cosmic-portal {
+.galactic-sanctuary {
   min-height: 100vh;
-  background: radial-gradient(ellipse at top, var(--cosmic-orange) 0%, var(--cosmic-yellow) 25%, var(--cosmic-dark) 70%);
-  background-attachment: fixed;
-  font-family: 'Poppins', sans-serif;
+  background: #000000;
   color: white;
+  font-family: 'Poppins', sans-serif;
   position: relative;
   overflow-x: hidden;
 }
 
-/* Partículas Cósmicas de Fondo */
-.cosmic-particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: radial-gradient(circle, var(--cosmic-blue), var(--cosmic-purple));
-  border-radius: 50%;
-  animation: floatCosmic 12s linear infinite;
-  opacity: 0.7;
-  box-shadow: 0 0 6px var(--cosmic-blue);
-}
-
-.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 8s; }
-.particle:nth-child(2) { left: 25%; animation-delay: 2s; animation-duration: 12s; }
-.particle:nth-child(3) { left: 40%; animation-delay: 4s; animation-duration: 10s; }
-.particle:nth-child(4) { left: 60%; animation-delay: 1s; animation-duration: 14s; }
-.particle:nth-child(5) { left: 75%; animation-delay: 3s; animation-duration: 9s; }
-.particle:nth-child(6) { left: 85%; animation-delay: 5s; animation-duration: 11s; }
-.particle:nth-child(7) { left: 15%; animation-delay: 6s; animation-duration: 13s; }
-.particle:nth-child(8) { left: 90%; animation-delay: 7s; animation-duration: 15s; }
-
-@keyframes floatCosmic {
-  0% {
-    transform: translateY(100vh) rotate(0deg) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.7;
-    transform: scale(1);
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(-100px) rotate(360deg) scale(0);
-    opacity: 0;
-  }
-}
-
-/* Alien Kawaii - Sello Personal */
-.alien-signature {
+/* Alien Mascot */
+.alien-corner {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 1000;
 }
 
-.alien-kawaii {
-  width: 90px;
-  height: 90px;
-  animation: kawaiiBounce 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 15px var(--cosmic-blue)) contrast(1.2) saturate(1.3);
+.alien-mascot {
+  width: 80px;
+  height: 80px;
+  animation: alienFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px #00d4ff);
   transition: all 0.3s ease;
 }
 
-.alien-kawaii:hover {
-  transform: scale(1.3) rotate(15deg);
-  filter: drop-shadow(0 0 25px var(--cosmic-purple)) contrast(1.4) saturate(1.5);
+.alien-mascot:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 20px #7a5cff);
 }
 
-@keyframes kawaiiBounce {
+@keyframes alienFloat {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  25% { transform: translateY(-8px) rotate(-5deg); }
-  50% { transform: translateY(-12px) rotate(0deg); }
-  75% { transform: translateY(-8px) rotate(5deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
 }
 
-/* Control de Música Cósmico */
-.music-portal {
+/* Control de Música */
+.music-corner {
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  gap: 12px;
 }
 
-.cosmic-btn {
-  background: linear-gradient(135deg, var(--cosmic-blue), var(--cosmic-purple));
+.music-btn {
+  background: linear-gradient(135deg, #7a5cff, #00d4ff);
   border: none;
-  border-radius: 25px;
-  padding: 12px 20px;
+  border-radius: 20px;
+  padding: 10px 16px;
   color: white;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
-  position: relative;
-  overflow: hidden;
 }
 
-.cosmic-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: all 0.6s ease;
-}
-
-.cosmic-btn:hover::before {
-  left: 100%;
-}
-
-.cosmic-btn:hover {
+.music-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(122, 92, 255, 0.6);
 }
 
-.cosmic-btn.playing {
-  background: linear-gradient(135deg, var(--cosmic-orange), var(--cosmic-yellow));
-  animation: cosmicPulse 2s ease-in-out infinite;
-  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
+.music-btn.playing {
+  background: linear-gradient(135deg, #00ff88, #00d4ff);
+  animation: musicPulse 2s ease-in-out infinite;
 }
 
-@keyframes cosmicPulse {
-  0%, 100% { 
-    box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
-    transform: scale(1);
-  }
-  50% { 
-    box-shadow: 0 6px 25px rgba(255, 106, 0, 0.8);
-    transform: scale(1.05);
-  }
+@keyframes musicPulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4); }
+  50% { box-shadow: 0 6px 25px rgba(0, 255, 136, 0.8); }
 }
 
-/* Ondas Cósmicas */
-.cosmic-waves {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-
-.wave {
-  width: 4px;
-  height: 16px;
-  background: linear-gradient(to top, var(--cosmic-blue), var(--cosmic-purple));
-  border-radius: 2px;
-  animation: cosmicWave 0.8s ease-in-out infinite;
-  box-shadow: 0 0 4px var(--cosmic-blue);
-}
-
-.wave:nth-child(1) { animation-delay: 0s; }
-.wave:nth-child(2) { animation-delay: 0.15s; }
-.wave:nth-child(3) { animation-delay: 0.3s; }
-.wave:nth-child(4) { animation-delay: 0.45s; }
-
-@keyframes cosmicWave {
-  0%, 100% { 
-    height: 16px; 
-    opacity: 0.6; 
-  }
-  50% { 
-    height: 28px; 
-    opacity: 1; 
-    box-shadow: 0 0 8px var(--cosmic-blue);
-  }
-}
-
-/* Banner Cósmico Principal */
-.cosmic-banner {
-  width: 100%;
-  height: 70vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mystical-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.portal-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.6) contrast(1.3) saturate(1.2);
-}
-
-.cosmic-gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 106, 0, 0.3) 0%,
-    rgba(255, 213, 61, 0.2) 30%,
-    rgba(122, 92, 255, 0.4) 70%,
-    rgba(13, 13, 13, 0.6) 100%
-  );
-}
-
-/* Contenido del Portal */
-.portal-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  max-width: 800px;
-  padding: 0 20px;
-}
-
-.cosmic-name {
-  font-size: clamp(3.5rem, 10vw, 7rem);
-  font-weight: 900;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(
-    45deg,
-    white,
-    var(--cosmic-blue),
-    var(--cosmic-purple),
-    white
-  );
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: cosmicGradient 4s ease-in-out infinite;
-  text-shadow: 0 0 30px var(--cosmic-glow);
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-}
-
-@keyframes cosmicGradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.cosmic-tagline {
-  font-size: clamp(1.2rem, 4vw, 2rem);
-  font-weight: 600;
-  color: var(--cosmic-yellow);
-  margin-bottom: 15px;
-  text-shadow: 0 0 20px rgba(255, 213, 61, 0.8);
-  font-style: italic;
-  animation: gentleGlow 3s ease-in-out infinite;
-}
-
-.mystical-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  color: var(--cosmic-blue);
-  opacity: 0.9;
-  text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
-  font-weight: 300;
-}
-
-@keyframes gentleGlow {
-  0%, 100% { 
-    opacity: 0.8; 
-    text-shadow: 0 0 20px rgba(255, 213, 61, 0.6); 
-  }
-  50% { 
-    opacity: 1; 
-    text-shadow: 0 0 30px rgba(255, 213, 61, 1); 
-  }
-}
-
-/* Perfil Cósmico */
-.cosmic-profile {
-  background: rgba(13, 13, 13, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 40px 20px;
-  border-top: 1px solid rgba(122, 92, 255, 0.3);
-  position: relative;
-}
-
-.profile-container {
+/* Sección Principal */
+.portal-main {
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+}
+
+.artist-presentation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  gap: 30px;
 }
 
-/* Avatar Místico */
-.mystical-avatar {
-  position: relative;
-  flex-shrink: 0;
+/* Perfil del Artista */
+.artist-profile {
+  text-align: left;
 }
 
-.avatar-image {
-  width: 100px;
-  height: 100px;
+.profile-circle {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--cosmic-purple);
+  overflow: hidden;
+  border: 4px solid #7a5cff;
+  margin-bottom: 20px;
   box-shadow: 0 0 20px rgba(122, 92, 255, 0.5);
 }
 
-.avatar-glow {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--cosmic-blue), var(--cosmic-purple));
-  opacity: 0.3;
-  animation: avatarGlow 4s ease-in-out infinite;
-  z-index: -1;
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes avatarGlow {
-  0%, 100% { opacity: 0.3; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.1); }
-}
-
-/* Info del Perfil */
-.profile-info {
-  flex: 1;
-}
-
-.artist-name {
-  font-size: 28px;
+.portal-title {
+  font-size: 32px;
   font-weight: 700;
-  color: white;
-  margin-bottom: 8px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.cosmic-stats {
-  margin-bottom: 15px;
-}
-
-.stat {
-  color: #aaaaaa;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.cosmic-bio {
-  color: #cccccc;
-  font-size: 14px;
-  line-height: 1.5;
+  color: #00d4ff;
   margin-bottom: 20px;
-  max-width: 600px;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-/* Botones Cósmicos */
-.cosmic-actions {
+.sanctuary-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 30px;
+}
+
+.artist-features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.subscribe-portal {
-  background: linear-gradient(135deg, var(--cosmic-orange), var(--cosmic-yellow));
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 24px;
-  font-weight: 700;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 106, 0, 0.4);
-}
-
-.subscribe-portal:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.6);
-}
-
-.join-dimension {
-  background: transparent;
-  color: var(--cosmic-blue);
-  border: 2px solid var(--cosmic-blue);
-  border-radius: 25px;
-  padding: 10px 24px;
-  font-weight: 600;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.join-dimension:hover {
-  background: var(--cosmic-blue);
-  color: white;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
-}
-
-.notification-crystal {
-  background: transparent;
-  color: var(--cosmic-purple);
-  border: 2px solid var(--cosmic-purple);
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(122, 92, 255, 0.2);
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 18px;
+  border: 2px solid #7a5cff;
 }
 
-.notification-crystal:hover {
-  background: var(--cosmic-purple);
-  color: white;
-  box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
-}
-
-/* Portal de Contenido */
-.content-portal {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* Tabs Místicos */
-.portal-tabs {
-  display: flex;
-  gap: 30px;
-  border-bottom: 1px solid rgba(122, 92, 255, 0.3);
-  margin-bottom: 30px;
-}
-
-.tab {
-  color: #aaaaaa;
+.feature-item span {
   font-size: 14px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  padding: 0 0 15px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
+  color: #aaaaaa;
+  font-weight: 500;
 }
 
-.tab.active {
-  color: var(--cosmic-blue);
-  border-bottom-color: var(--cosmic-blue);
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-}
-
-.tab:hover {
-  color: var(--cosmic-purple);
-}
-
-/* Contenido Místico */
-.section-title {
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 25px;
-  text-shadow: 0 0 10px var(--cosmic-glow);
-}
-
-/* Grid Cósmico */
-.cosmic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.mystical-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(122, 92, 255, 0.3);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
+/* Video de Visión */
+.vision-video {
   position: relative;
 }
 
-.mystical-card::before {
+.video-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #333;
+}
+
+.vision-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.vision-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.vision-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Entradas Mágicas */
+.magical-entries {
+  background: rgba(13, 13, 13, 0.8);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  position: relative;
+}
+
+.magic-sparkle {
+  margin-left: 10px;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.5; transform: rotate(0deg); }
+  50% { opacity: 1; transform: rotate(180deg); }
+}
+
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.entry-card {
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.entry-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(122, 92, 255, 0.1), transparent);
-  transition: all 0.8s ease;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: all 0.6s ease;
 }
 
-.mystical-card:hover::before {
+.entry-card:hover::before {
   left: 100%;
 }
 
-.mystical-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(122, 92, 255, 0.6);
-  box-shadow: 0 15px 30px rgba(122, 92, 255, 0.2);
+.entry-card:hover {
+  transform: translateY(-10px);
 }
 
-.card-portal {
-  position: relative;
-  width: 100%;
-  height: 160px;
-  background: linear-gradient(135deg, var(--cosmic-dark), #2a2a2a);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.frikilandia {
+  background: rgba(0, 100, 255, 0.1);
+  border-color: #0064ff;
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.3);
 }
 
-.portal-thumbnail {
-  font-size: 50px;
-  filter: drop-shadow(0 0 10px var(--cosmic-blue));
-  animation: portalSpin 8s linear infinite;
+.frikilandia:hover {
+  box-shadow: 0 10px 30px rgba(0, 100, 255, 0.5);
 }
 
-@keyframes portalSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.tragedias {
+  background: rgba(100, 100, 100, 0.1);
+  border-color: #666666;
+  box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
 }
 
-.duration-crystal {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(122, 92, 255, 0.8);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+.tragedias:hover {
+  box-shadow: 0 10px 30px rgba(100, 100, 100, 0.5);
 }
 
-.card-essence {
-  padding: 15px;
+.kawaii {
+  background: rgba(0, 255, 100, 0.1);
+  border-color: #00ff64;
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
 }
 
-.card-essence h3 {
-  color: white;
+.kawaii:hover {
+  box-shadow: 0 10px 30px rgba(0, 255, 100, 0.5);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.entry-card h3 {
   font-size: 16px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 5px;
+  color: white;
   line-height: 1.3;
 }
 
-.card-essence p {
-  color: #aaaaaa;
-  font-size: 12px;
+/* Sección de Contacto */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Orbes Flotantes */
-.floating-orbs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
+/* Formulario */
+.contact-form {
+  background: linear-gradient(135deg, rgba(0, 100, 255, 0.1), rgba(122, 92, 255, 0.1));
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 212, 255, 0.3);
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-input, .form-textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 25px;
+  padding: 12px 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.form-textarea {
+  min-height: 80px;
+  resize: vertical;
+  border-radius: 15px;
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #00d4ff, #7a5cff);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+}
+
+/* Ofrendas */
+.offerings-section {
+  text-align: center;
+  position: relative;
+}
+
+.crystal-orbs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 .orb {
-  position: absolute;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  opacity: 0.3;
-  animation: floatOrb 15s ease-in-out infinite;
+  animation: orbFloat 4s ease-in-out infinite;
 }
 
-.orb-1 {
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, var(--cosmic-blue), transparent);
-  top: 20%;
-  left: 10%;
+.orb-purple {
+  background: radial-gradient(circle, #7a5cff, #4a3c9a);
+  box-shadow: 0 0 20px rgba(122, 92, 255, 0.6);
   animation-delay: 0s;
 }
 
-.orb-2 {
-  width: 15px;
-  height: 15px;
-  background: radial-gradient(circle, var(--cosmic-purple), transparent);
-  top: 60%;
-  left: 85%;
-  animation-delay: 3s;
+.orb-blue {
+  background: radial-gradient(circle, #00d4ff, #0090cc);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  animation-delay: 1s;
 }
 
-.orb-3 {
-  width: 25px;
-  height: 25px;
-  background: radial-gradient(circle, var(--cosmic-yellow), transparent);
-  top: 80%;
-  left: 20%;
-  animation-delay: 6s;
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-.orb-4 {
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, var(--cosmic-orange), transparent);
-  top: 30%;
-  left: 70%;
-  animation-delay: 9s;
+.offerings-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-@keyframes floatOrb {
-  0%, 100% { 
-    transform: translateY(0px) translateX(0px) scale(1);
-    opacity: 0.3;
-  }
-  25% { 
-    transform: translateY(-30px) translateX(20px) scale(1.2);
-    opacity: 0.6;
-  }
-  50% { 
-    transform: translateY(-15px) translateX(-10px) scale(0.8);
-    opacity: 0.4;
-  }
-  75% { 
-    transform: translateY(-40px) translateX(15px) scale(1.1);
-    opacity: 0.7;
-  }
+/* Pokeball */
+.pokeball-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pokeball {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pokeball:hover {
+  transform: scale(1.1);
+}
+
+.pokeball-top {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, #ff4444, #cc0000);
+  border-radius: 40px 40px 0 0;
+  border: 3px solid #333;
+  border-bottom: none;
+}
+
+.pokeball-bottom {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, #ffffff, #dddddd);
+  border-radius: 0 0 40px 40px;
+  border: 3px solid #333;
+  border-top: none;
+}
+
+.pokeball-middle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #333;
+  transform: translateY(-50%);
+}
+
+.pokeball-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #333;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.offerings-subtitle {
+  font-size: 16px;
+  color: #cccccc;
+  margin: 20px 0;
+}
+
+/* Opciones de Cantidad */
+.amount-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.amount-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #7a5cff;
+  background: rgba(122, 92, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.amount-btn:hover {
+  background: rgba(122, 92, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.amount-btn.selected {
+  background: #7a5cff;
+  box-shadow: 0 0 20px rgba(122, 92, 255, 0.6);
+}
+
+/* Cantidad Personalizada */
+.custom-amount {
+  margin: 20px 0;
+}
+
+.custom-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(122, 92, 255, 0.3);
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+  color: #aaaaaa;
+}
+
+.custom-input:focus {
+  outline: none;
+  border-color: #7a5cff;
+  box-shadow: 0 0 15px rgba(122, 92, 255, 0.3);
+}
+
+.payment-methods {
+  font-size: 12px;
+  color: #aaaaaa;
+  margin: 15px 0;
+}
+
+.donate-btn {
+  background: linear-gradient(135deg, #7a5cff, #00d4ff);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  color: white;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
+  font-size: 14px;
+}
+
+.donate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122, 92, 255, 0.6);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .cosmic-banner {
-    height: 60vh;
+  .artist-presentation {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
   }
   
-  .profile-container {
-    flex-direction: column;
-    text-align: center;
+  .entries-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .cosmic-grid {
+  .contact-section {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   
-  .portal-tabs {
-    gap: 15px;
-    overflow-x: auto;
-    padding-bottom: 5px;
+  .portal-title {
+    font-size: 24px;
   }
   
-  .alien-kawaii {
-    width: 70px;
-    height: 70px;
+  .section-title {
+    font-size: 28px;
   }
   
-  .cosmic-btn {
-    padding: 10px 16px;
+  .alien-mascot {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .amount-options {
+    gap: 8px;
+  }
+  
+  .amount-btn {
+    width: 45px;
+    height: 45px;
     font-size: 12px;
-  }
-  
-  .cosmic-actions {
-    justify-content: center;
-    flex-wrap: wrap;
   }
 }
