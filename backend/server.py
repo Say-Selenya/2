@@ -23,9 +23,8 @@ db = client[os.environ['DB_NAME']]
 # Create the main app without a prefix
 app = FastAPI()
 
-# Force HTTPS in production
-if os.environ.get('ENVIRONMENT') != 'development':
-    app.add_middleware(HTTPSRedirectMiddleware)
+# Note: HTTPS redirection is handled by the ingress/load balancer
+# No need for HTTPSRedirectMiddleware as it causes redirect loops
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
