@@ -7,6 +7,8 @@ const Home = () => {
   const [audio, setAudio] = useState(null);
   const [selectedAmount, setSelectedAmount] = useState(null);
   const [customAmount, setCustomAmount] = useState('');
+  const [visitors] = useState(1247);
+  const [explorers] = useState(892);
 
   useEffect(() => {
     // Crear el objeto de audio con música fumeta
@@ -42,49 +44,87 @@ const Home = () => {
 
   return (
     <div className="zae-selenya-portal">
-      {/* Alien Kawaii - Esquina Superior Izquierda */}
-      <div className="alien-signature">
-        <img 
-          src="https://cdn.pixabay.com/photo/2024/03/09/17/17/alien-8623001_1280.png" 
-          alt="Alien Kawaii" 
-          className="alien-mascot"
-        />
-      </div>
-
-      {/* Control de Música Fumeta - Esquina Superior Derecha */}
+      {/* Control de Música - Solo Icono */}
       <div className="music-control">
         <button 
           onClick={toggleMusic} 
-          className={`fumeta-btn ${isPlaying ? 'playing' : ''}`}
+          className={`music-btn ${isPlaying ? 'playing' : ''}`}
         >
-          {isPlaying ? '⏸️' : '▶️'} Fumeta
+          {isPlaying ? '⏸️' : '▶️'}
         </button>
       </div>
 
-      {/* Banner Superior tipo YouTube */}
-      <div className="youtube-banner">
-        <div className="banner-bg">
+      {/* Banner Más Grande */}
+      <div className="main-banner">
+        <div className="banner-background">
           <img 
             src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
-            alt="Banner Zäe Selenya" 
-            className="banner-image"
+            alt="Banner Zäe Selena" 
+            className="banner-img"
           />
-          <div className="banner-overlay">
-            <div className="banner-content">
-              <h1 className="channel-name">Zäe Selenya</h1>
-              <button className="subscribe-button">SUSCRIBIRSE</button>
-            </div>
+          <div className="banner-gradient"></div>
+        </div>
+
+        {/* Alien Icono Abajo Izquierda del Banner */}
+        <div className="banner-alien">
+          <img 
+            src="https://cdn.pixabay.com/photo/2024/03/09/17/17/alien-8623001_1280.png" 
+            alt="Alien" 
+            className="alien-icon"
+          />
+        </div>
+
+        {/* Emoticono Grande Chica Rubia - Centro del Banner */}
+        <div className="banner-emoji">
+          <span className="blonde-emoji">👱‍♀️</span>
+        </div>
+
+        {/* Suscribirse Abajo Derecha del Banner */}
+        <div className="banner-subscribe">
+          <button className="subscribe-btn">SUSCRIBIRSE</button>
+        </div>
+
+        {/* Firma Abajo del Banner */}
+        <div className="banner-signature">
+          <h1 className="signature-name">Zäe Selena</h1>
+        </div>
+      </div>
+
+      {/* Video Primera Fila - Derecha del Banner */}
+      <div className="featured-video-section">
+        <div className="video-player">
+          <video 
+            className="main-video"
+            controls
+            poster="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg"
+          >
+            <source src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/tfes6x5u_siriii.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento video.
+          </video>
+        </div>
+      </div>
+
+      {/* Stats - Solo Exploradores y Visitas */}
+      <div className="stats-section">
+        <div className="stats-container">
+          <div className="stat-item">
+            <span className="stat-number">{explorers}</span>
+            <span className="stat-label">Exploradores</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">{visitors}</span>
+            <span className="stat-label">Visitas Totales</span>
           </div>
         </div>
       </div>
 
-      {/* Sección Artista - Layout Original */}
+      {/* Sección Artista - Con Video de Sombra */}
       <div className="artist-section">
         <div className="artist-left">
           <div className="profile-container">
             <img 
               src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/v3v2qa9l_foto22.jpeg" 
-              alt="Zäe Selenya Profile" 
+              alt="Zäe Selena Profile" 
               className="profile-image"
             />
           </div>
@@ -107,23 +147,23 @@ const Home = () => {
         </div>
 
         <div className="artist-right">
-          <div className="vision-container">
+          <div className="shadow-video">
             <img 
               src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
-              alt="Visión Galáctica" 
-              className="vision-image"
+              alt="Video de Sombra" 
+              className="shadow-image"
             />
-            <div className="vision-overlay">
-              <p className="vision-text">
-                Sumérgete en el universo creativo de Zäe Selenya<br/>
-                <span className="vision-subtitle">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
+            <div className="shadow-overlay">
+              <p className="shadow-text">
+                Sumérgete en el universo creativo de Zäe Selena<br/>
+                <span className="shadow-subtitle">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Entradas Mágicas - Centradas */}
+      {/* Entradas Mágicas */}
       <div className="magical-entries-section">
         <h2 className="entries-title">
           Entradas Mágicas
@@ -150,7 +190,7 @@ const Home = () => {
 
       {/* Sección Inferior - Formulario y Ofrendas */}
       <div className="bottom-section">
-        {/* Formulario Escríbeme - Izquierda */}
+        {/* Formulario Escríbeme */}
         <div className="contact-container">
           <div className="contact-form">
             <h3 className="contact-title">Escríbeme</h3>
@@ -163,7 +203,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Ofrendas - Derecha */}
+        {/* Ofrendas */}
         <div className="offerings-container">
           <div className="crystal-balls">
             <div className="crystal purple-crystal"></div>
