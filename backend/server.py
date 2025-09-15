@@ -57,14 +57,23 @@ async def get_status_checks():
 
 @api_router.get("/ssl-status")
 async def check_ssl_status(request: Request):
+    # Check if we're behind a proxy/load balancer using HTTPS
+    is_https = (
+        request.url.scheme == "https" or 
+        request.headers.get("x-forwarded-proto") == "https" or
+        request.headers.get("x-forwarded-ssl") == "on"
+    )
+    
     return {
-        "ssl_enabled": request.url.scheme == "https",
+        "ssl_enabled": is_https,
         "host": request.url.hostname,
         "scheme": request.url.scheme,
+        "forwarded_proto": request.headers.get("x-forwarded-proto"),
         "port": request.url.port,
         "headers": {
             "x-forwarded-proto": request.headers.get("x-forwarded-proto"),
             "x-forwarded-port": request.headers.get("x-forwarded-port"),
+            "x-forwarded-ssl": request.headers.get("x-forwarded-ssl"),
         }
     }
 
