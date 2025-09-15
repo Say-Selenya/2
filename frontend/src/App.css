@@ -446,7 +446,20 @@
 /* Responsive */
 @media (max-width: 768px) {
   .channel-banner {
-    height: 120px;
+    height: 180px;
+  }
+  
+  .banner-title {
+    font-size: 20px;
+  }
+  
+  .banner-subtitle {
+    font-size: 12px;
+  }
+  
+  .banner-text {
+    bottom: 15px;
+    right: 15px;
   }
   
   .channel-content {
