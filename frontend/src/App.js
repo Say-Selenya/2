@@ -8,29 +8,70 @@ const API = `${BACKEND_URL}/api`;
 
 const Home = () => {
   const [sslStatus, setSslStatus] = useState(null);
+  const [connectionStatus, setConnectionStatus] = useState('connecting');
+  const [healthCheck, setHealthCheck] = useState(null);
   
   const helloWorldApi = async () => {
     try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
+      const response = await axios.get(`${API}/`, {
+        timeout: 10000,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log("✅ Backend Connected:", response.data.message);
+      setConnectionStatus('connected');
     } catch (e) {
-      console.error(e, `errored out requesting / api`);
+      console.error("❌ Backend Connection Failed:", e);
+      setConnectionStatus('failed');
     }
   };
 
   const checkSSLStatus = async () => {
     try {
-      const response = await axios.get(`${API}/ssl-status`);
+      const response = await axios.get(`${API}/ssl-status`, {
+        timeout: 10000,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
       setSslStatus(response.data);
-      console.log("SSL Status:", response.data);
+      console.log("🔒 SSL Status:", response.data);
     } catch (e) {
-      console.error(e, `errored out requesting ssl-status api`);
+      console.error("❌ SSL Status Check Failed:", e);
+    }
+  };
+
+  const performHealthCheck = async () => {
+    try {
+      const response = await axios.get(`${API}/health`, {
+        timeout: 5000
+      });
+      setHealthCheck(response.data);
+      console.log("💚 Health Check:", response.data);
+    } catch (e) {
+      console.error("❌ Health Check Failed:", e);
+      setHealthCheck({ status: 'unhealthy', message: 'Connection failed' });
     }
   };
 
   useEffect(() => {
-    helloWorldApi();
-    checkSSLStatus();
+    const initializeApp = async () => {
+      setConnectionStatus('connecting');
+      await Promise.all([
+        helloWorldApi(),
+        checkSSLStatus(), 
+        performHealthCheck()
+      ]);
+    };
+    
+    initializeApp();
+    
+    // Periodic health checks
+    const healthInterval = setInterval(performHealthCheck, 30000);
+    
+    return () => clearInterval(healthInterval);
   }, []);
 
   return (
