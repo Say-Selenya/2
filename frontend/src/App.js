@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   return (
-    <div className="cosmic-container">
+    <div className="main-container">
       {/* Alien Vaquero - Esquina Superior Izquierda */}
       <div className="alien-cowboy">
         <img 
@@ -44,61 +44,74 @@ const Home = () => {
         />
       </div>
 
-      {/* Banner Principal */}
-      <div className="main-banner">
-        <h1 className="cosmic-title">🌌 ZAESTELAR.COM 🌌</h1>
-        <p className="cosmic-subtitle">~ Tu portal hacia las estrellas ~</p>
-      </div>
-
-      {/* Control de Música */}
+      {/* Control de Música Fumeta */}
       <div className="music-control">
         <button 
           onClick={toggleMusic} 
           className={`play-btn ${isPlaying ? 'playing' : ''}`}
         >
           {isPlaying ? '⏸️' : '▶️'} 
-          <span>{isPlaying ? 'Pausar' : 'Música Fumeta'}</span>
+          <span>{isPlaying ? 'Pausar Fumeta' : 'Play Fumeta'}</span>
         </button>
-        <div className="sound-waves">
-          <div className="wave"></div>
-          <div className="wave"></div>
-          <div className="wave"></div>
-        </div>
+        {isPlaying && (
+          <div className="sound-waves">
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+          </div>
+        )}
       </div>
 
-      {/* Contenido Central */}
-      <div className="cosmic-content">
-        <div className="space-card">
-          <h2>🛸 Bienvenido al Espacio Intergaláctico</h2>
-          <p>Donde los aliens vaqueros y la música fumeta se encuentran</p>
-          
-          <div className="features">
-            <div className="feature">
-              <span className="icon">👽</span>
-              <span>Alien Friendly</span>
-            </div>
-            <div className="feature">
-              <span className="icon">🤠</span>
-              <span>Estilo Vaquero</span>
-            </div>
-            <div className="feature">
-              <span className="icon">🎵</span>
-              <span>Beats Cósmicos</span>
+      {/* Banner Principal Tipo YouTube */}
+      <div className="hero-banner">
+        <div className="banner-image">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
+            alt="Banner Artístico" 
+            className="main-banner-img"
+          />
+          <div className="banner-overlay">
+            <div className="banner-content">
+              <h1 className="main-title">ZAESTELAR</h1>
+              <p className="main-subtitle">COSMIC VIBES & ALIEN BEATS</p>
+              <div className="subtitle-extra">~ Where space meets sound ~</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Estrellas de Fondo */}
-      <div className="stars">
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
-        <div className="star"></div>
+      {/* Contenido Inferior */}
+      <div className="bottom-content">
+        <div className="info-cards">
+          <div className="info-card">
+            <div className="card-icon">🛸</div>
+            <h3>Alien Territory</h3>
+            <p>Bienvenido al espacio intergaláctico donde los aliens vaqueros dominan</p>
+          </div>
+          
+          <div className="info-card">
+            <div className="card-icon">🎵</div>
+            <h3>Fumeta Beats</h3>
+            <p>Música cósmica y ritmos espaciales para elevar tu consciencia</p>
+          </div>
+          
+          <div className="info-card">
+            <div className="card-icon">🤠</div>
+            <h3>Cowboy Style</h3>
+            <p>La fusión perfecta entre el salvaje oeste y el espacio exterior</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Partículas flotantes */}
+      <div className="particles">
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
+        <div className="particle"></div>
       </div>
     </div>
   );
