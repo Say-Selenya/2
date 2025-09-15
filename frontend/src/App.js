@@ -45,6 +45,25 @@ const Home = () => {
           <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
         </a>
         <p className="mt-5">Building something incredible ~!</p>
+        
+        {/* SSL Status Display */}
+        {sslStatus && (
+          <div className="mt-8 p-4 bg-green-900 bg-opacity-50 rounded-lg border border-green-500">
+            <h3 className="text-lg font-semibold mb-2 text-green-400">🔒 SSL Status</h3>
+            <div className="text-left text-sm space-y-1">
+              <p><strong>SSL Enabled:</strong> {sslStatus.ssl_enabled ? '✅ Yes' : '❌ No'}</p>
+              <p><strong>Protocol:</strong> {sslStatus.scheme?.toUpperCase()}</p>
+              <p><strong>Host:</strong> {sslStatus.host}</p>
+              <p><strong>URL:</strong> {window.location.href}</p>
+              <p><strong>Secure Context:</strong> {window.isSecureContext ? '✅ Yes' : '❌ No'}</p>
+            </div>
+          </div>
+        )}
+        
+        <div className="mt-4 text-sm text-gray-300">
+          <p>🔐 Certificado SSL configurado con Let's Encrypt</p>
+          <p>🛡️ Headers de seguridad activados</p>
+        </div>
       </header>
     </div>
   );
