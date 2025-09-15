@@ -1,4 +1,4 @@
-/* Portal de Zäe Selena - Banner Grande y Elementos Repositionados */
+/* Portal Original Basado en las Fotos + Modificaciones Específicas */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -8,12 +8,11 @@
   box-sizing: border-box;
 }
 
-.zae-selenya-portal {
+.portal-original {
   min-height: 100vh;
   background: #000000;
   color: white;
   font-family: 'Poppins', sans-serif;
-  position: relative;
 }
 
 /* Control de Música - Solo Icono */
@@ -24,60 +23,57 @@
   z-index: 1000;
 }
 
-.music-btn {
+.music-icon {
   background: linear-gradient(135deg, #7a5cff, #00d4ff);
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 4px 12px rgba(122, 92, 255, 0.4);
 }
 
-.music-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(122, 92, 255, 0.6);
+.music-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(122, 92, 255, 0.6);
 }
 
-.music-btn.playing {
+.music-icon.playing {
   background: linear-gradient(135deg, #00ff88, #00d4ff);
-  animation: musicPulse 2s ease-in-out infinite;
+  animation: musicGlow 2s ease-in-out infinite;
 }
 
-@keyframes musicPulse {
-  0%, 100% { box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4); }
-  50% { box-shadow: 0 6px 25px rgba(0, 255, 136, 0.8); }
+@keyframes musicGlow {
+  0%, 100% { box-shadow: 0 4px 12px rgba(0, 255, 136, 0.4); }
+  50% { box-shadow: 0 6px 20px rgba(0, 255, 136, 0.8); }
 }
 
-/* Banner Más Grande */
-.main-banner {
+/* Banner Grande */
+.main-banner-large {
   width: 100%;
-  height: 350px;
+  height: 300px;
   position: relative;
   overflow: hidden;
 }
 
-.banner-background {
+.banner-bg {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.banner-img {
+.banner-background-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.7) contrast(1.2);
+  filter: brightness(0.6) contrast(1.1);
 }
 
-.banner-gradient {
+.banner-dark-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -85,40 +81,39 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
   );
 }
 
-/* Alien Icono - Abajo Izquierda del Banner */
-.banner-alien {
+/* Alien - Abajo Izquierda del Banner */
+.banner-alien-pos {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 15px;
+  left: 15px;
   z-index: 10;
 }
 
-.alien-icon {
-  width: 80px;
-  height: 80px;
-  animation: alienBounce 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 15px #00d4ff);
+.banner-alien-icon {
+  width: 70px;
+  height: 70px;
+  animation: alienWave 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px #00d4ff);
   transition: all 0.3s ease;
 }
 
-.alien-icon:hover {
-  transform: scale(1.4);
-  filter: drop-shadow(0 0 25px #7a5cff);
+.banner-alien-icon:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 20px #7a5cff);
 }
 
-@keyframes alienBounce {
+@keyframes alienWave {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(8deg); }
+  50% { transform: translateY(-8px) rotate(6deg); }
 }
 
-/* Emoticono Grande Chica Rubia - Centro del Banner */
-.banner-emoji {
+/* Emoticono Chica Rubia Grande - Centro del Banner */
+.banner-center-emoji {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,135 +121,132 @@
   z-index: 10;
 }
 
-.blonde-emoji {
-  font-size: 120px;
+.big-blonde-emoji {
+  font-size: 100px;
   cursor: pointer;
   transition: all 0.3s ease;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
 }
 
-.blonde-emoji:hover {
-  transform: scale(1.3);
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1));
+.big-blonde-emoji:hover {
+  transform: scale(1.4);
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 1));
 }
 
 /* Suscribirse - Abajo Derecha del Banner */
-.banner-subscribe {
+.banner-subscribe-pos {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 15px;
+  right: 15px;
   z-index: 10;
 }
 
-.subscribe-btn {
+.subscribe-button-banner {
   background: linear-gradient(135deg, #ff0844, #ff6b9d);
   border: none;
-  border-radius: 25px;
-  padding: 12px 24px;
+  border-radius: 20px;
+  padding: 10px 20px;
   color: white;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 8, 68, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 8, 68, 0.4);
 }
 
-.subscribe-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 8, 68, 0.6);
+.subscribe-button-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 8, 68, 0.6);
 }
 
-/* Firma - Debajo del Banner */
-.banner-signature {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 15;
+/* Firma debajo del banner */
+.signature-below-banner {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.signature-name {
-  font-size: 48px;
+.zae-selena-signature {
+  font-size: 42px;
   font-weight: 900;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-style: italic;
   background: linear-gradient(45deg, #ffffff, #00d4ff, #7a5cff, #ff6b9d);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: signatureGlow 4s ease-in-out infinite;
-  font-style: italic;
+  animation: signatureShine 4s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-@keyframes signatureGlow {
+@keyframes signatureShine {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
 /* Video Primera Fila - Derecha */
-.featured-video-section {
-  padding: 60px 40px 40px;
+.first-row-video {
+  padding: 30px 40px;
   display: flex;
   justify-content: flex-end;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.video-player {
-  width: 450px;
-  border-radius: 15px;
+.video-container-right {
+  width: 400px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border: 2px solid #7a5cff;
+  box-shadow: 0 8px 25px rgba(122, 92, 255, 0.3);
 }
 
-.main-video {
+.featured-video {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Stats - Solo Exploradores y Visitas */
-.stats-section {
-  background: rgba(13, 13, 13, 0.8);
+/* Stats Personales */
+.personal-stats {
+  background: rgba(20, 20, 20, 0.8);
   padding: 20px;
   text-align: center;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 }
 
-.stats-container {
+.stats-row {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  max-width: 600px;
+  gap: 50px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
-.stat-item {
+.stat-box {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.stat-number {
-  font-size: 32px;
+.stat-num {
+  font-size: 28px;
   font-weight: 700;
   color: #00d4ff;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-.stat-label {
-  font-size: 14px;
+.stat-text {
+  font-size: 13px;
   color: #aaaaaa;
   margin-top: 5px;
   font-weight: 500;
 }
 
-/* Sección Artista - Con Video de Sombra */
-.artist-section {
+/* Sección Artista Original (como en las fotos) */
+.artist-original-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -263,96 +255,96 @@
   margin: 0 auto;
 }
 
-.artist-left {
+.artist-left-side {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.profile-container {
-  width: 120px;
-  height: 120px;
+.circular-profile {
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid #7a5cff;
   margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(122, 92, 255, 0.5);
+  box-shadow: 0 0 18px rgba(122, 92, 255, 0.5);
 }
 
-.profile-image {
+.profile-circle-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.artist-title {
-  font-size: 28px;
+.original-title {
+  font-size: 26px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-.artist-description {
-  font-size: 15px;
+.original-description {
+  font-size: 14px;
   line-height: 1.6;
   color: #cccccc;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-.artist-features {
+.original-features {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-.feature-row {
+.feature-item-orig {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
-.feature-icon {
-  width: 40px;
-  height: 40px;
+.feature-circle {
+  width: 35px;
+  height: 35px;
   background: rgba(122, 92, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 14px;
   border: 2px solid #7a5cff;
 }
 
-.feature-row span {
-  font-size: 14px;
+.feature-item-orig span {
+  font-size: 13px;
   color: #aaaaaa;
   font-weight: 500;
 }
 
 /* Video de Sombra - Derecha */
-.artist-right {
+.artist-right-side {
   display: flex;
   align-items: center;
 }
 
-.shadow-video {
+.shadow-video-container {
   width: 100%;
-  height: 280px;
-  border-radius: 15px;
+  height: 260px;
+  border-radius: 12px;
   overflow: hidden;
   position: relative;
   border: 2px solid #333;
 }
 
-.shadow-image {
+.shadow-video-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.2);
+  filter: brightness(0.25);
 }
 
-.shadow-overlay {
+.shadow-text-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -365,57 +357,57 @@
   padding: 20px;
 }
 
-.shadow-text {
-  font-size: 16px;
+.shadow-video-text {
+  font-size: 15px;
   font-weight: 600;
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-.shadow-subtitle {
-  font-size: 13px;
+.shadow-video-sub {
+  font-size: 12px;
   opacity: 0.9;
   font-weight: 400;
   display: block;
   margin-top: 8px;
 }
 
-/* Entradas Mágicas */
-.magical-entries-section {
-  background: rgba(13, 13, 13, 0.8);
-  padding: 50px 40px;
+/* Entradas Mágicas Original */
+.magical-entries-original {
+  background: rgba(15, 15, 15, 0.9);
+  padding: 45px 40px;
   text-align: center;
 }
 
-.entries-title {
-  font-size: 32px;
+.original-entries-title {
+  font-size: 30px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 40px;
-  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  margin-bottom: 35px;
+  text-shadow: 0 0 18px rgba(0, 212, 255, 0.5);
 }
 
-.sparkle {
+.star-sparkle {
   margin-left: 10px;
-  animation: sparkleRotate 2s ease-in-out infinite;
+  animation: sparkleRotation 2s ease-in-out infinite;
 }
 
-@keyframes sparkleRotate {
+@keyframes sparkleRotation {
   0%, 100% { opacity: 0.6; transform: rotate(0deg); }
   50% { opacity: 1; transform: rotate(180deg); }
 }
 
-.entries-container {
+.entries-grid-original {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 800px;
+  gap: 25px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
-.entry-card {
-  padding: 30px 20px;
-  border-radius: 15px;
+.entry-frikilandia, .entry-tragedias, .entry-kawaii {
+  padding: 25px 18px;
+  border-radius: 12px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -424,273 +416,258 @@
   overflow: hidden;
 }
 
-.entry-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: all 0.6s ease;
-}
-
-.entry-card:hover::before {
-  left: 100%;
-}
-
-.entry-card:hover {
-  transform: translateY(-8px);
-}
-
-.frikilandia-card {
+.entry-frikilandia {
   background: rgba(0, 100, 255, 0.1);
   border-color: #0064ff;
-  box-shadow: 0 0 20px rgba(0, 100, 255, 0.3);
+  box-shadow: 0 0 18px rgba(0, 100, 255, 0.3);
 }
 
-.frikilandia-card:hover {
-  box-shadow: 0 8px 30px rgba(0, 100, 255, 0.5);
+.entry-frikilandia:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 100, 255, 0.5);
 }
 
-.tragedias-card {
+.entry-tragedias {
   background: rgba(100, 100, 100, 0.1);
   border-color: #666666;
-  box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
+  box-shadow: 0 0 18px rgba(100, 100, 100, 0.3);
 }
 
-.tragedias-card:hover {
-  box-shadow: 0 8px 30px rgba(100, 100, 100, 0.5);
+.entry-tragedias:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(100, 100, 100, 0.5);
 }
 
-.kawaii-card {
+.entry-kawaii {
   background: rgba(0, 255, 100, 0.1);
   border-color: #00ff64;
-  box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
+  box-shadow: 0 0 18px rgba(0, 255, 100, 0.3);
 }
 
-.kawaii-card:hover {
-  box-shadow: 0 8px 30px rgba(0, 255, 100, 0.5);
+.entry-kawaii:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 255, 100, 0.5);
 }
 
-.entry-icon {
-  font-size: 36px;
-  margin-bottom: 15px;
+.entry-heart {
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-.entry-card h3 {
-  font-size: 15px;
+.entry-frikilandia h3, .entry-tragedias h3, .entry-kawaii h3 {
+  font-size: 14px;
   font-weight: 600;
   color: white;
   line-height: 1.3;
 }
 
-/* Sección Inferior */
-.bottom-section {
+/* Sección Inferior Original */
+.bottom-original-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 50px 40px;
+  gap: 45px;
+  padding: 45px 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Formulario */
-.contact-container {
+/* Formulario Escríbeme Original */
+.escribeme-original {
   display: flex;
   justify-content: center;
 }
 
-.contact-form {
+.form-blue-container {
   background: linear-gradient(135deg, rgba(0, 100, 255, 0.15), rgba(122, 92, 255, 0.15));
-  padding: 30px;
-  border-radius: 20px;
+  padding: 28px;
+  border-radius: 18px;
   border: 2px solid rgba(0, 212, 255, 0.3);
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
 }
 
-.contact-title {
-  font-size: 22px;
+.escribeme-title {
+  font-size: 20px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
 }
 
-.form-group {
+.form-inputs-orig {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
-.form-field, .form-message {
+.input-orig, .textarea-orig {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(0, 212, 255, 0.3);
-  border-radius: 25px;
-  padding: 12px 18px;
+  border-radius: 22px;
+  padding: 11px 16px;
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 
-.form-field::placeholder, .form-message::placeholder {
+.input-orig::placeholder, .textarea-orig::placeholder {
   color: #aaaaaa;
 }
 
-.form-field:focus, .form-message:focus {
+.input-orig:focus, .textarea-orig:focus {
   outline: none;
   border-color: #00d4ff;
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
 }
 
-.form-message {
-  min-height: 80px;
+.textarea-orig {
+  min-height: 75px;
   resize: vertical;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
-.send-button {
+.send-orig {
   background: linear-gradient(135deg, #00d4ff, #7a5cff);
   border: none;
-  border-radius: 25px;
-  padding: 12px 25px;
+  border-radius: 22px;
+  padding: 11px 22px;
   color: white;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
 }
 
-.send-button:hover {
+.send-orig:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.6);
 }
 
-/* Ofrendas */
-.offerings-container {
+/* Ofrendas Original */
+.ofrendas-original {
   text-align: center;
   position: relative;
 }
 
-.crystal-balls {
+.crystal-orbs-top {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 20px;
+  gap: 35px;
+  margin-bottom: 18px;
 }
 
-.crystal {
-  width: 50px;
-  height: 50px;
+.purple-orb, .blue-orb {
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  animation: crystalFloat 4s ease-in-out infinite;
+  animation: orbsFloat 4s ease-in-out infinite;
 }
 
-.purple-crystal {
+.purple-orb {
   background: radial-gradient(circle, #7a5cff, #4a3c9a);
-  box-shadow: 0 0 20px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 0 18px rgba(122, 92, 255, 0.6);
   animation-delay: 0s;
 }
 
-.blue-crystal {
+.blue-orb {
   background: radial-gradient(circle, #00d4ff, #0090cc);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
-  animation-delay: 1.5s;
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.6);
+  animation-delay: 1.2s;
 }
 
-@keyframes crystalFloat {
+@keyframes orbsFloat {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-10px); }
 }
 
-.offerings-title {
-  font-size: 22px;
+.ofrendas-title-orig {
+  font-size: 20px;
   font-weight: 700;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* Pokeball */
-.pokeball-center {
+/* Pokeball Original */
+.pokeball-original {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 
-.pokeball {
-  width: 70px;
-  height: 70px;
+.pokeball-orig {
+  width: 65px;
+  height: 65px;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.pokeball:hover {
-  transform: scale(1.15);
+.pokeball-orig:hover {
+  transform: scale(1.12);
 }
 
-.pokeball-upper {
+.pokeball-red {
   width: 100%;
   height: 50%;
   background: linear-gradient(to bottom, #ff4444, #cc0000);
-  border-radius: 35px 35px 0 0;
+  border-radius: 32px 32px 0 0;
   border: 3px solid #333;
   border-bottom: none;
 }
 
-.pokeball-lower {
+.pokeball-white {
   width: 100%;
   height: 50%;
   background: linear-gradient(to top, #ffffff, #dddddd);
-  border-radius: 0 0 35px 35px;
+  border-radius: 0 0 32px 32px;
   border: 3px solid #333;
   border-top: none;
 }
 
-.pokeball-band {
+.pokeball-middle-line {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 5px;
   background: #333;
   transform: translateY(-50%);
 }
 
-.pokeball-button {
+.pokeball-center-btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   background: #333;
   border: 3px solid #ffffff;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.magic-tip {
-  font-size: 15px;
+.propina-text {
+  font-size: 14px;
   color: #cccccc;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 
-.tip-amounts {
+/* Amounts Original */
+.amounts-original {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 8px;
+  margin: 18px 0;
   flex-wrap: wrap;
 }
 
-.tip-btn {
-  width: 45px;
-  height: 45px;
+.amount-circle {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: 2px solid #7a5cff;
   background: rgba(122, 92, 255, 0.1);
@@ -699,135 +676,135 @@
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 13px;
+  font-size: 12px;
 }
 
-.tip-btn:hover {
+.amount-circle:hover {
   background: rgba(122, 92, 255, 0.3);
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-.tip-btn.selected {
+.amount-circle.selected {
   background: #7a5cff;
-  box-shadow: 0 0 20px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 0 18px rgba(122, 92, 255, 0.6);
 }
 
-.custom-tip {
-  margin: 20px 0;
+.custom-amount-orig {
+  margin: 18px 0;
 }
 
-.custom-field {
+.custom-input-orig {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(122, 92, 255, 0.3);
-  border-radius: 20px;
-  padding: 10px 15px;
+  border-radius: 18px;
+  padding: 9px 14px;
   color: white;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  width: 180px;
+  width: 170px;
   transition: all 0.3s ease;
 }
 
-.custom-field::placeholder {
+.custom-input-orig::placeholder {
   color: #aaaaaa;
 }
 
-.custom-field:focus {
+.custom-input-orig:focus {
   outline: none;
   border-color: #7a5cff;
-  box-shadow: 0 0 15px rgba(122, 92, 255, 0.3);
+  box-shadow: 0 0 12px rgba(122, 92, 255, 0.3);
 }
 
-.payment-info {
-  font-size: 12px;
+.payment-methods-orig {
+  font-size: 11px;
   color: #aaaaaa;
-  margin: 15px 0;
+  margin: 14px 0;
 }
 
-.donation-btn {
+.donation-button-orig {
   background: linear-gradient(135deg, #7a5cff, #00d4ff);
   border: none;
-  border-radius: 25px;
-  padding: 12px 25px;
+  border-radius: 22px;
+  padding: 11px 22px;
   color: white;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(122, 92, 255, 0.4);
-  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(122, 92, 255, 0.4);
+  font-size: 13px;
 }
 
-.donation-btn:hover {
+.donation-button-orig:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 6px 18px rgba(122, 92, 255, 0.6);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .main-banner {
-    height: 250px;
+  .main-banner-large {
+    height: 220px;
   }
   
-  .signature-name {
-    font-size: 32px;
+  .zae-selena-signature {
+    font-size: 28px;
   }
   
-  .blonde-emoji {
-    font-size: 80px;
+  .big-blonde-emoji {
+    font-size: 70px;
   }
   
-  .alien-icon {
-    width: 60px;
-    height: 60px;
+  .banner-alien-icon {
+    width: 55px;
+    height: 55px;
   }
   
-  .subscribe-btn {
-    padding: 8px 16px;
-    font-size: 12px;
+  .subscribe-button-banner {
+    padding: 8px 14px;
+    font-size: 11px;
   }
   
-  .featured-video-section {
-    padding: 40px 20px 20px;
+  .first-row-video {
+    padding: 25px 20px 15px;
     justify-content: center;
   }
   
-  .video-player {
+  .video-container-right {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
   }
   
-  .stats-container {
-    gap: 40px;
+  .stats-row {
+    gap: 35px;
   }
   
-  .stat-number {
-    font-size: 24px;
+  .stat-num {
+    font-size: 22px;
   }
   
-  .artist-section {
+  .artist-original-layout {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 30px 20px;
+    gap: 25px;
+    padding: 25px 20px;
     text-align: center;
   }
   
-  .entries-container {
+  .entries-grid-original {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
   
-  .bottom-section {
+  .bottom-original-layout {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 30px 20px;
+    gap: 25px;
+    padding: 25px 20px;
   }
   
-  .entries-title {
-    font-size: 26px;
+  .original-entries-title {
+    font-size: 24px;
   }
   
-  .artist-title {
-    font-size: 22px;
+  .original-title {
+    font-size: 20px;
   }
 }

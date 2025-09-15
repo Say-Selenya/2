@@ -43,191 +43,192 @@ const Home = () => {
   };
 
   return (
-    <div className="zae-selenya-portal">
-      {/* Control de Música - Solo Icono */}
+    <div className="portal-original">
+      {/* Control de Música - Solo Icono (esquina) */}
       <div className="music-control">
         <button 
           onClick={toggleMusic} 
-          className={`music-btn ${isPlaying ? 'playing' : ''}`}
+          className={`music-icon ${isPlaying ? 'playing' : ''}`}
         >
           {isPlaying ? '⏸️' : '▶️'}
         </button>
       </div>
 
-      {/* Banner Más Grande */}
-      <div className="main-banner">
-        <div className="banner-background">
+      {/* Banner Grande con todos los elementos */}
+      <div className="main-banner-large">
+        <div className="banner-bg">
           <img 
             src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
-            alt="Banner Zäe Selena" 
-            className="banner-img"
+            alt="Banner" 
+            className="banner-background-img"
           />
-          <div className="banner-gradient"></div>
+          <div className="banner-dark-overlay"></div>
         </div>
 
-        {/* Alien Icono Abajo Izquierda del Banner */}
-        <div className="banner-alien">
+        {/* Alien - Abajo Izquierda del Banner */}
+        <div className="banner-alien-pos">
           <img 
             src="https://cdn.pixabay.com/photo/2024/03/09/17/17/alien-8623001_1280.png" 
             alt="Alien" 
-            className="alien-icon"
+            className="banner-alien-icon"
           />
         </div>
 
-        {/* Emoticono Grande Chica Rubia - Centro del Banner */}
-        <div className="banner-emoji">
-          <span className="blonde-emoji">👱‍♀️</span>
+        {/* Emoticono Chica Rubia Grande - Centro */}
+        <div className="banner-center-emoji">
+          <span className="big-blonde-emoji">👱‍♀️</span>
         </div>
 
-        {/* Suscribirse Abajo Derecha del Banner */}
-        <div className="banner-subscribe">
-          <button className="subscribe-btn">SUSCRIBIRSE</button>
-        </div>
-
-        {/* Firma Abajo del Banner */}
-        <div className="banner-signature">
-          <h1 className="signature-name">Zäe Selena</h1>
+        {/* Suscribirse - Abajo Derecha */}
+        <div className="banner-subscribe-pos">
+          <button className="subscribe-button-banner">SUSCRIBIRSE</button>
         </div>
       </div>
 
-      {/* Video Primera Fila - Derecha del Banner */}
-      <div className="featured-video-section">
-        <div className="video-player">
+      {/* Firma debajo del banner */}
+      <div className="signature-below-banner">
+        <h1 className="zae-selena-signature">Zäe Selena</h1>
+      </div>
+
+      {/* Video Primera Fila - Derecha */}
+      <div className="first-row-video">
+        <div className="video-container-right">
           <video 
-            className="main-video"
+            className="featured-video"
             controls
             poster="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg"
           >
             <source src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/tfes6x5u_siriii.mp4" type="video/mp4" />
-            Tu navegador no soporta el elemento video.
+            Tu navegador no soporta video.
           </video>
         </div>
       </div>
 
-      {/* Stats - Solo Exploradores y Visitas */}
-      <div className="stats-section">
-        <div className="stats-container">
-          <div className="stat-item">
-            <span className="stat-number">{explorers}</span>
-            <span className="stat-label">Exploradores</span>
+      {/* Stats Personales */}
+      <div className="personal-stats">
+        <div className="stats-row">
+          <div className="stat-box">
+            <span className="stat-num">{explorers}</span>
+            <span className="stat-text">Exploradores</span>
           </div>
-          <div className="stat-item">
-            <span className="stat-number">{visitors}</span>
-            <span className="stat-label">Visitas Totales</span>
+          <div className="stat-box">
+            <span className="stat-num">{visitors}</span>
+            <span className="stat-text">Visitas Totales</span>
           </div>
         </div>
       </div>
 
-      {/* Sección Artista - Con Video de Sombra */}
-      <div className="artist-section">
-        <div className="artist-left">
-          <div className="profile-container">
+      {/* Sección Artista Original (como en las fotos) */}
+      <div className="artist-original-layout">
+        <div className="artist-left-side">
+          <div className="circular-profile">
             <img 
               src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/v3v2qa9l_foto22.jpeg" 
-              alt="Zäe Selena Profile" 
-              className="profile-image"
+              alt="Zäe Selena" 
+              className="profile-circle-img"
             />
           </div>
-          <h2 className="artist-title">La Artista Detrás del Portal</h2>
-          <p className="artist-description">
+          <h2 className="original-title">La Artista Detrás del Portal</h2>
+          <p className="original-description">
             Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico. 
             Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜💜
           </p>
           
-          <div className="artist-features">
-            <div className="feature-row">
-              <div className="feature-icon">✨</div>
+          <div className="original-features">
+            <div className="feature-item-orig">
+              <div className="feature-circle">✨</div>
               <span>creando mundos únicos</span>
             </div>
-            <div className="feature-row">
-              <div className="feature-icon">🎮</div>
+            <div className="feature-item-orig">
+              <div className="feature-circle">🎮</div>
               <span>arte desde el corazón y diversidad... múltiples estilos</span>
             </div>
           </div>
         </div>
 
-        <div className="artist-right">
-          <div className="shadow-video">
+        {/* Video de Sombra - Derecha (como en las fotos) */}
+        <div className="artist-right-side">
+          <div className="shadow-video-container">
             <img 
               src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
-              alt="Video de Sombra" 
-              className="shadow-image"
+              alt="Sombra Video" 
+              className="shadow-video-img"
             />
-            <div className="shadow-overlay">
-              <p className="shadow-text">
+            <div className="shadow-text-overlay">
+              <p className="shadow-video-text">
                 Sumérgete en el universo creativo de Zäe Selena<br/>
-                <span className="shadow-subtitle">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
+                <span className="shadow-video-sub">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Entradas Mágicas */}
-      <div className="magical-entries-section">
-        <h2 className="entries-title">
+      {/* Entradas Mágicas (exacto como fotos) */}
+      <div className="magical-entries-original">
+        <h2 className="original-entries-title">
           Entradas Mágicas
-          <span className="sparkle">✨</span>
+          <span className="star-sparkle">✨</span>
         </h2>
         
-        <div className="entries-container">
-          <div className="entry-card frikilandia-card">
-            <div className="entry-icon">💙</div>
+        <div className="entries-grid-original">
+          <div className="entry-frikilandia">
+            <div className="entry-heart">💙</div>
             <h3>Frikilandia</h3>
           </div>
           
-          <div className="entry-card tragedias-card">
-            <div className="entry-icon">🖤</div>
+          <div className="entry-tragedias">
+            <div className="entry-heart">🖤</div>
             <h3>Tragedias de<br/>Pesadillas</h3>
           </div>
           
-          <div className="entry-card kawaii-card">
-            <div className="entry-icon">💚</div>
+          <div className="entry-kawaii">
+            <div className="entry-heart">💚</div>
             <h3>Humor +<br/>Arte +<br/>Kawaii</h3>
           </div>
         </div>
       </div>
 
-      {/* Sección Inferior - Formulario y Ofrendas */}
-      <div className="bottom-section">
-        {/* Formulario Escríbeme */}
-        <div className="contact-container">
-          <div className="contact-form">
-            <h3 className="contact-title">Escríbeme</h3>
-            <div className="form-group">
-              <input type="text" placeholder="Tu nombre" className="form-field" />
-              <input type="email" placeholder="Tu correo" className="form-field" />
-              <textarea placeholder="Tu mensaje" className="form-message"></textarea>
-              <button className="send-button">Enviar</button>
+      {/* Sección Inferior Original (como fotos) */}
+      <div className="bottom-original-layout">
+        {/* Formulario Escríbeme - Izquierda */}
+        <div className="escribeme-original">
+          <div className="form-blue-container">
+            <h3 className="escribeme-title">Escríbeme</h3>
+            <div className="form-inputs-orig">
+              <input type="text" placeholder="Tu nombre" className="input-orig" />
+              <input type="email" placeholder="Tu correo" className="input-orig" />
+              <textarea placeholder="Tu mensaje" className="textarea-orig"></textarea>
+              <button className="send-orig">Enviar</button>
             </div>
           </div>
         </div>
 
-        {/* Ofrendas */}
-        <div className="offerings-container">
-          <div className="crystal-balls">
-            <div className="crystal purple-crystal"></div>
-            <div className="crystal blue-crystal"></div>
+        {/* Ofrendas - Derecha (exacto como fotos) */}
+        <div className="ofrendas-original">
+          <div className="crystal-orbs-top">
+            <div className="purple-orb"></div>
+            <div className="blue-orb"></div>
           </div>
           
-          <h3 className="offerings-title">Ofrendas</h3>
+          <h3 className="ofrendas-title-orig">Ofrendas</h3>
           
-          <div className="pokeball-center">
-            <div className="pokeball">
-              <div className="pokeball-upper"></div>
-              <div className="pokeball-lower"></div>
-              <div className="pokeball-band"></div>
-              <div className="pokeball-button"></div>
+          <div className="pokeball-original">
+            <div className="pokeball-orig">
+              <div className="pokeball-red"></div>
+              <div className="pokeball-white"></div>
+              <div className="pokeball-middle-line"></div>
+              <div className="pokeball-center-btn"></div>
             </div>
           </div>
           
-          <p className="magic-tip">Elige tu propina mágica:</p>
+          <p className="propina-text">Elige tu propina mágica:</p>
           
-          <div className="tip-amounts">
+          <div className="amounts-original">
             {[5, 15, 25, 50, 100].map(amount => (
               <button 
                 key={amount}
-                className={`tip-btn ${selectedAmount === amount ? 'selected' : ''}`}
+                className={`amount-circle ${selectedAmount === amount ? 'selected' : ''}`}
                 onClick={() => handleAmountSelect(amount)}
               >
                 {amount}€
@@ -235,7 +236,7 @@ const Home = () => {
             ))}
           </div>
           
-          <div className="custom-tip">
+          <div className="custom-amount-orig">
             <input 
               type="number" 
               placeholder="Cantidad Personalizada"
@@ -244,12 +245,12 @@ const Home = () => {
                 setCustomAmount(e.target.value);
                 setSelectedAmount(null);
               }}
-              className="custom-field"
+              className="custom-input-orig"
             />
           </div>
           
-          <p className="payment-info">Métodos de pago disponibles</p>
-          <button className="donation-btn">Realizar Ofrenda</button>
+          <p className="payment-methods-orig">Métodos de pago disponibles</p>
+          <button className="donation-button-orig">Realizar Ofrenda</button>
         </div>
       </div>
     </div>
