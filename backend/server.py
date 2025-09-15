@@ -57,6 +57,19 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+@api_router.get("/ssl-status")
+async def check_ssl_status(request: Request):
+    return {
+        "ssl_enabled": request.url.scheme == "https",
+        "host": request.url.hostname,
+        "scheme": request.url.scheme,
+        "port": request.url.port,
+        "headers": {
+            "x-forwarded-proto": request.headers.get("x-forwarded-proto"),
+            "x-forwarded-port": request.headers.get("x-forwarded-port"),
+        }
+    }
+
 # Include the router in the main app
 app.include_router(api_router)
 
