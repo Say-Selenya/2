@@ -1,4 +1,4 @@
-/* Portal Original Basado en las Fotos + Modificaciones Específicas */
+/* Replicando exactamente las fotos que me pasaste */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -8,64 +8,58 @@
   box-sizing: border-box;
 }
 
-.portal-original {
+.original-portal {
   min-height: 100vh;
   background: #000000;
   color: white;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Control de Música - Solo Icono */
-.music-control {
+/* Botón música solo icono - esquina */
+.music-corner {
   position: fixed;
   top: 15px;
   right: 15px;
   z-index: 1000;
 }
 
-.music-icon {
+.music-only-icon {
   background: linear-gradient(135deg, #7a5cff, #00d4ff);
   border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(122, 92, 255, 0.4);
+  box-shadow: 0 3px 10px rgba(122, 92, 255, 0.4);
 }
 
-.music-icon:hover {
+.music-only-icon:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 5px 15px rgba(122, 92, 255, 0.6);
 }
 
-.music-icon.playing {
+.music-only-icon.playing {
   background: linear-gradient(135deg, #00ff88, #00d4ff);
-  animation: musicGlow 2s ease-in-out infinite;
+  animation: musicPlay 2s ease-in-out infinite;
 }
 
-@keyframes musicGlow {
-  0%, 100% { box-shadow: 0 4px 12px rgba(0, 255, 136, 0.4); }
-  50% { box-shadow: 0 6px 20px rgba(0, 255, 136, 0.8); }
+@keyframes musicPlay {
+  0%, 100% { box-shadow: 0 3px 10px rgba(0, 255, 136, 0.4); }
+  50% { box-shadow: 0 5px 20px rgba(0, 255, 136, 0.8); }
 }
 
-/* Banner Grande */
-.main-banner-large {
+/* Banner grande como en fotos */
+.photo-banner {
   width: 100%;
-  height: 300px;
+  height: 280px;
   position: relative;
   overflow: hidden;
 }
 
-.banner-bg {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.banner-background-img {
+.photo-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -73,7 +67,7 @@
   filter: brightness(0.6) contrast(1.1);
 }
 
-.banner-dark-overlay {
+.photo-banner-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -82,38 +76,38 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0.5) 100%
   );
 }
 
-/* Alien - Abajo Izquierda del Banner */
-.banner-alien-pos {
+/* Alien abajo izquierda del banner */
+.photo-alien-corner {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
+  bottom: 10px;
+  left: 10px;
   z-index: 10;
 }
 
-.banner-alien-icon {
-  width: 70px;
-  height: 70px;
-  animation: alienWave 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 12px #00d4ff);
+.photo-alien {
+  width: 60px;
+  height: 60px;
+  animation: alienMove 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px #00d4ff);
   transition: all 0.3s ease;
 }
 
-.banner-alien-icon:hover {
+.photo-alien:hover {
   transform: scale(1.3);
   filter: drop-shadow(0 0 20px #7a5cff);
 }
 
-@keyframes alienWave {
+@keyframes alienMove {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(6deg); }
+  50% { transform: translateY(-6px) rotate(5deg); }
 }
 
-/* Emoticono Chica Rubia Grande - Centro del Banner */
-.banner-center-emoji {
+/* Emoticono chica rubia grande centro */
+.photo-center-emoji {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -121,54 +115,54 @@
   z-index: 10;
 }
 
-.big-blonde-emoji {
-  font-size: 100px;
+.photo-blonde {
+  font-size: 90px;
   cursor: pointer;
   transition: all 0.3s ease;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
 }
 
-.big-blonde-emoji:hover {
-  transform: scale(1.4);
-  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 1));
+.photo-blonde:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1));
 }
 
-/* Suscribirse - Abajo Derecha del Banner */
-.banner-subscribe-pos {
+/* Suscribirse abajo derecha del banner */
+.photo-subscribe-corner {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  bottom: 10px;
+  right: 10px;
   z-index: 10;
 }
 
-.subscribe-button-banner {
+.photo-subscribe-btn {
   background: linear-gradient(135deg, #ff0844, #ff6b9d);
   border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
+  border-radius: 18px;
+  padding: 8px 16px;
   color: white;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 8, 68, 0.4);
+  box-shadow: 0 3px 10px rgba(255, 8, 68, 0.4);
 }
 
-.subscribe-button-banner:hover {
+.photo-subscribe-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(255, 8, 68, 0.6);
+  box-shadow: 0 5px 15px rgba(255, 8, 68, 0.6);
 }
 
 /* Firma debajo del banner */
-.signature-below-banner {
+.photo-signature {
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0;
   background: rgba(0, 0, 0, 0.8);
 }
 
-.zae-selena-signature {
-  font-size: 42px;
+.photo-name {
+  font-size: 36px;
   font-weight: 900;
   font-style: italic;
   background: linear-gradient(45deg, #ffffff, #00d4ff, #7a5cff, #ff6b9d);
@@ -176,175 +170,173 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: signatureShine 4s ease-in-out infinite;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  animation: nameShine 4s ease-in-out infinite;
 }
 
-@keyframes signatureShine {
+@keyframes nameShine {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
 
-/* Video Primera Fila - Derecha */
-.first-row-video {
-  padding: 30px 40px;
+/* Tu video primera fila derecha */
+.photo-video-row {
+  padding: 25px 30px;
   display: flex;
   justify-content: flex-end;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.video-container-right {
-  width: 400px;
-  border-radius: 12px;
+.photo-video-right {
+  width: 350px;
+  border-radius: 10px;
   overflow: hidden;
   border: 2px solid #7a5cff;
-  box-shadow: 0 8px 25px rgba(122, 92, 255, 0.3);
+  box-shadow: 0 6px 20px rgba(122, 92, 255, 0.3);
 }
 
-.featured-video {
+.photo-your-video {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Stats Personales */
-.personal-stats {
-  background: rgba(20, 20, 20, 0.8);
-  padding: 20px;
+/* Stats solo exploradores y visitas */
+.photo-stats {
+  background: rgba(15, 15, 15, 0.8);
+  padding: 15px;
   text-align: center;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 }
 
-.stats-row {
+.photo-stats-grid {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  max-width: 500px;
+  gap: 40px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
-.stat-box {
+.photo-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.stat-num {
-  font-size: 28px;
+.photo-stat-num {
+  font-size: 24px;
   font-weight: 700;
   color: #00d4ff;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
-.stat-text {
-  font-size: 13px;
+.photo-stat-label {
+  font-size: 12px;
   color: #aaaaaa;
-  margin-top: 5px;
-  font-weight: 500;
+  margin-top: 3px;
 }
 
-/* Sección Artista Original (como en las fotos) */
-.artist-original-layout {
+/* Layout exacto de las fotos - dos columnas */
+.photo-main-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 40px;
-  max-width: 1200px;
+  gap: 35px;
+  padding: 35px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.artist-left-side {
+/* Columna izquierda - perfil como en fotos */
+.photo-left-col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.circular-profile {
-  width: 110px;
-  height: 110px;
+.photo-profile-pic {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #7a5cff;
-  margin-bottom: 20px;
-  box-shadow: 0 0 18px rgba(122, 92, 255, 0.5);
+  border: 3px solid #7a5cff;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px rgba(122, 92, 255, 0.5);
 }
 
-.profile-circle-img {
+.photo-profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.original-title {
-  font-size: 26px;
+.photo-artist-title {
+  font-size: 24px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 18px;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
-.original-description {
-  font-size: 14px;
-  line-height: 1.6;
+.photo-description {
+  font-size: 13px;
+  line-height: 1.5;
   color: #cccccc;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.original-features {
+.photo-features {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.feature-item-orig {
+.photo-feature {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
-.feature-circle {
-  width: 35px;
-  height: 35px;
+.photo-feature-icon {
+  width: 30px;
+  height: 30px;
   background: rgba(122, 92, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 12px;
   border: 2px solid #7a5cff;
 }
 
-.feature-item-orig span {
-  font-size: 13px;
+.photo-feature span {
+  font-size: 12px;
   color: #aaaaaa;
-  font-weight: 500;
 }
 
-/* Video de Sombra - Derecha */
-.artist-right-side {
+/* Video de sombra derecha como fotos */
+.photo-right-col {
   display: flex;
   align-items: center;
 }
 
-.shadow-video-container {
+.photo-shadow-video {
   width: 100%;
-  height: 260px;
-  border-radius: 12px;
+  height: 240px;
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   border: 2px solid #333;
 }
 
-.shadow-video-img {
+.photo-shadow-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.25);
+  filter: brightness(0.2);
 }
 
-.shadow-text-overlay {
+.photo-shadow-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -354,320 +346,316 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
-.shadow-video-text {
-  font-size: 15px;
+.photo-shadow-text p {
+  font-size: 14px;
   font-weight: 600;
   color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-.shadow-video-sub {
-  font-size: 12px;
+.photo-shadow-sub {
+  font-size: 11px;
   opacity: 0.9;
   font-weight: 400;
   display: block;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-/* Entradas Mágicas Original */
-.magical-entries-original {
-  background: rgba(15, 15, 15, 0.9);
-  padding: 45px 40px;
+/* Entradas Mágicas exacto como fotos */
+.photo-entries {
+  background: rgba(10, 10, 10, 0.9);
+  padding: 40px 35px;
   text-align: center;
 }
 
-.original-entries-title {
-  font-size: 30px;
+.photo-entries-title {
+  font-size: 28px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 35px;
-  text-shadow: 0 0 18px rgba(0, 212, 255, 0.5);
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
-.star-sparkle {
-  margin-left: 10px;
-  animation: sparkleRotation 2s ease-in-out infinite;
+.photo-sparkle {
+  margin-left: 8px;
+  animation: sparkleRot 2s ease-in-out infinite;
 }
 
-@keyframes sparkleRotation {
+@keyframes sparkleRot {
   0%, 100% { opacity: 0.6; transform: rotate(0deg); }
   50% { opacity: 1; transform: rotate(180deg); }
 }
 
-.entries-grid-original {
+.photo-entries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 750px;
+  gap: 20px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.entry-frikilandia, .entry-tragedias, .entry-kawaii {
-  padding: 25px 18px;
-  border-radius: 12px;
+.photo-entry {
+  padding: 20px 15px;
+  border-radius: 10px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid;
-  position: relative;
-  overflow: hidden;
 }
 
-.entry-frikilandia {
+.photo-friki {
   background: rgba(0, 100, 255, 0.1);
-  border-color: #0064ff;
-  box-shadow: 0 0 18px rgba(0, 100, 255, 0.3);
+  border-color: #0064ff;  
+  box-shadow: 0 0 15px rgba(0, 100, 255, 0.3);
 }
 
-.entry-frikilandia:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 100, 255, 0.5);
+.photo-friki:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 100, 255, 0.5);
 }
 
-.entry-tragedias {
+.photo-dark {
   background: rgba(100, 100, 100, 0.1);
   border-color: #666666;
-  box-shadow: 0 0 18px rgba(100, 100, 100, 0.3);
+  box-shadow: 0 0 15px rgba(100, 100, 100, 0.3);
 }
 
-.entry-tragedias:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(100, 100, 100, 0.5);
+.photo-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(100, 100, 100, 0.5);
 }
 
-.entry-kawaii {
+.photo-kawaii {
   background: rgba(0, 255, 100, 0.1);
   border-color: #00ff64;
-  box-shadow: 0 0 18px rgba(0, 255, 100, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
 }
 
-.entry-kawaii:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0, 255, 100, 0.5);
+.photo-kawaii:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 255, 100, 0.5);
 }
 
-.entry-heart {
-  font-size: 32px;
-  margin-bottom: 12px;
+.photo-entry-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.entry-frikilandia h3, .entry-tragedias h3, .entry-kawaii h3 {
-  font-size: 14px;
+.photo-entry h3 {
+  font-size: 13px;
   font-weight: 600;
   color: white;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
-/* Sección Inferior Original */
-.bottom-original-layout {
+/* Layout inferior exacto como fotos */
+.photo-bottom-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 45px;
-  padding: 45px 40px;
-  max-width: 1200px;
+  gap: 40px;
+  padding: 40px 35px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Formulario Escríbeme Original */
-.escribeme-original {
+/* Formulario izquierda exacto como foto */
+.photo-form-section {
   display: flex;
   justify-content: center;
 }
 
-.form-blue-container {
+.photo-form-blue {
   background: linear-gradient(135deg, rgba(0, 100, 255, 0.15), rgba(122, 92, 255, 0.15));
-  padding: 28px;
-  border-radius: 18px;
+  padding: 25px;
+  border-radius: 15px;
   border: 2px solid rgba(0, 212, 255, 0.3);
   width: 100%;
-  max-width: 380px;
+  max-width: 350px;
 }
 
-.escribeme-title {
-  font-size: 20px;
+.photo-form-title {
+  font-size: 18px;
   font-weight: 700;
   color: #00d4ff;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   text-align: center;
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
-.form-inputs-orig {
+.photo-form-fields {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
-.input-orig, .textarea-orig {
+.photo-input, .photo-textarea {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(0, 212, 255, 0.3);
-  border-radius: 22px;
-  padding: 11px 16px;
+  border-radius: 20px;
+  padding: 10px 15px;
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   transition: all 0.3s ease;
 }
 
-.input-orig::placeholder, .textarea-orig::placeholder {
+.photo-input::placeholder, .photo-textarea::placeholder {
   color: #aaaaaa;
 }
 
-.input-orig:focus, .textarea-orig:focus {
+.photo-input:focus, .photo-textarea:focus {
   outline: none;
   border-color: #00d4ff;
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
-.textarea-orig {
-  min-height: 75px;
+.photo-textarea {
+  min-height: 70px;
   resize: vertical;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
-.send-orig {
+.photo-send-btn {
   background: linear-gradient(135deg, #00d4ff, #7a5cff);
   border: none;
-  border-radius: 22px;
-  padding: 11px 22px;
+  border-radius: 20px;
+  padding: 10px 20px;
   color: white;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 212, 255, 0.4);
 }
 
-.send-orig:hover {
+.photo-send-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 212, 255, 0.6);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.6);
 }
 
-/* Ofrendas Original */
-.ofrendas-original {
+/* Ofrendas derecha exacto como foto */
+.photo-offerings-section {
   text-align: center;
-  position: relative;
 }
 
-.crystal-orbs-top {
+.photo-crystals {
   display: flex;
   justify-content: center;
-  gap: 35px;
-  margin-bottom: 18px;
+  gap: 30px;
+  margin-bottom: 15px;
 }
 
-.purple-orb, .blue-orb {
-  width: 45px;
-  height: 45px;
+.photo-crystal {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  animation: orbsFloat 4s ease-in-out infinite;
+  animation: crystalMove 4s ease-in-out infinite;
 }
 
-.purple-orb {
+.photo-purple {
   background: radial-gradient(circle, #7a5cff, #4a3c9a);
-  box-shadow: 0 0 18px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 0 15px rgba(122, 92, 255, 0.6);
   animation-delay: 0s;
 }
 
-.blue-orb {
+.photo-blue {
   background: radial-gradient(circle, #00d4ff, #0090cc);
-  box-shadow: 0 0 18px rgba(0, 212, 255, 0.6);
-  animation-delay: 1.2s;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+  animation-delay: 1s;
 }
 
-@keyframes orbsFloat {
+@keyframes crystalMove {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
-.ofrendas-title-orig {
-  font-size: 20px;
+.photo-offerings-title {
+  font-size: 18px;
   font-weight: 700;
   color: white;
-  margin-bottom: 18px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-/* Pokeball Original */
-.pokeball-original {
+/* Pokeball exacto como foto */
+.photo-pokeball-container {
   display: flex;
   justify-content: center;
-  margin: 18px 0;
+  margin: 15px 0;
 }
 
-.pokeball-orig {
-  width: 65px;
-  height: 65px;
+.photo-pokeball {
+  width: 60px;
+  height: 60px;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.pokeball-orig:hover {
-  transform: scale(1.12);
+.photo-pokeball:hover {
+  transform: scale(1.1);
 }
 
-.pokeball-red {
+.photo-pokeball-top {
   width: 100%;
   height: 50%;
   background: linear-gradient(to bottom, #ff4444, #cc0000);
-  border-radius: 32px 32px 0 0;
+  border-radius: 30px 30px 0 0;
   border: 3px solid #333;
   border-bottom: none;
 }
 
-.pokeball-white {
+.photo-pokeball-bottom {
   width: 100%;
   height: 50%;
   background: linear-gradient(to top, #ffffff, #dddddd);
-  border-radius: 0 0 32px 32px;
+  border-radius: 0 0 30px 30px;
   border: 3px solid #333;
   border-top: none;
 }
 
-.pokeball-middle-line {
+.photo-pokeball-line {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 4px;
   background: #333;
   transform: translateY(-50%);
 }
 
-.pokeball-center-btn {
+.photo-pokeball-btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background: #333;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.propina-text {
-  font-size: 14px;
+.photo-tip-text {
+  font-size: 13px;
   color: #cccccc;
-  margin: 18px 0;
+  margin: 15px 0;
 }
 
-/* Amounts Original */
-.amounts-original {
+.photo-tip-circles {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin: 18px 0;
+  gap: 6px;
+  margin: 15px 0;
   flex-wrap: wrap;
 }
 
-.amount-circle {
-  width: 42px;
-  height: 42px;
+.photo-tip-circle {
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 2px solid #7a5cff;
   background: rgba(122, 92, 255, 0.1);
@@ -676,135 +664,131 @@
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 12px;
+  font-size: 11px;
 }
 
-.amount-circle:hover {
+.photo-tip-circle:hover {
   background: rgba(122, 92, 255, 0.3);
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
-.amount-circle.selected {
+.photo-tip-circle.selected {
   background: #7a5cff;
-  box-shadow: 0 0 18px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 0 15px rgba(122, 92, 255, 0.6);
 }
 
-.custom-amount-orig {
-  margin: 18px 0;
+.photo-custom {
+  margin: 15px 0;
 }
 
-.custom-input-orig {
+.photo-custom-input {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(122, 92, 255, 0.3);
-  border-radius: 18px;
-  padding: 9px 14px;
+  border-radius: 15px;
+  padding: 8px 12px;
   color: white;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  width: 170px;
+  width: 160px;
   transition: all 0.3s ease;
 }
 
-.custom-input-orig::placeholder {
+.photo-custom-input::placeholder {
   color: #aaaaaa;
 }
 
-.custom-input-orig:focus {
+.photo-custom-input:focus {
   outline: none;
   border-color: #7a5cff;
-  box-shadow: 0 0 12px rgba(122, 92, 255, 0.3);
+  box-shadow: 0 0 10px rgba(122, 92, 255, 0.3);
 }
 
-.payment-methods-orig {
-  font-size: 11px;
+.photo-payment-text {
+  font-size: 10px;
   color: #aaaaaa;
-  margin: 14px 0;
+  margin: 12px 0;
 }
 
-.donation-button-orig {
+.photo-donate-btn {
   background: linear-gradient(135deg, #7a5cff, #00d4ff);
   border: none;
-  border-radius: 22px;
-  padding: 11px 22px;
+  border-radius: 20px;
+  padding: 10px 20px;
   color: white;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(122, 92, 255, 0.4);
-  font-size: 13px;
+  box-shadow: 0 3px 10px rgba(122, 92, 255, 0.4);
+  font-size: 12px;
 }
 
-.donation-button-orig:hover {
+.photo-donate-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(122, 92, 255, 0.6);
+  box-shadow: 0 5px 15px rgba(122, 92, 255, 0.6);
 }
 
-/* Responsive */
+/* Responsive exacto */  
 @media (max-width: 768px) {
-  .main-banner-large {
-    height: 220px;
+  .photo-banner {
+    height: 200px;
   }
   
-  .zae-selena-signature {
-    font-size: 28px;
-  }
-  
-  .big-blonde-emoji {
-    font-size: 70px;
-  }
-  
-  .banner-alien-icon {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .subscribe-button-banner {
-    padding: 8px 14px;
-    font-size: 11px;
-  }
-  
-  .first-row-video {
-    padding: 25px 20px 15px;
-    justify-content: center;
-  }
-  
-  .video-container-right {
-    width: 100%;
-    max-width: 350px;
-  }
-  
-  .stats-row {
-    gap: 35px;
-  }
-  
-  .stat-num {
-    font-size: 22px;
-  }
-  
-  .artist-original-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 25px 20px;
-    text-align: center;
-  }
-  
-  .entries-grid-original {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  
-  .bottom-original-layout {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    padding: 25px 20px;
-  }
-  
-  .original-entries-title {
+  .photo-name {
     font-size: 24px;
   }
   
-  .original-title {
-    font-size: 20px;
+  .photo-blonde {
+    font-size: 60px;
+  }
+  
+  .photo-alien {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .photo-subscribe-btn {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+  
+  .photo-video-row {
+    padding: 20px 15px 10px;
+    justify-content: center;
+  }
+  
+  .photo-video-right {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .photo-stats-grid {
+    gap: 30px;
+  }
+  
+  .photo-main-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 15px;
+    text-align: center;
+  }
+  
+  .photo-entries-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .photo-bottom-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 25px 15px;
+  }
+  
+  .photo-entries-title {
+    font-size: 22px;
+  }
+  
+  .photo-artist-title {
+    font-size: 18px;
   }
 }
