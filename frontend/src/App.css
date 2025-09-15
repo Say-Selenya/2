@@ -140,8 +140,32 @@
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(0, 0, 0, 0.4) 100%
   );
+}
+
+/* Texto sobre el banner */
+.banner-text {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  text-align: right;
+}
+
+.banner-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 5px;
+}
+
+.banner-subtitle {
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  opacity: 0.9;
 }
 
 /* Información del Canal */
