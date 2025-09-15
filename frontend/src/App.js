@@ -72,6 +72,10 @@ const Home = () => {
             className="banner-image"
           />
           <div className="banner-overlay"></div>
+          <div className="banner-text">
+            <div className="banner-title">ZAESTELAR</div>
+            <div className="banner-subtitle">Cosmic Vibes & Alien Beats</div>
+          </div>
         </div>
       </div>
 
