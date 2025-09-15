@@ -41,9 +41,9 @@ const Home = () => {
   };
 
   return (
-    <div className="galactic-sanctuary">
+    <div className="zae-selenya-portal">
       {/* Alien Kawaii - Esquina Superior Izquierda */}
-      <div className="alien-corner">
+      <div className="alien-signature">
         <img 
           src="https://cdn.pixabay.com/photo/2024/03/09/17/17/alien-8623001_1280.png" 
           alt="Alien Kawaii" 
@@ -51,125 +51,143 @@ const Home = () => {
         />
       </div>
 
-      {/* Control de Música */}
-      <div className="music-corner">
+      {/* Control de Música Fumeta - Esquina Superior Derecha */}
+      <div className="music-control">
         <button 
           onClick={toggleMusic} 
-          className={`music-btn ${isPlaying ? 'playing' : ''}`}
+          className={`fumeta-btn ${isPlaying ? 'playing' : ''}`}
         >
           {isPlaying ? '⏸️' : '▶️'} Fumeta
         </button>
       </div>
 
-      {/* Sección Principal - Portal Artist */}
-      <div className="portal-main">
-        <div className="artist-presentation">
-          <div className="artist-profile">
-            <div className="profile-circle">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/v3v2qa9l_foto22.jpeg" 
-                alt="Zäe Selenya Profile" 
-                className="profile-img"
-              />
-            </div>
-            <h1 className="portal-title">La Artista Detrás del Portal</h1>
-            <p className="sanctuary-description">
-              Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico. 
-              Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜💜
-            </p>
-            
-            <div className="artist-features">
-              <div className="feature-item">
-                <div className="feature-icon">✨</div>
-                <span>creando mundos únicos</span>
-              </div>
-              <div className="feature-item">
-                <div className="feature-icon">🎮</div>
-                <span>arte desde el corazón y diversidad... múltiples estilos</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="vision-video">
-            <div className="video-container">
-              <img 
-                src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
-                alt="Visión Galáctica" 
-                className="vision-bg"
-              />
-              <div className="video-overlay">
-                <p className="vision-text">
-                  Sumérgete en el universo creativo de Zäe Selenya<br/>
-                  <span className="vision-subtitle">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
-                </p>
-              </div>
+      {/* Banner Superior tipo YouTube */}
+      <div className="youtube-banner">
+        <div className="banner-bg">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
+            alt="Banner Zäe Selenya" 
+            className="banner-image"
+          />
+          <div className="banner-overlay">
+            <div className="banner-content">
+              <h1 className="channel-name">Zäe Selenya</h1>
+              <button className="subscribe-button">SUSCRIBIRSE</button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Entradas Mágicas */}
-      <div className="magical-entries">
-        <h2 className="section-title">
+      {/* Sección Artista - Layout Original */}
+      <div className="artist-section">
+        <div className="artist-left">
+          <div className="profile-container">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/v3v2qa9l_foto22.jpeg" 
+              alt="Zäe Selenya Profile" 
+              className="profile-image"
+            />
+          </div>
+          <h2 className="artist-title">La Artista Detrás del Portal</h2>
+          <p className="artist-description">
+            Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico. 
+            Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜💜
+          </p>
+          
+          <div className="artist-features">
+            <div className="feature-row">
+              <div className="feature-icon">✨</div>
+              <span>creando mundos únicos</span>
+            </div>
+            <div className="feature-row">
+              <div className="feature-icon">🎮</div>
+              <span>arte desde el corazón y diversidad... múltiples estilos</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="artist-right">
+          <div className="vision-container">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_fcc6c48f-4aa0-419e-8e47-e34d99c0d792/artifacts/wzorduw3_B882A8E3-F69E-4774-9EA8-733A40B0EF9A.jpeg" 
+              alt="Visión Galáctica" 
+              className="vision-image"
+            />
+            <div className="vision-overlay">
+              <p className="vision-text">
+                Sumérgete en el universo creativo de Zäe Selenya<br/>
+                <span className="vision-subtitle">Una presentación íntima de la artista detrás del portal y su visión galáctica.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Entradas Mágicas - Centradas */}
+      <div className="magical-entries-section">
+        <h2 className="entries-title">
           Entradas Mágicas
-          <span className="magic-sparkle">✨</span>
+          <span className="sparkle">✨</span>
         </h2>
         
-        <div className="entries-grid">
-          <div className="entry-card frikilandia">
-            <div className="card-icon">💙</div>
+        <div className="entries-container">
+          <div className="entry-card frikilandia-card">
+            <div className="entry-icon">💙</div>
             <h3>Frikilandia</h3>
           </div>
           
-          <div className="entry-card tragedias">
-            <div className="card-icon">🖤</div>
+          <div className="entry-card tragedias-card">
+            <div className="entry-icon">🖤</div>
             <h3>Tragedias de<br/>Pesadillas</h3>
           </div>
           
-          <div className="entry-card kawaii">
-            <div className="card-icon">💚</div>
+          <div className="entry-card kawaii-card">
+            <div className="entry-icon">💚</div>
             <h3>Humor +<br/>Arte +<br/>Kawaii</h3>
           </div>
         </div>
       </div>
 
-      {/* Formulario Escríbeme */}
-      <div className="contact-section">
-        <div className="contact-form">
-          <h3 className="form-title">Escríbeme</h3>
-          <div className="form-fields">
-            <input type="text" placeholder="Tu nombre" className="form-input" />
-            <input type="email" placeholder="Tu correo" className="form-input" />
-            <textarea placeholder="Tu mensaje" className="form-textarea"></textarea>
-            <button className="send-btn">Enviar</button>
+      {/* Sección Inferior - Formulario y Ofrendas */}
+      <div className="bottom-section">
+        {/* Formulario Escríbeme - Izquierda */}
+        <div className="contact-container">
+          <div className="contact-form">
+            <h3 className="contact-title">Escríbeme</h3>
+            <div className="form-group">
+              <input type="text" placeholder="Tu nombre" className="form-field" />
+              <input type="email" placeholder="Tu correo" className="form-field" />
+              <textarea placeholder="Tu mensaje" className="form-message"></textarea>
+              <button className="send-button">Enviar</button>
+            </div>
           </div>
         </div>
 
-        {/* Ofrendas */}
-        <div className="offerings-section">
-          <div className="crystal-orbs">
-            <div className="orb orb-purple"></div>
-            <div className="orb orb-blue"></div>
+        {/* Ofrendas - Derecha */}
+        <div className="offerings-container">
+          <div className="crystal-balls">
+            <div className="crystal purple-crystal"></div>
+            <div className="crystal blue-crystal"></div>
           </div>
           
           <h3 className="offerings-title">Ofrendas</h3>
           
-          <div className="pokeball-container">
+          <div className="pokeball-center">
             <div className="pokeball">
-              <div className="pokeball-top"></div>
-              <div className="pokeball-middle"></div>
-              <div className="pokeball-bottom"></div>
-              <div className="pokeball-center"></div>
+              <div className="pokeball-upper"></div>
+              <div className="pokeball-lower"></div>
+              <div className="pokeball-band"></div>
+              <div className="pokeball-button"></div>
             </div>
           </div>
           
-          <p className="offerings-subtitle">Elige tu propina mágica:</p>
+          <p className="magic-tip">Elige tu propina mágica:</p>
           
-          <div className="amount-options">
+          <div className="tip-amounts">
             {[5, 15, 25, 50, 100].map(amount => (
               <button 
                 key={amount}
-                className={`amount-btn ${selectedAmount === amount ? 'selected' : ''}`}
+                className={`tip-btn ${selectedAmount === amount ? 'selected' : ''}`}
                 onClick={() => handleAmountSelect(amount)}
               >
                 {amount}€
@@ -177,7 +195,7 @@ const Home = () => {
             ))}
           </div>
           
-          <div className="custom-amount">
+          <div className="custom-tip">
             <input 
               type="number" 
               placeholder="Cantidad Personalizada"
@@ -186,12 +204,12 @@ const Home = () => {
                 setCustomAmount(e.target.value);
                 setSelectedAmount(null);
               }}
-              className="custom-input"
+              className="custom-field"
             />
           </div>
           
-          <p className="payment-methods">Métodos de pago disponibles</p>
-          <button className="donate-btn">Realizar Ofrenda</button>
+          <p className="payment-info">Métodos de pago disponibles</p>
+          <button className="donation-btn">Realizar Ofrenda</button>
         </div>
       </div>
     </div>
