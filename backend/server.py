@@ -88,18 +88,49 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Add security headers middleware
+# Add comprehensive security headers middleware
 @app.middleware("http")
 async def add_security_headers(request, call_next):
     response = await call_next(request)
     
-    # HTTPS Security Headers
-    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    # Force HTTPS and prevent downgrade attacks
+    response.headers["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains; preload"
+    
+    # Prevent MIME type sniffing
     response.headers["X-Content-Type-Options"] = "nosniff"
+    
+    # Prevent clickjacking
     response.headers["X-Frame-Options"] = "DENY"
+    
+    # XSS Protection
     response.headers["X-XSS-Protection"] = "1; mode=block"
+    
+    # Referrer Policy
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
-    response.headers["Content-Security-Policy"] = "default-src 'self' https:; img-src 'self' https: data:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'"
+    
+    # Content Security Policy - More permissive for React apps
+    csp = "default-src 'self' https:; " \
+          "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; " \
+          "style-src 'self' 'unsafe-inline' https:; " \
+          "img-src 'self' data: https:; " \
+          "font-src 'self' https:; " \
+          "connect-src 'self' https:; " \
+          "media-src 'self' https:; " \
+          "object-src 'none'; " \
+          "base-uri 'self'; " \
+          "form-action 'self'"
+    
+    response.headers["Content-Security-Policy"] = csp
+    
+    # Additional security headers
+    response.headers["X-Permitted-Cross-Domain-Policies"] = "none"
+    response.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=()"
+    
+    # Cache control for security
+    if request.url.path.startswith("/api"):
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        response.headers["Pragma"] = "no-cache"
+        response.headers["Expires"] = "0"
     
     return response
 
