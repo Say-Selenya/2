@@ -7,6 +7,8 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const Home = () => {
+  const [sslStatus, setSslStatus] = useState(null);
+  
   const helloWorldApi = async () => {
     try {
       const response = await axios.get(`${API}/`);
@@ -16,8 +18,19 @@ const Home = () => {
     }
   };
 
+  const checkSSLStatus = async () => {
+    try {
+      const response = await axios.get(`${API}/ssl-status`);
+      setSslStatus(response.data);
+      console.log("SSL Status:", response.data);
+    } catch (e) {
+      console.error(e, `errored out requesting ssl-status api`);
+    }
+  };
+
   useEffect(() => {
     helloWorldApi();
+    checkSSLStatus();
   }, []);
 
   return (
