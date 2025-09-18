@@ -49,62 +49,12 @@ const ZaePortal = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30"></div>
         </div>
 
-        {/* Content Overlay */}
-        <div className="relative z-10 h-full flex items-center">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl">
-              {/* Channel Info */}
-              <div className="flex items-center mb-8">
-                <div className="w-24 h-24 rounded-full border-4 border-orange-400 p-1 shadow-lg shadow-orange-400/50 mr-6">
-                  <img
-                    src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face"
-                    alt="Zäe Selenya"
-                    className="w-full h-full rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h1 className="text-6xl font-bold mb-2 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent">
-                    Zäe Selenya
-                  </h1>
-                  <div className="flex items-center space-x-4 text-orange-200">
-                    <span className="flex items-center space-x-1">
-                      <Users className="w-4 h-4" />
-                      <span>15.2K suscriptores</span>
-                    </span>
-                    <span className="flex items-center space-x-1">
-                      <Eye className="w-4 h-4" />
-                      <span>892K visualizaciones</span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Main Title */}
-              <h2 className="text-5xl font-bold mb-6 leading-tight">
-                <span className="text-white">Portal Místico</span>
-                <br />
-                <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                  Galáctico
-                </span>
-              </h2>
-
-              {/* Description */}
-              <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
-                Bienvenidos a mi universo donde la creatividad trasciende las dimensiones. 
-                Cada pixel cuenta una historia mágica en este cosmos virtual único.
-              </p>
-
-              {/* Call to Action Buttons */}
-              <div className="flex flex-wrap gap-4">
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold flex items-center space-x-2">
-                  <Play className="w-5 h-5" />
-                  <span>SUSCRIBIRSE</span>
-                </Button>
-                <Button variant="outline" className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black px-8 py-4 text-lg font-semibold">
-                  Explorar Portal
-                </Button>
-              </div>
-            </div>
+        {/* Signature Overlay - Bottom Left */}
+        <div className="absolute bottom-8 left-8 z-10">
+          <div className="signature-text">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent font-signature">
+              Zäe Selenya
+            </h1>
           </div>
         </div>
 
