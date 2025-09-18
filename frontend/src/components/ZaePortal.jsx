@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Badge } from './ui/badge';
-import { Heart, Zap, Sparkles, Send, Star, Moon, Rocket } from 'lucide-react';
+import { Heart, Zap, Sparkles, Send, Star, Moon, Rocket, Play, Users, Eye } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 const ZaePortal = () => {
@@ -29,284 +29,360 @@ const ZaePortal = () => {
   const handleContactSubmit = (e) => {
     e.preventDefault();
     console.log('Mensaje enviado:', contactForm);
-    // Reset form
     setContactForm({ name: '', email: '', message: '' });
     alert('¡Mensaje enviado a través del cosmos! ✨');
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
-      {/* Cosmic Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900"></div>
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              opacity: Math.random() * 0.8 + 0.2
-            }}
-          ></div>
-        ))}
-      </div>
+    <div className="min-h-screen bg-black text-white">
+      {/* YouTube-Style Banner Hero Section */}
+      <section className="relative h-[70vh] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
+          }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30"></div>
+        </div>
 
-      <div className="relative z-10">
-        {/* Header */}
-        <header className="border-b border-cyan-400/30 bg-gray-800/50 backdrop-blur-sm">
-          <div className="container mx-auto px-6 py-6">
-            <div className="flex justify-between items-center">
-              {/* Left side - Avatar and Name */}
-              <div className="flex items-center space-x-4">
-                <div className="relative">
-                  <div className="w-16 h-16 rounded-full border-2 border-cyan-400 p-1 shadow-lg shadow-cyan-400/50">
-                    <img
-                      src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face"
-                      alt="Zäe Selenya"
-                      className="w-full h-full rounded-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2">
-                    <Sparkles className="w-6 h-6 text-yellow-400 animate-spin" />
-                  </div>
+        {/* Content Overlay */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl">
+              {/* Channel Info */}
+              <div className="flex items-center mb-8">
+                <div className="w-24 h-24 rounded-full border-4 border-orange-400 p-1 shadow-lg shadow-orange-400/50 mr-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face"
+                    alt="Zäe Selenya"
+                    className="w-full h-full rounded-full object-cover"
+                  />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <h1 className="text-6xl font-bold mb-2 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent">
                     Zäe Selenya
                   </h1>
-                  <p className="text-sm text-gray-300">Portal Místico Galáctico</p>
-                </div>
-              </div>
-
-              {/* Right side - Artistic Profile */}
-              <div className="hidden md:flex items-center space-x-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg p-2 shadow-lg">
-                  <div className="w-full h-full bg-gray-900/80 rounded flex items-center justify-center">
-                    <Rocket className="w-8 h-8 text-yellow-400" />
+                  <div className="flex items-center space-x-4 text-orange-200">
+                    <span className="flex items-center space-x-1">
+                      <Users className="w-4 h-4" />
+                      <span>15.2K suscriptores</span>
+                    </span>
+                    <span className="flex items-center space-x-1">
+                      <Eye className="w-4 h-4" />
+                      <span>892K visualizaciones</span>
+                    </span>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Decorative alien graphic */}
-            <div className="mt-4 flex justify-center">
-              <div className="flex items-center space-x-2 text-green-400">
-                <Zap className="w-6 h-6" />
-                <span className="text-sm font-mono">ALIEN_MODE_ACTIVATED</span>
-                <Zap className="w-6 h-6" />
+              {/* Main Title */}
+              <h2 className="text-5xl font-bold mb-6 leading-tight">
+                <span className="text-white">Portal Místico</span>
+                <br />
+                <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+                  Galáctico
+                </span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
+                Bienvenidos a mi universo donde la creatividad trasciende las dimensiones. 
+                Cada pixel cuenta una historia mágica en este cosmos virtual único.
+              </p>
+
+              {/* Call to Action Buttons */}
+              <div className="flex flex-wrap gap-4">
+                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold flex items-center space-x-2">
+                  <Play className="w-5 h-5" />
+                  <span>SUSCRIBIRSE</span>
+                </Button>
+                <Button variant="outline" className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black px-8 py-4 text-lg font-semibold">
+                  Explorar Portal
+                </Button>
               </div>
             </div>
           </div>
-        </header>
+        </div>
 
-        {/* Presentation Section */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+        {/* Floating Elements */}
+        <div className="absolute top-20 right-20 animate-pulse">
+          <div className="w-16 h-16 bg-orange-400/20 rounded-full flex items-center justify-center border border-orange-400/50">
+            <Sparkles className="w-8 h-8 text-orange-400" />
+          </div>
+        </div>
+        <div className="absolute bottom-32 left-32 animate-bounce">
+          <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center border border-yellow-400/50">
+            <Star className="w-6 h-6 text-yellow-400" />
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation/Menu Section */}
+      <section className="bg-gray-900 border-b border-gray-700">
+        <div className="container mx-auto px-6 py-4">
+          <nav className="flex space-x-8">
+            <a href="#inicio" className="text-orange-400 font-semibold border-b-2 border-orange-400 pb-2">INICIO</a>
+            <a href="#entradas" className="text-gray-300 hover:text-orange-400 transition-colors pb-2">ENTRADAS MÁGICAS</a>
+            <a href="#ofrendas" className="text-gray-300 hover:text-orange-400 transition-colors pb-2">OFRENDAS</a>
+            <a href="#contacto" className="text-gray-300 hover:text-orange-400 transition-colors pb-2">CONTACTO</a>
+          </nav>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 px-6 bg-gray-900">
+        <div className="container mx-auto max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold mb-6 text-orange-400">
                 La Artista Detrás del Portal
-              </h2>
-              <div className="flex justify-center mb-8">
-                <div className="w-32 h-32 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-full flex items-center justify-center border border-cyan-400/30">
-                  <div className="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center shadow-inner">
-                    <Moon className="w-12 h-12 text-purple-400" />
-                  </div>
-                </div>
-              </div>
-              <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              </h3>
+              <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 {mockData.artistDescription}
               </p>
-              <p className="text-sm italic text-cyan-300 mt-4">
+              <p className="text-orange-200 italic text-lg">
                 "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Magical Entries */}
-        <section className="py-16 px-6 bg-gray-800/30">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl font-bold text-center mb-12 flex items-center justify-center space-x-4">
-              <Sparkles className="w-8 h-8 text-yellow-400" />
-              <span className="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-                Entradas Mágicas
-              </span>
-              <Sparkles className="w-8 h-8 text-yellow-400" />
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              {mockData.magicalEntries.map((entry, index) => (
-                <Card key={index} className="bg-gray-800/80 border-2 border-transparent hover:border-cyan-400/50 transition-all duration-300 group hover:shadow-lg hover:shadow-cyan-400/20">
-                  <CardContent className="p-6 text-center">
-                    <div className="mb-4 flex justify-center">
-                      <div className={`w-16 h-16 rounded-full flex items-center justify-center ${entry.bgColor} border-2 ${entry.borderColor}`}>
-                        <Heart className={`w-8 h-8 ${entry.iconColor} group-hover:animate-pulse`} />
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">
-                      {entry.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm">
-                      {entry.description}
-                    </p>
-                    <Button 
-                      className={`mt-4 ${entry.buttonClass} hover:scale-105 transition-transform`}
-                      size="sm"
-                    >
-                      Explorar {entry.emoji}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Offerings Section */}
-        <section className="py-16 px-6">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-6 flex items-center justify-center space-x-4">
-                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                  <Star className="w-4 h-4 text-white" />
-                </div>
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Ofrendas
-                </span>
-                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                  <Star className="w-4 h-4 text-white" />
-                </div>
-              </h2>
-            </div>
-
-            <Card className="bg-gray-800/80 border-2 border-purple-400/30 max-w-md mx-auto">
-              <CardContent className="p-8 text-center">
-                {/* Pokeball Icon */}
-                <div className="mb-6 flex justify-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center border-4 border-white shadow-lg relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                      <div className="w-8 h-8 bg-white rounded-full border-4 border-gray-800"></div>
-                    </div>
-                    <div className="absolute inset-x-0 top-1/2 h-1 bg-gray-800 transform -translate-y-0.5"></div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-64 h-64 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-full flex items-center justify-center border-2 border-orange-400/30 backdrop-blur-sm">
+                  <div className="w-48 h-48 bg-gray-800 rounded-full flex items-center justify-center shadow-inner relative overflow-hidden">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center opacity-30"
+                      style={{
+                        backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
+                      }}
+                    ></div>
+                    <Moon className="w-16 h-16 text-orange-400 relative z-10" />
                   </div>
                 </div>
-
-                <h3 className="text-xl font-bold mb-6 text-purple-300">
-                  Propina Mágica
-                </h3>
-
-                {/* Tip Options */}
-                <div className="grid grid-cols-3 gap-3 mb-6">
-                  {mockData.tipAmounts.map((amount) => (
-                    <Button
-                      key={amount}
-                      variant={selectedTip === amount ? "default" : "outline"}
-                      className={`${
-                        selectedTip === amount 
-                          ? "bg-purple-500 hover:bg-purple-600 text-white" 
-                          : "border-purple-400/50 text-purple-300 hover:border-purple-400"
-                      } transition-all`}
-                      onClick={() => handleTipSelect(amount)}
-                    >
-                      ${amount}
-                    </Button>
-                  ))}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center animate-pulse">
+                  <Sparkles className="w-4 h-4 text-gray-900" />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                {/* Custom Amount */}
-                <div className="mb-6">
+      {/* Magical Entries - YouTube Playlist Style */}
+      <section id="entradas" className="py-16 px-6 bg-black">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-center mb-12 flex items-center justify-center space-x-4">
+            <Sparkles className="w-10 h-10 text-yellow-400" />
+            <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+              Entradas Mágicas
+            </span>
+            <Sparkles className="w-10 h-10 text-yellow-400" />
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {mockData.magicalEntries.map((entry, index) => (
+              <Card key={index} className="bg-gray-900 border border-gray-700 hover:border-orange-400/50 transition-all duration-300 group hover:shadow-lg hover:shadow-orange-400/20 overflow-hidden">
+                <div className="relative h-48 bg-gradient-to-br from-gray-800 to-gray-900">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center opacity-20"
+                    style={{
+                      backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
+                    }}
+                  ></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className={`w-20 h-20 rounded-full flex items-center justify-center ${entry.bgColor} border-2 ${entry.borderColor} backdrop-blur-sm`}>
+                      <Heart className={`w-10 h-10 ${entry.iconColor} group-hover:animate-pulse`} />
+                    </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-black/50 text-orange-400 border border-orange-400/50">
+                      {entry.emoji}
+                    </Badge>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    {entry.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                    {entry.description}
+                  </p>
+                  <Button 
+                    className={`w-full ${entry.buttonClass} hover:scale-105 transition-transform font-semibold`}
+                    size="sm"
+                  >
+                    <Play className="w-4 h-4 mr-2" />
+                    Explorar {entry.emoji}
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Offerings Section - YouTube Channel Membership Style */}
+      <section id="ofrendas" className="py-16 px-6 bg-gray-900">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 flex items-center justify-center space-x-4">
+              <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                <Star className="w-5 h-5 text-white" />
+              </div>
+              <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+                Ofrendas Mágicas
+              </span>
+              <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                <Star className="w-5 h-5 text-white" />
+              </div>
+            </h2>
+            <p className="text-gray-400 text-lg">Apoya el canal y desbloquea contenido exclusivo</p>
+          </div>
+
+          <Card className="bg-black border-2 border-orange-400/30 max-w-md mx-auto shadow-2xl">
+            <CardContent className="p-8 text-center">
+              {/* Pokeball Icon */}
+              <div className="mb-6 flex justify-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center border-4 border-white shadow-lg relative">
+                  <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-white rounded-full border-4 border-gray-800"></div>
+                  </div>
+                  <div className="absolute inset-x-0 top-1/2 h-1 bg-gray-800 transform -translate-y-0.5"></div>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-2 text-orange-400">
+                Membresía del Canal
+              </h3>
+              <p className="text-gray-400 mb-6">Únete a la comunidad galáctica</p>
+
+              {/* Tip Options */}
+              <div className="grid grid-cols-3 gap-3 mb-6">
+                {mockData.tipAmounts.map((amount) => (
+                  <Button
+                    key={amount}
+                    variant={selectedTip === amount ? "default" : "outline"}
+                    className={`${
+                      selectedTip === amount 
+                        ? "bg-orange-500 hover:bg-orange-600 text-white" 
+                        : "border-orange-400/50 text-orange-400 hover:border-orange-400 hover:bg-orange-400/10"
+                    } transition-all font-semibold`}
+                    onClick={() => handleTipSelect(amount)}
+                  >
+                    ${amount}
+                  </Button>
+                ))}
+              </div>
+
+              {/* Custom Amount */}
+              <div className="mb-6">
+                <Input
+                  type="number"
+                  placeholder="Cantidad personalizada"
+                  value={customTip}
+                  onChange={(e) => handleCustomTip(e.target.value)}
+                  className="bg-gray-800 border-orange-400/50 text-white placeholder:text-gray-500 focus:border-orange-400"
+                />
+              </div>
+
+              <div className="mb-6 space-y-2">
+                <Badge variant="outline" className="text-orange-300 border-orange-400/50 block">
+                  ✨ Acceso a contenido exclusivo
+                </Badge>
+                <Badge variant="outline" className="text-orange-300 border-orange-400/50 block">
+                  🎮 Streaming en vivo prioritario
+                </Badge>
+                <Badge variant="outline" className="text-orange-300 border-orange-400/50 block">
+                  💫 Badges personalizados
+                </Badge>
+              </div>
+
+              <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 text-lg">
+                <Heart className="w-5 h-5 mr-2" />
+                Unirse Ahora ✨
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section id="contacto" className="py-16 px-6 bg-black">
+        <div className="container mx-auto max-w-md">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+              Escríbeme
+            </h2>
+            <p className="text-gray-400">Conecta conmigo a través del cosmos</p>
+          </div>
+
+          <Card className="bg-gray-900 border-2 border-orange-400/30 backdrop-blur-sm shadow-2xl">
+            <CardContent className="p-8">
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                <div>
                   <Input
-                    type="number"
-                    placeholder="Cantidad personalizada"
-                    value={customTip}
-                    onChange={(e) => handleCustomTip(e.target.value)}
-                    className="bg-gray-700 border-purple-400/50 text-white placeholder:text-gray-400"
+                    type="text"
+                    placeholder="Tu nombre"
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                    className="bg-gray-800 border-orange-400/50 text-white placeholder:text-gray-500 focus:border-orange-400 h-12"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="Tu correo"
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                    className="bg-gray-800 border-orange-400/50 text-white placeholder:text-gray-500 focus:border-orange-400 h-12"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Textarea
+                    placeholder="Tu mensaje"
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                    className="bg-gray-800 border-orange-400/50 text-white placeholder:text-gray-500 focus:border-orange-400 min-h-[120px] resize-none"
+                    required
                   />
                 </div>
 
-                <Badge variant="outline" className="text-cyan-300 border-cyan-400/50 mb-4">
-                  Métodos disponibles: PayPal • Stripe • Cosmic Credits
-                </Badge>
-
-                <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold">
-                  Enviar Ofrenda ✨
+                <Button 
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold py-3 text-lg flex items-center justify-center space-x-2"
+                >
+                  <Send className="w-5 h-5" />
+                  <span>Enviar al Cosmos</span>
                 </Button>
-              </CardContent>
-            </Card>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-6 border-t border-gray-700 bg-gray-900">
+        <div className="container mx-auto text-center">
+          <p className="text-gray-400 text-sm mb-2">
+            © 2025 Zäe Selenya - Portal Místico Galáctico ✨
+          </p>
+          <p className="text-xs text-gray-500">
+            Donde los sueños se convierten en realidad digital
+          </p>
+          <div className="flex justify-center space-x-6 mt-4">
+            <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">YouTube</a>
+            <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">Instagram</a>
+            <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">Twitter</a>
+            <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">Discord</a>
           </div>
-        </section>
-
-        {/* Contact Form */}
-        <section className="py-16 px-6 bg-gray-800/30">
-          <div className="container mx-auto max-w-md">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Escríbeme
-              </h2>
-            </div>
-
-            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-2 border-cyan-400/30 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <form onSubmit={handleContactSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      type="text"
-                      placeholder="Tu nombre"
-                      value={contactForm.name}
-                      onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                      className="bg-gray-700/50 border-cyan-400/50 text-white placeholder:text-gray-400 focus:border-cyan-400"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Tu correo"
-                      value={contactForm.email}
-                      onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                      className="bg-gray-700/50 border-cyan-400/50 text-white placeholder:text-gray-400 focus:border-cyan-400"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <Textarea
-                      placeholder="Tu mensaje"
-                      value={contactForm.message}
-                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                      className="bg-gray-700/50 border-cyan-400/50 text-white placeholder:text-gray-400 focus:border-cyan-400 min-h-[120px]"
-                      required
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold flex items-center justify-center space-x-2"
-                  >
-                    <Send className="w-4 h-4" />
-                    <span>Enviar al Cosmos</span>
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="py-8 px-6 border-t border-cyan-400/30 bg-gray-800/50">
-          <div className="container mx-auto text-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 Zäe Selenya - Portal Místico Galáctico ✨
-            </p>
-            <p className="text-xs text-gray-500 mt-2">
-              Donde los sueños se convierten en realidad digital
-            </p>
-          </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   );
 };
