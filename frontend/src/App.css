@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -17,6 +17,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', monospace;
   font-weight: 700;
   line-height: 1.2;
+}
+
+.font-signature {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+}
+
+.signature-text {
+  position: relative;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.signature-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #eab308);
+  border-radius: 1px;
 }
 
 .App {
