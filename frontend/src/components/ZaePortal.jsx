@@ -58,17 +58,7 @@ const ZaePortal = () => {
           </div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute top-20 right-20 animate-pulse">
-          <div className="w-16 h-16 bg-orange-400/20 rounded-full flex items-center justify-center border border-orange-400/50">
-            <Sparkles className="w-8 h-8 text-orange-400" />
-          </div>
-        </div>
-        <div className="absolute bottom-32 left-32 animate-bounce">
-          <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center border border-yellow-400/50">
-            <Star className="w-6 h-6 text-yellow-400" />
-          </div>
-        </div>
+
       </section>
 
       {/* Navigation/Menu Section */}
