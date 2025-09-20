@@ -93,23 +93,6 @@ const ZaePortal = () => {
             {/* Feminine galactic overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 via-pink-900/40 to-transparent"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-transparent to-purple-950/30"></div>
-            
-            {/* Magical sparkles overlay */}
-            <div className="absolute inset-0">
-              {[...Array(15)].map((_, i) => (
-                <div
-                  key={`sparkle-${i}`}
-                  className="absolute animate-float-sparkle"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 4}s`
-                  }}
-                >
-                  <Sparkles className="w-4 h-4 text-pink-300 animate-pulse" />
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Alien Greeting - Top Left */}
