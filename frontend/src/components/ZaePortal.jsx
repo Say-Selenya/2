@@ -111,7 +111,94 @@ const ZaePortal = () => {
         </section>
 
         {/* BREATHING SPACE 1 */}
-        <div className="h-24 bg-gradient-to-b from-orange-900/20 via-transparent to-purple-950/20"></div>
+        <div className="h-16 bg-gradient-to-b from-orange-900/20 via-transparent to-purple-950/20"></div>
+
+        {/* FEATURED VIDEO SECTION - Hook for audience */}
+        <section className="py-16 px-6 bg-gradient-to-br from-gray-900 via-purple-950/20 to-gray-900 relative">
+          <div className="container mx-auto max-w-4xl">
+            {/* Mystical particles around video */}
+            <div className="absolute inset-0 pointer-events-none">
+              {[...Array(12)].map((_, i) => (
+                <div
+                  key={`video-${i}`}
+                  className="absolute animate-twinkle"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 6}s`
+                  }}
+                >
+                  <div className="w-1 h-1 bg-cyan-400/30 rounded-full"></div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mb-12 relative">
+              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-mystical">
+                Bienvenidos a Mi Universo ✨
+              </h2>
+              <p className="text-gray-300 text-lg font-minimal">
+                Descubre la magia que te espera en este templo galáctico
+              </p>
+            </div>
+
+            {/* Video Container */}
+            <div className="relative max-w-3xl mx-auto">
+              {/* Glowing border effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl"></div>
+              
+              <div className="relative bg-gradient-to-br from-purple-900/30 to-gray-900/50 rounded-2xl p-2 backdrop-blur-sm border border-cyan-400/30">
+                <video 
+                  className="w-full h-auto rounded-xl shadow-2xl"
+                  controls
+                  preload="metadata"
+                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23111827'/%3E%3Ctext x='50%25' y='50%25' font-family='Playfair Display, serif' font-size='48' fill='%2306b6d4' text-anchor='middle' dy='0.3em'%3EZäe Selenya%3C/text%3E%3C/svg%3E"
+                >
+                  <source 
+                    src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/rehezllt_Video%20de%20WhatsApp%202025-09-20%20a%20las%2023.49.01_81753841.mp4" 
+                    type="video/mp4" 
+                  />
+                  Tu navegador no soporta el elemento de video.
+                </video>
+              </div>
+
+              {/* Floating elements around video */}
+              <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
+                <Play className="w-6 h-6 text-white" />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+            </div>
+
+            {/* Call to action below video */}
+            <div className="text-center mt-12">
+              <p className="text-purple-300 font-minimal text-lg mb-6">
+                ¿Listo para formar parte de esta experiencia única?
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  className="bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 font-bold px-8 py-3 text-lg transition-all duration-300 hover:scale-105 shadow-lg font-minimal uppercase tracking-wide"
+                  onClick={() => document.getElementById('entradas').scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  Explorar Ahora
+                </Button>
+                <Button 
+                  variant="outline"
+                  className="border-purple-400/50 text-purple-300 hover:border-cyan-400/60 hover:text-cyan-300 px-8 py-3 text-lg font-minimal uppercase tracking-wide"
+                  onClick={() => document.getElementById('ofrendas').scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <Heart className="w-5 h-5 mr-2" />
+                  Unirse al Templo
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* BREATHING SPACE 2 */}
+        <div className="h-24 bg-gradient-to-b from-purple-950/20 via-transparent to-purple-950/20"></div>
 
         {/* ABOUT SECTION - Purple/Violet theme with more breathing */}
         <section className="py-24 px-6 bg-gradient-to-br from-purple-950/30 to-violet-950/25">
