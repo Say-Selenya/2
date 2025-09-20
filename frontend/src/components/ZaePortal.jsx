@@ -224,64 +224,7 @@ const ZaePortal = () => {
           </div>
         </section>
 
-        {/* BREATHING SPACE 2 */}
-        <div className="h-24 bg-gradient-to-b from-purple-950/20 via-transparent to-purple-950/20"></div>
-
-        {/* ABOUT SECTION - Purple/Violet theme with more breathing */}
-        <section className="py-24 px-6 bg-gradient-to-br from-purple-950/30 to-violet-950/25">
-          <div className="container mx-auto max-w-6xl">
-            {/* Subtle particles for this section */}
-            <div className="absolute inset-0 pointer-events-none">
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={`purple-${i}`}
-                  className="absolute animate-float"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 8}s`
-                  }}
-                >
-                  <div className="w-1 h-1 bg-purple-400/20 rounded-full"></div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-16 items-center relative">
-              <div className="space-y-8">
-                <h3 className="text-4xl font-bold mb-8 text-purple-200 font-mystical">
-                  La Artista Detrás del Portal
-                </h3>
-                <p className="text-purple-100/90 text-lg leading-relaxed font-minimal">
-                  {mockData.artistDescription}
-                </p>
-                <blockquote className="text-cyan-300 italic text-xl font-mystical border-l-4 border-cyan-400/50 pl-6">
-                  "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
-                </blockquote>
-              </div>
-              <div className="flex justify-center">
-                <div className="relative">
-                  <div className="w-80 h-80 bg-gradient-to-br from-purple-500/10 via-violet-500/8 to-transparent rounded-full flex items-center justify-center border border-purple-400/20 backdrop-blur-sm">
-                    <div className="w-64 h-64 bg-gradient-to-br from-purple-800/30 to-violet-800/25 rounded-full flex items-center justify-center shadow-inner relative overflow-hidden">
-                      <div 
-                        className="absolute inset-0 bg-cover bg-center opacity-20"
-                        style={{
-                          backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
-                        }}
-                      ></div>
-                      <Moon className="w-20 h-20 text-purple-300 relative z-10" />
-                    </div>
-                  </div>
-                  <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
-                    <Star className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* BREATHING SPACE 2 */}
+        {/* BREATHING SPACE 3 */}
         <div className="h-32 bg-gradient-to-b from-purple-950/20 via-transparent to-pink-950/20"></div>
 
         {/* MAGICAL ENTRIES - Pink/Rose theme with better spacing */}
