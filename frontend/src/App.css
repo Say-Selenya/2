@@ -8,7 +8,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #1e1b4b, #581c87, #be185d);
+  background: #111827;
   color: #ffffff;
   line-height: 1.6;
 }
@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 60%;
   height: 2px;
-  background: linear-gradient(90deg, #ec4899, #a855f7, #06b6d4);
+  background: linear-gradient(90deg, #f97316, #eab308, #dc2626);
   border-radius: 1px;
 }
 
@@ -44,23 +44,22 @@ h1, h2, h3, h4, h5, h6 {
   min-h: 100vh;
 }
 
-/* Custom scrollbar - Feminine */
+/* Custom scrollbar - Subtle */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e1b4b;
+  background: #1f2937;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ec4899, #a855f7, #06b6d4);
-  border-radius: 6px;
-  border: 2px solid #1e1b4b;
+  background: linear-gradient(45deg, #6b7280, #9ca3af);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #db2777, #9333ea, #0891b2);
+  background: linear-gradient(45deg, #9ca3af, #d1d5db);
 }
 
 /* Smooth scrolling */
@@ -70,77 +69,45 @@ html {
 
 /* Enhanced contrast for banner background */
 .enhanced-contrast {
-  filter: contrast(1.4) brightness(1.2) saturate(1.3) hue-rotate(10deg);
+  filter: contrast(1.2) brightness(1.1) saturate(1.1);
 }
 
 /* Alien PNG transparent */
 .alien-transparent {
   transform: scaleX(-1);
-  filter: drop-shadow(2px 2px 6px rgba(139, 92, 246, 0.6));
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
   mix-blend-mode: multiply;
   background: transparent;
   filter: 
-    drop-shadow(2px 2px 6px rgba(139, 92, 246, 0.6))
-    contrast(180%) 
-    brightness(0.9) 
-    saturate(140%);
+    drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6))
+    contrast(160%) 
+    brightness(0.85) 
+    saturate(120%);
 }
 
-/* Profile photo with feminine glow */
-.profile-photo-feminine {
-  animation: glow-feminine 4s ease-in-out infinite alternate;
+/* Profile photo with warm glow */
+.profile-photo-warm {
+  animation: glow-warm 6s ease-in-out infinite alternate;
 }
 
-@keyframes glow-feminine {
+@keyframes glow-warm {
   from {
-    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
   }
   to {
-    box-shadow: 0 0 25px rgba(236, 72, 153, 0.8), 0 0 35px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
   }
 }
 
-/* Galactic animations */
+/* Subtle animations */
 @keyframes twinkle {
   0%, 100% { 
-    opacity: 0.3;
+    opacity: 0.1;
     transform: scale(1);
   }
   50% { 
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
-
-@keyframes shooting-star {
-  0% {
-    transform: translateX(-100px) translateY(0px);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(300px) translateY(100px);
-    opacity: 0;
-  }
-}
-
-@keyframes float-sparkle {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg);
-    opacity: 0.6;
-  }
-  33% {
-    transform: translateY(-10px) rotate(120deg);
-    opacity: 1;
-  }
-  66% {
-    transform: translateY(5px) rotate(240deg);
-    opacity: 0.8;
+    opacity: 0.4;
+    transform: scale(1.1);
   }
 }
 
@@ -149,117 +116,20 @@ html {
     transform: translateY(0px);
   }
   50% { 
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(40px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(40px) rotate(-360deg);
-  }
-}
-
-/* Cosmic effects */
-.cosmic-circle {
-  animation: cosmic-glow 6s ease-in-out infinite alternate;
-  position: relative;
-}
-
-@keyframes cosmic-glow {
-  0% {
-    box-shadow: 
-      0 0 20px rgba(236, 72, 153, 0.3),
-      0 0 40px rgba(168, 85, 247, 0.2),
-      inset 0 0 20px rgba(6, 182, 212, 0.1);
-  }
-  100% {
-    box-shadow: 
-      0 0 30px rgba(236, 72, 153, 0.6),
-      0 0 60px rgba(168, 85, 247, 0.4),
-      inset 0 0 30px rgba(6, 182, 212, 0.2);
-  }
-}
-
-.cosmic-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.cosmic-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(236, 72, 153, 0.1),
-    rgba(168, 85, 247, 0.1),
-    rgba(6, 182, 212, 0.1),
-    transparent
-  );
-  transition: left 0.5s;
-}
-
-.cosmic-card:hover::before {
-  left: 100%;
-}
-
-.cosmic-pokeball {
-  animation: pokeball-float 4s ease-in-out infinite;
-}
-
-@keyframes pokeball-float {
+@keyframes pulse {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    opacity: 0.4;
   }
-  25% {
-    transform: translateY(-5px) rotate(2deg);
-  }
-  75% {
-    transform: translateY(5px) rotate(-2deg);
+  50% {
+    opacity: 0.8;
   }
 }
 
-.cosmic-button {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.cosmic-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 
-    0 10px 25px rgba(236, 72, 153, 0.3),
-    0 0 50px rgba(168, 85, 247, 0.2);
-}
-
-.cosmic-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  transition: left 0.5s;
-}
-
-.cosmic-button:hover::before {
-  left: 100%;
-}
-
-/* Gradient animations */
+/* Reduced gradient animations */
 @keyframes gradient-shift {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -268,7 +138,7 @@ html {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -276,52 +146,32 @@ html {
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Text gradient effects */
+/* Text gradient effects - more subtle */
 .text-gradient {
-  background: linear-gradient(45deg, #ec4899, #a855f7, #06b6d4);
+  background: linear-gradient(45deg, #6b7280, #9ca3af, #d1d5db);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-shift 4s ease infinite;
+  animation: gradient-shift 6s ease infinite;
 }
 
-/* Hover effects */
+/* Hover effects - reduced intensity */
 .hover-float:hover {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }
 
-.hover-glow:hover {
-  animation: cosmic-glow 2s ease-in-out infinite;
+/* Button effects - subtle */
+button:hover {
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
 }
 
 /* Loading states */
 .loading-shimmer {
-  background: linear-gradient(90deg, #1e1b4b 25%, #581c87 50%, #1e1b4b 75%);
+  background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
   background-size: 200% 100%;
-  animation: shimmer 2s infinite;
+  animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
@@ -334,17 +184,13 @@ html {
   .signature-text h1 {
     font-size: 2.5rem;
   }
-  
-  .cosmic-card {
-    margin: 1rem;
-  }
 }
 
 /* Focus states for accessibility */
 button:focus,
 input:focus,
 textarea:focus {
-  outline: 2px solid #ec4899;
+  outline: 2px solid #6b7280;
   outline-offset: 2px;
 }
 
@@ -352,8 +198,8 @@ textarea:focus {
 @media (prefers-contrast: high) {
   .text-gradient {
     background: none;
-    -webkit-text-fill-color: #ec4899;
-    color: #ec4899;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
   }
 }
 
@@ -366,28 +212,41 @@ textarea:focus {
   }
 }
 
-/* Custom particle effects */
+/* Custom particle effects - very subtle */
 .animate-twinkle {
-  animation: twinkle 2s ease-in-out infinite;
+  animation: twinkle 4s ease-in-out infinite;
 }
 
-.animate-shooting-star {
-  animation: shooting-star 3s linear infinite;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.animate-float-sparkle {
-  animation: float-sparkle 4s ease-in-out infinite;
+.animate-pulse {
+  animation: pulse 3s ease-in-out infinite;
 }
 
-.animate-orbit {
-  animation: orbit 3s linear infinite;
+/* Remove old styles */
+.alien-greeting,
+.cosmic-circle,
+.cosmic-card,
+.cosmic-pokeball,
+.cosmic-button {
+  /* Simplified versions without excessive effects */
 }
 
-/* Remove old alien animation styles */
-.alien-greeting {
-  display: none;
+/* Section-specific subtle effects */
+.bg-section-blue {
+  background: linear-gradient(135deg, #1e3a8a20, #0c4a6e15);
 }
 
-@keyframes alienWave {
-  display: none;
+.bg-section-pink {
+  background: linear-gradient(135deg, #be185d20, #9f123915);
+}
+
+.bg-section-purple {
+  background: linear-gradient(135deg, #581c8720, #6b21a815);
+}
+
+.bg-section-green {
+  background: linear-gradient(135deg, #065f4620, #047857315);
 }
