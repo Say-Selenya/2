@@ -145,11 +145,34 @@ const ZaePortal = () => {
             {/* Two Column Layout: Artist Description + Video */}
             <div className="grid lg:grid-cols-2 gap-16 items-center relative">
               
-              {/* Left Column - Artist Description */}
+              {/* Left Column - Artist Description with Large Profile Photo */}
               <div className="space-y-8 lg:pr-8">
                 <h3 className="text-4xl font-bold mb-8 text-purple-200 font-mystical">
                   La Artista Detrás del Portal
                 </h3>
+
+                {/* Large Profile Photo */}
+                <div className="flex justify-center lg:justify-start mb-8">
+                  <div className="relative">
+                    <div className="w-64 h-64 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full p-2 backdrop-blur-sm border-2 border-cyan-400/40">
+                      <img
+                        src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/cycju4fh_Imagen%20de%20WhatsApp%202025-09-21%20a%20las%2000.04.22_17f509e4.jpg"
+                        alt="Zäe Selenya Profile"
+                        className="w-full h-full rounded-full object-cover shadow-2xl"
+                      />
+                    </div>
+                    {/* Glowing effect around photo */}
+                    <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-xl -z-10 animate-pulse"></div>
+                    
+                    {/* Floating elements around photo */}
+                    <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
+                      <Sparkles className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
+                      <Heart className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                </div>
                 
                 <p className="text-purple-100/90 text-lg leading-relaxed font-minimal">
                   {mockData.artistDescription}
@@ -159,10 +182,10 @@ const ZaePortal = () => {
                   "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
                 </blockquote>
 
-                {/* Decorative element */}
+                {/* Decorative line */}
                 <div className="flex items-center space-x-4 pt-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full flex items-center justify-center border border-purple-400/30 backdrop-blur-sm">
-                    <Moon className="w-8 h-8 text-purple-300" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full flex items-center justify-center border border-purple-400/30 backdrop-blur-sm">
+                    <Moon className="w-6 h-6 text-purple-300" />
                   </div>
                   <div className="flex-1 h-px bg-gradient-to-r from-purple-400/50 to-transparent"></div>
                 </div>
