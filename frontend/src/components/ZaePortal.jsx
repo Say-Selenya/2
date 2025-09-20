@@ -37,24 +37,24 @@ const ZaePortal = () => {
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       {/* Subtle Background Effects */}
       <div className="absolute inset-0">
-        {/* Reduced cosmic particles */}
-        {[...Array(30)].map((_, i) => (
+        {/* Minimal cosmic particles */}
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="absolute animate-twinkle"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 8}s`,
-              animationDuration: `${4 + Math.random() * 4}s`
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${6 + Math.random() * 4}s`
             }}
           >
             <div 
-              className="rounded-full bg-white/20"
+              className="rounded-full bg-white/15"
               style={{
                 width: `${Math.random() * 2 + 1}px`,
                 height: `${Math.random() * 2 + 1}px`,
-                opacity: Math.random() * 0.4 + 0.1
+                opacity: Math.random() * 0.3 + 0.1
               }}
             ></div>
           </div>
@@ -70,8 +70,8 @@ const ZaePortal = () => {
               backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/20 via-yellow-900/10 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-orange-950/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/15 via-yellow-900/8 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 via-transparent to-orange-950/8"></div>
           </div>
 
           <div className="absolute top-6 left-6 z-10">
@@ -84,7 +84,7 @@ const ZaePortal = () => {
 
           <div className="absolute bottom-8 left-8 z-10 flex items-end space-x-4">
             <div className="signature-text">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent font-signature">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent font-mystical">
                 Zäe Selenya
               </h1>
             </div>
@@ -98,65 +98,68 @@ const ZaePortal = () => {
           </div>
         </section>
 
-        {/* NAVIGATION - Orange theme */}
-        <section className="bg-orange-900/60 border-b border-orange-500/20 backdrop-blur-sm">
-          <div className="container mx-auto px-6 py-4">
-            <nav className="flex space-x-8">
-              <a href="#inicio" className="text-orange-400 font-semibold border-b-2 border-orange-400 pb-2 hover:text-orange-300 transition-colors">✨ INICIO</a>
-              <a href="#entradas" className="text-orange-200 hover:text-orange-400 transition-colors pb-2">💫 ENTRADAS MÁGICAS</a>
-              <a href="#ofrendas" className="text-orange-200 hover:text-orange-400 transition-colors pb-2">🔮 OFRENDAS</a>
-              <a href="#contacto" className="text-orange-200 hover:text-orange-400 transition-colors pb-2">💌 CONTACTO</a>
+        {/* NAVIGATION - More breathing space */}
+        <section className="bg-orange-900/40 border-b border-orange-500/15 backdrop-blur-sm">
+          <div className="container mx-auto px-6 py-6">
+            <nav className="flex space-x-12">
+              <a href="#inicio" className="text-cyan-400 font-semibold border-b-2 border-cyan-400 pb-3 hover:text-cyan-300 transition-colors font-minimal text-sm uppercase tracking-wide">✨ INICIO</a>
+              <a href="#entradas" className="text-orange-200 hover:text-cyan-400 transition-colors pb-3 font-minimal text-sm uppercase tracking-wide">💫 ENTRADAS MÁGICAS</a>
+              <a href="#ofrendas" className="text-orange-200 hover:text-cyan-400 transition-colors pb-3 font-minimal text-sm uppercase tracking-wide">🔮 OFRENDAS</a>
+              <a href="#contacto" className="text-orange-200 hover:text-cyan-400 transition-colors pb-3 font-minimal text-sm uppercase tracking-wide">💌 CONTACTO</a>
             </nav>
           </div>
         </section>
 
-        {/* ABOUT SECTION - Blue/Cyan theme */}
-        <section className="py-16 px-6 bg-gradient-to-br from-blue-950/60 to-cyan-950/40">
-          <div className="container mx-auto max-w-4xl">
-            {/* Blue particles for this section */}
+        {/* BREATHING SPACE 1 */}
+        <div className="h-24 bg-gradient-to-b from-orange-900/20 via-transparent to-purple-950/20"></div>
+
+        {/* ABOUT SECTION - Purple/Violet theme with more breathing */}
+        <section className="py-24 px-6 bg-gradient-to-br from-purple-950/30 to-violet-950/25">
+          <div className="container mx-auto max-w-6xl">
+            {/* Subtle particles for this section */}
             <div className="absolute inset-0 pointer-events-none">
-              {[...Array(15)].map((_, i) => (
+              {[...Array(8)].map((_, i) => (
                 <div
-                  key={`blue-${i}`}
+                  key={`purple-${i}`}
                   className="absolute animate-float"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 6}s`
+                    animationDelay: `${Math.random() * 8}s`
                   }}
                 >
-                  <div className="w-1 h-1 bg-cyan-400/30 rounded-full"></div>
+                  <div className="w-1 h-1 bg-purple-400/20 rounded-full"></div>
                 </div>
               ))}
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center relative">
-              <div>
-                <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  La Artista Detrás del Portal ✨
+            <div className="grid md:grid-cols-2 gap-16 items-center relative">
+              <div className="space-y-8">
+                <h3 className="text-4xl font-bold mb-8 text-purple-200 font-mystical">
+                  La Artista Detrás del Portal
                 </h3>
-                <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                <p className="text-purple-100/90 text-lg leading-relaxed font-minimal">
                   {mockData.artistDescription}
                 </p>
-                <p className="text-cyan-300 italic text-lg">
-                  "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades" 💜
-                </p>
+                <blockquote className="text-cyan-300 italic text-xl font-mystical border-l-4 border-cyan-400/50 pl-6">
+                  "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
+                </blockquote>
               </div>
               <div className="flex justify-center">
                 <div className="relative">
-                  <div className="w-64 h-64 bg-gradient-to-br from-cyan-500/15 via-blue-500/10 to-transparent rounded-full flex items-center justify-center border-2 border-cyan-400/20 backdrop-blur-sm">
-                    <div className="w-48 h-48 bg-gradient-to-br from-blue-800/40 to-cyan-800/30 rounded-full flex items-center justify-center shadow-inner relative overflow-hidden">
+                  <div className="w-80 h-80 bg-gradient-to-br from-purple-500/10 via-violet-500/8 to-transparent rounded-full flex items-center justify-center border border-purple-400/20 backdrop-blur-sm">
+                    <div className="w-64 h-64 bg-gradient-to-br from-purple-800/30 to-violet-800/25 rounded-full flex items-center justify-center shadow-inner relative overflow-hidden">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-20"
                         style={{
                           backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
                         }}
                       ></div>
-                      <Moon className="w-16 h-16 text-cyan-400 relative z-10" />
+                      <Moon className="w-20 h-20 text-purple-300 relative z-10" />
                     </div>
                   </div>
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center animate-pulse">
-                    <Star className="w-4 h-4 text-white" />
+                  <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
+                    <Star className="w-6 h-6 text-white" />
                   </div>
                 </div>
               </div>
@@ -164,67 +167,73 @@ const ZaePortal = () => {
           </div>
         </section>
 
-        {/* MAGICAL ENTRIES - Pink/Magenta theme */}
-        <section id="entradas" className="py-16 px-6 bg-gradient-to-br from-pink-950/50 to-rose-950/40 relative">
-          {/* Pink particles */}
+        {/* BREATHING SPACE 2 */}
+        <div className="h-32 bg-gradient-to-b from-purple-950/20 via-transparent to-pink-950/20"></div>
+
+        {/* MAGICAL ENTRIES - Pink/Rose theme with better spacing */}
+        <section id="entradas" className="py-24 px-6 bg-gradient-to-br from-pink-950/25 to-rose-950/20 relative">
+          {/* Minimal pink particles */}
           <div className="absolute inset-0 pointer-events-none">
-            {[...Array(12)].map((_, i) => (
+            {[...Array(6)].map((_, i) => (
               <div
                 key={`pink-${i}`}
                 className="absolute animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 4}s`
+                  animationDelay: `${Math.random() * 6}s`
                 }}
               >
-                <div className="w-1 h-1 bg-pink-400/25 rounded-full"></div>
+                <div className="w-1 h-1 bg-pink-400/15 rounded-full"></div>
               </div>
             ))}
           </div>
 
-          <div className="container mx-auto max-w-6xl relative">
-            <h2 className="text-4xl font-bold text-center mb-12 flex items-center justify-center space-x-4">
-              <Heart className="w-10 h-10 text-pink-400/80" />
-              <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
-                Entradas Mágicas
-              </span>
-              <Heart className="w-10 h-10 text-pink-400/80" />
-            </h2>
+          <div className="container mx-auto max-w-7xl relative">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl font-bold mb-6 flex items-center justify-center space-x-6 font-mystical">
+                <Heart className="w-12 h-12 text-pink-400/60" />
+                <span className="text-pink-200">
+                  Entradas Mágicas
+                </span>
+                <Heart className="w-12 h-12 text-pink-400/60" />
+              </h2>
+              <p className="text-pink-300/80 text-lg font-minimal mt-4">Explora mis universos creativos</p>
+            </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-12">
               {mockData.magicalEntries.map((entry, index) => (
-                <Card key={index} className="bg-gradient-to-br from-pink-900/40 to-rose-900/30 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300 group hover:shadow-lg hover:shadow-pink-400/10 overflow-hidden backdrop-blur-sm">
-                  <div className="relative h-48 bg-gradient-to-br from-pink-800/20 to-rose-800/15">
+                <Card key={index} className="bg-gradient-to-br from-pink-900/25 to-rose-900/20 border border-pink-400/15 hover:border-pink-400/30 transition-all duration-500 group hover:shadow-xl hover:shadow-pink-400/10 overflow-hidden backdrop-blur-sm">
+                  <div className="relative h-56 bg-gradient-to-br from-pink-800/15 to-rose-800/10">
                     <div 
-                      className="absolute inset-0 bg-cover bg-center opacity-15"
+                      className="absolute inset-0 bg-cover bg-center opacity-12"
                       style={{
                         backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
                       }}
                     ></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-full flex items-center justify-center bg-pink-500/20 border border-pink-400/30 backdrop-blur-sm">
-                        <Heart className="w-10 h-10 text-pink-400 group-hover:animate-pulse" />
+                      <div className="w-24 h-24 rounded-full flex items-center justify-center bg-pink-500/15 border border-pink-400/25 backdrop-blur-sm">
+                        <Heart className="w-12 h-12 text-pink-400/80 group-hover:animate-pulse" />
                       </div>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-pink-900/40 text-pink-300 border border-pink-400/30">
+                    <div className="absolute top-6 right-6">
+                      <Badge className="bg-pink-900/30 text-pink-300 border border-pink-400/25 font-minimal">
                         {entry.emoji}
                       </Badge>
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-pink-100 group-hover:text-pink-300 transition-colors">
+                  <CardContent className="p-8 space-y-6">
+                    <h3 className="text-2xl font-bold text-pink-100 group-hover:text-pink-300 transition-colors font-mystical">
                       {entry.title}
                     </h3>
-                    <p className="text-pink-200/80 text-sm mb-4 leading-relaxed">
+                    <p className="text-pink-200/70 leading-relaxed font-minimal">
                       {entry.description}
                     </p>
                     <Button 
-                      className="w-full bg-gradient-to-r from-pink-600/80 to-rose-600/80 hover:from-pink-500 hover:to-rose-500 text-white hover:scale-105 transition-transform font-semibold"
-                      size="sm"
+                      className="w-full bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 hover:scale-105 transition-all duration-300 font-semibold py-3 font-minimal uppercase tracking-wide"
+                      size="lg"
                     >
-                      <Heart className="w-4 h-4 mr-2" />
+                      <Heart className="w-5 h-5 mr-2" />
                       Explorar {entry.emoji}
                     </Button>
                   </CardContent>
@@ -234,69 +243,74 @@ const ZaePortal = () => {
           </div>
         </section>
 
-        {/* OFFERINGS SECTION - Purple/Violet theme */}
-        <section id="ofrendas" className="py-16 px-6 bg-gradient-to-br from-purple-950/50 to-violet-950/40 relative">
-          {/* Purple particles */}
+        {/* BREATHING SPACE 3 */}
+        <div className="h-32 bg-gradient-to-b from-pink-950/20 via-transparent to-purple-950/25"></div>
+
+        {/* OFFERINGS SECTION - Purple/Violet theme with luxury spacing */}
+        <section id="ofrendas" className="py-24 px-6 bg-gradient-to-br from-purple-950/30 to-violet-950/25 relative">
+          {/* Minimal purple particles */}
           <div className="absolute inset-0 pointer-events-none">
-            {[...Array(10)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <div
                 key={`purple-${i}`}
                 className="absolute animate-twinkle"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 5}s`
+                  animationDelay: `${Math.random() * 8}s`
                 }}
               >
-                <div className="w-1 h-1 bg-purple-400/30 rounded-full"></div>
+                <div className="w-1 h-1 bg-purple-400/20 rounded-full"></div>
               </div>
             ))}
           </div>
 
-          <div className="container mx-auto max-w-4xl relative">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-6 flex items-center justify-center space-x-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-500/80 to-violet-500/80 rounded-full flex items-center justify-center">
-                  <Star className="w-5 h-5 text-white" />
+          <div className="container mx-auto max-w-5xl relative">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl font-bold mb-8 flex items-center justify-center space-x-6 font-mystical">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500/60 to-violet-500/60 rounded-full flex items-center justify-center">
+                  <Star className="w-6 h-6 text-white" />
                 </div>
-                <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-                  Ofrendas Mágicas
+                <span className="text-purple-200">
+                  Ofrendas Místicas
                 </span>
-                <div className="w-10 h-10 bg-gradient-to-r from-violet-500/80 to-purple-500/80 rounded-full flex items-center justify-center">
-                  <Star className="w-5 h-5 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-violet-500/60 to-purple-500/60 rounded-full flex items-center justify-center">
+                  <Star className="w-6 h-6 text-white" />
                 </div>
               </h2>
-              <p className="text-purple-200 text-lg">Apoya mi templo galáctico y desbloquea magia exclusiva 💜</p>
+              <p className="text-purple-300/80 text-xl font-minimal">Apoya mi templo galáctico y desbloquea magia exclusiva</p>
             </div>
 
-            <Card className="bg-gradient-to-br from-purple-950/60 to-violet-950/50 border border-purple-400/25 max-w-md mx-auto shadow-xl backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
-                <div className="mb-6 flex justify-center relative">
-                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500/80 to-violet-600/80 rounded-full flex items-center justify-center border-4 border-white shadow-lg relative">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500/80 to-violet-600/80 rounded-full flex items-center justify-center">
-                      <div className="w-8 h-8 bg-white rounded-full border-4 border-gray-800 flex items-center justify-center">
-                        <Heart className="w-3 h-3 text-purple-500" />
+            <Card className="bg-gradient-to-br from-purple-950/40 to-violet-950/35 border border-purple-400/20 max-w-lg mx-auto shadow-2xl backdrop-blur-sm">
+              <CardContent className="p-12 text-center space-y-8">
+                <div className="flex justify-center relative">
+                  <div className="w-32 h-32 bg-gradient-to-br from-purple-500/60 to-violet-600/60 rounded-full flex items-center justify-center border-4 border-white shadow-xl relative">
+                    <div className="w-28 h-28 bg-gradient-to-br from-purple-500/60 to-violet-600/60 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-white rounded-full border-4 border-gray-800 flex items-center justify-center">
+                        <Heart className="w-4 h-4 text-purple-500" />
                       </div>
                     </div>
                     <div className="absolute inset-x-0 top-1/2 h-1 bg-gray-800 transform -translate-y-0.5"></div>
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-                  Membresía del Templo ✨
-                </h3>
-                <p className="text-purple-200 mb-6">Únete a la familia galáctica</p>
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-violet-300 bg-clip-text text-transparent font-mystical">
+                    Membresía del Templo
+                  </h3>
+                  <p className="text-purple-200/80 text-lg font-minimal">Únete a la familia galáctica</p>
+                </div>
 
-                <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="grid grid-cols-3 gap-4">
                   {mockData.tipAmounts.map((amount) => (
                     <Button
                       key={amount}
                       variant={selectedTip === amount ? "default" : "outline"}
                       className={`${
                         selectedTip === amount 
-                          ? "bg-gradient-to-r from-purple-500/80 to-violet-500/80 hover:from-purple-400 hover:to-violet-400 text-white" 
-                          : "border-purple-400/40 text-purple-300 hover:border-purple-400/60 hover:bg-purple-400/10"
-                      } transition-all font-semibold`}
+                          ? "bg-gradient-to-r from-cyan-500 to-turquoise-500 text-gray-900 shadow-lg" 
+                          : "border-purple-400/30 text-purple-300 hover:border-cyan-400/50 hover:text-cyan-300"
+                      } transition-all font-semibold py-3 font-minimal`}
                       onClick={() => handleTipSelect(amount)}
                     >
                       ${amount}
@@ -304,77 +318,81 @@ const ZaePortal = () => {
                   ))}
                 </div>
 
-                <div className="mb-6">
+                <div>
                   <Input
                     type="number"
                     placeholder="Cantidad personalizada ✨"
                     value={customTip}
                     onChange={(e) => handleCustomTip(e.target.value)}
-                    className="bg-purple-900/40 border-purple-400/40 text-white placeholder:text-purple-300 focus:border-purple-400 text-center"
+                    className="bg-purple-900/30 border-purple-400/30 text-white placeholder:text-purple-300 focus:border-cyan-400 text-center py-3 font-minimal"
                   />
                 </div>
 
-                <div className="mb-6 space-y-2">
-                  <Badge variant="outline" className="text-purple-200 border-purple-400/40 block">
+                <div className="space-y-3">
+                  <Badge variant="outline" className="text-purple-200 border-purple-400/30 block py-2 font-minimal">
                     💜 Acceso a contenido exclusivo y sensual
                   </Badge>
-                  <Badge variant="outline" className="text-violet-200 border-violet-400/40 block">
+                  <Badge variant="outline" className="text-violet-200 border-violet-400/30 block py-2 font-minimal">
                     🔮 Curaciones energéticas personalizadas
                   </Badge>
-                  <Badge variant="outline" className="text-purple-200 border-purple-400/40 block">
+                  <Badge variant="outline" className="text-purple-200 border-purple-400/30 block py-2 font-minimal">
                     ✨ Contenido brutal y mágico
                   </Badge>
                 </div>
 
-                <Button className="w-full bg-gradient-to-r from-purple-500/80 via-violet-500/80 to-purple-500/80 hover:from-purple-400 hover:via-violet-400 hover:to-purple-400 text-white font-semibold py-3 text-lg">
-                  <Heart className="w-5 h-5 mr-2" />
-                  Unirse al Templo 💜✨
+                <Button className="w-full bg-gradient-to-r from-cyan-500 via-turquoise-500 to-cyan-400 hover:from-cyan-400 hover:via-turquoise-400 hover:to-cyan-300 text-gray-900 font-bold py-4 text-lg transition-all duration-300 hover:scale-105 shadow-lg font-minimal uppercase tracking-wide">
+                  <Heart className="w-6 h-6 mr-3 animate-pulse" />
+                  Unirse al Templo
+                  <Sparkles className="w-6 h-6 ml-3" />
                 </Button>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* CONTACT FORM - Green/Emerald theme */}
-        <section id="contacto" className="py-16 px-6 bg-gradient-to-br from-emerald-950/50 to-green-950/40 relative">
-          {/* Green particles */}
+        {/* BREATHING SPACE 4 */}
+        <div className="h-32 bg-gradient-to-b from-purple-950/25 via-transparent to-pink-950/20"></div>
+
+        {/* CONTACT FORM - Pink/Rose theme with elegant spacing */}
+        <section id="contacto" className="py-24 px-6 bg-gradient-to-br from-pink-950/25 to-rose-950/20 relative">
+          {/* Minimal particles */}
           <div className="absolute inset-0 pointer-events-none">
-            {[...Array(8)].map((_, i) => (
+            {[...Array(4)].map((_, i) => (
               <div
-                key={`green-${i}`}
+                key={`contact-${i}`}
                 className="absolute animate-float"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 6}s`
+                  animationDelay: `${Math.random() * 8}s`
                 }}
               >
-                <div className="w-1 h-1 bg-emerald-400/25 rounded-full"></div>
+                <div className="w-1 h-1 bg-pink-400/15 rounded-full"></div>
               </div>
             ))}
           </div>
 
-          <div className="container mx-auto max-w-md relative">
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
-                Escríbeme 💌
+          <div className="container mx-auto max-w-lg relative">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl font-bold mb-6 text-pink-200 font-mystical">
+                Escríbeme
               </h2>
-              <p className="text-emerald-200">Conecta conmigo a través del cosmos místico</p>
+              <p className="text-pink-300/80 text-lg font-minimal">Conecta conmigo a través del cosmos místico</p>
             </div>
 
-            <Card className="bg-gradient-to-br from-emerald-950/60 to-green-950/50 border border-emerald-400/25 backdrop-blur-sm shadow-xl">
-              <CardContent className="p-8">
-                <form onSubmit={handleContactSubmit} className="space-y-6">
+            <Card className="bg-gradient-to-br from-pink-950/40 to-rose-950/35 border border-pink-400/20 backdrop-blur-sm shadow-2xl">
+              <CardContent className="p-10">
+                <form onSubmit={handleContactSubmit} className="space-y-8">
                   <div className="relative">
                     <Input
                       type="text"
                       placeholder="Tu nombre mágico ✨"
                       value={contactForm.name}
                       onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
-                      className="bg-emerald-900/40 border-emerald-400/40 text-white placeholder:text-emerald-300 focus:border-emerald-400 h-12 pl-10"
+                      className="bg-pink-900/30 border-pink-400/30 text-white placeholder:text-pink-300 focus:border-cyan-400 h-14 pl-12 font-minimal"
                       required
                     />
-                    <Heart className="absolute left-3 top-3 w-5 h-5 text-emerald-400" />
+                    <Heart className="absolute left-4 top-4 w-6 h-6 text-pink-400" />
                   </div>
                   
                   <div className="relative">
@@ -383,10 +401,10 @@ const ZaePortal = () => {
                       placeholder="Tu correo cósmico 💫"
                       value={contactForm.email}
                       onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
-                      className="bg-emerald-900/40 border-emerald-400/40 text-white placeholder:text-emerald-300 focus:border-emerald-400 h-12 pl-10"
+                      className="bg-pink-900/30 border-pink-400/30 text-white placeholder:text-pink-300 focus:border-cyan-400 h-14 pl-12 font-minimal"
                       required
                     />
-                    <Sparkles className="absolute left-3 top-3 w-5 h-5 text-emerald-400" />
+                    <Sparkles className="absolute left-4 top-4 w-6 h-6 text-pink-400" />
                   </div>
                   
                   <div className="relative">
@@ -394,19 +412,19 @@ const ZaePortal = () => {
                       placeholder="Tu mensaje desde las estrellas... 🌟"
                       value={contactForm.message}
                       onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
-                      className="bg-emerald-900/40 border-emerald-400/40 text-white placeholder:text-emerald-300 focus:border-emerald-400 min-h-[120px] resize-none pl-10 pt-3"
+                      className="bg-pink-900/30 border-pink-400/30 text-white placeholder:text-pink-300 focus:border-cyan-400 min-h-[140px] resize-none pl-12 pt-4 font-minimal"
                       required
                     />
-                    <Star className="absolute left-3 top-3 w-5 h-5 text-emerald-400" />
+                    <Star className="absolute left-4 top-4 w-6 h-6 text-pink-400" />
                   </div>
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-emerald-500/80 to-green-500/80 hover:from-emerald-400 hover:to-green-400 text-white font-bold py-3 text-lg flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 font-bold py-4 text-lg flex items-center justify-center space-x-3 transition-all duration-300 hover:scale-105 shadow-lg font-minimal uppercase tracking-wide"
                   >
-                    <Send className="w-5 h-5" />
+                    <Send className="w-6 h-6" />
                     <span>Enviar al Cosmos</span>
-                    <Sparkles className="w-5 h-5" />
+                    <Sparkles className="w-6 h-6" />
                   </Button>
                 </form>
               </CardContent>
@@ -414,20 +432,23 @@ const ZaePortal = () => {
           </div>
         </section>
 
-        {/* FOOTER - Gray/Silver theme */}
-        <footer className="py-8 px-6 border-t border-gray-600/30 bg-gradient-to-r from-gray-900/80 to-slate-900/80 backdrop-blur-sm">
-          <div className="container mx-auto text-center">
-            <p className="text-gray-300 text-sm mb-2">
-              © 2025 Zäe Selenya - Portal Místico Galáctico ✨💜
+        {/* BREATHING SPACE 5 */}
+        <div className="h-24 bg-gradient-to-b from-pink-950/20 via-transparent to-gray-900"></div>
+
+        {/* FOOTER - Minimalist with breathing */}
+        <footer className="py-16 px-6 border-t border-gray-600/20 bg-gray-900/60 backdrop-blur-sm">
+          <div className="container mx-auto text-center space-y-6">
+            <p className="text-gray-300 font-minimal">
+              © 2025 <span className="font-mystical text-purple-300">Zäe Selenya</span> - Portal Místico Galáctico ✨
             </p>
-            <p className="text-xs text-gray-400 mt-2">
+            <p className="text-sm text-gray-400 font-minimal italic">
               Donde los sueños se convierten en magia digital
             </p>
-            <div className="flex justify-center space-x-6 mt-4">
-              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors">💜 YouTube</a>
-              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors">✨ Instagram</a>
-              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors">🔮 Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-gray-300 transition-colors">💫 Discord</a>
+            <div className="flex justify-center space-x-8 mt-8">
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors font-minimal text-sm">💜 YouTube</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors font-minimal text-sm">✨ Instagram</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors font-minimal text-sm">🔮 Twitter</a>
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors font-minimal text-sm">💫 Discord</a>
             </div>
           </div>
         </footer>
