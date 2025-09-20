@@ -58,12 +58,19 @@ const ZaePortal = () => {
           />
         </div>
 
-        {/* Signature Overlay - Bottom Left */}
-        <div className="absolute bottom-8 left-8 z-10">
+        {/* Signature and Profile Photo - Bottom Left */}
+        <div className="absolute bottom-8 left-8 z-10 flex items-end space-x-4">
           <div className="signature-text">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 bg-clip-text text-transparent font-signature">
               Zäe Selenya
             </h1>
+          </div>
+          <div className="w-16 h-16 rounded-full border-2 border-orange-400/60 p-1 shadow-lg shadow-orange-400/30 profile-photo">
+            <img
+              src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/olceu8nm_Imagen%20de%20WhatsApp%202025-09-21%20a%20las%2000.04.22_b5169f09.jpg"
+              alt="Zäe Selenya Profile"
+              className="w-full h-full rounded-full object-cover"
+            />
           </div>
         </div>
 
