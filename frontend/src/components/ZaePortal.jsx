@@ -142,9 +142,6 @@ const ZaePortal = () => {
               </p>
             </div>
 
-            {/* Two Column Layout: Artist Description + Video */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center relative">
-              
             {/* Two Column Layout: Profile Photo + Description | Video */}
             <div className="grid lg:grid-cols-2 gap-16 items-start relative">
               
