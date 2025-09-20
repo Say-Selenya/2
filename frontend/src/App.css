@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   filter: contrast(1.3) brightness(1.1) saturate(1.2);
 }
 
-/* Alien static - no animation, background removed */
+/* Alien static - no animation, background removed, facing right */
 .alien-static {
   /* Remove white background and enhance transparency */
   mix-blend-mode: multiply;
@@ -53,6 +53,8 @@ h1, h2, h3, h4, h5, h6 {
           contrast(1.2) 
           brightness(0.9)
           hue-rotate(5deg);
+  /* Flip horizontally to face right */
+  transform: scaleX(-1);
 }
 
 /* Remove old alien animation */
