@@ -83,17 +83,25 @@ html {
   filter: contrast(1.15) brightness(1.05) saturate(1.05);
 }
 
-/* Alien PNG transparent */
+/* Alien PNG transparent - final version */
 .alien-transparent {
-  transform: scaleX(-1);
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  transform: scaleX(-1); /* Face right */
+  filter: 
+    drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6))
+    contrast(200%) 
+    brightness(0.8) 
+    saturate(150%);
   mix-blend-mode: multiply;
   background: transparent;
-  filter: 
-    drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))
-    contrast(150%) 
-    brightness(0.9) 
-    saturate(110%);
+  /* Remove white background completely */
+  -webkit-mask: 
+    radial-gradient(circle, black 45%, transparent 75%),
+    linear-gradient(black, black);
+  -webkit-mask-composite: intersect;
+  mask: 
+    radial-gradient(circle, black 45%, transparent 75%),
+    linear-gradient(black, black);
+  mask-composite: intersect;
 }
 
 /* Profile photo with warm glow */
