@@ -37,9 +37,9 @@ const ZaePortal = () => {
     <div className="min-h-screen bg-black text-white">
       {/* YouTube-Style Banner Hero Section */}
       <section className="relative h-[70vh] overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Enhanced Contrast */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat enhanced-contrast"
           style={{
             backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
           }}
@@ -47,6 +47,18 @@ const ZaePortal = () => {
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30"></div>
+        </div>
+
+        {/* Alien Greeting - Top Left */}
+        <div className="absolute top-6 left-6 z-10">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/2x7tp5h4_Imagen%20de%20WhatsApp%202025-09-20%20a%20las%2023.42.09_3a9dc102.jpg"
+            alt="Alien saludando"
+            className="w-20 h-20 object-contain alien-greeting"
+            style={{
+              filter: 'drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8))'
+            }}
+          />
         </div>
 
         {/* Signature Overlay - Bottom Left */}
