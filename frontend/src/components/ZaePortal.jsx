@@ -51,14 +51,13 @@ const ZaePortal = () => {
 
         {/* Alien Greeting - Top Left */}
         <div className="absolute top-6 left-6 z-10">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/2x7tp5h4_Imagen%20de%20WhatsApp%202025-09-20%20a%20las%2023.42.09_3a9dc102.jpg"
-            alt="Alien saludando"
-            className="w-32 h-32 object-contain alien-static"
-            style={{
-              filter: 'drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.8))'
-            }}
-          />
+          <div className="w-32 h-32 relative alien-container">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/2x7tp5h4_Imagen%20de%20WhatsApp%202025-09-20%20a%20las%2023.42.09_3a9dc102.jpg"
+              alt="Alien saludando"
+              className="w-full h-full object-contain alien-clean"
+            />
+          </div>
         </div>
 
         {/* Signature Overlay - Bottom Left */}
