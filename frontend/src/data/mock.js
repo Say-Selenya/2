@@ -1,5 +1,5 @@
 export const mockData = {
-  artistDescription: "Bienvenidos a mi universo galáctico, donde la creatividad trasciende las dimensiones y cada pixel cuenta una historia mágica. Soy una viajera entre mundos digitales, creando experiencias sensoriales que conectan almas a través del cosmos virtual.",
+  artistDescription: "Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico. Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜",
   
   magicalEntries: [
     {
