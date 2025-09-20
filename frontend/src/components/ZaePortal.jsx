@@ -90,9 +90,9 @@ const ZaePortal = () => {
               backgroundImage: `url('https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/solnv0sw_PHOTO-2025-09-18-21-30-44.jpg')`
             }}
           >
-            {/* Feminine galactic overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/80 via-pink-900/40 to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-transparent to-purple-950/30"></div>
+            {/* Feminine galactic overlay - reduced opacity */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-pink-900/15 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-indigo-950/40 via-transparent to-purple-950/15"></div>
           </div>
 
           {/* Alien Greeting - Top Left */}
