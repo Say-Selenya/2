@@ -29,6 +29,17 @@ h1, h2, h3, h4, h5, h6 {
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
 }
 
+.signature-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #eab308);
+  border-radius: 1px;
+}
+
 /* Enhanced contrast for banner background */
 .enhanced-contrast {
   filter: contrast(1.3) brightness(1.1) saturate(1.2);
