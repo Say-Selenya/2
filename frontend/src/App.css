@@ -45,14 +45,28 @@ h1, h2, h3, h4, h5, h6 {
   filter: contrast(1.3) brightness(1.1) saturate(1.2);
 }
 
-/* Alien transparent - no background, just the alien */
+/* Alien PNG transparent - remove white background completely */
 .alien-transparent {
   transform: scaleX(-1); /* Face right */
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
-  /* Pure transparency without any background */
+  /* Make white pixels transparent */
+  mix-blend-mode: multiply;
   background: transparent;
-  border: none;
-  opacity: 0.9;
+  /* Advanced technique to remove white background */
+  -webkit-mask: 
+    radial-gradient(circle, black 40%, transparent 70%),
+    linear-gradient(black, black);
+  -webkit-mask-composite: intersect;
+  mask: 
+    radial-gradient(circle, black 40%, transparent 70%),
+    linear-gradient(black, black);
+  mask-composite: intersect;
+  /* Alternative approach for white removal */
+  filter: 
+    drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6))
+    contrast(200%) 
+    brightness(0.8) 
+    saturate(150%);
 }
 
 /* Remove old alien animation */
