@@ -110,154 +110,96 @@ const ZaePortal = () => {
           </div>
         </section>
 
-        {/* BREATHING SPACE 1 - Reduced */}
-        <div className="h-8 bg-gradient-to-b from-orange-900/15 via-transparent to-purple-950/15"></div>
+        {/* MINIMAL BREATHING SPACE */}
+        <div className="h-4 bg-gradient-to-b from-orange-900/10 to-transparent"></div>
 
-        {/* MAIN PRESENTATION SECTION - First Page Prominence */}
-        <section className="py-20 px-6 bg-gradient-to-br from-gray-900 via-purple-950/15 to-gray-900 relative">
-          <div className="container mx-auto max-w-7xl">
-            {/* Minimal cosmic particles */}
-            <div className="absolute inset-0 pointer-events-none">
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={`main-${i}`}
-                  className="absolute animate-twinkle"
-                  style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 8}s`
-                  }}
-                >
-                  <div className="w-1 h-1 bg-cyan-400/20 rounded-full"></div>
-                </div>
-              ))}
-            </div>
-
-            {/* Two Column Layout: Profile + Description | Video */}
-            <div className="grid lg:grid-cols-2 gap-20 items-center relative">
+        {/* MAIN PRESENTATION SECTION - First Page Only */}
+        <section className="py-12 px-6 bg-gradient-to-br from-gray-900 via-purple-950/10 to-gray-900">
+          <div className="container mx-auto max-w-6xl">
+            {/* Two Column Layout: Photo + Description | Video */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               
               {/* Left Column - Profile Photo + Artist Description */}
-              <div className="space-y-10">
-                {/* Profile Photo - Centered and Large */}
-                <div className="flex justify-center lg:justify-start">
+              <div className="space-y-6">
+                {/* Profile Photo - Compact */}
+                <div className="flex justify-center lg:justify-start mb-6">
                   <div className="relative">
-                    <div className="w-72 h-72 bg-gradient-to-br from-purple-500/15 via-pink-500/10 to-cyan-500/15 rounded-full p-3 backdrop-blur-sm border-2 border-cyan-400/30 shadow-2xl">
+                    <div className="w-48 h-48 bg-gradient-to-br from-purple-500/15 via-pink-500/10 to-cyan-500/15 rounded-full p-2 backdrop-blur-sm border border-cyan-400/30 shadow-xl">
                       <img
                         src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/cycju4fh_Imagen%20de%20WhatsApp%202025-09-21%20a%20las%2000.04.22_17f509e4.jpg"
                         alt="Zäe Selenya Profile"
-                        className="w-full h-full rounded-full object-cover shadow-2xl"
+                        className="w-full h-full rounded-full object-cover shadow-xl"
                       />
                     </div>
-                    {/* Subtle glow effect */}
-                    <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-xl -z-10 animate-pulse"></div>
-                    
                     {/* Minimal floating elements */}
-                    <div className="absolute -top-6 -right-6 w-14 h-14 bg-gradient-to-r from-cyan-400/80 to-turquoise-400/80 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                      <Sparkles className="w-7 h-7 text-white" />
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
+                      <Sparkles className="w-4 h-4 text-white" />
                     </div>
-                    <div className="absolute -bottom-6 -left-6 w-14 h-14 bg-gradient-to-r from-pink-400/80 to-purple-400/80 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                      <Heart className="w-7 h-7 text-white" />
+                    <div className="absolute -bottom-3 -left-3 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
+                      <Heart className="w-4 h-4 text-white" />
                     </div>
                   </div>
                 </div>
 
-                {/* Artist Description */}
-                <div className="text-center lg:text-left space-y-8">
-                  <h2 className="text-5xl font-bold text-purple-100 font-mystical leading-tight">
+                {/* Artist Description - Compact */}
+                <div className="text-center lg:text-left space-y-4">
+                  <h2 className="text-3xl font-bold text-purple-100 font-mystical">
                     La Artista Detrás del Portal
                   </h2>
                   
-                  <div className="space-y-6">
-                    <p className="text-purple-100/90 text-xl leading-relaxed font-minimal">
-                      {mockData.artistDescription}
-                    </p>
-                    
-                    <blockquote className="text-cyan-300 italic text-2xl font-mystical border-l-4 border-cyan-400/50 pl-8 py-6 bg-cyan-400/5 rounded-r-xl">
-                      "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
-                    </blockquote>
-                  </div>
-
-                  {/* Decorative elements */}
-                  <div className="flex items-center justify-center lg:justify-start space-x-6 pt-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full flex items-center justify-center border border-purple-400/30 backdrop-blur-sm">
-                      <Moon className="w-8 h-8 text-purple-300" />
-                    </div>
-                    <div className="flex-1 h-px bg-gradient-to-r from-purple-400/40 to-transparent max-w-48"></div>
-                    <div className="text-purple-400 text-sm font-minimal uppercase tracking-wider">
-                      Portal Místico
-                    </div>
-                  </div>
+                  <p className="text-purple-100/90 text-base leading-relaxed font-minimal">
+                    {mockData.artistDescription}
+                  </p>
+                  
+                  <blockquote className="text-cyan-300 italic text-lg font-mystical border-l-3 border-cyan-400/50 pl-4 py-2 bg-cyan-400/5 rounded-r-lg">
+                    "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
+                  </blockquote>
                 </div>
               </div>
 
-              {/* Right Column - Featured Video with Enhanced Presentation */}
+              {/* Right Column - Video */}
               <div className="relative">
-                {/* Video Title and Description */}
-                <div className="text-center mb-8">
-                  <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-turquoise-400 bg-clip-text text-transparent font-mystical">
-                    Sumérgete en el universo creativo de Zäe Selenya
-                  </h3>
-                  <p className="text-purple-200/80 text-lg font-minimal leading-relaxed">
-                    Una presentación íntima de la artista detrás del portal y su visión galáctica
-                  </p>
+                <div className="relative bg-gradient-to-br from-purple-900/30 to-gray-900/40 rounded-xl p-3 backdrop-blur-sm border border-cyan-400/30 shadow-xl">
+                  <video 
+                    className="w-full h-auto rounded-lg shadow-xl"
+                    controls
+                    preload="metadata"
+                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23111827'/%3E%3Ctext x='50%25' y='50%25' font-family='Playfair Display, serif' font-size='48' fill='%2306b6d4' text-anchor='middle' dy='0.3em'%3EZäe Selenya%3C/text%3E%3C/svg%3E"
+                  >
+                    <source 
+                      src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/rehezllt_Video%20de%20WhatsApp%202025-09-20%20a%20las%2023.49.01_81753841.mp4" 
+                      type="video/mp4" 
+                    />
+                    Tu navegador no soporta el elemento de video.
+                  </video>
                 </div>
 
-                {/* Video Container with Enhanced Design */}
-                <div className="relative">
-                  {/* Enhanced glowing border effect */}
-                  <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/25 via-purple-500/25 to-pink-500/25 rounded-3xl blur-2xl"></div>
-                  
-                  <div className="relative bg-gradient-to-br from-purple-900/40 to-gray-900/60 rounded-2xl p-4 backdrop-blur-sm border-2 border-cyan-400/40 shadow-2xl">
-                    <video 
-                      className="w-full h-auto rounded-xl shadow-2xl"
-                      controls
-                      preload="metadata"
-                      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23111827'/%3E%3Ctext x='50%25' y='50%25' font-family='Playfair Display, serif' font-size='48' fill='%2306b6d4' text-anchor='middle' dy='0.3em'%3EZäe Selenya%3C/text%3E%3Ctext x='50%25' y='60%25' font-family='Inter, sans-serif' font-size='24' fill='%23a855f7' text-anchor='middle' dy='0.3em'%3EPortal Místico Galáctico%3C/text%3E%3C/svg%3E"
-                    >
-                      <source 
-                        src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/rehezllt_Video%20de%20WhatsApp%202025-09-20%20a%20las%2023.49.01_81753841.mp4" 
-                        type="video/mp4" 
-                      />
-                      Tu navegador no soporta el elemento de video.
-                    </video>
-                  </div>
-
-                  {/* Enhanced floating elements around video */}
-                  <div className="absolute -top-8 -left-8 w-16 h-16 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse shadow-xl">
-                    <Play className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse shadow-xl">
-                    <Sparkles className="w-8 h-8 text-white" />
-                  </div>
+                {/* Minimal floating elements */}
+                <div className="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
+                  <Play className="w-4 h-4 text-white" />
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
+                  <Heart className="w-4 h-4 text-white" />
                 </div>
               </div>
             </div>
 
-            {/* Call to action - More prominent */}
-            <div className="text-center mt-20">
-              <div className="mb-10">
-                <h4 className="text-3xl font-bold mb-4 text-purple-100 font-mystical">
-                  ¿Listo para formar parte de esta experiencia única?
-                </h4>
-                <p className="text-purple-300/80 text-xl font-minimal">
-                  Explora mis universos creativos y únete a la familia galáctica
-                </p>
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-8">
+            {/* Compact Call to action */}
+            <div className="text-center mt-10">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Button 
-                  className="bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 font-bold px-12 py-5 text-xl transition-all duration-300 hover:scale-105 shadow-2xl font-minimal uppercase tracking-wide"
+                  className="bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 font-bold px-8 py-3 text-base transition-all duration-300 hover:scale-105 shadow-lg font-minimal uppercase tracking-wide"
                   onClick={() => document.getElementById('entradas').scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <Sparkles className="w-7 h-7 mr-4" />
+                  <Sparkles className="w-5 h-5 mr-2" />
                   Explorar Ahora
                 </Button>
                 <Button 
                   variant="outline"
-                  className="border-2 border-purple-400/60 text-purple-300 hover:border-cyan-400/80 hover:text-cyan-300 hover:bg-cyan-400/10 px-12 py-5 text-xl font-minimal uppercase tracking-wide transition-all duration-300"
+                  className="border border-purple-400/50 text-purple-300 hover:border-cyan-400/60 hover:text-cyan-300 hover:bg-cyan-400/10 px-8 py-3 text-base font-minimal uppercase tracking-wide transition-all duration-300"
                   onClick={() => document.getElementById('ofrendas').scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <Heart className="w-7 h-7 mr-4" />
+                  <Heart className="w-5 h-5 mr-2" />
                   Unirse al Templo
                 </Button>
               </div>
