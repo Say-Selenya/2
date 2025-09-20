@@ -145,16 +145,15 @@ const ZaePortal = () => {
             {/* Two Column Layout: Artist Description + Video */}
             <div className="grid lg:grid-cols-2 gap-16 items-center relative">
               
-              {/* Left Column - Artist Description with Large Profile Photo */}
-              <div className="space-y-8 lg:pr-8">
-                <h3 className="text-4xl font-bold mb-8 text-purple-200 font-mystical">
-                  La Artista Detrás del Portal
-                </h3>
-
+            {/* Two Column Layout: Profile Photo + Description | Video */}
+            <div className="grid lg:grid-cols-2 gap-16 items-start relative">
+              
+              {/* Left Column - Profile Photo + Artist Description */}
+              <div className="space-y-8">
                 {/* Large Profile Photo */}
-                <div className="flex justify-center lg:justify-start mb-8">
+                <div className="flex justify-center mb-10">
                   <div className="relative">
-                    <div className="w-72 h-72 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full p-3 backdrop-blur-sm border-2 border-cyan-400/40 shadow-2xl">
+                    <div className="w-80 h-80 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full p-4 backdrop-blur-sm border-2 border-cyan-400/40 shadow-2xl">
                       <img
                         src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/cycju4fh_Imagen%20de%20WhatsApp%202025-09-21%20a%20las%2000.04.22_17f509e4.jpg"
                         alt="Zäe Selenya Profile"
@@ -162,32 +161,39 @@ const ZaePortal = () => {
                       />
                     </div>
                     {/* Glowing effect around photo */}
-                    <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-2xl -z-10 animate-pulse"></div>
+                    <div className="absolute -inset-8 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-2xl -z-10 animate-pulse"></div>
                     
                     {/* Floating elements around photo */}
-                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                      <Sparkles className="w-8 h-8 text-white" />
+                    <div className="absolute -top-8 -right-8 w-20 h-20 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse shadow-xl">
+                      <Sparkles className="w-10 h-10 text-white" />
                     </div>
-                    <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse shadow-lg">
-                      <Heart className="w-8 h-8 text-white" />
+                    <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse shadow-xl">
+                      <Heart className="w-10 h-10 text-white" />
                     </div>
                   </div>
                 </div>
-                
-                <p className="text-purple-100/90 text-lg leading-relaxed font-minimal">
-                  {mockData.artistDescription}
-                </p>
-                
-                <blockquote className="text-cyan-300 italic text-xl font-mystical border-l-4 border-cyan-400/50 pl-6 py-4">
-                  "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
-                </blockquote>
 
-                {/* Decorative line */}
-                <div className="flex items-center space-x-4 pt-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full flex items-center justify-center border border-purple-400/30 backdrop-blur-sm">
-                    <Moon className="w-6 h-6 text-purple-300" />
+                {/* Artist Description */}
+                <div className="text-center lg:text-left space-y-6">
+                  <h3 className="text-4xl font-bold text-purple-200 font-mystical">
+                    La Artista Detrás del Portal
+                  </h3>
+                  
+                  <p className="text-purple-100/90 text-lg leading-relaxed font-minimal">
+                    {mockData.artistDescription}
+                  </p>
+                  
+                  <blockquote className="text-cyan-300 italic text-xl font-mystical border-l-4 border-cyan-400/50 pl-6 py-4 bg-cyan-400/5 rounded-r-lg">
+                    "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
+                  </blockquote>
+
+                  {/* Decorative line */}
+                  <div className="flex items-center justify-center lg:justify-start space-x-4 pt-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full flex items-center justify-center border border-purple-400/30 backdrop-blur-sm">
+                      <Moon className="w-6 h-6 text-purple-300" />
+                    </div>
+                    <div className="flex-1 h-px bg-gradient-to-r from-purple-400/50 to-transparent max-w-32"></div>
                   </div>
-                  <div className="flex-1 h-px bg-gradient-to-r from-purple-400/50 to-transparent"></div>
                 </div>
               </div>
 
