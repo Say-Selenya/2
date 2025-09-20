@@ -154,7 +154,7 @@ const ZaePortal = () => {
                 {/* Large Profile Photo */}
                 <div className="flex justify-center lg:justify-start mb-8">
                   <div className="relative">
-                    <div className="w-64 h-64 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full p-2 backdrop-blur-sm border-2 border-cyan-400/40">
+                    <div className="w-72 h-72 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full p-3 backdrop-blur-sm border-2 border-cyan-400/40 shadow-2xl">
                       <img
                         src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/cycju4fh_Imagen%20de%20WhatsApp%202025-09-21%20a%20las%2000.04.22_17f509e4.jpg"
                         alt="Zäe Selenya Profile"
@@ -162,14 +162,14 @@ const ZaePortal = () => {
                       />
                     </div>
                     {/* Glowing effect around photo */}
-                    <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-xl -z-10 animate-pulse"></div>
+                    <div className="absolute -inset-6 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 rounded-full blur-2xl -z-10 animate-pulse"></div>
                     
                     {/* Floating elements around photo */}
-                    <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
-                      <Sparkles className="w-6 h-6 text-white" />
+                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                      <Sparkles className="w-8 h-8 text-white" />
                     </div>
-                    <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
-                      <Heart className="w-6 h-6 text-white" />
+                    <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                      <Heart className="w-8 h-8 text-white" />
                     </div>
                   </div>
                 </div>
