@@ -113,83 +113,110 @@ const ZaePortal = () => {
         {/* BREATHING SPACE 1 */}
         <div className="h-16 bg-gradient-to-b from-orange-900/20 via-transparent to-purple-950/20"></div>
 
-        {/* FEATURED VIDEO SECTION - Hook for audience */}
-        <section className="py-16 px-6 bg-gradient-to-br from-gray-900 via-purple-950/20 to-gray-900 relative">
-          <div className="container mx-auto max-w-4xl">
-            {/* Mystical particles around video */}
+        {/* FEATURED VIDEO SECTION with Artist Description - Hook for audience */}
+        <section className="py-24 px-6 bg-gradient-to-br from-gray-900 via-purple-950/20 to-gray-900 relative">
+          <div className="container mx-auto max-w-7xl">
+            {/* Mystical particles around section */}
             <div className="absolute inset-0 pointer-events-none">
-              {[...Array(12)].map((_, i) => (
+              {[...Array(15)].map((_, i) => (
                 <div
                   key={`video-${i}`}
                   className="absolute animate-twinkle"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 6}s`
+                    animationDelay: `${Math.random() * 8}s`
                   }}
                 >
-                  <div className="w-1 h-1 bg-cyan-400/30 rounded-full"></div>
+                  <div className="w-1 h-1 bg-cyan-400/25 rounded-full"></div>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mb-12 relative">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-mystical">
+            <div className="text-center mb-16 relative">
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent font-mystical">
                 Bienvenidos a Mi Universo ✨
               </h2>
-              <p className="text-gray-300 text-lg font-minimal">
+              <p className="text-gray-300 text-xl font-minimal">
                 Descubre la magia que te espera en este templo galáctico
               </p>
             </div>
 
-            {/* Video Container */}
-            <div className="relative max-w-3xl mx-auto">
-              {/* Glowing border effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl"></div>
+            {/* Two Column Layout: Artist Description + Video */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center relative">
               
-              <div className="relative bg-gradient-to-br from-purple-900/30 to-gray-900/50 rounded-2xl p-2 backdrop-blur-sm border border-cyan-400/30">
-                <video 
-                  className="w-full h-auto rounded-xl shadow-2xl"
-                  controls
-                  preload="metadata"
-                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23111827'/%3E%3Ctext x='50%25' y='50%25' font-family='Playfair Display, serif' font-size='48' fill='%2306b6d4' text-anchor='middle' dy='0.3em'%3EZäe Selenya%3C/text%3E%3C/svg%3E"
-                >
-                  <source 
-                    src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/rehezllt_Video%20de%20WhatsApp%202025-09-20%20a%20las%2023.49.01_81753841.mp4" 
-                    type="video/mp4" 
-                  />
-                  Tu navegador no soporta el elemento de video.
-                </video>
+              {/* Left Column - Artist Description */}
+              <div className="space-y-8 lg:pr-8">
+                <h3 className="text-4xl font-bold mb-8 text-purple-200 font-mystical">
+                  La Artista Detrás del Portal
+                </h3>
+                
+                <p className="text-purple-100/90 text-lg leading-relaxed font-minimal">
+                  {mockData.artistDescription}
+                </p>
+                
+                <blockquote className="text-cyan-300 italic text-xl font-mystical border-l-4 border-cyan-400/50 pl-6 py-4">
+                  "Donde la magia se encuentra con la tecnología, nace un universo de infinitas posibilidades"
+                </blockquote>
+
+                {/* Decorative element */}
+                <div className="flex items-center space-x-4 pt-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 via-pink-500/15 to-cyan-500/20 rounded-full flex items-center justify-center border border-purple-400/30 backdrop-blur-sm">
+                    <Moon className="w-8 h-8 text-purple-300" />
+                  </div>
+                  <div className="flex-1 h-px bg-gradient-to-r from-purple-400/50 to-transparent"></div>
+                </div>
               </div>
 
-              {/* Floating elements around video */}
-              <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
-                <Play className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
-                <Heart className="w-6 h-6 text-white" />
+              {/* Right Column - Featured Video */}
+              <div className="relative">
+                {/* Glowing border effect */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl"></div>
+                
+                <div className="relative bg-gradient-to-br from-purple-900/30 to-gray-900/50 rounded-2xl p-3 backdrop-blur-sm border border-cyan-400/30">
+                  <video 
+                    className="w-full h-auto rounded-xl shadow-2xl"
+                    controls
+                    preload="metadata"
+                    poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'%3E%3Crect width='1200' height='675' fill='%23111827'/%3E%3Ctext x='50%25' y='50%25' font-family='Playfair Display, serif' font-size='48' fill='%2306b6d4' text-anchor='middle' dy='0.3em'%3EZäe Selenya%3C/text%3E%3C/svg%3E"
+                  >
+                    <source 
+                      src="https://customer-assets.emergentagent.com/job_6d890d5b-566e-4269-8a6d-68191d008ad7/artifacts/rehezllt_Video%20de%20WhatsApp%202025-09-20%20a%20las%2023.49.01_81753841.mp4" 
+                      type="video/mp4" 
+                    />
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+
+                {/* Floating elements around video */}
+                <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradient-to-r from-cyan-400 to-turquoise-400 rounded-full flex items-center justify-center animate-pulse">
+                  <Play className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center animate-pulse">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
               </div>
             </div>
 
-            {/* Call to action below video */}
-            <div className="text-center mt-12">
-              <p className="text-purple-300 font-minimal text-lg mb-6">
+            {/* Call to action below both columns */}
+            <div className="text-center mt-16">
+              <p className="text-purple-300 font-minimal text-xl mb-8">
                 ¿Listo para formar parte de esta experiencia única?
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-6">
                 <Button 
-                  className="bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 font-bold px-8 py-3 text-lg transition-all duration-300 hover:scale-105 shadow-lg font-minimal uppercase tracking-wide"
+                  className="bg-gradient-to-r from-cyan-500 to-turquoise-500 hover:from-cyan-400 hover:to-turquoise-400 text-gray-900 font-bold px-10 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-xl font-minimal uppercase tracking-wide"
                   onClick={() => document.getElementById('entradas').scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <Sparkles className="w-5 h-5 mr-2" />
+                  <Sparkles className="w-6 h-6 mr-3" />
                   Explorar Ahora
                 </Button>
                 <Button 
                   variant="outline"
-                  className="border-purple-400/50 text-purple-300 hover:border-cyan-400/60 hover:text-cyan-300 px-8 py-3 text-lg font-minimal uppercase tracking-wide"
+                  className="border-purple-400/50 text-purple-300 hover:border-cyan-400/60 hover:text-cyan-300 px-10 py-4 text-lg font-minimal uppercase tracking-wide"
                   onClick={() => document.getElementById('ofrendas').scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <Heart className="w-5 h-5 mr-2" />
+                  <Heart className="w-6 h-6 mr-3" />
                   Unirse al Templo
                 </Button>
               </div>
