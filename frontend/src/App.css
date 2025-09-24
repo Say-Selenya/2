@@ -5300,7 +5300,7 @@ html {
 .hero { position: relative; min-height: 58dvh; display: grid; place-items: end center; }
 .hero-bg {
   position:absolute; inset:0;
-  background: url('/imagenes/hero-sombra.jpg') center/cover no-repeat;
+  background: url('/images/sombra.jpg') center/cover no-repeat;
   filter: saturate(1.1) contrast(1.05);
   opacity: 0.95;
 }
@@ -5329,13 +5329,13 @@ html {
 }
 
 /* ABOUT */
-.about { margin: 36px auto; display:grid; grid-template-columns: 1.3fr .9fr; gap:18px; }
-.about-card { padding:22px; }
-.about-head { display:flex; align-items:center; gap:14px; }
-.about-text { color: var(--txt); opacity:.92; line-height:1.55; }
-.about-badges { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
-.about-badges span { font-size:.9rem; color:var(--muted); background: rgba(255,255,255,.04); padding:6px 10px; border-radius:999px; border:1px solid var(--stroke); }
-.about-media { padding:22px; }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/images/hero-sombra.jpg') center/cover no-repeat;
+  filter: saturate(1.1) contrast(1.05);
+  opacity: 0.95;
+}
 .media-box { height: 220px; border-radius:14px; background: radial-gradient(120px 80px at 20% 30%, #ffd36a, #ff6a6a 45%, #5e1fff 100%); }
 
 /* TIERS */
