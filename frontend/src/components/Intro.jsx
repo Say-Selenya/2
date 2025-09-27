@@ -1,15 +1,27 @@
 export default function Intro() {
   return (
-    <div>
+    <div className="intro-section">
       <h2 className="title-glow">Bienvenida ✨</h2>
-      <p style={{ fontSize: '1.1rem', lineHeight: '1.6', textAlign: 'center', margin: '2rem 0' }}>
-        Este es mi espacio creativo donde comparto arte, energía y proyectos
-        personales con magia y estilo único. 
-      </p>
-      <p style={{ fontSize: '1rem', lineHeight: '1.6', opacity: 0.8, textAlign: 'center' }}>
-        Aquí encontrarás una fusión de creatividad digital, experiencias energéticas 
-        y contenido exclusivo diseñado para despertar tu lado más místico y artístico.
-      </p>
+      
+      <div className="intro-content">
+        {/* Texto a la izquierda */}
+        <div className="intro-text">
+          <p>
+            Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico.
+          </p>
+          <p>
+            Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜
+          </p>
+        </div>
+        
+        {/* Espacio para video a la derecha */}
+        <div className="intro-video">
+          <div className="video-placeholder">
+            <p>🎬 Video de Entrada</p>
+            <p>(Próximamente)</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
