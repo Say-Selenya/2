@@ -140,9 +140,9 @@ body {
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .hero {
-    height: 30vh;
-    min-height: 200px;
-    max-height: 250px;
+    height: 40vh; /* Aumentado de 30vh a 40vh */
+    min-height: 300px; /* Aumentado de 200px a 300px */
+    max-height: 350px; /* Aumentado de 250px a 350px */
     padding: 0 1rem 1rem 1rem;
   }
   
