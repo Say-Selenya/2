@@ -192,6 +192,11 @@ body {
   transform: translateY(-1px) scale(1.02);
 }
 
+/* Títulos brillantes */
+.title-glow {
+  text-shadow: 0 0 8px #fff, 0 0 15px #6c63ff, 0 0 30px #ff6ec7;
+}
+
 /* Sección Intro con layout de dos columnas */
 .intro-section {
   margin: 3rem 0;
