@@ -445,7 +445,7 @@ section {
   margin-right: auto;
 }
 
-/* Grid para video y foto lado a lado */
+/* Grid para foto y video lado a lado */
 .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -454,53 +454,53 @@ section {
   margin-top: 3rem;
 }
 
-.video-section {
-  display: flex;
-  justify-content: center;
-}
-
 .photo-section {
   display: flex;
   justify-content: center;
 }
 
+.video-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* Foto dentro de una burbuja */
 .sexy-photo-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px; /* Más pequeña */
+  height: 250px; /* Más pequeña */
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 50%; /* Burbuja circular */
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    inset 0 -5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 5px 15px rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sexy-photo-container:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 20px 45px rgba(0, 0, 0, 0.3),
+    inset 0 -5px 15px rgba(0, 0, 0, 0.1),
+    inset 0 5px 15px rgba(255, 255, 255, 0.8);
 }
 
 .sexy-image {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Imagen circular dentro de la burbuja */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.sexy-image:hover {
-  transform: scale(1.02);
-}
-
+/* Quitar el símbolo de burbuja animado */
 .bubble-symbol {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-8px); }
-  60% { transform: translateY(-4px); }
+  display: none; /* Eliminado completamente */
 }
 
 /* Responsive */
