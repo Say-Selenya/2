@@ -275,22 +275,23 @@ section {
   }
 }
 
-/* Tiers & Ofrendas */
+/* Tiers & Ofrendas con más espaciado */
 .tiers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Aumentado mínimo */
+  gap: 3rem; /* Aumentado */
+  margin-top: 3rem; /* Aumentado */
 }
 
 .tier-card {
-  padding: 2rem;
+  padding: 3rem; /* Aumentado de 2rem */
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(108, 99, 255, 0.2);
   text-align: center;
+  margin-bottom: 2rem; /* Más separación */
 }
 
 .tier-card:hover {
@@ -300,27 +301,28 @@ section {
 }
 
 .tier-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.7rem; /* Aumentado */
+  margin-bottom: 1.5rem; /* Aumentado */
   color: #ff6ec7;
 }
 
 .tier-price {
-  font-size: 2rem;
+  font-size: 2.2rem; /* Aumentado */
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Aumentado */
   color: #6c63ff;
 }
 
 .tier-features {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 1.5rem 0; /* Aumentado */
 }
 
 .tier-features li {
-  padding: 0.5rem 0;
+  padding: 0.8rem 0; /* Aumentado */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem; /* Aumentado */
 }
 
 .tier-features li:last-child {
