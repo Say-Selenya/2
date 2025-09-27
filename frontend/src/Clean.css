@@ -32,12 +32,12 @@ section {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner - TAMAÑO BALANCEADO PARA DESKTOP */
+/* Hero formato banner - PROPORCIÓN PERFECTA */
 .hero {
   position: relative;
-  height: 45vh; /* Reducido de 60vh a 45vh para mejor balance */
-  max-height: 450px; /* Reducido de 600px a 450px */
-  min-height: 320px; /* Reducido de 450px a 320px */
+  height: 40vh; /* Ajustado para mejor proporción */
+  max-height: 380px; /* Proporción más elegante */
+  min-height: 300px; /* Mínimo más equilibrado */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -49,12 +49,32 @@ section {
   background-repeat: no-repeat;
   color: #fff;
   overflow: hidden;
-  width: 100%; /* Todo el ancho disponible */
-  margin: 0; /* Sin margen */
-  padding: 0 2.5rem 1.5rem 2.5rem; /* Padding balanceado */
+  width: 100%;
+  margin: 0;
+  padding: 0 2rem 1.8rem 2rem; /* Padding más balanceado */
 }
 
-/* Capa oscura semitransparente */
+/* Reproductor de música en esquina superior derecha */
+.music-player {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  padding: 0.8rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.music-player audio {
+  width: 200px;
+  height: 35px;
+  border-radius: 8px;
+}
+
+/* Mejorar overlay para mejor contraste */
 .hero::before {
   content: '';
   position: absolute;
@@ -62,7 +82,12 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    180deg, 
+    rgba(0, 0, 0, 0.3) 0%, 
+    rgba(0, 0, 0, 0.5) 70%, 
+    rgba(0, 0, 0, 0.7) 100%
+  );
   z-index: 1;
 }
 
