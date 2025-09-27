@@ -373,18 +373,18 @@ section {
   text-shadow: 0 0 8px #fff, 0 0 15px #6c63ff, 0 0 30px #ff6ec7;
 }
 
-/* Sección Intro con layout de dos columnas - MENOS ESPACIO SUPERIOR */
+/* Sección Intro con menos espacio */
 .intro-section {
-  margin: 1rem 0 4rem 0; /* Mucho menos margen superior */
-  padding: 1rem 0 3rem 0; /* Menos padding superior */
+  margin: 0.5rem 0 1.5rem 0; /* Mucho menos margen */
+  padding: 0.5rem 0 1rem 0; /* Menos padding */
 }
 
 .intro-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem; /* Mantener gap entre columnas */
+  gap: 3rem; /* Mantener gap entre columnas */
   align-items: center;
-  margin-top: 1.5rem; /* Reducido de 3rem */
+  margin-top: 1rem; /* Reducido de 1.5rem */
 }
 
 .intro-text {
