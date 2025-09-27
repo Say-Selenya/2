@@ -32,27 +32,20 @@ section {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner - FOTO OPTIMIZADA PARA MÁXIMA VISIBILIDAD */
+/* Hero formato pantalla completa */
 .hero {
-  position: relative;
-  height: 40vh;
-  max-height: 380px;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  text-align: left;
-  background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/yqbfoxmu_sombra.jpg');
-  background-size: cover;
-  background-position: center center; /* Centrar perfectamente */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Efecto parallax */
-  color: #fff;
-  overflow: hidden;
   width: 100%;
-  margin: 0;
-  padding: 0 2rem 1.8rem 2rem;
+  height: 100vh; /* ocupa toda la pantalla al cargar */
+  background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/yqbfoxmu_sombra.jpg'); /* usando tu imagen */
+  background-size: cover; /* hace que la imagen se estire y llene el espacio */
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat; /* evita repeticiones */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 /* Reproductor de vinilo FORZANDO esquina DERECHA */
