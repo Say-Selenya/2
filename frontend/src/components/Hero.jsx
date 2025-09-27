@@ -26,8 +26,7 @@ export default function Hero() {
           </button>
         </div>
         <audio ref={audioRef} loop>
-          <source src="#" type="audio/mpeg" />
-          {/* Aquí irá tu archivo de música cuando lo subas */}
+          <source src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/iopf850v_ssvid.net--ALIEN-FUMETA.mp3" type="audio/mpeg" />
           Tu navegador no soporta el elemento de audio.
         </audio>
       </div>
