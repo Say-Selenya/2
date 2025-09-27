@@ -192,9 +192,74 @@ body {
   transform: translateY(-1px) scale(1.02);
 }
 
-/* Títulos brillantes */
-.title-glow {
-  text-shadow: 0 0 8px #fff, 0 0 15px #6c63ff, 0 0 30px #ff6ec7;
+/* Sección Intro con layout de dos columnas */
+.intro-section {
+  margin: 3rem 0;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.intro-text {
+  text-align: left;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  color: #ddd;
+}
+
+.intro-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 2px dashed rgba(108, 99, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6c63ff;
+  font-size: 1rem;
+}
+
+.video-placeholder p {
+  margin: 0.5rem 0;
+  opacity: 0.8;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .intro-text {
+    text-align: center;
+  }
+  
+  .intro-text p {
+    font-size: 1rem;
+  }
+  
+  .video-placeholder {
+    height: 200px;
+  }
 }
 
 /* Tiers & Ofrendas */
