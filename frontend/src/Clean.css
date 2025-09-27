@@ -280,7 +280,8 @@ section {
   
   .music-player {
     top: 0.5rem;
-    right: 0.5rem;
+    right: 0.5rem; /* FORZAR DERECHA en móviles */
+    left: auto; /* NO a la izquierda */
   }
   
   .vinyl-record {
