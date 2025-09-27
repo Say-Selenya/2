@@ -159,12 +159,12 @@ section {
   }
   
   .container {
-    padding: 3rem 1rem; /* Menos padding en móviles pero más que antes */
+    padding: 1.5rem 1rem 3rem 1rem; /* Menos padding superior en móviles */
   }
   
   section {
-    margin: 3rem 0;
-    padding: 2rem 0;
+    margin: 1.5rem 0 3rem 0; /* Menos margen superior */
+    padding: 1rem 0 2rem 0; /* Menos padding superior */
   }
   
   .intro-content {
