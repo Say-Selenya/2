@@ -39,38 +39,51 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero */
-.hero { 
-  text-align: center; 
-  padding: 3rem 1rem; 
+/* Hero principal */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: radial-gradient(circle at center, #1a1a40, #0d0d1a);
+  color: #fff;
 }
 
-.hero-avatar {
-  width: 160px; 
-  height: 160px;
-  margin: 0 auto 1rem;
+.hero img {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,.45);
-  border: 3px solid rgba(108, 99, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
 }
 
-.hero-avatar img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-  display: block;
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #e0aaff;
+  text-shadow: 0 0 15px #9d4edd;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Mantener compatibilidad con clases existentes */
+.hero-avatar {
+  display: inline-block;
+  margin: 0 auto 1rem;
 }
 
 .hero-title { 
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem; 
+  color: #e0aaff;
+  text-shadow: 0 0 15px #9d4edd;
   margin: 1rem 0;
 }
 
 .hero-sub { 
   font-size: 1.2rem; 
+  color: #ddd;
   margin-bottom: 2rem;
-  opacity: 0.9;
 }
 
 /* Botones mágicos */
