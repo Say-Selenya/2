@@ -39,6 +39,13 @@ body {
   transform: translateY(-2px);
 }
 
+/* Animación de brillo mágico */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ff66ff; }
+  50% { text-shadow: 0 0 20px #ffccff; }
+  100% { text-shadow: 0 0 10px #ff66ff; }
+}
+
 /* Hero principal */
 .hero {
   text-align: center;
@@ -59,6 +66,7 @@ body {
   font-size: 2.5rem;
   color: #e0aaff;
   text-shadow: 0 0 15px #9d4edd;
+  animation: glow 3s infinite;
 }
 
 .hero p {
@@ -77,6 +85,7 @@ body {
   font-size: 2.5rem; 
   color: #e0aaff;
   text-shadow: 0 0 15px #9d4edd;
+  animation: glow 3s infinite;
   margin: 1rem 0;
 }
 
