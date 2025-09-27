@@ -46,10 +46,12 @@ body {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero principal con imagen de fondo */
+/* Hero principal con formato banner de YouTube */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 60vh; /* Altura de banner, no pantalla completa */
+  max-height: 500px; /* Límite máximo para pantallas muy grandes */
+  min-height: 400px; /* Altura mínima para móviles */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,6 +62,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
+  overflow: hidden;
 }
 
 /* Capa oscura semitransparente */
@@ -70,7 +73,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -88,7 +91,7 @@ body {
 
 .hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #e0aaff;
   text-shadow: 0 0 15px #9d4edd;
   animation: glow 3s infinite;
@@ -96,7 +99,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #ddd;
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -105,7 +108,7 @@ body {
 /* Mantener compatibilidad con clases existentes */
 .hero-title { 
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem; 
+  font-size: 3rem; 
   color: #e0aaff;
   text-shadow: 0 0 15px #9d4edd;
   animation: glow 3s infinite;
@@ -113,7 +116,7 @@ body {
 }
 
 .hero-sub { 
-  font-size: 1.4rem; 
+  font-size: 1.3rem; 
   color: #ddd;
   margin-bottom: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -121,9 +124,14 @@ body {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
   .hero h1,
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .hero p,
