@@ -1,6 +1,5 @@
 import "./Clean.css";
 import Hero from "./components/Hero";
-import Intro from "./components/Intro";
 import Ofrendas from "./components/Ofrendas";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
@@ -13,8 +12,15 @@ export default function App() {
           <Hero />
         </section>
 
-        <section id="intro" className="container">
-          <Intro />
+        <section id="sexy-photo" className="container">
+          <div className="sexy-photo-section">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
+              alt="Sexy" 
+              className="sexy-image"
+            />
+            <div className="bubble-symbol">💬</div>
+          </div>
         </section>
 
         <section id="ofrendas" className="container">
