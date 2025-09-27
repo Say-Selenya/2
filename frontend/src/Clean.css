@@ -300,6 +300,13 @@ section {
     font-size: 2rem; /* Tamaño proporcional en móviles */
   }
   
+  .alien-sticker {
+    width: 70px !important;
+    height: 70px !important;
+    top: 0.5rem !important;
+    left: 0.5rem !important;
+  }
+  
   .music-player {
     top: 0.5rem;
     right: 0.5rem; /* FORZAR DERECHA en móviles */
