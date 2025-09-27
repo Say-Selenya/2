@@ -80,9 +80,9 @@ section {
 
 .hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem; /* Aumentado de 2.8rem para banner más grande */
+  font-size: 3rem; /* Ajustado de 3.5rem a 3rem para mejor proporción */
   color: #e0aaff;
-  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7; /* Sombra más intensa */
+  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7; /* Mantener sombra intensa */
   animation: glow 3s infinite;
   margin-bottom: 0.5rem;
 }
@@ -97,9 +97,9 @@ section {
 /* Mantener compatibilidad con clases existentes */
 .hero-title { 
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem; /* Aumentado de 2.8rem */
+  font-size: 3rem; /* Ajustado de 3.5rem a 3rem */
   color: #e0aaff;
-  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7; /* Sombra más intensa */
+  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7; /* Mantener sombra intensa */
   animation: glow 3s infinite;
   margin-bottom: 0.5rem;
 }
