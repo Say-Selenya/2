@@ -162,7 +162,7 @@ section {
   animation-play-state: paused;
 }
 
-/* Overlay más sutil para ver mejor la foto */
+/* Overlay sutil para mejor legibilidad */
 .hero::before {
   content: '';
   position: absolute;
@@ -170,13 +170,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    180deg, 
-    rgba(0, 0, 0, 0.1) 0%, 
-    rgba(0, 0, 0, 0.2) 40%, 
-    rgba(0, 0, 0, 0.4) 80%, 
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: rgba(0, 0, 0, 0.3); /* Overlay ligero */
   z-index: 1;
 }
 
