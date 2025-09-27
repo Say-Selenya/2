@@ -105,11 +105,12 @@ section {
 
 .hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3rem; /* Ajustado de 3.5rem a 3rem para mejor proporción */
+  font-size: 2.6rem; /* Tamaño más proporcionado */
   color: #e0aaff;
-  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7; /* Mantener sombra intensa */
+  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7;
   animation: glow 3s infinite;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: 700; /* Más peso para mejor visibilidad */
 }
 
 .hero p {
