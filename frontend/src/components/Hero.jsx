@@ -17,6 +17,9 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      {/* Pegatina de alien arriba izquierda */}
+      <div className="alien-sticker"></div>
+
       {/* Reproductor de vinilo en esquina superior derecha */}
       <div className="music-player">
         <div className={`vinyl-record ${isPlaying ? 'playing' : 'paused'}`}>
