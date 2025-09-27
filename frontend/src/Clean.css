@@ -188,7 +188,8 @@ section {
   
   .music-player {
     top: 0.5rem;
-    right: 0.5rem;
+    right: 0.5rem; /* DERECHA en móviles también */
+    left: auto; /* Asegurar que no esté a la izquierda */
     padding: 0.5rem;
   }
   
