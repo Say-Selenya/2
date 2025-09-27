@@ -279,14 +279,23 @@ section {
   
   .music-player {
     top: 0.5rem;
-    right: 0.5rem; /* DERECHA en móviles también */
-    left: auto; /* Asegurar que no esté a la izquierda */
-    padding: 0.5rem;
+    right: 0.5rem;
   }
   
-  .music-player audio {
-    width: 150px;
-    height: 30px;
+  .vinyl-record {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .vinyl-center {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .play-button {
+    width: 25px;
+    height: 25px;
+    font-size: 0.7rem;
   }
   
   .container {
