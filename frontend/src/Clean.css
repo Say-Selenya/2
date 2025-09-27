@@ -49,8 +49,8 @@ section {
   background-repeat: no-repeat;
   color: #fff;
   overflow: hidden;
-  width: 100vw; /* Todo el ancho de la pantalla */
-  margin-left: calc(-50vw + 50%); /* Para romper el container */
+  width: 100%; /* Todo el ancho disponible */
+  margin: 0; /* Sin margen */
   padding: 0 2rem 0.8rem 2rem;
 }
 
