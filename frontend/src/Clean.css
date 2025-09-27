@@ -26,12 +26,12 @@ body {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner de YouTuber desde arriba - MÁS GRANDE */
+/* Hero formato banner de YouTuber desde arriba - TAMAÑO EQUILIBRADO */
 .hero {
   position: relative;
-  height: 50vh; /* Aumentado de 35vh a 50vh */
-  max-height: 450px; /* Aumentado de 300px a 450px */
-  min-height: 350px; /* Aumentado de 250px a 350px */
+  height: 25vh; /* Reducido de 50vh a 25vh para mostrar más contenido */
+  max-height: 280px; /* Reducido de 450px a 280px */
+  min-height: 220px; /* Reducido de 350px a 220px */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Contenido hacia abajo */
@@ -44,7 +44,7 @@ body {
   color: #fff;
   overflow: hidden;
   width: 100%;
-  padding: 0 2rem 1.5rem 2rem; /* Padding para posicionar el contenido */
+  padding: 0 2rem 1rem 2rem; /* Padding reducido también */
 }
 
 /* Capa oscura semitransparente */
