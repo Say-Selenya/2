@@ -12,14 +12,48 @@ export default function App() {
           <Hero />
         </section>
 
-        <section id="sexy-photo" className="container">
-          <div className="sexy-photo-section">
-            <img 
-              src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
-              alt="Sexy" 
-              className="sexy-image"
-            />
-            <div className="bubble-symbol">💬</div>
+        <section id="content-section" className="container">
+          <div className="main-content">
+            {/* Descripción del templo galáctico */}
+            <div className="description-section">
+              <h2 className="title-glow">Bienvenida ✨</h2>
+              <p>
+                Este santuario será mi templo galáctico: luces, cámara, materiales para crear contenido visual, sensual y mágico.
+              </p>
+              <p>
+                Con tu ayuda, podré ofrecer contenido brutal, curaciones energéticas, y vivir de lo que me apasiona. 📸💜
+              </p>
+            </div>
+
+            {/* Layout de dos columnas: Video y Foto */}
+            <div className="media-grid">
+              <div className="video-section">
+                <video 
+                  className="entrada-video"
+                  controls 
+                  style={{
+                    width: '100%',
+                    maxWidth: '400px',
+                    borderRadius: '12px',
+                    boxShadow: '0 8px 25px rgba(108, 99, 255, 0.3)'
+                  }}
+                >
+                  <source src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/1ff13rjc_videoprincipal.mp4" type="video/mp4" />
+                  Tu navegador no soporta el elemento de video.
+                </video>
+              </div>
+
+              <div className="photo-section">
+                <div className="sexy-photo-container">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
+                    alt="Sexy" 
+                    className="sexy-image"
+                  />
+                  <div className="bubble-symbol">💬</div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
