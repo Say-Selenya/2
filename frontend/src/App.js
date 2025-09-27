@@ -14,6 +14,17 @@ export default function App() {
 
         <section id="content-section" className="container">
           <div className="main-content">
+            {/* Foto pequeña en burbuja arriba */}
+            <div className="top-photo-section">
+              <div className="bubble-photo-container">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
+                  alt="Sexy" 
+                  className="bubble-image"
+                />
+              </div>
+            </div>
+
             {/* Descripción del templo galáctico */}
             <div className="description-section">
               <h2 className="title-glow">Bienvenida ✨</h2>
@@ -25,33 +36,21 @@ export default function App() {
               </p>
             </div>
 
-            {/* Layout de dos columnas: Foto y Video */}
-            <div className="media-grid">
-              <div className="photo-section">
-                <div className="sexy-photo-container">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
-                    alt="Sexy" 
-                    className="sexy-image"
-                  />
-                </div>
-              </div>
-
-              <div className="video-section">
-                <video 
-                  className="entrada-video"
-                  controls 
-                  style={{
-                    width: '100%',
-                    maxWidth: '400px',
-                    borderRadius: '12px',
-                    boxShadow: '0 8px 25px rgba(108, 99, 255, 0.3)'
-                  }}
-                >
-                  <source src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/1ff13rjc_videoprincipal.mp4" type="video/mp4" />
-                  Tu navegador no soporta el elemento de video.
-                </video>
-              </div>
+            {/* Video centrado */}
+            <div className="video-section-centered">
+              <video 
+                className="entrada-video"
+                controls 
+                style={{
+                  width: '100%',
+                  maxWidth: '500px',
+                  borderRadius: '12px',
+                  boxShadow: '0 8px 25px rgba(108, 99, 255, 0.3)'
+                }}
+              >
+                <source src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/1ff13rjc_videoprincipal.mp4" type="video/mp4" />
+                Tu navegador no soporta el elemento de video.
+              </video>
             </div>
           </div>
         </section>
