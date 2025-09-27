@@ -4,8 +4,8 @@ export default function Footer() {
       {/* Navegación al final de la página */}
       <nav className="footer-nav">
         <a href="#hero">Inicio</a>
-        <a href="#intro">Sobre Mí</a>
-        <a href="#planes">Planes</a>
+        <a href="#intro">Intro</a>
+        <a href="#planes">Tiers</a>
         <a href="#ofrendas">Ofrendas</a>
         <a href="#contacto">Contacto</a>
       </nav>
