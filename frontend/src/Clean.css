@@ -54,25 +54,116 @@ section {
   padding: 0 2rem 1.8rem 2rem; /* Padding más balanceado */
 }
 
-/* Reproductor de música en esquina superior DERECHA */
+/* Reproductor de vinilo en esquina superior derecha */
 .music-player {
   position: absolute;
   top: 1rem;
-  right: 1rem; /* DERECHA - no izquierda */
-  left: auto; /* Asegurar que no esté a la izquierda */
+  right: 1rem;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 0.8rem;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+/* Disco de vinilo */
+.vinyl-record {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  border: 2px solid #444;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: spin 4s linear infinite paused;
+}
+
+.vinyl-record:hover {
+  transform: scale(1.1);
+}
+
+/* Centro del vinilo */
+.vinyl-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #666;
+  border-radius: 50%;
+  border: 1px solid #888;
+}
+
+/* Líneas del vinilo */
+.vinyl-record::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #555;
+  border-radius: 50%;
+}
+
+.vinyl-record::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border: 1px solid #555;
+  border-radius: 50%;
+}
+
+/* Botón de play/pause */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #333;
+  transition: all 0.2s ease;
+  z-index: 11;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Controles de audio ocultos */
 .music-player audio {
-  width: 200px;
-  height: 35px;
-  border-radius: 8px;
+  display: none;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Estado de reproducción */
+.vinyl-record.playing {
+  animation-play-state: running;
+}
+
+.vinyl-record.paused {
+  animation-play-state: paused;
 }
 
 /* Mejorar overlay para mejor contraste */
