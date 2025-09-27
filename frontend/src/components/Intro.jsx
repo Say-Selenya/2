@@ -14,12 +14,22 @@ export default function Intro() {
           </p>
         </div>
         
-        {/* Espacio para video a la derecha */}
+        {/* Video de entrada a la derecha */}
         <div className="intro-video">
-          <div className="video-placeholder">
-            <p>🎬 Video de Entrada</p>
-            <p>(Próximamente)</p>
-          </div>
+          <video 
+            className="entrada-video"
+            controls 
+            poster=""
+            style={{
+              width: '100%',
+              maxWidth: '400px',
+              borderRadius: '12px',
+              boxShadow: '0 8px 25px rgba(108, 99, 255, 0.3)'
+            }}
+          >
+            <source src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/1ff13rjc_videoprincipal.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
         </div>
       </div>
     </div>
