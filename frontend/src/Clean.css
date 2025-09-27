@@ -54,11 +54,12 @@ section {
   padding: 0 2rem 1.8rem 2rem; /* Padding más balanceado */
 }
 
-/* Reproductor de vinilo en esquina superior derecha */
+/* Reproductor de vinilo en esquina superior DERECHA */
 .music-player {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 1rem; /* ASEGURAR QUE ESTÉ A LA DERECHA */
+  left: auto; /* NO a la izquierda */
   z-index: 10;
   display: flex;
   flex-direction: column;
