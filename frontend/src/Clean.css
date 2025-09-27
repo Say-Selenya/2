@@ -49,7 +49,7 @@ section {
   padding: 0 2rem 2rem 2rem; /* Padding para posicionar el nombre */
 }
 
-/* Pegatina de alien en esquina superior izquierda */
+/* Pegatina de alien en esquina superior izquierda - SIN FONDO BLANCO */
 .alien-sticker {
   position: absolute !important;
   top: 1rem !important;
@@ -64,10 +64,13 @@ section {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
   transform: scaleX(-1); /* Voltear horizontalmente para que salude a la derecha */
   transition: transform 0.3s ease;
+  mix-blend-mode: multiply; /* Hace que el fondo blanco desaparezca */
+  opacity: 0.9; /* Ligeramente transparente para mejor integración */
 }
 
 .alien-sticker:hover {
   transform: scaleX(-1) scale(1.1); /* Mantener el volteo y agregar hover */
+  opacity: 1; /* Opacidad completa al hover */
 }
 .music-player {
   position: absolute !important;
