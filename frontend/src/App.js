@@ -12,7 +12,7 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <section id="hero" className="container">
+        <section id="hero">
           <Hero />
         </section>
 
