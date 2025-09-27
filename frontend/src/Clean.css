@@ -49,7 +49,26 @@ section {
   padding: 0 2rem 2rem 2rem; /* Padding para posicionar el nombre */
 }
 
-/* Reproductor de vinilo FORZANDO esquina DERECHA */
+/* Pegatina de alien en esquina superior izquierda */
+.alien-sticker {
+  position: absolute !important;
+  top: 1rem !important;
+  left: 1rem !important;
+  z-index: 20;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/urmgy2qo_Imagen%20de%20WhatsApp%202025-09-27%20a%20las%2005.54.55_f51740de.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transform: scaleX(-1); /* Voltear horizontalmente para que salude a la derecha */
+  transition: transform 0.3s ease;
+}
+
+.alien-sticker:hover {
+  transform: scaleX(-1) scale(1.1); /* Mantener el volteo y agregar hover */
+}
 .music-player {
   position: absolute !important;
   top: 1.5rem !important;
