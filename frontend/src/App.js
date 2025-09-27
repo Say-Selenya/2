@@ -25,8 +25,18 @@ export default function App() {
               </p>
             </div>
 
-            {/* Layout de dos columnas: Video y Foto */}
+            {/* Layout de dos columnas: Foto y Video */}
             <div className="media-grid">
+              <div className="photo-section">
+                <div className="sexy-photo-container">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
+                    alt="Sexy" 
+                    className="sexy-image"
+                  />
+                </div>
+              </div>
+
               <div className="video-section">
                 <video 
                   className="entrada-video"
@@ -41,17 +51,6 @@ export default function App() {
                   <source src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/1ff13rjc_videoprincipal.mp4" type="video/mp4" />
                   Tu navegador no soporta el elemento de video.
                 </video>
-              </div>
-
-              <div className="photo-section">
-                <div className="sexy-photo-container">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_pagina-view/artifacts/86xpvka5_sexy.jpg" 
-                    alt="Sexy" 
-                    className="sexy-image"
-                  />
-                  <div className="bubble-symbol">💬</div>
-                </div>
               </div>
             </div>
           </div>
