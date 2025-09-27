@@ -201,12 +201,16 @@ section {
 
 .hero h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.6rem; /* Tamaño más proporcionado */
+  font-size: 2.6rem;
   color: #e0aaff;
-  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7;
+  text-shadow: 
+    0 0 20px #9d4edd, 
+    0 0 40px #ff6ec7,
+    2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra adicional para contraste */
   animation: glow 3s infinite;
   margin-bottom: 0.4rem;
-  font-weight: 700; /* Más peso para mejor visibilidad */
+  font-weight: 700;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); /* Filtro adicional */
 }
 
 .hero p {
@@ -219,12 +223,16 @@ section {
 /* Mantener compatibilidad con clases existentes */
 .hero-title { 
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.6rem; /* Tamaño más proporcionado */
+  font-size: 2.6rem;
   color: #e0aaff;
-  text-shadow: 0 0 20px #9d4edd, 0 0 40px #ff6ec7;
+  text-shadow: 
+    0 0 20px #9d4edd, 
+    0 0 40px #ff6ec7,
+    2px 2px 8px rgba(0, 0, 0, 0.8); /* Sombra adicional para contraste */
   animation: glow 3s infinite;
   margin-bottom: 0.4rem;
   font-weight: 700;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); /* Filtro adicional */
 }
 
 .hero-sub { 
