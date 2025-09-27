@@ -174,15 +174,26 @@ section {
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .hero {
-    height: 45vh; /* Aumentado de 25vh a 45vh - banner grande en móviles también */
-    min-height: 350px; /* Aumentado de 200px */
-    max-height: 450px; /* Aumentado de 280px */
-    padding: 0 1.5rem 1.5rem 1.5rem; /* Más padding */
+    height: 35vh; /* Proporción ajustada para móviles */
+    min-height: 250px;
+    max-height: 320px;
+    padding: 0 1.5rem 1.2rem 1.5rem;
   }
   
   .hero h1,
   .hero-title {
-    font-size: 2.5rem; /* Aumentado de 2rem a 2.5rem */
+    font-size: 2rem; /* Tamaño proporcional en móviles */
+  }
+  
+  .music-player {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .music-player audio {
+    width: 150px;
+    height: 30px;
   }
   
   .container {
