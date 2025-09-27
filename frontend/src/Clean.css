@@ -7,17 +7,17 @@ body {
   min-height: 100vh;
 }
 
-/* Contenedor con más padding */
+/* Contenedor con menos padding superior */
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4rem 2rem; /* Aumentado de 2rem a 4rem */
+  padding: 2rem 2rem 4rem 2rem; /* Menos padding top, más padding bottom */
 }
 
-/* Secciones con más espaciado */
+/* Secciones con menos espaciado superior */
 section {
-  margin: 4rem 0; /* Más espaciado entre secciones */
-  padding: 3rem 0; /* Más padding interno */
+  margin: 2rem 0 4rem 0; /* Menos margen superior, más inferior */
+  padding: 1.5rem 0 3rem 0; /* Menos padding superior */
 }
 
 /* Navbar oculta o movida abajo */
