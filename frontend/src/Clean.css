@@ -32,12 +32,12 @@ section {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner - TAMAÑO OPTIMIZADO PARA IMPACTO */
+/* Hero formato banner - BANNER GRANDE E IMPACTANTE */
 .hero {
   position: relative;
-  height: 35vh; /* Aumentado de 15vh a 35vh para más impacto */
-  max-height: 400px; /* Aumentado de 200px a 400px */
-  min-height: 280px; /* Aumentado de 150px a 280px */
+  height: 60vh; /* Aumentado significativamente de 35vh a 60vh */
+  max-height: 600px; /* Aumentado de 400px a 600px */
+  min-height: 450px; /* Aumentado de 280px a 450px */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -51,7 +51,7 @@ section {
   overflow: hidden;
   width: 100%; /* Todo el ancho disponible */
   margin: 0; /* Sin margen */
-  padding: 0 2rem 1.2rem 2rem; /* Más padding bottom */
+  padding: 0 3rem 2rem 3rem; /* Más padding para el banner más grande */
 }
 
 /* Capa oscura semitransparente */
