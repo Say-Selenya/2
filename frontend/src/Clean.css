@@ -49,27 +49,27 @@ section {
   padding: 0 2rem 2rem 2rem; /* Padding para posicionar el nombre */
 }
 
-/* Pegatina de alien en esquina superior izquierda - VISIBLE */
+/* Pegatina de alien en esquina superior izquierda - MÁS GRANDE SIN FONDO BLANCO */
 .alien-sticker {
   position: absolute !important;
   top: 1rem !important;
   left: 1rem !important;
   z-index: 20;
-  width: 100px;
-  height: 100px;
+  width: 140px; /* Aumentado de 100px a 140px */
+  height: 140px; /* Aumentado de 100px a 140px */
   background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/urmgy2qo_Imagen%20de%20WhatsApp%202025-09-27%20a%20las%2005.54.55_f51740de.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)) saturate(1.2) contrast(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6)) saturate(1.3) contrast(1.2);
   transform: scaleX(-1); /* Voltear horizontalmente para que salude a la derecha */
   transition: transform 0.3s ease;
-  /* Quitamos mix-blend-mode para que sea visible */
+  mix-blend-mode: multiply; /* Quita específicamente el fondo blanco */
 }
 
 .alien-sticker:hover {
-  transform: scaleX(-1) scale(1.1); /* Mantener el volteo y agregar hover */
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6)) saturate(1.3) contrast(1.2);
+  transform: scaleX(-1) scale(1.05); /* Menos hover para que no se haga demasiado grande */
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)) saturate(1.4) contrast(1.3);
 }
 .music-player {
   position: absolute !important;
