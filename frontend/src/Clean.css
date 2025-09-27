@@ -14,29 +14,9 @@ body {
   padding: 2rem;
 }
 
-/* Navbar */
+/* Navbar oculta o movida abajo */
 .navbar {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.navbar a:hover {
-  background: rgba(108, 99, 255, 0.3);
-  transform: translateY(-2px);
+  display: none; /* Ocultamos la navbar para que el banner esté arriba */
 }
 
 /* Animación de brillo mágico */
@@ -46,17 +26,17 @@ body {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner de YouTuber */
+/* Hero formato banner de YouTuber desde arriba */
 .hero {
   position: relative;
-  height: 35vh; /* Altura más baja tipo banner de canal */
-  max-height: 300px; /* Máximo más bajo para formato banner */
-  min-height: 250px; /* Mínimo para móviles */
+  height: 35vh; 
+  max-height: 300px; 
+  min-height: 250px; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end; /* Contenido hacia abajo */
+  align-items: flex-start; /* Contenido hacia la izquierda */
+  text-align: left; /* Texto alineado a la izquierda */
   background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/yqbfoxmu_sombra.jpg');
   background-size: cover;
   background-position: center;
@@ -64,6 +44,7 @@ body {
   color: #fff;
   overflow: hidden;
   width: 100%;
+  padding: 0 2rem 1.5rem 2rem; /* Padding para posicionar el contenido */
 }
 
 /* Capa oscura semitransparente */
@@ -96,13 +77,13 @@ body {
   color: #e0aaff;
   text-shadow: 0 0 15px #9d4edd;
   animation: glow 3s infinite;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ddd;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -113,21 +94,47 @@ body {
   color: #e0aaff;
   text-shadow: 0 0 15px #9d4edd;
   animation: glow 3s infinite;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .hero-sub { 
-  font-size: 1.1rem; 
+  font-size: 1rem; 
   color: #ddd;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Botones más compactos para formato banner */
+/* Botones en la izquierda también */
 .hero .btn-magic {
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  margin: 0.3rem;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.9rem;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+}
+
+/* Navegación alternativa al final de la página */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-nav a:hover {
+  background: rgba(108, 99, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 /* Responsive para móviles */
@@ -136,21 +143,22 @@ body {
     height: 30vh;
     min-height: 200px;
     max-height: 250px;
+    padding: 0 1rem 1rem 1rem;
   }
   
   .hero h1,
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .hero p,
   .hero-sub {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   
   .hero .btn-magic {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }
 
