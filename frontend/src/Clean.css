@@ -147,25 +147,50 @@ section {
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .hero {
-    height: 20vh; /* Reducido de 40vh a 20vh */
-    min-height: 180px; /* Reducido de 300px a 180px */
-    max-height: 220px; /* Reducido de 350px a 220px */
-    padding: 0 1rem 0.8rem 1rem;
+    height: 12vh; /* Aún más pequeño en móviles */
+    min-height: 120px;
+    max-height: 150px;
+    padding: 0 1rem 0.6rem 1rem;
   }
   
   .hero h1,
   .hero-title {
-    font-size: 1.4rem; /* Reducido ligeramente */
+    font-size: 1.3rem;
   }
   
-  .hero p,
-  .hero-sub {
-    font-size: 0.9rem;
+  .container {
+    padding: 3rem 1rem; /* Menos padding en móviles pero más que antes */
   }
   
-  .hero .btn-magic {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
+  section {
+    margin: 3rem 0;
+    padding: 2rem 0;
+  }
+  
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 3rem; /* Más gap que antes */
+  }
+  
+  .intro-text {
+    text-align: center;
+  }
+  
+  .intro-text p {
+    font-size: 1.1rem; /* Más grande que antes */
+  }
+  
+  .video-placeholder {
+    height: 250px; /* Más alto */
+  }
+  
+  .tiers-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .tier-card {
+    padding: 2.5rem; /* Más padding que antes */
   }
 }
 
