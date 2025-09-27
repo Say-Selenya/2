@@ -26,12 +26,12 @@ body {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner de YouTuber desde arriba */
+/* Hero formato banner de YouTuber desde arriba - MÁS GRANDE */
 .hero {
   position: relative;
-  height: 35vh; 
-  max-height: 300px; 
-  min-height: 250px; 
+  height: 50vh; /* Aumentado de 35vh a 50vh */
+  max-height: 450px; /* Aumentado de 300px a 450px */
+  min-height: 350px; /* Aumentado de 250px a 350px */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Contenido hacia abajo */
