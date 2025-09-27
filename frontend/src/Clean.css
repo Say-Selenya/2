@@ -32,12 +32,12 @@ section {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner - PROPORCIÓN PERFECTA */
+/* Hero formato banner - FOTO OPTIMIZADA PARA MÁXIMA VISIBILIDAD */
 .hero {
   position: relative;
-  height: 40vh; /* Ajustado para mejor proporción */
-  max-height: 380px; /* Proporción más elegante */
-  min-height: 300px; /* Mínimo más equilibrado */
+  height: 40vh;
+  max-height: 380px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -45,13 +45,14 @@ section {
   text-align: left;
   background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/yqbfoxmu_sombra.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center; /* Centrar perfectamente */
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Efecto parallax */
   color: #fff;
   overflow: hidden;
   width: 100%;
   margin: 0;
-  padding: 0 2rem 1.8rem 2rem; /* Padding más balanceado */
+  padding: 0 2rem 1.8rem 2rem;
 }
 
 /* Reproductor de vinilo FORZANDO esquina DERECHA */
