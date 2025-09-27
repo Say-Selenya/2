@@ -280,25 +280,7 @@ section {
   opacity: 0.8;
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .intro-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .intro-text {
-    text-align: center;
-  }
-  
-  .intro-text p {
-    font-size: 1rem;
-  }
-  
-  .video-placeholder {
-    height: 200px;
-  }
-}
+
 
 /* Tiers & Ofrendas con más espaciado */
 .tiers-grid {
