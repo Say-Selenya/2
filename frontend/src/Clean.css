@@ -147,15 +147,15 @@ section {
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .hero {
-    height: 25vh; /* Aumentado de 12vh a 25vh */
-    min-height: 200px; /* Aumentado de 120px */
-    max-height: 280px; /* Aumentado de 150px */
-    padding: 0 1rem 1rem 1rem;
+    height: 45vh; /* Aumentado de 25vh a 45vh - banner grande en móviles también */
+    min-height: 350px; /* Aumentado de 200px */
+    max-height: 450px; /* Aumentado de 280px */
+    padding: 0 1.5rem 1.5rem 1.5rem; /* Más padding */
   }
   
   .hero h1,
   .hero-title {
-    font-size: 2rem; /* Aumentado de 1.3rem a 2rem */
+    font-size: 2.5rem; /* Aumentado de 2rem a 2.5rem */
   }
   
   .container {
