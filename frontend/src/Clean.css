@@ -204,17 +204,18 @@ section {
   text-shadow: 0 0 8px #fff, 0 0 15px #6c63ff, 0 0 30px #ff6ec7;
 }
 
-/* Sección Intro con layout de dos columnas */
+/* Sección Intro con layout de dos columnas - MÁS ESPACIADA */
 .intro-section {
-  margin: 3rem 0;
+  margin: 4rem 0; /* Aumentado */
+  padding: 3rem 0; /* Más padding */
 }
 
 .intro-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem; /* Aumentado de 3rem a 4rem */
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem; /* Aumentado */
 }
 
 .intro-text {
@@ -222,9 +223,9 @@ section {
 }
 
 .intro-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin: 1.5rem 0;
+  font-size: 1.2rem; /* Aumentado */
+  line-height: 1.7; /* Más espaciado */
+  margin: 2rem 0; /* Más margen */
   color: #ddd;
 }
 
@@ -236,8 +237,8 @@ section {
 
 .video-placeholder {
   width: 100%;
-  max-width: 400px;
-  height: 250px;
+  max-width: 450px; /* Aumentado */
+  height: 300px; /* Aumentado */
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   border: 2px dashed rgba(108, 99, 255, 0.4);
