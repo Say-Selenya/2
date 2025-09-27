@@ -26,25 +26,26 @@ body {
   100% { text-shadow: 0 0 10px #ff66ff; }
 }
 
-/* Hero formato banner de YouTuber desde arriba - TAMAÑO EQUILIBRADO */
+/* Hero formato banner - MÁXIMO 60% DE PANTALLA Y TODO EL ANCHO */
 .hero {
   position: relative;
-  height: 25vh; /* Reducido de 50vh a 25vh para mostrar más contenido */
-  max-height: 280px; /* Reducido de 450px a 280px */
-  min-height: 220px; /* Reducido de 350px a 220px */
+  height: 15vh; /* Reducido para máximo 60% de pantalla */
+  max-height: 200px; /* Mucho más pequeño */
+  min-height: 150px; /* Mínimo reducido */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Contenido hacia abajo */
-  align-items: flex-start; /* Contenido hacia la izquierda */
-  text-align: left; /* Texto alineado a la izquierda */
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
   background-image: url('https://customer-assets.emergentagent.com/job_pagina-view/artifacts/yqbfoxmu_sombra.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
   overflow: hidden;
-  width: 100%;
-  padding: 0 2rem 1rem 2rem; /* Padding reducido también */
+  width: 100vw; /* Todo el ancho de la pantalla */
+  margin-left: calc(-50vw + 50%); /* Para romper el container */
+  padding: 0 2rem 0.8rem 2rem;
 }
 
 /* Capa oscura semitransparente */
