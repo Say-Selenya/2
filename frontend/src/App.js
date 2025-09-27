@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      <Navbar />
       <main>
         <section id="hero">
           <Hero />
@@ -18,10 +17,6 @@ export default function App() {
 
         <section id="intro" className="container">
           <Intro />
-        </section>
-
-        <section id="planes" className="container">
-          <Tiers />
         </section>
 
         <section id="ofrendas" className="container">
