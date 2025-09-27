@@ -49,7 +49,7 @@ section {
   padding: 0 2rem 2rem 2rem; /* Padding para posicionar el nombre */
 }
 
-/* Pegatina de alien SIN FONDO BLANCO - TÉCNICA PNG */
+/* Alien DEFINITIVAMENTE sin fondo blanco - TÉCNICA PNG FINAL */
 .alien-sticker {
   position: absolute !important;
   top: 1rem !important;
@@ -62,32 +62,25 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.8)) 
-          saturate(1.5) 
-          contrast(1.4)
+          contrast(1.5) 
+          saturate(1.4)
           brightness(1.1);
   transform: scaleX(-1);
   transition: transform 0.3s ease;
   
-  /* Técnica avanzada para eliminar blanco */
+  /* TÉCNICA FINAL PARA ELIMINAR FONDO BLANCO */
   background-blend-mode: multiply;
-  background-color: transparent;
-  
-  /* Crear efecto PNG sin fondo */
-  -webkit-mask-image: 
-    linear-gradient(45deg, transparent 0%, black 30%, black 70%, transparent 100%),
-    radial-gradient(circle at center, black 60%, transparent 65%);
-  mask-image: 
-    linear-gradient(45deg, transparent 0%, black 30%, black 70%, transparent 100%),
-    radial-gradient(circle at center, black 60%, transparent 65%);
-  -webkit-mask-composite: source-over;
-  mask-composite: intersect;
+  background-color: #000000;
+  mix-blend-mode: screen;
+  opacity: 0.95;
 }
 
 .alien-sticker:hover {
   transform: scaleX(-1) scale(1.05);
+  opacity: 1;
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.9)) 
-          saturate(1.6) 
-          contrast(1.5)
+          contrast(1.6) 
+          saturate(1.5)
           brightness(1.2);
 }
 .music-player {
